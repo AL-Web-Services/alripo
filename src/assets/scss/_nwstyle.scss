@@ -3,7 +3,19 @@
 /////////////////////////////////////////////////
 //Global variables                   //
 /////////////////////////////////////////////////
+$circle:50%;
 $small-font-size:80%;
+$text-position:center;
+
+/////////////////////////////////////////////////
+//mixins                   //
+/////////////////////////////////////////////////
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
 
 /////////////////////////////////////////////////
 //top flydown menu style                       //
@@ -19,4 +31,31 @@ $small-font-size:80%;
 }
 .hide-first{
   display: none;
+}
+/////////////////////////////////////////////////
+//circle                    //
+/////////////////////////////////////////////////
+.image-circle{
+@include border-radius($circle);
+//padding: 10%;
+filter: grayscale(100%);
+width: 5%;
+height: 5%;
+}
+
+/////////////////////////////////////////////////
+//hero                  //
+/////////////////////////////////////////////////
+.hero {
+  background:url('/assets/img/deco/al.jpg') no-repeat center center;
+  background-size: cover;
+  height: 80vh;
+  margin-bottom: 3rem;
+}
+/////////////////////////////////////////////////
+//Landing                                      //
+/////////////////////////////////////////////////
+
+.textposition {
+  text-align: $text-position;
 }
