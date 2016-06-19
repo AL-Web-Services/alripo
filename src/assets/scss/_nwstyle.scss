@@ -1,0 +1,22 @@
+//nwstyle
+
+/////////////////////////////////////////////////
+//Global variables                   //
+/////////////////////////////////////////////////
+$small-font-size:80%;
+
+/////////////////////////////////////////////////
+//top flydown menu style                       //
+/////////////////////////////////////////////////
+
+.sitemapmenu{
+  font-size: $small-font-size;
+  margin-left:0;
+  li {
+    list-style-type: none;
+    padding: 0;
+  }
+}
+.hide-first{
+  display: none;
+}
