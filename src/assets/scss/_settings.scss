@@ -52,7 +52,7 @@ $foundation-palette: (
   primary: #594F4F,
   secondary: #547980,
   success: #45ADA8,
-  warning: #9DE0AD,
+  warning: #EC5840,
   alert: #FF9A43,
 );
 $light-gray: #e6e6e6;
@@ -231,9 +231,13 @@ $accordionmenu-arrow-color: $primary-color;
 
 $badge-background: $primary-color;
 $badge-color: foreground($badge-background);
-$badge-padding: 0.3em;
-$badge-minwidth: 2.1em;
-$badge-font-size: 0.6rem;
+// $badge-padding: 0.3em;
+// $badge-minwidth: 2.1em;
+// $badge-font-size: 0.6rem;
+//style changed by nw
+$badge-padding: 0.4em 0.3em;
+$badge-minwidth: 2.5em;
+$badge-font-size: 1rem;
 
 // 10. Breadcrumbs
 // ---------------

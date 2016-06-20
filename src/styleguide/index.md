@@ -349,6 +349,7 @@ These buttons are used for less important, secondary actions on a page.
 <i class="fi-at-sign icon-large"></i>
 <i class="fi-book-bookmark icon-large"></i>
 <i class="fi-burst-new icon-large"></i>
+<i class="fi-flag icon-large"></i>
 <i class="fi-refresh icon-large"></i>
 <i class="fi-home icon-large"></i>
 <i class="fi-plus icon-large"></i>
