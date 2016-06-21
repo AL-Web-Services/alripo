@@ -166,7 +166,7 @@ $accordion-separator: #41444a;
     color: #fff;
     // sets accodion item separator color
     box-shadow: inset 0 -1px $accordion-separator;
-    
+
     &::after {
       // sets accodion arrow color and direction
       border-color: #fff transparent transparent;
@@ -252,4 +252,3 @@ $accordion-separator: #41444a;
   float: right;
   max-width: 350px;
 }
-

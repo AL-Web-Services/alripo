@@ -1,0 +1,43 @@
+//.testmystyle {
+//color:map-get($foundation-palette, primary);
+//}
+
+$foundation-palette: (
+  primary: blue,
+  secondary: #666666,
+  success: #44d97a,
+  warning: #fdad2a,
+  alert: #ea5946,
+);
+
+$primary-color: blue;
+
+$label-background: $primary-color;
+$label-color: foreground($label-background);
+$label-font-size: 0.8rem;
+$label-padding: 0.33333rem 0.5rem;
+$label-radius: $global-radius;
+
+.label.alert {background: red none repeat scroll 0 0;}
+.label.warning {background: orange none repeat scroll 0 0;}
+
+//Vertical align mixin
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  transform: translateY(50%);
+}
+
+//Spacing between sections mixin
+@mixin custom-margin($margin: 3rem) {
+  margin-top: $margin;
+  margin-bottom: $margin;
+}
+
+.custom-thumbnail {
+  @include thumbnail()
+  border-radius: 50%;
+}
+@media screen and (min-width: 1024px) {.text-align {@include vertical-align();}}
+
+.custom-margin {@include custom-margin();}
