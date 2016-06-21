@@ -4,6 +4,9 @@
 @import 'foundation';
 @import 'motion-ui';
 
+
+@include foundation-everything; // Very important if you want to include all of foundation css to your complied css
+
 @include foundation-global-styles;
 @include foundation-grid;
 // @include foundation-flex-grid;
