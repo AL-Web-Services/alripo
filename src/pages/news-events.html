@@ -1,10 +1,71 @@
 ---
-test: post
-title: Blogging Like a Hacker
+title: My Blog
+description: Like I said, my bloggg!
+images:
+    url:
+    - "http://placehold.it/100"
+    - "http://placehold.it/100"
+    - "http://placehold.it/100"
+    - "http://placehold.it/100"
+example:
+  custom:
+    variables:
+    - "All I need is a space suit and I'm ready to go."
+    - "Are the stars out tonight? I don't know if it's cloudy or bright."
+    - "And the world keeps spinning."
+    - "Cold hearted orb that rules the night."
 ---
 <div class="row">
 
-
+<div class="medium-12 columns">
+  <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+    <ul class="orbit-container">
+      <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+      <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+      <li class="is-active orbit-slide">
+        <div class="row">
+          <div class="large-6 columns">
+            <img class="orbit-image" src="http://placehold.it/914x457" alt="Space">
+            <!--<figcaption class="orbit-caption">Space, the final frontier.</figcaption>-->
+          </div>
+          <div class="large-6 columns">
+            <img class="orbit-image" src="http://placehold.it/914x457" alt="Space">
+            <!--<figcaption class="orbit-caption">Space, the final frontier.</figcaption>-->
+          </div>
+        </div>
+      </li>
+      <li class="orbit-slide">
+        <div class="row">
+          <div class="large-6 columns">
+            <img class="orbit-image" src="http://placehold.it/914x457" alt="Space">
+            <!--<figcaption class="orbit-caption">Space, the final frontier.</figcaption>-->
+          </div>
+          <div class="large-6 columns">
+            <img class="orbit-image" src="http://placehold.it/914x457" alt="Space">
+            <!--<figcaption class="orbit-caption">Space, the final frontier.</figcaption>-->
+          </div>
+        </div>
+      </li>
+      <li class="orbit-slide">
+        <div class="row">
+          <div class="large-6 columns">
+            <img class="orbit-image" src="http://placehold.it/914x457" alt="Space">
+            <!--<figcaption class="orbit-caption">Space, the final frontier.</figcaption>-->
+          </div>
+          <div class="large-6 columns">
+            <img class="orbit-image" src="http://placehold.it/914x457" alt="Space">
+            <!--<figcaption class="orbit-caption">Space, the final frontier.</figcaption>-->
+          </div>
+        </div>
+      </li>
+    </ul>
+    <nav class="orbit-bullets">
+      <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
+      <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+      <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+    </nav>
+  </div>
+</div>
     <div class="medium-12 columns">
           <h1>News Elements</h1>
         <span class="secondary label float-right">Prototype: In Progress</span>
@@ -119,11 +180,23 @@ title: Blogging Like a Hacker
         <div class="row column small-up-1 medium-up-2 large-up-5 text-center custom-margin">
           <h1 class="text-left">Five Column Grid</h1>
           <p>
-            test data: {{test}}
+            test data: {{title}}
               <ul class="breakfast-items">
                   {{#each data}}
                   <li>{{ this }}</li>
                   {{/each}}
+              </ul>
+
+              <ul>
+                {{#each images.url}}
+                <li>{{.}}</li>
+                {{/each}}
+              </ul>
+
+              <ul>
+                {{#each example.custom.variables}}
+                <li>{{.}}</li>
+                {{/each}}
               </ul>
           </p>
         <span class="secondary label float-right">Prototype: In Progress</span>

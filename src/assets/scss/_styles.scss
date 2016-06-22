@@ -29,7 +29,7 @@ $label-radius: $global-radius;
 }
 
 //Spacing between sections mixin
-@mixin custom-margin($margin: 3rem) {
+@mixin custom-margin($margin) {
   margin-top: $margin;
   margin-bottom: $margin;
 }
@@ -40,4 +40,4 @@ $label-radius: $global-radius;
 }
 @media screen and (min-width: 1024px) {.text-align {@include vertical-align();}}
 
-.custom-margin {@include custom-margin();}
+.custom-margin {@include custom-margin(3rem);}
