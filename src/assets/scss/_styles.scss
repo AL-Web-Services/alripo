@@ -2,6 +2,14 @@
 //color:map-get($foundation-palette, primary);
 //}
 
+//colors and styles
+@mixin border-style($weight, $color){
+  border: $weight solid $color;
+}
+
+.light-border {@include border-style(1px, #e6e6e6);}
+
+
 $foundation-palette: (
   primary: blue,
   secondary: #666666,
@@ -45,3 +53,271 @@ $label-radius: $global-radius;
 .over-container {position: relative;}
 .over-text {position: absolute; display: block; top: 0; left: 0; width: 100%; height: 100%;}
 .over-center {text-align: center; top: 35%;}
+
+//Material cards on news and events
+@import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
+
+.card {
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+  box-shadow: none;
+  //box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  color: #272727;
+  border: 1px solid #ccc;
+  //border-radius: 2px;
+  .title {
+    line-height: 3rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  .content {
+    padding: 1.3rem;
+    font-weight: 300;
+    border-radius: 0 0 2px 2px;
+  }
+  p {
+  margin: 0;
+  }
+  .action {
+    border-top: 1px solid rgba(160, 160, 160, 0.2);
+    padding: 1.3rem;
+  }
+  a {
+    color: #ffab40;
+    margin-right: 1.3rem;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .image {
+    position: relative;
+    .title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 1.3rem;
+      color: #fff;
+    }
+    img {
+      border-radius: 2px 2px 0 0;
+    }
+  }
+}
+//News and events hero
+
+.hero {
+  background: url('https://static.pexels.com/photos/1341/blue-abstract-glass-balls.jpg') no-repeat center center;
+  background-color: grey;
+  background-size: cover;
+  height: 50vh;
+  &:before {
+    content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-image: linear-gradient(to bottom right,#002f4b,#000);
+		opacity: .8;
+  }
+  .intro {
+    padding: 3rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+  }
+  h1 {
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    letter-spacing: -0.025em;
+    font-weight: 300;
+    text-align: center;
+  }
+  p {
+    color: #fff;
+    line-height: 1.75em;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .tech-img {
+    background: url('https://static.pexels.com/photos/7374/startup-photos.jpg') no-repeat center center;
+    background-size: cover;
+    height: 9rem;
+    width: 9rem;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+  @media only screen and (min-width: 40.063em) {
+    .tech-img {
+      height: 18rem;
+      width: 18rem;
+    }
+    h1 {
+      padding-top: 4.5rem;
+      text-align: right;
+      font-size: 2.5rem;
+    }
+    p {
+      text-align: right;
+    }
+  }
+}
+.hero-wrapper {position: relative;}
+// Events
+.events-all hr {margin-top: 5px; margin-bottom: 5px;}
+//Events small
+.events-small .event-month {padding: 0.5rem 1rem;}
+.events-small .event-day {padding: 0 1rem; font-size: 1.5em;}
+.events-small .event {padding: 0.8rem 0 0;}
+
+//Panels
+.header.panel {
+  margin: 1rem auto;
+  border: 1px solid #ccc;
+  //background: #fff;
+
+  p {
+    font: 1rem "Avenir Next";
+    padding: 1rem 2rem 2rem 2rem;
+    margin-top: -1.25rem;
+
+    span {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 75%;
+      font-weight: bold;
+    }
+  }
+
+  .sign {
+    background:#ccc;
+    width: 150px;
+    height: 2.4rem;
+    border: 1px solid #ccc;
+    position: relative;
+    top: -1.3rem;
+    margin: auto;
+
+    h1 {
+      text-transform: uppercase;
+      font: bolder 0.875rem "Avenir Next";
+      letter-spacing: 3px;
+      color: #666;
+      font-size: 70%;
+      text-align: center;
+      line-height: 2rem;
+    }
+  }
+}
+//Info card with corner label
+// flat colors
+
+$primary: #ccc;
+$secondary: #ADB2BD;
+$info: #89c4f4;
+$alert: #F22613;
+$success: #87D37C;
+$warning: #F89406;
+$bg: #fff;
+$font-color: #333;
+
+
+.callout-card {
+	background: $bg;
+  border: 1px solid #333;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin: 0 0 1rem;
+  overflow: hidden;
+
+  .card-label {
+	    border-color: transparent #333 transparent transparent;
+	    border-color: rgba(255,255,255,0) #333 rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+
+  &.primary {
+    border-color: $primary;
+
+    .card-label {
+	    border-color: transparent $primary transparent transparent;
+	    border-color: rgba(255,255,255,0) $primary rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+  }
+  &.secondary {
+    border-color: $secondary;
+
+    .card-label {
+	    border-color: transparent $secondary transparent transparent;
+	    border-color: rgba(255,255,255,0) $secondary rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+  }
+  &.info {
+    border-color: $info;
+
+    .card-label {
+	    border-color: transparent $info transparent transparent;
+	    border-color: rgba(255,255,255,0) $info rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+  }
+  &.alert {
+    border-color: $alert;
+
+    .card-label {
+	    border-color: transparent $alert transparent transparent;
+	    border-color: rgba(255,255,255,0) $alert rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+  }
+  &.success {
+    border-color: $success;
+
+    .card-label {
+	    border-color: transparent $success transparent transparent;
+	    border-color: rgba(255,255,255,0) $success rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+  }
+  &.warning {
+    border-color: $warning;
+
+    .card-label {
+	    border-color: transparent $warning transparent transparent;
+	    border-color: rgba(255,255,255,0) $warning rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+  }
+
+  .card-label {
+    border-style: solid;
+    border-width: 0 70px 40px 0;
+    float:right;
+    height: 0px;
+    width: 0px;
+    transform:rotate(360deg);
+  }
+
+  .callout-card-content{
+	  padding: 0.5rem 1.5rem 0.875rem;
+  }
+
+  &.radius {
+    border-radius: 0.6rem;
+  }
+
+  .label-text {
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    position: relative;
+    right: -40px;
+    top: 2px;
+    white-space: nowrap;
+    transform: rotate(30deg);
+  }
+}
+//Clear default tabs styles
+
+.tabs-clear-styles .tabs, .tabs-clear-styles .tabs-content {border: none;}
+
+//Panel hover effect
+.panel-wrapper a:hover {background-color: #ccc;}
