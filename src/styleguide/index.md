@@ -409,8 +409,43 @@ These buttons are used for less important, secondary actions on a page.
 
 
 
+# Start My Research
+
+
+---
+
+
+```html_example
+<div class="columns large-12 small-12 callout" data-equalizer-watch>
+  <p>Start My Research</p>
+  <form method="GET" action="http://auraria.summon.serialssolutions.com/">
+      <div class="input-group">
+          <input class="input-group-field" type="text" placeholder="Find articles, books, media, journals and more" id="search_string_All" name="q">
+          <!--    <input type="submit" name="Search" value="Search" class="submit"> -->
+          <span class="input-group-label">Search</span>
+      </div>
+      <input id=" value=" name="keep_r" type="hidden" />
+      <div>
+          <input checked="checked" title="Search for all materials" type="radio" name="cmd" value="" id="summonAll" />
+          <label for="summonAll">Articles, books and more</label>
+          <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Journal Article)" id="summonArticles" />
+          <label for="summonArticles">Articles only</label>
+          <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Book / eBook)" id="summonBooks" />
+          <label for="summonBooks">Books only</label>
+          <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Audio Recording,f|ContentType,Video Recording,f|ContentType,Streaming Video)" title="search for" id="summonMedia" />
+          <label for="summonMedia">Media only</label>
+      </div>
+  </form>
+  <p class="float-right"><a target="_blank" href="http://auraria.summon.serialssolutions.com/#!/advanced" title="Use Advanced Search">Advanced Search</a></p>
+</div>
+```
+
+
+
+
 
 # Vertical Tabs
+
 
 <p class="lead">Could use for Subjects Display for Database List</p>
 
