@@ -1,0 +1,115 @@
+<!-- row one header -->
+<div class="row">
+    <!--logo + fly -->
+    <!--responsive menu, hide for large display-->
+    <div class="title-bar hide-for-large">
+        <button class="menu-icon" type="button" data-toggle="flymenu"></button>
+        <div class="title-bar-title">logo</div>
+    </div>
+    <!--end of responsive menu-->
+    <div class="topbar show-for-large">
+        <div class="row">
+            <div class="large-6 medium-6 small-12 columns">
+                <h1><small>Logo</small></h1>
+            </div>
+            <div class="large-6 medium-6 small-12 columns">
+                <a class="float-right" data-toggle="flymenu"> Menu</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end of row header one-->
+<!--row hide + flydown -->
+<div class="row hide-first" id="flymenu" data-toggler data-animate="fade-in fade-out">
+    <div class="columns large-3 medium-6 small-12">
+        <h5>Find</h5>
+        <ul class="sitemapmenu vertical">
+            <li><a href="#">Sub Menu Item</a></li>
+            <li><a href="#">Sub Menu Item</a></li>
+            <li><a href="#">Sub Menu Item</a></li>
+            <li><a href="#">...</a></li>
+        </ul>
+    </div>
+    <div class="columns large-3 medium-6 small-12">
+        <h4>Services</h4>
+        <ul class="sitemapmenu vertical">
+            <li><a href="#">Sub Menu Item</a></li>
+            <li><a href="#">Sub Menu Item</a></li>
+            <li><a href="#">Sub Menu Item</a></li>
+            <li><a href="#">Sub Menu Item</a></li>
+            <li><a href="#">Sub Menu Item</a></li>
+            <li><a href="#">...</a></li>
+        </ul>
+    </div>
+    <div class="columns large-3 medium-6 small-12">
+        <h4>About</h4>
+        <ul class="sitemapmenu vertical">
+            <li><a href="#">Sub Menu Item</a></li>
+            <li><a href="#">Sub Menu Item</a></li>
+            <li><a href="#">Sub Menu Item</a></li>
+            <li><a href="#">...</a></li>
+        </ul>
+    </div>
+    <div class="columns large-3 medium-6 small-12">
+        <h4>Request Forms</h4>
+        <ul class="sitemapmenu vertical">
+            <li><a href="#">Sub Menu Item</a></li>
+            <li><a href="#">Sub Menu Item</a></li>
+            <li><a href="#">Sub Menu Item</a></li>
+            <li><a href="#">Sub Menu Item</a></li>
+            <li><a href="#">Sub Menu Item</a></li>
+            <li><a href="#">Sub Menu Item</a></li>
+            <li><a href="#">...</a></li>
+        </ul>
+    </div>
+</div>
+<!--end of hide + flydown menu-->
+
+<!-- row two main content -->
+<div class="row expanded" data-equalizer="foo" >
+    <div class="large-3 columns photo-card-left" data-equalizer-watch="bar">
+    hello
+    </div>
+    <div class="large-6 columns" data-equalizer-watch="bar">
+    <!--search box-->
+		<div class="row">
+			<h2>Start My Research</h2>
+	        <form method="GET" action="http://auraria.summon.serialssolutions.com/">
+	            <div class="input-group">
+	                <input class="input-group-field" type="text" placeholder="Find articles, books, media, journals and more" id="search_string_All" name="q">
+	                <!--    <input type="submit" name="Search" value="Search" class="submit"> -->
+	                <span class="input-group-label">Search</span>
+	            </div>
+	            <input id=" value=" name="keep_r" type="hidden" />
+	            <div>
+	                <input checked="checked" title="Search for all materials" type="radio" name="cmd" value="" id="summonAll" />
+	                <label for="summonAll">Articles, books and more</label>
+	                <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Journal Article)" id="summonArticles" />
+	                <label for="summonArticles">Articles only</label>
+	                <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Book / eBook)" id="summonBooks" />
+	                <label for="summonBooks">Books only</label>
+	                <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Audio Recording,f|ContentType,Video Recording,f|ContentType,Streaming Video)" title="search for" id="summonMedia" />
+	                <label for="summonMedia">Media only</label>
+	            </div>
+	        </form>
+        	<p class="float-right"><a target="_blank" href="http://auraria.summon.serialssolutions.com/#!/advanced" title="Use Advanced Search">Advanced Search</a></p>
+		</div>
+		<!--end of search box -->
+
+    </div>
+    <div class="large-3 columns" data-equalizer-watch="bar">photo & other</div>
+</div>
+<!-- end of row two main content-->
+<!-- row three secondary main content -->
+<div class="row">
+    <div class="large-3 columns">news</div>
+    <div class="large-3 columns">events</div>
+    <div class="large-6 columns">featured</div>
+</div>
+<!-- end of row three secondary main content -->
+<!-- row footer -->
+<div class="row">
+    <div class="large-6 columns">footer left</div>
+    <div class="large-6 columns">footer right</div>
+</div>
+<!-- end of row footer -->
