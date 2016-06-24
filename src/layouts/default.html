@@ -11,64 +11,69 @@
 </head>
 
 <body>
-    <!-- new header to incorporate the CU Denver top links -->
-    <header>
-        <!-- Start Top Bar -->
+    <!-- off canvas div start-->
+    <div class="off-canvas-wrapper">
+        <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+            <!-- off canvas div start end -->
+            <!-- Start My Z6full site layout header -->
+            <header>
+                <nav>
+                    <!-- Start Top Bar -->
+                    <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+                        <button class="menu-icon" type="button" data-toggle></button>
+                        <div class="title-bar-title">Menu</div>
+                    </div>
+                    <div class="top-bar" id="example-menu">
+                        <div class="row">
+                            <div class="top-bar-left">
+                                <ul class="dropdown menu" data-dropdown-menu>
+                                    <li class="menu-text">AL Web Services RP Sandbox</li>
+                                    <li><a href="/styleguide.html">Redesign Style Guide</a></li>
+                                    <li class="has-submenu">
+                                    <a href="#">Redesign Mockups</a>
+                                          <ul class="menu">
+                                            <li><a href="#">Library Home</a>
+                                            <ul class="menu">
+                                            <li><a href="/almockups/landing1.html">Concept 1</a></li>
+                                            </ul>
+                                            </li>
+                                            <li><a href="#">Databases</a>
+                                            <ul class="menu">
+                                            <li><a href="/almockups/dblanding.html">DB Landing 1</a></li>
+                                            <li><a href="/almockups/dbresults.html">DB Results 1</a></li>
+                                            <li><a href="/almockups/dbdetail.html">DB detail 1</a></li>
+                                            </ul>
+                                            </li>
+                                            <li><a href="#">...</a></li>
+                                            <!-- add more mockups html pages here -->
+                                          </ul>                                  
+                                    </li>
+                                    <li class="has-submenu">
+                                        <a href="#">ZurbF Example</a>
+                                        <ul class="submenu menu vertical" data-submenu>
+                                            <li><a href="/templates/agency.html">Agency</a></li>
+                                            <li><a href="/templates/estate.html">Estate</a></li>
+                                            <li><a href="/templates/mag.html">Megazine</a></li>
+                                            <li><a href="/templates/marketing.html">Marketing</a></li>
+                                            <li><a href="/templates/portfolio.html">Portfolio</a></li>
+                                            <li><a href="/templates/product.html">Product</a></li>
+                                        </ul>
+                                    </li>
 
-        <div class="title-bar hide-for-large">
-            <button class="menu-icon" type="button" data-toggle="flymenu"></button>
-            <div class="title-bar-title">logo</div>
+                                </ul>
+                            </div>
+                        
+                        </div>
+                    </div>
+                    <!-- End Top Bar -->
+                </nav>
+            </header>
+            <!-- End My Z6full site layout header -->
+            {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}} {{> body}}
+            <!-- off canvas div end -->
         </div>
-
-        <div class="topbar show-for-large">
-            <div class="row">
-                <div class="large-6 medium-6 small-12 columns">
-                    <h1><small>Logo</small></h1>
-                </div>
-                <div class="large-6 medium-6 small-12 columns">
-                    <a class="float-right" data-toggle="flymenu"> Menu</a>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="row hide-first" id="flymenu" data-toggler data-animate="fade-in fade-out">
-            <div class="columns large-3 medium-6 small-12">
-                <h5>Examples</h5>
-                <ul class="sitemapmenu vertical">
-                    <li><a href="/templates/agency.html">Agency</a></li>
-                    <li><a href="/templates/estate.html">Estate</a></li>
-                    <li><a href="/templates/mag.html">Megazine</a></li>
-                    <li><a href="/templates/marketing.html">Marketing</a></li>
-                    <li><a href="/templates/portfolio.html">Portfolio</a></li>
-                    <li><a href="/templates/product.html">Product</a></li>
-                </ul>
-            </div>
-            <div class="columns large-3 medium-6 small-12">
-                <h4>Mockups</h4>
-                <ul class="sitemapmenu vertical">
-                    <li><a href="/nwal/landing1.html">Landing 1</a></li>
-                    <li><a href="#">...</a></li>
-                    <!-- add more mockups html pages here -->
-                </ul>
-            </div>
-            <div class="columns large-3 medium-6 small-12">
-                <h4>Style Guides</h4>
-                <ul class="sitemapmenu vertical">
-                    <li><a href="/styleguide.html">Redesign Style Guide</a></li>
-                </ul>
-            </div>
-            <div class="columns large-3 medium-6 small-12">
-                <h4>Resources</h4>
-                <ul class="sitemapmenu vertical">
-                    <li><a href="http://foundation.zurb.com/sites/docs">Docs</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
- 
-    <!-- / end of the header -->
-    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}} {{> body}}
+    </div>
+    <!-- off canvas div end end-->
     <script src="{{root}}assets/js/app.js"></script>
 </body>
 
