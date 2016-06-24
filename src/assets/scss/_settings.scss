@@ -45,7 +45,7 @@
 // 1. Global
 // ---------
 
-$global-font-size: 100%;
+$global-font-size: 90%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
@@ -235,9 +235,9 @@ $badge-color: foreground($badge-background);
 // $badge-minwidth: 2.1em;
 // $badge-font-size: 0.6rem;
 //style changed by nw
-$badge-padding: 0.4em 0.3em;
-$badge-minwidth: 2.5em;
-$badge-font-size: 1rem;
+$badge-padding: 0.3em 0.2em;
+$badge-minwidth: 2.2em;
+$badge-font-size: .9rem;
 
 // 10. Breadcrumbs
 // ---------------
