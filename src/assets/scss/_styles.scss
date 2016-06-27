@@ -320,6 +320,27 @@ $font-color: #333;
 //Clear default tabs styles
 
 .tabs-clear-styles .tabs, .tabs-clear-styles .tabs-content {border: none;}
+.tabs-clear-styles .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {float: left;}
+
+//Clear form select styles
+.clear-form-st select {background-color: transparent; border: 0 solid white; margin: 0;}
 
 //Panel hover effect
 .panel-wrapper a:hover {background-color: #ccc;}
+
+//media queries show, hide for prototyping purposes
+@media only screen and (min-width: 768px) {.table-sm {display: none;}.table-bg {display: block;}}
+@media only screen and (max-width: 767px) {.table-sm {display: block;}.table-bg {display: none;}}
+
+//accordion
+.accordion-navigation {
+  >a:after {
+    content: "↡";
+    padding-left: 5px;
+    float: right;
+    font-size: 20px;
+  }
+  &.active > a:after {
+    content: "↟";
+  }
+}
