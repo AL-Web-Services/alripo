@@ -7,15 +7,7 @@ $circle:50%;
 $small-font-size:80%;
 $text-position:center;
 
-/////////////////////////////////////////////////
-//mixins                   //
-/////////////////////////////////////////////////
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
-}
+
 
 /////////////////////////////////////////////////
 //top flydown menu style                       //
@@ -59,3 +51,16 @@ height: 5%;
 .textposition {
   text-align: $text-position;
 }
+/////////////////////////////////////////////////
+//round corner for button                      //
+/////////////////////////////////////////////////
+
+.roundedge {
+  border-radius: 50%;
+}
+
+// badge
+
+
+
+

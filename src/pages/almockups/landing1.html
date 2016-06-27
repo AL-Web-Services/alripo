@@ -28,16 +28,18 @@
         </form>
         <p class="float-right"><a target="_blank" href="http://auraria.summon.serialssolutions.com/#!/advanced" title="Use Advanced Search">Advanced Search</a></p>
     </div>
-    <div class="columns large-3 small-12 callout" data-equalizer-watch>
-        <h2>How To Find</h2>
-        <ul>
-            <li>Articles</li>
-            <li>Books & E-Books</li>
-            <li>Audios</li>
-            <li>Videos</li>
-        </ul>
-        <p class="float-right">More</p>
+    <div class="columns hide-for-large small-12 callout">
+    <h2><i class="fi-clock primary"></i> Today's Hours - 7:30am to 10pm</h2>
     </div>
+    <div class="columns show-for-large large-3 callout" data-equalizer-watch>
+       <h2><i class="fi-clock primary"></i> Today's Hours <span class="tiny button secondary roundedge float-right">Open</span></h2>
+        <p>
+        Monday, Jun 27, 2016<br />
+        7:30am to 10pm<br />
+        </p>
+        <p class="float-right">All Hours</p>
+    </div>
+   
 </div>
 <div class="row">
     <div class="columns large-3 small-6 callout">Databases List</div>
@@ -113,19 +115,12 @@
                 </div>
             </div>
             <hr>
-            <ul class="pagination" role="navigation" aria-label="Pagination">
-                <li class="disabled">Previous <span class="show-for-sr">page</span></li>
-                <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
-                <li><a href="#" aria-label="Page 2">2</a></li>
-                <li><a href="#" aria-label="Page 3">3</a></li>
-                <li><a href="#" aria-label="Page 4">4</a></li>
-                <li><a href="#" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
-            </ul>
+   
         </article>
     </div>
     <div class="large-4 columns">
         <aside>
-        <!-- <div class="row columns">
+     <!--   <div class="row columns">
                 <p class="lead">Book Group Study Rooms</p>
                 <ul class="vertical medium-horizontal menu expanded text-center">
                 
@@ -134,9 +129,9 @@
                             <div class="stat">18</div><span></span></a>
                     </li>
                 </ul>
-            </div>
-            <div class="row columns">
-                <p class="lead">Technology Checkout</p>
+            </div> -->
+            <div class="row columns hide-first" id="availidea" data-toggler data-animate="fade-in fade-out">
+                <p class="lead">Availability</p>
                 <ul class="vertical medium-horizontal menu expanded text-center">
                     <li>
                         <a href="#">
@@ -148,14 +143,14 @@
                     </li>
                     <li>
                         <a href="#">
-                            <div class="stat">95</div><span>IPads</span></a>
+                            <div class="stat">95</div><span>Tablets</span></a>
                     </li>
                     <li>
                         <a href="#">
-                            <div class="stat">59</div><span>Wifi Routers</span></a>
+                            <div class="stat">59</div><span>Study Rooms</span></a>
                     </li>
                 </ul>
-            </div> -->
+            </div> 
             <div class="row columns">
                 <p class="lead">Featured Resources</p>
                 <p><img src="http://placehold.it/600x370&text=Look at me!" alt="image for article" alt="article preview image"></p>
@@ -198,18 +193,10 @@
                         <a href="#" class="rsvp button">Details</a>
                     </div>
                 </article>
-                <hr>
-                <article class="event">
-                    <div class="event-date">
-                        <p class="event-month">Oct</p>
-                        <p class="event-day">21</p>
-                    </div>
-                    <div class="event-desc">
-                        <h4 class="event-desc-header">Day in the Life of Foundation for Apps</h4>
-                        <p class="event-desc-detail"><span class="event-desc-time"></span>BDConf - Washington, DC</p>
-                        <a href="#" class="rsvp button">Details</a>
-                    </div>
-                </article>
+                <hr>                
+            </div>
+            <div class="row columns">
+                <a class="float-right" data-toggle="availidea">Future Phase Add-on (Possiblity)</a>        
             </div>
     </div>
     <div class="row small-up-3">

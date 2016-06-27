@@ -39,7 +39,7 @@ $icon-large:300%;
 $icon-small:100%;
 $icon-color-ligjt:white;
 $icon-color-dark:map-get($foundation-palette, success);
-$icon-padding-right:1em;
+$padding-right:.5em;
 
 .icon-medium {
   font-size: $icon-medium;
@@ -48,7 +48,6 @@ $icon-padding-right:1em;
 .icon-large {
   font-size: $icon-large;
   color: $icon-color-dark;
-  margin-right:$icon-padding-right;
 }
 
 //////////////////////
