@@ -344,3 +344,76 @@ $font-color: #333;
     content: "↟";
   }
 }
+// dropdown clear styles
+
+.dropdown-clear .button.dropdown::after {margin-left: 0; top: 0; border-color: black transparent transparent;}
+.dropdown-clear .button {padding: 0; margin: 35px 0 0; background-color: #fff; float: right;}
+
+// testimonial styling
+.quote {
+  background: #ebf3f5;
+  padding: 15px 20px 5px 15px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  &:after {
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 20px 18px 0 18px;
+    border-color: #ebf3f5 transparent transparent transparent;
+    position: relative;
+    top: 37px;
+    left: 20px;
+  }
+}
+
+.student {
+  margin-left: 25px;
+  margin-bottom: 40px;
+  .photo{
+    background-color: #ccc;
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-right: 10px;
+  }
+  p{
+    position: relative;
+    top: 5px;
+    text-transform: uppercase;
+    &:nth-child(2) {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+    &:nth-child(3) {
+      font-size: 14px;
+      color: #777;
+    }
+  }
+}
+//timeline
+.ball {display: block; width: 40px; height: 40px; background-color: #666; border-radius: 50%; margin-left: auto; margin-right: auto; margin-bottom: -10px; width: 20px; height: 20px;}
+.timeline .timeline-box {width: 300px; /*margin-left: auto; margin-right: auto; background-color: #f8f8f8; padding: 15px;*/}
+.timeline .timeline-line {border-bottom: 2px solid #666;}
+.timeline .timeline-box {
+  margin-left: auto;
+  margin-right: auto;
+  background: #ccc;
+  padding: 15px 20px 5px 15px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  &:after {
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 20px 18px 0 18px;
+    border-color: #ccc transparent transparent transparent;
+    position: relative;
+    top: 37px;
+    left: 110px;
+  }
+}
