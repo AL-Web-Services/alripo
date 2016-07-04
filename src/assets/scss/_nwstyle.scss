@@ -6,6 +6,7 @@
 $circle:50%;
 $small-font-size:80%;
 $text-position:center;
+$alphotobg:"/assets/img/deco/campus.jpg";
 
 
 
@@ -39,7 +40,7 @@ filter: grayscale(100%);
 //hero                  //
 /////////////////////////////////////////////////
 .hero {
-  background:url('/assets/img/deco/al.jpg') no-repeat center center;
+  background:url($alphotobg) no-repeat center center;
   background-size: cover;
   height: 80vh;
   margin-bottom: 3rem;
