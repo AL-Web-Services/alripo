@@ -64,63 +64,107 @@
     </div>
 </div>
 <!--end of hide + flydown menu-->
-
 <!-- row two main content -->
-<div class="row expanded hero" data-equalizer="foo" >
-    <div class="large-3 columns photo-card-left" data-equalizer-watch="bar">
-    hello
-    </div>
-    <div class="large-6 columns" data-equalizer-watch="bar">
-    <!--search box-->
-		<div class="row callout">
-			<h2>Start My Research</h2>
-	        <form method="GET" action="http://auraria.summon.serialssolutions.com/">
-	            <div class="input-group">
-	                <input class="input-group-field" type="text" placeholder="Find articles, books, media, journals and more" id="search_string_All" name="q">
-	                <!--    <input type="submit" name="Search" value="Search" class="submit"> -->
-	                <span class="input-group-label">Search</span>
-	            </div>
-	            <input id=" value=" name="keep_r" type="hidden" />
-	            <div>
-	                <input checked="checked" title="Search for all materials" type="radio" name="cmd" value="" id="summonAll" />
-	                <label for="summonAll">Articles, books and more</label>
-	                <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Journal Article)" id="summonArticles" />
-	                <label for="summonArticles">Articles only</label>
-	                <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Book / eBook)" id="summonBooks" />
-	                <label for="summonBooks">Books only</label>
-	                <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Audio Recording,f|ContentType,Video Recording,f|ContentType,Streaming Video)" title="search for" id="summonMedia" />
-	                <label for="summonMedia">Media only</label>
-	            </div>
-	        </form>
-        	<p class="float-right"><a target="_blank" href="http://auraria.summon.serialssolutions.com/#!/advanced" title="Use Advanced Search">Advanced Search</a></p>
-		</div>
-		<!--end of search box -->
-        <!--addtional options -->
-        <div class="row callout">
-        <ul class="menu expanded">
-            <li><a href="#">Databases List</a></li>
-             <li><a href="#">Skyline Catalog</a></li>
-             <li><a href="#">Journal List</a></li>
-             <li><a href="#">Course Reserves</a></li>
-        </ul>
+<div class="expanded hero" data-equalizer="foo">
+    <div class="row">
+    <p></p>
+        <div class="columns hide-for-large small-12 callout">
+            <h2><i class="fi-clock primary"></i> Today's Hours - 7:30am to 10pm</h2>
         </div>
-
-        <!--end of addtional options-->
-
+        <div class="columns show-for-large large-3 photo-card-left callout" data-equalizer-watch="bar">
+            <p></p>
+            <h2><i class="fi-clock primary"></i> Today's Hours <span class="tiny button secondary roundedge float-right">Open</span></h2>
+            <p>
+                Monday, Jun 27, 2016
+                <br /> 7:30am to 10pm
+                <br />
+            </p>
+            <p class="float-right">All Hours</p>
+        </div>
+        <div class="large-6 columns callout" data-equalizer-watch="bar">
+            
+            <!--search box-->
+            <div>
+                <h2>Start My Research</h2>
+                <form method="GET" action="http://auraria.summon.serialssolutions.com/">
+                    <div class="input-group">
+                        <input class="input-group-field" type="text" placeholder="Find articles, books, media, journals and more" id="search_string_All" name="q">
+                        <!--    <input type="submit" name="Search" value="Search" class="submit"> -->
+                        <span class="input-group-label">Search</span>
+                    </div>
+                    <input id=" value=" name="keep_r" type="hidden" />
+                    <div>
+                        <input checked="checked" title="Search for all materials" type="radio" name="cmd" value="" id="summonAll" />
+                        <label for="summonAll">Articles, books and more</label>
+                        <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Journal Article)" id="summonArticles" />
+                        <label for="summonArticles">Articles only</label>
+                        <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Book / eBook)" id="summonBooks" />
+                        <label for="summonBooks">Books only</label>
+                        <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Audio Recording,f|ContentType,Video Recording,f|ContentType,Streaming Video)" title="search for" id="summonMedia" />
+                        <label for="summonMedia">Media only</label>
+                    </div>
+                </form>
+                <div class="columns"><p class="text-right"><a target="_blank" href="http://auraria.summon.serialssolutions.com/#!/advanced" title="Use Advanced Search">Advanced Search</a></p>
+                </div>
+            </div>
+            <!--end of search box -->
+            <!--addtional options -->
+            <div>
+                <div class="columns button-group expanded">
+                    <button class="button" href="#">Databases List</button>
+                    <button class="button" href="#">Skyline Catalog</button>
+                    <button class="button" href="#">Journal List</button>
+                    <button class="button" href="#">Course Reserves</button>
+                </div>
+            </div>
+            <!--end of addtional options-->
+        </div>
+        <div class="large-3 columns callout" data-equalizer-watch="bar">
+            <p></p>
+            <h2>Ask Us</h2>
+            <ul class="menu vertical">
+                <li><i class="fi-comment icon-medium top" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="1" title="Chat"> Chat</i></li>
+                <li><i class="fi-mail icon-medium " data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="1" title="Email"> Email</i> </li>
+                <li><i class="fi-mobile-signal icon-medium  top" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="1" title="Text"> Text</i> </li>
+                <li><i class="fi-telephone icon-medium  top" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="1" title="Phone"> Phone</i></li>
+                <li><i class="fi-torso icon-medium top" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="1" title="In-Person"> In-Person</i></li>
+            </ul>
+        </div>
     </div>
-    <div class="large-3 columns" data-equalizer-watch="bar">photo & other</div>
 </div>
+<!--end expanded row-->
 <!-- end of row two main content-->
 <!-- row three secondary main content -->
-<div class="row">
-    <div class="large-3 columns">news</div>
-    <div class="large-3 columns">events</div>
-    <div class="large-6 columns">featured</div>
+<div class="row small-up-1 medium-up-2 large-up-3">
+    <div class="column">
+        <div>
+            <h2>News</h2>
+            <p><img src="http://placehold.it/400x370&text=Icon" alt="image of a planet called Pegasi B"></p>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam....</p>
+            <button class="hollow button float-right" href="#">More</button>
+        </div>
+    </div>
+    <div class="column">
+        <div>
+            <h2>Events</h2>
+            <p><img src="http://placehold.it/400x370&text=Icon" alt="image of a planet called Pegasi B"></p>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam....</p>
+            <button class="hollow button float-right" href="#">More</button>
+        </div>
+    </div>
+    <div class="column">
+        <div>
+            <h2>Featured</h2>
+            <p><img src="http://placehold.it/400x370&text=Icon" alt="image of a planet called Pegasi B"></p>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam....</p>
+            <button class="hollow button float-right" href="#">More</button>
+        </div>
+    </div>
 </div>
 <!-- end of row three secondary main content -->
 <!-- row footer -->
-<div class="row">
+<!-- <div class="row">
     <div class="large-6 columns">footer left</div>
     <div class="large-6 columns">footer right</div>
-</div>
+</div> -->
 <!-- end of row footer -->
