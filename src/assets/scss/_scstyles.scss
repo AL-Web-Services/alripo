@@ -1,0 +1,467 @@
+//.testmystyle {
+//color:map-get($foundation-palette, primary);
+//}
+
+//colors and styles
+@mixin border-style($weight, $color){
+  border: $weight solid $color;
+}
+
+.light-border {@include border-style(1px, #e6e6e6);}
+
+
+$foundation-palette: (
+  primary: blue,
+  secondary: #666666,
+  success: #44d97a,
+  warning: #fdad2a,
+  alert: #ea5946,
+);
+
+$primary-color: blue;
+
+$label-background: $primary-color;
+$label-color: foreground($label-background);
+$label-font-size: 0.8rem;
+$label-padding: 0.33333rem 0.5rem;
+$label-radius: $global-radius;
+
+.label.alert {background: red none repeat scroll 0 0;}
+.label.warning {background: orange none repeat scroll 0 0;}
+
+//Vertical align mixin
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  transform: translateY(50%);
+}
+
+//Spacing between sections mixin
+@mixin custom-margin($margin) {
+  margin-top: $margin;
+  margin-bottom: $margin;
+}
+
+.custom-thumbnail {
+  @include thumbnail()
+  border-radius: 50%;
+}
+@media screen and (min-width: 1024px) {.text-align {@include vertical-align();}}
+
+.custom-margin {@include custom-margin(3rem);}
+
+.over-container {position: relative;}
+.over-text {position: absolute; display: block; top: 0; left: 0; width: 100%; height: 100%;}
+.over-center {text-align: center; top: 35%;}
+
+//Material cards on news and events
+@import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
+
+@media only screen and (max-width: 768px) {.cards-styled .card {margin-bottom: 15px;}}
+.cards-styled .card {
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+  box-shadow: none;
+  //box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  color: #272727;
+  border: 1px solid #ccc;
+  //border-radius: 2px;
+  .title {
+    line-height: 3rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  .content {
+    padding: 1.3rem;
+    font-weight: 300;
+    border-radius: 0 0 2px 2px;
+  }
+  p {
+  margin: 0;
+  }
+  .action {
+    border-top: 1px solid rgba(160, 160, 160, 0.2);
+    padding: 1.3rem;
+  }
+  a {
+    color: #ffab40;
+    margin-right: 1.3rem;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .image {
+    position: relative;
+    .title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 1.3rem;
+      color: #fff;
+    }
+    img {
+      border-radius: 2px 2px 0 0;
+    }
+  }
+}
+//News and events hero
+
+.hero {
+  background: url('http://placehold.it/1200x400') no-repeat center center;
+  background-color: grey;
+  background-size: cover;
+  height: 50vh;
+  &:before {
+    content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-image: linear-gradient(to bottom right,#ccc,#000);
+		opacity: .8;
+  }
+  .intro {
+    padding: 3rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+  }
+  h1 {
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    letter-spacing: -0.025em;
+    font-weight: 300;
+    text-align: center;
+  }
+  p {
+    color: #fff;
+    line-height: 1.75em;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .tech-img {
+    background: url('http://placehold.it/290x290') no-repeat center center;
+    background-size: cover;
+    height: 9rem;
+    width: 9rem;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+  @media only screen and (min-width: 40.063em) {
+    .tech-img {
+      height: 18rem;
+      width: 18rem;
+    }
+    h1 {
+      padding-top: 4.5rem;
+      text-align: right;
+      font-size: 2.5rem;
+    }
+    p {
+      text-align: right;
+    }
+  }
+}
+.hero-wrapper {position: relative;}
+// Events
+.events-all hr {margin-top: 5px; margin-bottom: 5px;}
+//Events small
+.events-small .event-month {padding: 0.5rem 1rem;}
+.events-small .event-day {padding: 0 1rem; font-size: 1.5em;}
+.events-small .event {padding: 0.8rem 0 0;}
+
+//Panels
+.header.panel {
+  margin: 1rem auto;
+  border: 1px solid #ccc;
+  //background: #fff;
+
+  p {
+    font: 1rem "Avenir Next";
+    padding: 1rem 2rem 2rem 2rem;
+    margin-top: -1.25rem;
+
+    span {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 75%;
+      font-weight: bold;
+    }
+  }
+
+  .sign {
+    background:#ccc;
+    width: 150px;
+    height: 2.4rem;
+    border: 1px solid #ccc;
+    position: relative;
+    top: -1.3rem;
+    margin: auto;
+
+    &:hover {background-color: white;}
+
+    h1 {
+      text-transform: uppercase;
+      font: bolder 0.875rem "Avenir Next";
+      letter-spacing: 3px;
+      color: #666;
+      font-size: 70%;
+      text-align: center;
+      line-height: 2rem;
+    }
+  }
+}
+//Info card with corner label
+// flat colors
+
+$primary: #ccc;
+$secondary: #ADB2BD;
+$info: #89c4f4;
+$alert: #F22613;
+$success: #87D37C;
+$warning: #F89406;
+$bg: #fff;
+$font-color: #333;
+
+
+.callout-card {
+	background: $bg;
+  border: 1px solid #333;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin: 0 0 1rem;
+  overflow: hidden;
+
+  .card-label {
+	    border-color: transparent #333 transparent transparent;
+	    border-color: rgba(255,255,255,0) #333 rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+
+  &.primary {
+    border-color: $primary;
+
+    .card-label {
+	    border-color: transparent $primary transparent transparent;
+	    border-color: rgba(255,255,255,0) $primary rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+  }
+  &.secondary {
+    border-color: $secondary;
+
+    .card-label {
+	    border-color: transparent $secondary transparent transparent;
+	    border-color: rgba(255,255,255,0) $secondary rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+  }
+  &.info {
+    border-color: $info;
+
+    .card-label {
+	    border-color: transparent $info transparent transparent;
+	    border-color: rgba(255,255,255,0) $info rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+  }
+  &.alert {
+    border-color: $alert;
+
+    .card-label {
+	    border-color: transparent $alert transparent transparent;
+	    border-color: rgba(255,255,255,0) $alert rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+  }
+  &.success {
+    border-color: $success;
+
+    .card-label {
+	    border-color: transparent $success transparent transparent;
+	    border-color: rgba(255,255,255,0) $success rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+  }
+  &.warning {
+    border-color: $warning;
+
+    .card-label {
+	    border-color: transparent $warning transparent transparent;
+	    border-color: rgba(255,255,255,0) $warning rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+  }
+
+  .card-label {
+    border-style: solid;
+    border-width: 0 70px 40px 0;
+    float:right;
+    height: 0px;
+    width: 0px;
+    transform:rotate(360deg);
+  }
+
+  .callout-card-content{
+	  padding: 0.5rem 1.5rem 0.875rem;
+  }
+
+  &.radius {
+    border-radius: 0.6rem;
+  }
+
+  .label-text {
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    position: relative;
+    right: -40px;
+    top: 2px;
+    white-space: nowrap;
+    transform: rotate(30deg);
+  }
+}
+//Clear default tabs styles
+
+.tabs-clear-styles .tabs, .tabs-clear-styles .tabs-content {border: none;}
+.tabs-clear-styles .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {float: left;}
+
+//Clear form select styles
+.clear-form-st select {background-color: transparent; border: 0 solid white; margin: 0;}
+
+//Panel hover effect
+.panel-wrapper a:hover {background-color: #ccc;}
+
+//media queries show, hide for prototyping purposes
+@media only screen and (min-width: 768px) {.table-sm {display: none;}.table-bg {display: block;}}
+@media only screen and (max-width: 767px) {.table-sm {display: block;}.table-bg {display: none;}}
+
+//accordion
+.accordion-navigation {
+  >a:after {
+    content: "↡";
+    padding-left: 5px;
+    float: right;
+    font-size: 20px;
+  }
+  &.active > a:after {
+    content: "↟";
+  }
+}
+// dropdown clear styles
+
+.dropdown-clear .button.dropdown::after {margin-left: 0; top: 0; border-color: black transparent transparent;}
+.dropdown-clear .button {padding: 0; margin: 35px 0 0; background-color: #fff; float: right;}
+
+// testimonial styling
+.quote {
+  background: #ebf3f5;
+  padding: 15px 20px 5px 15px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  &:after {
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 20px 18px 0 18px;
+    border-color: #ebf3f5 transparent transparent transparent;
+    position: relative;
+    top: 37px;
+    left: 20px;
+  }
+}
+
+.student {
+  margin-left: 25px;
+  margin-bottom: 40px;
+  .photo{
+    background-color: #ccc;
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-right: 10px;
+  }
+  p{
+    position: relative;
+    top: 5px;
+    text-transform: uppercase;
+    &:nth-child(2) {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+    &:nth-child(3) {
+      font-size: 14px;
+      color: #777;
+    }
+  }
+}
+//timeline
+@media only screen and (min-width: 1024px){.ball {display: block; width: 40px; height: 40px; background-color: #666; border-radius: 50%; margin-left: auto; margin-right: auto; margin-bottom: -10px; width: 20px; height: 20px;} .timeline .timeline-line {border-bottom: 2px solid #666;}
+.timeline .timeline-box {
+  &:after {
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 20px 18px 0 18px;
+    border-color: #ccc transparent transparent transparent;
+    position: relative;
+    top: 37px;
+    left: 110px;
+  }
+}
+}
+.timeline .timeline-box {width: 300px; /*margin-left: auto; margin-right: auto; background-color: #f8f8f8; padding: 15px;*/}
+.timeline .timeline-box {
+  margin-left: auto;
+  margin-right: auto;
+  background: #ccc;
+  padding: 15px 20px 5px 15px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+// style link to all
+@media only screen and (min-width: 1024px) {.link-to-all {text-align: right; padding-top: 20px;}}
+@media only screen and (max-width: 1023px) {.link-to-all {text-align: center; padding-top: 10px;}}
+// simulate carousel
+@media only screen and (min-width: 1024px){
+  .cards-styled {position: relative;}
+  .control-left {
+    transform: rotate(90deg);
+    &:after {
+      content: '';
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 20px 18px 0 18px;
+      border-color: #ccc transparent transparent transparent;
+      position: absolute;
+      top: 360px;
+      left: 860px;
+      cursor: pointer;
+    }
+  }
+  .control-right {
+    transform: rotate(-90deg);
+    &:after {
+      content: '';
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 20px 18px 0 18px;
+      border-color: #ccc transparent transparent transparent;
+      position: absolute;
+      top: 600px;
+      left: 300px;
+      cursor: pointer;
+    }
+  }
+}
+//sticky styling
+//.sticky-custom {right: -150px; top: 300px; width: 100px;}
+.sticky-custom {width: 100px; margin-left: -100px; margin-top: 100px !important;}
+.sticky-custom i {font-size: 3em; float: left; font-size: 2em; width: 100%;}
+
+// thumbnail label
+.thumb-label {width: 100%; background-color: #666; margin-top: -31px;}
+p.thumb-label {color: white; font-size: 0.7em; text-align: center; font-weight: bold;}
