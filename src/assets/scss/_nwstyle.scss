@@ -6,9 +6,9 @@
 $circle:50%;
 $small-font-size:80%;
 $text-position:center;
-//$alphotobg:"/assets/img/deco/campus.jpg";
+$alphotobg:"/assets/img/deco/campus.jpg";
 
-$alphotobg:"http://placehold.it/1200x450";
+//$alphotobg:"http://placehold.it/1200x450";
 
 /////////////////////////////////////////////////
 //top flydown menu style                       //
@@ -42,9 +42,10 @@ filter: grayscale(100%);
 .hero {
   background:url($alphotobg) no-repeat center center;
   background-size: cover;
-  height: 30vh;
+  //height: 50vh;
+  max-height:400px;
   margin-bottom: 3rem;
-  padding-top:3rem;
+  padding-top:1rem;
 }
 /////////////////////////////////////////////////
 //Landing                                      //
