@@ -363,6 +363,58 @@ These buttons are used for less important, secondary actions on a page.
 
 
 
+# Research Tools
+
+---
+
+```html_example
+<div class="row">
+    <div class="columns">
+        <h2>Research Tools</h2>
+        <hr />
+        <div class="media-object stack-for-small">
+            <div class="media-object-section">
+                <img class="custom-thumbnail" src="http://placehold.it/50">
+            </div>
+            <div class="media-object-section">
+                <h3>Databases list</h3>
+                <p>Search databases for online, academic, vetted, or peer-reviewed research material. <a href="#">How to choose a database?</a></p>
+            </div>
+        </div>
+        <div class="media-object stack-for-small">
+            <div class="media-object-section">
+                <img class="custom-thumbnail" src="http://placehold.it/50">
+            </div>
+            <div class="media-object-section">
+                <h3>Skyline Catalog</h3>
+                <p>Find books, ebooks, movies, music, government documents, and more from the library catalog. <a href="#">How to find books?</a></p>
+            </div>
+        </div>
+        <div class="media-object stack-for-small">
+            <div class="media-object-section">
+                <img class="custom-thumbnail" src="http://placehold.it/50" alt="images" />
+            </div>
+            <div class="media-object-section">
+                <h3>Journal List</h3>
+                <p>Locate print and electronic journals, magazines, newspapers, and other periodicals. <a href="#">Understanding Periodicals</a></p>
+            </div>
+        </div>
+        <div class="media-object stack-for-small">
+            <div class="media-object-section">
+                <img class="custom-thumbnail success" src="http://placehold.it/50">
+            </div>
+            <div class="media-object-section">
+                <h3>Course Reserves</h3>
+                <p>Find reserved materials by course or instructor. <a href="#">How to find Course Reserves?</a></p>
+            </div>
+        </div>
+        
+        <span class="float-right"><a href="#">More >></a>
+    </div>
+
+```
+
+
 
 # Typography
 
@@ -407,7 +459,6 @@ These buttons are used for less important, secondary actions on a page.
         <li><a href="#" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
 </ul>
 ```
-
 
 
 
