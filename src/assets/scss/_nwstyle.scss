@@ -69,6 +69,9 @@ $light-bg:#F2F2F2;
 .textposition {
   text-align: $text-position;
 }
+.titlepad{
+  padding-bottom: 1rem;
+}
 /////////////////////////////////////////////////
 //round corner for button                      //
 /////////////////////////////////////////////////
@@ -244,12 +247,6 @@ $img-hover-global-radius: 4px;
 
 
 
-
-
-
-
-
-
 .overlay-slide-in-left {
   
   img {
@@ -385,4 +382,19 @@ $img-hover-global-radius: 4px;
 } 
 
 
-
+/////////////////////////////////////////////////
+//Hours Style  //
+/////////////////////////////////////////////////
+.period-style{
+  font-size: 1.2em; 
+  margin-bottom: 0;
+}
+.tr-even-width{
+  width:25%;
+}
+.showhour{
+   @include breakpoint(small only){
+    display:none;
+  }
+ display: visible;
+}
