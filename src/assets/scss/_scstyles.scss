@@ -465,3 +465,111 @@ $font-color: #333;
 // thumbnail label
 .thumb-label {width: 100%; background-color: #666; margin-top: -31px;}
 p.thumb-label {color: white; font-size: 0.7em; text-align: center; font-weight: bold;}
+
+//slide up dive on hover - news & events
+//large
+@media only screen and (min-width: 1200px){
+  .block-wrapper{
+    height: 440px;
+    width: auto;
+    overflow: hidden;
+  }
+  .overlay {height:890px;}
+  .block-wrapper .overlay {
+      transform: translate3d(0px, 0px, 0px);
+      transition: transform .2s ease-in-out;
+  }
+  .block-wrapper .overlay:hover {
+      transform: translate3d(0px, -445px, 0px);
+  }
+  .overlay-text {position:absolute;top:330px; left: 0;}
+}
+@media only screen and (max-width: 1199px){
+  .overlay-text h1.over-cc {display:none;}
+}
+//small
+@media only screen and (min-width: 1200px){
+.block-wrapper-sm{
+  height: 210px;
+  width: auto;
+  overflow: hidden;
+}
+.overlay-sm {height:440px;position: relative;}
+.block-wrapper-sm .overlay-sm {
+    transform: translate3d(0px, 0px, 0px);
+    transition: transform .2s ease-in-out;
+}
+.block-wrapper-sm .overlay-sm:hover {
+    transform: translate3d(0px, -210px, 0px);
+}
+.overlay-text-sm {position:absolute; top:170px; left: 0;}
+}
+@media only screen and (max-width: 1199px){
+.overlay-text-sm h1.over-cc {display:none;}
+}
+
+
+//footer
+.footer-proto {
+  background-color: #ccc;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1rem;
+
+  .social a {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    line-height: 2rem;
+    margin: 0 3px 0 0;
+  }
+
+  .copywrite {
+    color: #333;
+    font-size: 0.875rem;
+    margin: 1rem 0 1rem 0;
+  }
+
+  .footer-links a {
+    list-style: none;
+    font-weight: normal;
+    color: #333;
+    padding: 3rem 0 2rem;
+    margin: 0;
+    font-size: 0.875rem;
+
+    &::after {
+      content: "•";
+      padding: 0 0.2rem 0 0.4rem;
+    }
+
+    &:last-child::after {
+      content: "";
+      padding: 0 0.4rem 0 0.8rem;
+    }
+  }
+
+  @media only screen and (min-width: 40.063em) {
+    padding: 4rem;
+
+    p {
+      text-align: left;
+    }
+
+    .social {
+      text-align: left;
+      margin: 0;
+    }
+
+  }
+}
+
+.logo {
+  color: #333;
+  font-size: 1.5rem;
+}
