@@ -18,8 +18,57 @@
             <!-- Start My Z6full site layout header -->
             <header>
                 <nav>
-                    <!-- Start Top Bar -->
-                    <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+
+                    <!-- new top menu behavior -->
+                    <div class="title-bar hide-for-medium" data-responsive-toggle="example-menu">
+                        <button class="menu-icon" type="button" data-toggle="offCanvasLeft"></button>
+                        <div class="title-bar-title">Menu</div>
+                    </div>
+                    <div class="row show-for-medium">
+                        <div class="top-bar-left">
+                            <ul class="dropdown menu" data-dropdown-menu>
+                                <li class="menu-text"><a href="/index.html"><h1><small>ALWSRIPO</small></h1></a></li>
+                                
+                                <li class="has-submenu"><a href="#">Landing</a>                                       
+                                    <ul class="menu">
+                                    <li><a href="/almockups/landing1.html">Concept 1</a></li>
+                                    <li><a href="/almockups/landingcard.html">Concept 2</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Databases</a>
+                                    <ul class="menu">
+                                    <li><a href="/almockups/dblanding.html">DB Landing 1</a></li>
+                                    <li><a href="/almockups/dbresults.html">DB Results 1</a></li>
+                                    <li><a href="/almockups/dbdetail.html">DB Detail 1</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/almockups/allhours.html">All Hours</a></li>
+                                <li><a href="#">Marketing</a>
+                                    <ul class="menu">
+                                    <li><a href="#">News & Events Home</a></li>
+                                    <li><a href="#">Featured</a></li>
+                                    <li><a href="#">...</a></li>
+                                    </ul>
+                                </li>                                                                                 
+                            </ul>
+                             <!--    <div class="input-group">
+                                    <input class="input-group-field" type="text" placeholder="Search this site" id="search_string_All" name="q">
+                                    <span class="input-group-label"><i class="fi-magnifying-glass"></i></span>
+                                </div> -->
+                        </div>
+                      
+                        <div class="top-bar-right">
+                                                   
+                            <div class="columns large-2">
+                            <button class="button" type="button" data-toggle="flymenu">Sitemap</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- end of new top menu behavior -->
+
+                    <!-- Original Start Top Bar -->
+                    <!-- <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
                         <button class="menu-icon" type="button" data-toggle></button>
                         <div class="title-bar-title">Menu</div>
                     </div>
@@ -53,7 +102,7 @@
                                             </ul>
                                             </li>                                       
                                             <li><a href="/almockups/allhours.html">All Hours</a></li>
-                                            <!-- add more mockups html pages here -->
+                                            
                                           </ul>                                  
                                     </li>
                                     <li class="has-submenu">
@@ -72,8 +121,76 @@
                             </div>
                         
                         </div>
-                    </div>
+                    </div> -->
                     <!-- End Top Bar -->
+                    <!--row hide + flydown -->
+                    <div class="row hide-first" id="flymenu" data-toggler data-animate="fade-in fade-out" data-closable>
+                       <button class="close-button" type="button" aria-label="Dismiss alert" data-close>
+                            <span aria-hidden="true">&times;</span>
+                            </button>  
+                     <div class="row columns">
+                            <div class="input-group">
+                                <input class="input-group-field" type="text" placeholder="Search this site" id="search_string_All" name="q">
+                                <span class="input-group-label"><i class="fi-magnifying-glass"></i></span>
+                            </div>
+
+
+                        </div>
+                        <div class="columns large-3 medium-6 small-12">
+                            <span><strong>Group 1</strong></span>
+                            <ul class="sitemapmenu vertical">
+                                <li><a href="#">Sub Menu Item</a></li>
+                                <li><a href="#">Sub Menu Item</a></li>
+                                <li><a href="#">Sub Menu Item</a></li>
+                                <li><a href="#">...</a></li>
+                            </ul>
+                        </div>
+                        <div class="columns large-3 medium-6 small-12">
+                            <span><strong>Group 2</strong></span>
+                            <ul class="sitemapmenu vertical">
+                               <li><a href="#">Sub Menu Item</a></li>
+                                <li><a href="#">Sub Menu Item</a></li>
+                                <li><a href="#">Sub Menu Item</a></li>
+                                <li><a href="#">...</a></li>
+                            </ul>
+                        </div>
+                        <div class="columns large-3 medium-6 small-12">
+                            <span><strong>Group 3</strong></span>
+                            <ul class="sitemapmenu vertical">
+                                <li><a href="#">Sub Menu Item</a></li>
+                                <li><a href="#">Sub Menu Item</a></li>
+                                <li><a href="#">Sub Menu Item</a></li>
+                                <li><a href="#">...</a></li>
+                            </ul>
+                        </div>
+                        <div class="columns large-3 medium-6 small-12">
+                            <span><strong>Group 5</strong></span>
+                            <ul class="sitemapmenu vertical">
+                                <li><a href="#">Sub Menu Item</a></li>
+                                <li><a href="#">Sub Menu Item</a></li>
+                                <li><a href="#">Sub Menu Item</a></li>
+                                <li><a href="#">...</a></li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                    <!--end of hide + flydown menu-->
+                    <!-- my sidebar content -->
+                    <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
+                        <button class="close-button" aria-label="Close menu" type="button" data-close>
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="row">
+                            <div class="small-12 small-centered columns">
+                                <ul class="vertical menu">
+                                    <li><a href="http://library.auraria.edu" target="_blank">AL Home</a></li>
+                                    <li><a href="/almockups/nav.html" target="_blank">Global Navigation</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of my sidebar content -->
                 </nav>
             </header>
             <!-- End My Z6full site layout header -->
