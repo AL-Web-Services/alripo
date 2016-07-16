@@ -10,7 +10,7 @@
 .light-border {@include border-style(1px, #e6e6e6);}
 
 
-$foundation-palette: (
+/*$foundation-palette: (
   primary: blue,
   secondary: #666666,
   success: #44d97a,
@@ -24,7 +24,7 @@ $label-background: $primary-color;
 $label-color: foreground($label-background);
 $label-font-size: 0.8rem;
 $label-padding: 0.33333rem 0.5rem;
-$label-radius: $global-radius;
+$label-radius: $global-radius;*/
 
 .label.alert {background: red none repeat scroll 0 0;}
 .label.warning {background: orange none repeat scroll 0 0;}
@@ -105,7 +105,7 @@ $label-radius: $global-radius;
 .info-bl .info-bl-callout {padding: 30px 20px 20px; border: 1px solid #ccc; margin-top:40px;margin-bottom: 10px;}
 .info-bl .info-bl-list {padding: 30px 20px 20px;margin-bottom: 10px;}
 //Material cards on news and events
-@import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
+//@import url(fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
 
 @media only screen and (max-width: 768px) {.cards-styled .card {margin-bottom: 15px;}}
 .cards-styled .card {
@@ -228,7 +228,8 @@ $label-radius: $global-radius;
 // Custom event
 .custom-post {padding-top:20px;}
 .custom-post .event-day {font-size:0.9em;padding:2rem;}
-
+.styled-event .event-date {border-bottom:1px solid #666;font-size: 0.7em;font-weight: bold;}
+.events-small img {margin-top: 5px;}
 //Panels
 .header.panel {
   margin: 1rem auto;
@@ -456,7 +457,10 @@ $font-color: #333;
   }
 }
 //timeline
-@media only screen and (min-width: 1024px){.ball {display: block; width: 40px; height: 40px; background-color: #666; border-radius: 50%; margin-left: auto; margin-right: auto; margin-bottom: -10px; width: 20px; height: 20px;} .timeline .timeline-line {border-bottom: 2px solid #666;}
+@media only screen and (min-width: 1024px){
+  .ball {display: block; width: 40px; height: 40px; background-color: #666; border-radius: 50%; margin-left: auto; margin-right: auto; margin-bottom: -10px; width: 20px; height: 20px;}
+  .timeline .timeline-line {border-bottom: 2px solid #666;}
+
 .timeline .timeline-box {
   &:after {
     content: '';
@@ -520,6 +524,7 @@ $font-color: #333;
 //style carousels
 .orbit-custom .orbit-previous,.orbit-custom .orbit-next {color: #333;}
 .orbit-previous, .orbit-next {background-color:#ccc;opacity:0.5;}
+.orbit-bullets button {width:0.8rem;height:0.8rem;}
 
 //sticky styling
 //.sticky-custom {right: -150px; top: 300px; width: 100px;}
@@ -533,26 +538,35 @@ p.thumb-label {color: white; font-size: 0.7em; text-align: center; font-weight: 
 //slide up dive on hover - news & events
 //large
 @media only screen and (min-width: 1200px){
-  .block-wrapper{
-    height: 440px;
-    width: auto;
-    overflow: hidden;
-  }
-  .overlay {height:890px;}
-  .block-wrapper .overlay {
-      transform: translate3d(0px, 0px, 0px);
-      transition: transform .2s ease-in-out;
-  }
-  .block-wrapper .overlay:hover {
-      transform: translate3d(0px, -445px, 0px);
-  }
-  .overlay-text {position:absolute;top:330px; left: 0;}
+
 }
-@media only screen and (max-width: 1199px){
-  .overlay-text h1.over-cc {display:none;}
+.block-wrapper {
+  position: relative;
+  max-height: 440px;
+  overflow: hidden;
+}
+.block-wrapper img {width:100%; height:auto;}
+.overlay-text, .overlay-text-sm {
+  min-height: 440px;
+  background:rgba(0,0,0, 0.5);
+  display: block;
+  position: absolute;
+  top: 73%;
+  width: 100%;
+  left:0;
+  transition: all .2s ease-in-out;
+  color: white;
+}
+.overlay-text-sm {
+  top: 76%;
+}
+.overlay-text-sm a {color:white;}
+.overlay-sm {padding:15px;}
+.block-wrapper:hover .overlay-text, .block-wrapper:hover .overlay-text-sm {
+  top:0;
 }
 //small
-@media only screen and (min-width: 1200px){
+/*@media only screen and (min-width: 1200px){
 .block-wrapper-sm{
   height: 210px;
   width: auto;
@@ -570,7 +584,7 @@ p.thumb-label {color: white; font-size: 0.7em; text-align: center; font-weight: 
 }
 @media only screen and (max-width: 1199px){
 .overlay-text-sm h1.over-cc {display:none;}
-}
+}*/
 //horizontal block overlay
 .info-block {height: 160px;width: auto;overflow: hidden; transition: all .2s ease-in-out;}
 .info-block:hover {
@@ -590,6 +604,7 @@ p.thumb-label {color: white; font-size: 0.7em; text-align: center; font-weight: 
 .social-menu p {margin-bottom:0;}
 .social-menu .menu > li:not(.menu-text) > a {padding: 0.2rem 0.9rem;}
 //footer
+
 .footer-proto {
   background-color: #ccc;
   text-align: center;
@@ -634,6 +649,7 @@ p.thumb-label {color: white; font-size: 0.7em; text-align: center; font-weight: 
     }
   }
 
+
   @media only screen and (min-width: 40.063em) {
     padding: 4rem;
 
@@ -646,7 +662,7 @@ p.thumb-label {color: white; font-size: 0.7em; text-align: center; font-weight: 
       margin: 0;
     }
 
-  }
+}
 }
 
 .logo {
