@@ -4,6 +4,7 @@
 @import 'foundation';
 @import 'motion-ui';
 
+<<<<<<< HEAD
 @include foundation-everything;
 //@include foundation-global-styles;
 //@include foundation-grid;
@@ -16,6 +17,17 @@
 
 // @include foundation-range-input;
 
+=======
+@include foundation-everything; // Very important if you want to include all of foundation css to your complied css
+
+// @include foundation-global-styles;
+// @include foundation-grid;
+// // @include foundation-flex-grid;
+// @include foundation-typography;
+// @include foundation-button;
+// @include foundation-forms;
+// // @include foundation-range-input;
+>>>>>>> 46f7644df6001d6e9efdfa6ee3ebb5f7c9cc0fd2
 // @include foundation-accordion;
 // @include foundation-accordion-menu;
 // @include foundation-badge;
@@ -35,10 +47,15 @@
 // @include foundation-orbit;
 // @include foundation-pagination;
 // @include foundation-progress-bar;
+<<<<<<< HEAD
 
 // @include foundation-progress-element;
 // @include foundation-meter-element;
 
+=======
+// // @include foundation-progress-element;
+// // @include foundation-meter-element;
+>>>>>>> 46f7644df6001d6e9efdfa6ee3ebb5f7c9cc0fd2
 // @include foundation-slider;
 // @include foundation-sticky;
 // @include foundation-reveal;
@@ -51,7 +68,10 @@
 // @include foundation-top-bar;
 // @include foundation-visibility-classes;
 // @include foundation-float-classes;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 46f7644df6001d6e9efdfa6ee3ebb5f7c9cc0fd2
 // @include foundation-flex-classes;
 
 //@include motion-ui-transitions;
