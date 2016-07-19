@@ -53,10 +53,19 @@ $label-radius: $global-radius;*/
   .m-b1b {margin-bottom:15px;}
   .m-b2 {margin-bottom:20px;}
   .m-b3 {margin-bottom:30px;}
+  //bottom margin
+  .m-b1-n {margin-bottom:-10px;}
+  .m-b1b-n {margin-bottom:-15px;}
+  .m-b2-n {margin-bottom:-20px;}
+  .m-b3-n {margin-bottom:-30px;}
   //top margin
   .m-t1 {margin-top:10px;}
   .m-t2 {margin-top:20px;}
   .m-t3 {margin-top:30px;}
+  //top margin
+  .m-t1-n {margin-top:-10px;}
+  .m-t2-n {margin-top:-20px;}
+  .m-t3-n {margin-top:-30px;}
   //all padding
   .p-ab {padding:15px;}
 
@@ -525,6 +534,7 @@ $font-color: #333;
 .orbit-custom .orbit-previous,.orbit-custom .orbit-next {color: #333;}
 .orbit-previous, .orbit-next {background-color:#ccc;opacity:0.5;}
 .orbit-bullets button {width:0.8rem;height:0.8rem;}
+.slideshow-box {padding: 30px 20px 40px; border: 1px solid #ccc; margin-top: 0;margin-bottom: 10px;}
 
 //sticky styling
 //.sticky-custom {right: -150px; top: 300px; width: 100px;}
@@ -537,8 +547,10 @@ p.thumb-label {color: white; font-size: 0.7em; text-align: center; font-weight: 
 
 //slide up dive on hover - news & events
 //large
-@media only screen and (min-width: 1200px){
-
+@media only screen and (max-width: 960px){
+  .block-wrapper {max-height:100% !important;overflow: visible !important;}
+  .overlay-text, .overlay-text-sm {position: relative !important; min-height: auto !important;margin-bottom:30px; top:0 !important;}
+  .header-box {border: 0 solid #666 !important;background-color: transparent !important;}
 }
 .block-wrapper {
   position: relative;
@@ -676,3 +688,6 @@ p.thumb-label {color: white; font-size: 0.7em; text-align: center; font-weight: 
 //label over image bottom right
 .label-wraper-br {position: relative;}
 .label-wraper-br .label {position: absolute; top:0; right:0;}
+
+//Media object custom style for mobile
+@media only screen and (max-width: 960px){.media-img img {width: 25% !important; float: left; margin-right: 10px; margin-bottom: 10px;}}
