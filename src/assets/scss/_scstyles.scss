@@ -566,7 +566,7 @@ p.thumb-label {color: white; font-size: 0.7em; text-align: center; font-weight: 
   top: 73%;
   width: 100%;
   left:0;
-  transition: all .2s ease-in-out;
+  transition: all .3s ease-in-out;
   color: white;
 }
 .overlay-text-sm {
@@ -576,6 +576,9 @@ p.thumb-label {color: white; font-size: 0.7em; text-align: center; font-weight: 
 .overlay-sm {padding:15px;}
 .block-wrapper:hover .overlay-text, .block-wrapper:hover .overlay-text-sm {
   top:0;
+}
+.block-wrapper:hover .overlay-text h1, .block-wrapper:hover .overlay-text-sm h1 {
+  font-size: 2em;
 }
 //small
 /*@media only screen and (min-width: 1200px){
