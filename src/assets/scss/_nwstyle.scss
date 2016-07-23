@@ -398,3 +398,27 @@ $img-hover-global-radius: 4px;
   }
  display: visible;
 }
+
+
+/////////////////////////////////////////////////
+//database design //
+/////////////////////////////////////////////////
+.accordionshow{
+   &::after{
+    content: 'Open All +';
+   }
+}
+.accordionhide{
+   &::after{
+    content: 'Close All -';
+   }
+}
+.morecontent{
+  span {
+    display: none;
+  }
+}
+.morelink {
+    display: block;
+}
+
