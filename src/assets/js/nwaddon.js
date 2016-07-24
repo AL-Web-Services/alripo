@@ -1,15 +1,47 @@
   
 $(document).ready(function() {
+    // $("#subgroup .accordion").foundation('down', $(".accordion .accordion-content"));
 
-
+    
     $("#btnOpen").click(function() {
-        $("#subgroup").foundation('toggle', $("#subgroup .accordion-content"));
-        if ($("#subgroup .accordion-content").parent().hasClass("is-active")) {
-            $("#btnOpen").removeClass("accordionshow").addClass("accordionhide");
-        } else {
-            $("#btnOpen").removeClass("accordionhide").addClass("accordionshow");
-        }
+        Foundation.Accordion.defaults.multiExpand = true;
+
+    
+        //if (!$("#subgroup .accordion .accordion-item").hasClass("is-active")) {
+     
+            $("#subgroup .accordion").foundation('down', $(".accordion .accordion-content"));
+            // $("#btnOpen").removeClass("accordionshow").addClass("accordionhide");   
+        // } else {
+        //     $("#subgroup .accordion").foundation('up', $(".accordion .accordion-content"));
+        //     // $("#btnOpen").removeClass("accordionhide").addClass("accordionshow");
+
+        //}
+ 
     });
+
+    $("#btnClose").click(function() {
+
+    
+        //if ($("#subgroup .accordion .accordion-item").hasClass("is-active")) {
+     
+            $("#subgroup .accordion").foundation('up', $(".accordion .accordion-content"));
+
+        //}
+ 
+    });
+
+    // $("#btnOpen").click(function() {
+    //     if (!$("#subgroup .accordion .accordion-item").hasClass("is-active")) {
+    //         $("#subgroup .accordion").foundation('down', $(".accordion .accordion-content"));
+    //         $("#btnOpen").removeClass("accordionshow").addClass("accordionhide");
+    //     }
+        // if ($("#subgroup .accordion .accordion-item").hasClass("is-active")) {
+        //     $("#btnOpen").removeClass("accordionshow").addClass("accordionhide");
+        // } else {
+        //     $("#btnOpen").removeClass("accordionhide").addClass("accordionshow");
+        // }
+   
+
 
 
     /////////////////////////////////////////////////

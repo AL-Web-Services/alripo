@@ -19,7 +19,7 @@
     <!--end of maindisplay-->
     <div class="large-3 small-12 large-offset-1 columns">
         <div class="card">
-            <ul class="menu vertical">
+            <ul class="menu vertical show-for-medium" >
                 <li><a href="#">Multi-Subject Databases</a></li>
                 <li><a href="#">Popular Databases</a></li>
                 <li><a href="#">Off Campus Access</a></li>
@@ -29,8 +29,9 @@
 </div>
 <!--end of search & a to z row-->
 <div class="row">
-    <div class="columns">
-        <h2>Browse Databases by title</h2>
+<hr />
+    <div class="large-12 columns">
+        <h2>Browse Databases by Title</h2>
         <div class="large-12">
             <a class="tiny button" href="/almockups/dbresults.html">A</a>
             <a class="tiny button" href="#">B</a>
@@ -66,6 +67,7 @@
 <!--subject browse row-->
 <div class="row">
     <div class="large-12 columns">
+
         <h2>Browse by Subject</h2>
         <!--tab option-->
         <div class="row">
@@ -83,144 +85,149 @@
             <!--browse by subject option1 -->
             <div class="row callout tabs-panel is-active" id="panel1">
                 <div class="large-12 colunms text-right">
-                    <button id="btnOpen" type="button tiny" class="button accordionshow"></button>
-                </div>
+                    <button id="btnOpen" type="button" class="tiny button hollow accordionshow"></button>
+                    <button id="btnClose" type="button" class="tiny button hollow accordionhide"></button>
 
-                <div class="accordion" data-allow-all-closed="true" data-accordion data-multi-expand="true" id="subgroup">
-                    <div class="accordion-item large-6 columns" data-accordion-item>
-                        <a href="#" class="accordion-title"><h3>Arts and Humanities</h3></a>
-                        <div class="accordion-content" data-tab-content>
-                            <div class="row columns">
-                                <ul>
-                                    <li><a href="/almockups/dbresults.html">Art and Architecture</a></li>
-                                    <li><a href="#">History</a></li>
-                                    <li><a href="#">History: Primary Sources</a></li>
-                                    <li><a href="#">Linguistics, Language and Literature</a></li>
-                                    <li><a href="#">Music</a></li>
-                                    <li><a href="#">Philosophy and Religion</a></li>
-                                    <li><a href="#">Theater, Film and Television</a></li>
-                                </ul>
-                                <p class="float-right"><a href="/almockups/dbresults.html">See All >></a></p>
+                </div>
+                <div id="subgroup">
+                    <div class="accordion large-6 columns" data-allow-all-closed="true" data-accordion data-multi-expand="true">
+                        <div class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title"><h3>Arts and Humanities</h3></a>
+                            <div class="accordion-content" data-tab-content>
+                                <div class="row columns">
+                                    <ul>
+                                        <li><a href="/almockups/dbresults.html">Art and Architecture</a></li>
+                                        <li><a href="#">History</a></li>
+                                        <li><a href="#">History: Primary Sources</a></li>
+                                        <li><a href="#">Linguistics, Language and Literature</a></li>
+                                        <li><a href="#">Music</a></li>
+                                        <li><a href="#">Philosophy and Religion</a></li>
+                                        <li><a href="#">Theater, Film and Television</a></li>
+                                    </ul>
+                                    <p class="float-right"><a href="/almockups/dbresults.html">See All >></a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title"><h3>General Interest and Reference</h3></a>
+                            <div class="accordion-content" data-tab-content>
+                                <div class="row columns">
+                                    <ul>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                    </ul>
+                                    <p class="float-right">See All >> </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title"><h3>Professional Studies</h3></a>
+                            <div class="accordion-content" data-tab-content>
+                                <div class="row columns">
+                                    <ul>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                    </ul>
+                                    <p class="float-right">See All >> </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title"><h3>Science and Technology</h3></a>
+                            <div class="accordion-content" data-tab-content>
+                                <div class="row columns">
+                                    <ul>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                    </ul>
+                                    <p class="float-right">See All >> </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item large-6 columns" data-accordion-item>
-                        <a href="#" class="accordion-title"><h3>Subject Leve1 1</h3></a>
-                        <div class="accordion-content" data-tab-content>
-                            <div class="row columns">
-                                <ul>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                </ul>
-                                <p class="float-right">See All >> </p>
+                    <!--end of left grid-->
+                    <div class="accordion large-6 columns" data-allow-all-closed="true" data-accordion data-multi-expand="true">
+                        <div class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title"><h3>Social Sciences</h3></a>
+                            <div class="accordion-content" data-tab-content>
+                                <div class="row columns">
+                                    <ul>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                    </ul>
+                                    <p class="float-right">See All >> </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion-item large-6 columns" data-accordion-item>
-                        <a href="#" class="accordion-title"><h3>Subject Leve1 1</h3></a>
-                        <div class="accordion-content" data-tab-content>
-                            <div class="row columns">
-                                <ul>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                </ul>
-                                <p class="float-right">See All >> </p>
+                        <div class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title"><h3>Subject Leve1 1</h3></a>
+                            <div class="accordion-content" data-tab-content>
+                                <div class="row columns">
+                                    <ul>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                    </ul>
+                                    <p class="float-right">See All >> </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion-item large-6 columns" data-accordion-item>
-                        <a href="#" class="accordion-title"><h3>Subject Leve1 1</h3></a>
-                        <div class="accordion-content" data-tab-content>
-                            <div class="row columns">
-                                <ul>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                </ul>
-                                <p class="float-right">See All >> </p>
+                        <div class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title"><h3>Subject Leve1 1</h3></a>
+                            <div class="accordion-content" data-tab-content>
+                                <div class="row columns">
+                                    <ul>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                        <li><a href="#">Subject Level 2</a></li>
+                                    </ul>
+                                    <p class="float-right">See All >> </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion-item large-6 columns" data-accordion-item>
-                        <a href="#" class="accordion-title"><h3>Subject Leve1 1</h3></a>
-                        <div class="accordion-content" data-tab-content>
-                            <div class="row columns">
-                                <ul>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                </ul>
-                                <p class="float-right">See All >> </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item large-6 columns" data-accordion-item>
-                        <a href="#" class="accordion-title"><h3>Subject Leve1 1</h3></a>
-                        <div class="accordion-content" data-tab-content>
-                            <div class="row columns">
-                                <ul>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                </ul>
-                                <p class="float-right">See All >> </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item large-6 columns" data-accordion-item>
-                        <a href="#" class="accordion-title"><h3>Subject Leve1 1</h3></a>
-                        <div class="accordion-content" data-tab-content>
-                            <div class="row columns">
-                                <ul>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                    <li><a href="#">Subject Level 2</a></li>
-                                </ul>
-                                <p class="float-right">See All >> </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item large-6 columns" data-accordion-item>
-                        <a href="#" class="accordion-title"><h3>Social Sciences</h3></a>
-                        <div class="accordion-content" data-tab-content>
+                        <div class="accordion-item" data-accordion-item>
+                            <a href="#" class="accordion-title"><h3>Social Sciences</h3></a>
+                            <div class="accordion-content" data-tab-content>
                                 <ul>
                                     <li><a href="#">Anthropology and Archaeology</a></li>
                                     <li><a href="#">Communication Studies</a></li>
@@ -236,260 +243,276 @@
                                     <li><a href="#">Women’s Studies</a></li>
                                 </ul>
                                 <p class="float-right">See All >> </p>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--end of option 1-->
-            <!--option2 -->
-            <div class="row callout tabs-panel" id="panel2">
-                <div class="row collapse">
-                    <div class="small-4 medium-3 columns">
-                        <ul class="tabs vertical" id="example-vert-tabs" data-tabs>
-                            <li class="tabs-title is-active"><a href="#panel1v" aria-selected="true"><h3>Arts</h3></a></li>
-                            <li class="tabs-title"><a href="#panel2v"><h3>Business</h3></a></li>
-                            <li class="tabs-title"><a href="#panel3v"><h3>Subject Lev1</h3></a></li>
-                            <li class="tabs-title"><a href="#panel4v"><h3>Subject Lev1</h3></a></li>
-                            <li class="tabs-title"><a href="#panel5v"><h3>Subject Lev1</h3></a></li>
-                            <li class="tabs-title"><a href="#panel6v"><h3>Subject Lev1</h3></a></li>
-                            <li class="tabs-title"><a href="#panel7v"><h3>Subject Lev1</h3></a></li>
-                            <li class="tabs-title"><a href="#panel8v"><h3>Subject Lev1</h3></a></li>
-                            <li class="tabs-title"><a href="#panel9v"><h3>Subject Lev1</h3></a></li>
-                            <li class="tabs-title"><a href="#panel10v"><h3>Subject Lev1</h3></a></li>
-                        </ul>
-                    </div>
-                    <div class="small-8 medium-9 columns">
-                        <div class="tabs-content vertical" data-tabs-content="example-vert-tabs">
-                            <div class="tabs-panel is-active" id="panel1v">
-                                <ul>
-                                    <li><a href="#">Art and Architecture</a></li>
-                                    <li><a href="#">History</a></li>
-                                    <li><a href="#">History: Primary Sources</a></li>
-                                    <li><a href="#">Linguistics, Language and Literature</a></li>
-                                    <li><a href="#">Music</a></li>
-                                    <li><a href="#">Philosophy and Religion</a></li>
-                                    <li><a href="#">Theater, Film and Television</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                </ul>
-                            </div>
-                            <div class="tabs-panel" id="panel2v">
-                                <ul>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                </ul>
-                            </div>
-                            <div class="tabs-panel" id="panel3v">
-                                <ul>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                </ul>
-                            </div>
-                            <div class="tabs-panel" id="panel4v">
-                                <ul>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                </ul>
-                            </div>
-                            <div class="tabs-panel" id="panel5v">
-                                <ul>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                </ul>
-                            </div>
-                            <div class="tabs-panel" id="panel6v">
-                                <img class="thumbnail" src="/assets/img/deco/al.jpg">
-                            </div>
-                            <div class="tabs-panel" id="panel7v">
-                                <ul>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                </ul>
-                            </div>
-                            <div class="tabs-panel" id="panel8v">
-                                <ul>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                </ul>
-                            </div>
-                            <div class="tabs-panel" id="panel9v">
-                                <ul>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                </ul>
-                            </div>
-                            <div class="tabs-panel" id="panel10v">
-                                <ul>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                    <li><a href="#">Level 2 subject</a></li>
-                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--end of option2 -->
-            <!--option3 -->
-            <div class="row callout tabs-panel" id="panel3">
-                <div class="large-6 columns">
-                    <h4><a href="/almockups/dbresults.html">General Interest and Reference</a></h4>
-                    <ul>
-                        <li><a href="/almockups/dbresults.html">Biographies</a></li>
-                        <li><a href="#Dictionaries and Encyclopedias">Dictionaries and Encyclopedias</a></li>
-                        <li><a href="#Directories">Directories</a></li>
-                        <li><a href="#Images">Images</a></li>
-                        <li><a href="#Library and Publisher Catalogs">Library and Publisher Catalogs</a></li>
-                        <li><a href="#Newspapers, Magazines and Current Events">Newspapers, Magazines and Current Events</a></li>
-                        <li><a href="#Statistical Information">Statistical Information</a></li>
-                        <li><a href="#Streaming Video">Streaming Video</a></li>
-                    </ul>
-                    <h4><a href="#">Professional Studies</a></h4>
-                    <ul>
-                        <li><a href="#">Business</a></li>
-                        <li><a href="#">Criminal Justic</a></li>
-                        <li><a href="#">Health Administration</a></li>
-                        <li><a href="#">Hotel and Restaurant Management</a></li>
-                        <li><a href="#">Industrial Design</a></li>
-                        <li><a href="#">Law and Legislation</a></li>
-                        </a>
-                        </li>
-                        <li><a href="#">Public Administration and Affairs</a></li>
-                        <li><a href="#">Sport, Fitness and Physical Education</a></li>
-                        <li><a href="#">Transportation</a></li>
-                    </ul>
-                    <h4><a href="#Science and Technology">Science and Technology</a></h4>
-                    <ul>
-                        <li><a href="#Agriculture">Agriculture</a></li>
-                        <li><a href="#Biology">Biology</a></li>
-                        <li><a href="#Chemistry">Chemistry</a></li>
-                        <li><a href="#Computers and Information Science">Computers and Information Science</a></li>
-                        <li><a href="#Engineering">Engineering</a></li>
-                        <li><a href="#Environment and Natural Resources">Environment and Natural Resources</a></li>
-                        <li><a href="#Food and Nutrition">Food and Nutrition</a></li>
-                        <li><a href="#Geology">Geology</a></li>
-                        <li><a href="#Math and Statistics">Math and Statistics</a></li>
-                        <li><a href="#Medicine - Human and Veterinary">Medicine - Human and Veterinary</a></li>
-                        <li><a href="#Physics and Astronomy">Physics and Astronomy</a></li>
-                        <li><a href="#Textiles and Fashion Design">Textiles and Fashion Design</a></li>
+            <!--end of right grid-->
+        
+        <!--end of subgroup-->
+        <!--end of option 1-->
+        <!--option2 -->
+        <div class="row callout tabs-panel" id="panel2">
+            <div class="row collapse">
+                <div class="small-4 medium-3 columns">
+                    <ul class="tabs vertical" id="example-vert-tabs" data-tabs>
+                        <li class="tabs-title is-active"><a href="#panel1v" aria-selected="true"><h3>Arts</h3></a></li>
+                        <li class="tabs-title"><a href="#panel2v"><h3>Business</h3></a></li>
+                        <li class="tabs-title"><a href="#panel3v"><h3>Subject Lev1</h3></a></li>
+                        <li class="tabs-title"><a href="#panel4v"><h3>Subject Lev1</h3></a></li>
+                        <li class="tabs-title"><a href="#panel5v"><h3>Subject Lev1</h3></a></li>
+                        <li class="tabs-title"><a href="#panel6v"><h3>Subject Lev1</h3></a></li>
+                        <li class="tabs-title"><a href="#panel7v"><h3>Subject Lev1</h3></a></li>
+                        <li class="tabs-title"><a href="#panel8v"><h3>Subject Lev1</h3></a></li>
+                        <li class="tabs-title"><a href="#panel9v"><h3>Subject Lev1</h3></a></li>
+                        <li class="tabs-title"><a href="#panel10v"><h3>Subject Lev1</h3></a></li>
                     </ul>
                 </div>
-                <div class="large-6 columns">
-                    <h3><a href="#Arts and Humanities">Arts and Humanities</a></h3>
-                    <ul>
-                        <li><a href="#Art and Architecture">Art and Architecture</a></li>
-                        <li><a href="#History">History</a></li>
-                        <li><a href="#History: Primary Sources">History: Primary Sources</a></li>
-                        <li><a href="#Linguistics, Language and Literature">Linguistics, Language and Literature</a></li>
-                        <li><a href="#Music">Music</a></li>
-                        <li><a href="#Philosophy and Religion">Philosophy and Religion </a></li>
-                        <li><a href="#Theater, Film and Television">Theater, Film and Television</a></li>
-                    </ul>
-                    <h4><a href="#Social Sciences">Social Sciences</a></h4>
-                    <ul>
-                        <li><a href="#Anthropology">Anthropology</a></li>
-                        <li><a href="#Business and Management">Business and Management</a></li>
-                        <li><a href="#Communications">Communications</a></li>
-                        <li><a href="#Economics">Economics</a></li>
-                        <li><a href="#Education">Education</a></li>
-                        <li><a href="#Geography, Maps and Spatial Data">Geography, Maps and Spatial Data</a></li>
-                        <li><a href="#Government, Law and Public Policy">Government, Law and Public Policy</a></li>
-                        <li><a href="#Human Resources, Labor &amp; Employment">Human Resources, Labor &amp; Employment</a></li>
-                        <li><a href="#Library and Information Science">Library and Information Science</a></li>
-                        <li><a href="#Population and Demography">Population and Demography</a></li>
-                        <li><a href="#Psychology">Psychology</a></li>
-                        <li><a href="#Sociology and Rural Development">Sociology and Rural Development</a></li>
-                    </ul>
+                <div class="small-8 medium-9 columns">
+                    <div class="tabs-content vertical" data-tabs-content="example-vert-tabs">
+                        <div class="tabs-panel is-active" id="panel1v">
+                            <ul>
+                                <li><a href="#">Art and Architecture</a></li>
+                                <li><a href="#">History</a></li>
+                                <li><a href="#">History: Primary Sources</a></li>
+                                <li><a href="#">Linguistics, Language and Literature</a></li>
+                                <li><a href="#">Music</a></li>
+                                <li><a href="#">Philosophy and Religion</a></li>
+                                <li><a href="#">Theater, Film and Television</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                            </ul>
+                        </div>
+                        <div class="tabs-panel" id="panel2v">
+                            <ul>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                            </ul>
+                        </div>
+                        <div class="tabs-panel" id="panel3v">
+                            <ul>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                            </ul>
+                        </div>
+                        <div class="tabs-panel" id="panel4v">
+                            <ul>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                            </ul>
+                        </div>
+                        <div class="tabs-panel" id="panel5v">
+                            <ul>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                            </ul>
+                        </div>
+                        <div class="tabs-panel" id="panel6v">
+                            <img class="thumbnail" src="/assets/img/deco/al.jpg">
+                        </div>
+                        <div class="tabs-panel" id="panel7v">
+                            <ul>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                            </ul>
+                        </div>
+                        <div class="tabs-panel" id="panel8v">
+                            <ul>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                            </ul>
+                        </div>
+                        <div class="tabs-panel" id="panel9v">
+                            <ul>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                            </ul>
+                        </div>
+                        <div class="tabs-panel" id="panel10v">
+                            <ul>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                                <li><a href="#">Level 2 subject</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <!--end of tab content-->
+        <!--end of option2 -->
+        <!--option3 -->
+        <div class="row callout tabs-panel" id="panel3">
+            <div class="large-6 columns">
+                <h4><a href="/almockups/dbresults.html">General Interest and Reference</a></h4>
+                <ul>
+                    <li><a href="/almockups/dbresults.html">Biographies</a></li>
+                    <li><a href="#Dictionaries and Encyclopedias">Dictionaries and Encyclopedias</a></li>
+                    <li><a href="#Directories">Directories</a></li>
+                    <li><a href="#Images">Images</a></li>
+                    <li><a href="#Library and Publisher Catalogs">Library and Publisher Catalogs</a></li>
+                    <li><a href="#Newspapers, Magazines and Current Events">Newspapers, Magazines and Current Events</a></li>
+                    <li><a href="#Statistical Information">Statistical Information</a></li>
+                    <li><a href="#Streaming Video">Streaming Video</a></li>
+                </ul>
+                <h4><a href="#">Professional Studies</a></h4>
+                <ul>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Criminal Justic</a></li>
+                    <li><a href="#">Health Administration</a></li>
+                    <li><a href="#">Hotel and Restaurant Management</a></li>
+                    <li><a href="#">Industrial Design</a></li>
+                    <li><a href="#">Law and Legislation</a></li>
+                    </a>
+                    </li>
+                    <li><a href="#">Public Administration and Affairs</a></li>
+                    <li><a href="#">Sport, Fitness and Physical Education</a></li>
+                    <li><a href="#">Transportation</a></li>
+                </ul>
+                <h4><a href="#Science and Technology">Science and Technology</a></h4>
+                <ul>
+                    <li><a href="#Agriculture">Agriculture</a></li>
+                    <li><a href="#Biology">Biology</a></li>
+                    <li><a href="#Chemistry">Chemistry</a></li>
+                    <li><a href="#Computers and Information Science">Computers and Information Science</a></li>
+                    <li><a href="#Engineering">Engineering</a></li>
+                    <li><a href="#Environment and Natural Resources">Environment and Natural Resources</a></li>
+                    <li><a href="#Food and Nutrition">Food and Nutrition</a></li>
+                    <li><a href="#Geology">Geology</a></li>
+                    <li><a href="#Math and Statistics">Math and Statistics</a></li>
+                    <li><a href="#Medicine - Human and Veterinary">Medicine - Human and Veterinary</a></li>
+                    <li><a href="#Physics and Astronomy">Physics and Astronomy</a></li>
+                    <li><a href="#Textiles and Fashion Design">Textiles and Fashion Design</a></li>
+                </ul>
+            </div>
+            <div class="large-6 columns">
+                <h3><a href="#Arts and Humanities">Arts and Humanities</a></h3>
+                <ul>
+                    <li><a href="#Art and Architecture">Art and Architecture</a></li>
+                    <li><a href="#History">History</a></li>
+                    <li><a href="#History: Primary Sources">History: Primary Sources</a></li>
+                    <li><a href="#Linguistics, Language and Literature">Linguistics, Language and Literature</a></li>
+                    <li><a href="#Music">Music</a></li>
+                    <li><a href="#Philosophy and Religion">Philosophy and Religion </a></li>
+                    <li><a href="#Theater, Film and Television">Theater, Film and Television</a></li>
+                </ul>
+                <h4><a href="#Social Sciences">Social Sciences</a></h4>
+                <ul>
+                    <li><a href="#Anthropology">Anthropology</a></li>
+                    <li><a href="#Business and Management">Business and Management</a></li>
+                    <li><a href="#Communications">Communications</a></li>
+                    <li><a href="#Economics">Economics</a></li>
+                    <li><a href="#Education">Education</a></li>
+                    <li><a href="#Geography, Maps and Spatial Data">Geography, Maps and Spatial Data</a></li>
+                    <li><a href="#Government, Law and Public Policy">Government, Law and Public Policy</a></li>
+                    <li><a href="#Human Resources, Labor &amp; Employment">Human Resources, Labor &amp; Employment</a></li>
+                    <li><a href="#Library and Information Science">Library and Information Science</a></li>
+                    <li><a href="#Population and Demography">Population and Demography</a></li>
+                    <li><a href="#Psychology">Psychology</a></li>
+                    <li><a href="#Sociology and Rural Development">Sociology and Rural Development</a></li>
+                </ul>
+            </div>
+        </div>
+
     </div>
+    <!--end of tab content-->
 </div>
 <!--end subject browse row-->
+
+    <div class="columns small-12 show-for-small-only">
+        <div class="row columns">
+            <h2>More Options</h2>
+            <ul class="menu vertical" >
+                <li><a href="#">Multi-Subject Databases</a></li>
+                <li><a href="#">Popular Databases</a></li>
+                <li><a href="#">Off Campus Access</a></li>
+            </ul>
+        </div>
+    </div>
+     
+
