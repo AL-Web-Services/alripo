@@ -72,7 +72,7 @@
 }
 
 .custom-thumbnail {
-  @include thumbnail()
+  @include thumbnail;
   border-radius: 50%;
 }
 @media screen and (min-width: 1024px) {.text-align {@include vertical-align();}}
@@ -111,7 +111,8 @@
 .custom-post {padding-top:20px;}
 .custom-post .event-day {font-size:0.9em;padding:2rem;}
 .styled-event .event-date {border-bottom:1px solid #666;font-size: 0.7em;}
-.events-small img {margin-top: 5px;}
+.events-small img {margin-top: 5px; border-bottom: 4px solid #666;}
+.events-small img.styled-event-blk {border-bottom: 4px solid black;}
 
 //Panels
 .header.panel {
@@ -467,3 +468,12 @@ h3.fun-heading {margin-left: 5px;}
 .letter-styled {margin-top: 23px; padding-top: 5px; width:55px; height: 55px; background-color: #666; font-weight:bold; text-align: center; border-radius: 50%; font-size:  1.8em; color: white;}
 .letter-styled.light {background-color: #ccc;}
 @media only screen and (max-width: 768px){.letter-styled {margin-left:auto;margin-right: auto;}}
+
+//style category dots
+.category-btns {float: right;}
+.category-btns .icon-button span {width:15px; height:15px; background-color: #666; display: block; float: right; border-radius: 50%; margin-left: 3px;}
+.category-btns .icon-button span.gr1 {background-color: #666;}
+.category-btns .icon-button span.gr2 {background-color: #ccc;}
+.category-btns .icon-button span.gr3 {background-color: black;}
+.category-btns .icon-button span.gr4 {background-color: #eee;}
+.category-btns .icon-button span.gr5 {background-color: #333;}
