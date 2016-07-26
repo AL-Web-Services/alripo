@@ -1,7 +1,3 @@
-//.testmystyle {
-//color:map-get($foundation-palette, primary);
-//}
-
 //colors and styles
 @mixin border-style($weight, $color){
   border: $weight solid $color;
@@ -9,25 +5,58 @@
 
 .light-border {@include border-style(1px, #e6e6e6);}
 
+//helper typography classes for prototyping
+.size-xxxs {font-size:0.6em;}
+.size-xxs {font-size:0.8em;}
+.size-xs {font-size:0.9em;}
+.size-sm {font-size:1em;}
+.size-sm-a {font-size:1.4em;}
+.size-md {font-size:1.5em;}
+.size-lg {font-size:2em;}
+.size-xl {font-size:2.5em;}
+.size-giant {font-size:5em;}
+.justify-p {text-align: justify;}
+.bold-p {font-weight:bold;}
+.uppercase-p {text-transform:uppercase;}
+.line-h1 {line-height:1.2em;}
 
-$foundation-palette: (
-  primary: blue,
-  secondary: #666666,
-  success: #44d97a,
-  warning: #fdad2a,
-  alert: #ea5946,
-);
+//utility padding and margin
+@media only screen and (min-width: 768px){
+  //all margins
+  .m-0 {margin:0;}
+  .m-tb-3 {margin-top:30;margin-bottom:30px;}
+  //bottom margin
+  .m-b1 {margin-bottom:10px;}
+  .m-b1b {margin-bottom:15px;}
+  .m-b2 {margin-bottom:20px;}
+  .m-b3 {margin-bottom:30px;}
+  //bottom negative margin
+  .m-b1-n {margin-bottom:-10px;}
+  .m-b1b-n {margin-bottom:-15px;}
+  .m-b2-n {margin-bottom:-20px;}
+  .m-b3-n {margin-bottom:-30px;}
+  //top margin
+  .m-t1 {margin-top:10px;}
+  .m-t2 {margin-top:20px;}
+  .m-t3 {margin-top:30px;}
+  .m-t4 {margin-top:40px;}
+  //top negative margin
+  .m-t1-n {margin-top:-10px;}
+  .m-t2-n {margin-top:-20px;}
+  .m-t3-n {margin-top:-30px;}
+  //all padding
+  .p-ab {padding:15px;}
 
-$primary-color: blue;
+}
 
-$label-background: $primary-color;
-$label-color: foreground($label-background);
-$label-font-size: 0.8rem;
-$label-padding: 0.33333rem 0.5rem;
-$label-radius: $global-radius;
-
-.label.alert {background: red none repeat scroll 0 0;}
-.label.warning {background: orange none repeat scroll 0 0;}
+//dividers
+@media only screen and (min-width: 768px){
+  .divider-right {border-right:1px solid #ccc;}
+  .divider-right-thick {border-right:2px solid #666;}
+  .divider-left-thick {border-left: 2px solid #666;}
+}
+.divider-horizontal {border-bottom:1px solid #ccc;}
+.divider-horizontal:last-child {border-bottom:0px solid white;}
 
 //Vertical align mixin
 @mixin vertical-align($position: relative) {
@@ -49,131 +78,40 @@ $label-radius: $global-radius;
 @media screen and (min-width: 1024px) {.text-align {@include vertical-align();}}
 
 .custom-margin {@include custom-margin(3rem);}
+.custom-margin-top {margin-top:3rem;}
 
 .over-container {position: relative;}
 .over-text {position: absolute; display: block; top: 0; left: 0; width: 100%; height: 100%;}
 .over-center {text-align: center; top: 35%;}
 
-//Material cards on news and events
-@import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
+//featured cards row
+.cards-row .cards-headline{margin-bottom:-10px; margin-top: 10px;}
+.cards-row .card-item img {margin-bottom: -10px;}
+.cards-row .card-content {padding: 20px 10px 10px 20px; border: 1px solid #ccc; margin-top: 10px;}
+@media only screen and (max-width: 768px){.cards-row .card-content {margin-bottom: 20px;}}
+//
+.info-bl .info-bl-callout {padding: 30px 20px 20px; border: 1px solid #ccc; margin-top:40px;margin-bottom: 10px;}
+.info-bl .info-bl-list {padding: 30px 20px 20px;margin-bottom: 10px;}
+.info-bl .info-bl-callout.grey-callout {background-color: #ccc;}
+//Horizontal cards
+//.horizontal-cards img {float:left;}
+//@import url(fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
 
-@media only screen and (max-width: 768px) {.cards-styled .card {margin-bottom: 15px;}}
-.cards-styled .card {
-  font-family: 'Roboto', sans-serif;
-  overflow: hidden;
-  box-shadow: none;
-  //box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  color: #272727;
-  border: 1px solid #ccc;
-  //border-radius: 2px;
-  .title {
-    line-height: 3rem;
-    font-size: 1.5rem;
-    font-weight: 300;
-  }
-  .content {
-    padding: 1.3rem;
-    font-weight: 300;
-    border-radius: 0 0 2px 2px;
-  }
-  p {
-  margin: 0;
-  }
-  .action {
-    border-top: 1px solid rgba(160, 160, 160, 0.2);
-    padding: 1.3rem;
-  }
-  a {
-    color: #ffab40;
-    margin-right: 1.3rem;
-    transition: color 0.3s ease;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-  .image {
-    position: relative;
-    .title {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      padding: 1.3rem;
-      color: #fff;
-    }
-    img {
-      border-radius: 2px 2px 0 0;
-    }
-  }
-}
-//News and events hero
-
-.hero {
-  background: url('http://placehold.it/1200x400') no-repeat center center;
-  background-color: grey;
-  background-size: cover;
-  height: 50vh;
-  &:before {
-    content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		background-image: linear-gradient(to bottom right,#ccc,#000);
-		opacity: .8;
-  }
-  .intro {
-    padding: 3rem;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white;
-  }
-  h1 {
-    color: #fff;
-    font-size: 1.5rem;
-    line-height: 1.5em;
-    letter-spacing: -0.025em;
-    font-weight: 300;
-    text-align: center;
-  }
-  p {
-    color: #fff;
-    line-height: 1.75em;
-    font-weight: 200;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  .tech-img {
-    background: url('http://placehold.it/290x290') no-repeat center center;
-    background-size: cover;
-    height: 9rem;
-    width: 9rem;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto;
-  }
-  @media only screen and (min-width: 40.063em) {
-    .tech-img {
-      height: 18rem;
-      width: 18rem;
-    }
-    h1 {
-      padding-top: 4.5rem;
-      text-align: right;
-      font-size: 2.5rem;
-    }
-    p {
-      text-align: right;
-    }
-  }
-}
 .hero-wrapper {position: relative;}
-// Events
+// Events custom styling
 .events-all hr {margin-top: 5px; margin-bottom: 5px;}
-//Events small
 .events-small .event-month {padding: 0.5rem 1rem;}
 .events-small .event-day {padding: 0 1rem; font-size: 1.5em;}
 .events-small .event {padding: 0.8rem 0 0;}
+
+// Custom event
+.event-style-2 {display: block;}
+@media only screen and (min-width: 768px) {.event-style-2 button {float:right;}}
+@media only screen and (max-width: 767px) {.event-style-2 button {width:100%;}}
+.custom-post {padding-top:20px;}
+.custom-post .event-day {font-size:0.9em;padding:2rem;}
+.styled-event .event-date {border-bottom:1px solid #666;font-size: 0.7em;}
+.events-small img {margin-top: 5px;}
 
 //Panels
 .header.panel {
@@ -216,112 +154,16 @@ $label-radius: $global-radius;
     }
   }
 }
-//Info card with corner label
-// flat colors
 
-$primary: #ccc;
-$secondary: #ADB2BD;
-$info: #89c4f4;
-$alert: #F22613;
-$success: #87D37C;
-$warning: #F89406;
-$bg: #fff;
-$font-color: #333;
-
-
-.callout-card {
-	background: $bg;
-  border: 1px solid #333;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  margin: 0 0 1rem;
-  overflow: hidden;
-
-  .card-label {
-	    border-color: transparent #333 transparent transparent;
-	    border-color: rgba(255,255,255,0) #333 rgba(255,255,255,0) rgba(255,255,255,0);
-    }
-
-  &.primary {
-    border-color: $primary;
-
-    .card-label {
-	    border-color: transparent $primary transparent transparent;
-	    border-color: rgba(255,255,255,0) $primary rgba(255,255,255,0) rgba(255,255,255,0);
-    }
-  }
-  &.secondary {
-    border-color: $secondary;
-
-    .card-label {
-	    border-color: transparent $secondary transparent transparent;
-	    border-color: rgba(255,255,255,0) $secondary rgba(255,255,255,0) rgba(255,255,255,0);
-    }
-  }
-  &.info {
-    border-color: $info;
-
-    .card-label {
-	    border-color: transparent $info transparent transparent;
-	    border-color: rgba(255,255,255,0) $info rgba(255,255,255,0) rgba(255,255,255,0);
-    }
-  }
-  &.alert {
-    border-color: $alert;
-
-    .card-label {
-	    border-color: transparent $alert transparent transparent;
-	    border-color: rgba(255,255,255,0) $alert rgba(255,255,255,0) rgba(255,255,255,0);
-    }
-  }
-  &.success {
-    border-color: $success;
-
-    .card-label {
-	    border-color: transparent $success transparent transparent;
-	    border-color: rgba(255,255,255,0) $success rgba(255,255,255,0) rgba(255,255,255,0);
-    }
-  }
-  &.warning {
-    border-color: $warning;
-
-    .card-label {
-	    border-color: transparent $warning transparent transparent;
-	    border-color: rgba(255,255,255,0) $warning rgba(255,255,255,0) rgba(255,255,255,0);
-    }
-  }
-
-  .card-label {
-    border-style: solid;
-    border-width: 0 70px 40px 0;
-    float:right;
-    height: 0px;
-    width: 0px;
-    transform:rotate(360deg);
-  }
-
-  .callout-card-content{
-	  padding: 0.5rem 1.5rem 0.875rem;
-  }
-
-  &.radius {
-    border-radius: 0.6rem;
-  }
-
-  .label-text {
-    color: #fff;
-    font-size: 0.75rem;
-    font-weight: bold;
-    position: relative;
-    right: -40px;
-    top: 2px;
-    white-space: nowrap;
-    transform: rotate(30deg);
-  }
-}
 //Clear default tabs styles
-
 .tabs-clear-styles .tabs, .tabs-clear-styles .tabs-content {border: none;}
 .tabs-clear-styles .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {float: left;}
+
+.tabs-base .tabs {border:0 solid white;}
+.tabs-base .tabs-content {border:0 solid white;}
+.tabs-base .tabs-panel {padding:0;}
+.tabs-base .tabs-title > a {padding:0.5rem;}
+.tabs-base ul.tabs {margin-bottom: 10px;}
 
 //Clear form select styles
 .clear-form-st select {background-color: transparent; border: 0 solid white; margin: 0;}
@@ -331,7 +173,7 @@ $font-color: #333;
 
 //media queries show, hide for prototyping purposes
 @media only screen and (min-width: 768px) {.table-sm {display: none;}.table-bg {display: block;}}
-@media only screen and (max-width: 767px) {.table-sm {display: block;}.table-bg {display: none;}}
+@media only screen and (max-width: 767px) {.table-sm {display: block;}.table-bg {display: none;} .hide-it {display:none;}}
 
 //accordion
 .accordion-navigation {
@@ -396,7 +238,10 @@ $font-color: #333;
   }
 }
 //timeline
-@media only screen and (min-width: 1024px){.ball {display: block; width: 40px; height: 40px; background-color: #666; border-radius: 50%; margin-left: auto; margin-right: auto; margin-bottom: -10px; width: 20px; height: 20px;} .timeline .timeline-line {border-bottom: 2px solid #666;}
+@media only screen and (min-width: 1024px){
+  .ball {display: block; width: 40px; height: 40px; background-color: #666; border-radius: 50%; margin-left: auto; margin-right: auto; margin-bottom: -10px; width: 20px; height: 20px;}
+  .timeline .timeline-line {border-bottom: 2px solid #666;}
+
 .timeline .timeline-box {
   &:after {
     content: '';
@@ -457,6 +302,12 @@ $font-color: #333;
     }
   }
 }
+//style carousels
+.orbit-custom .orbit-previous,.orbit-custom .orbit-next {color: #333;}
+.orbit-previous, .orbit-next {background-color:#ccc;opacity:0.5;}
+.orbit-bullets button {width:0.8rem;height:0.8rem;}
+.slideshow-box {padding: 30px 20px 40px; border: 1px solid #ccc; margin-top: 0;margin-bottom: 10px;}
+
 //sticky styling
 //.sticky-custom {right: -150px; top: 300px; width: 100px;}
 .sticky-custom {width: 100px; margin-left: -100px; margin-top: 100px !important;}
@@ -465,3 +316,154 @@ $font-color: #333;
 // thumbnail label
 .thumb-label {width: 100%; background-color: #666; margin-top: -31px;}
 p.thumb-label {color: white; font-size: 0.7em; text-align: center; font-weight: bold;}
+
+//slide up dive on hover - news & events
+//large
+.block-wrapper {
+  position: relative;
+  max-height: 440px;
+  overflow: hidden;
+}
+.block-wrapper img {width:100%; height:auto;}
+.overlay-text, .overlay-text-sm {
+  min-height: 440px;
+  background:rgba(0,0,0, 0.5);
+  display: block;
+  position: absolute;
+  top: 73%;
+  width: 100%;
+  left:0;
+  transition: all .3s ease-in-out;
+  color: white;
+}
+.overlay-text-sm {
+  top: 76%;
+}
+.overlay-text-sm a, .overlay-text a {color:white;}
+.overlay-sm {padding:15px;}
+.block-wrapper:hover .overlay-text, .block-wrapper:hover .overlay-text-sm {
+  top:0;
+}
+//horizontal block overlay
+.info-block {height: 160px;width: auto;overflow: hidden; transition: all .2s ease-in-out;}
+.info-block:hover {
+  display:block;
+    height:auto;
+}
+//static overlay
+.stat-overlay-wrapper {position:relative;}
+.stat-overlay-content {position:absolute;bottom:0;left:0;}
+.stat-overlay-content a {color:white;}
+.square-block {width:170px;height:160px;background-color:#666;display: block;margin-bottom:30px;}
+//style static header box
+.header-box {background-color: #f8f8f8; border: 1px solid #ccc;}
+.header-box-content {padding: 30px 30px 0px;}
+.header-box img {width:100%;height:auto;}
+//style overlay on mobile
+@media only screen and (max-width: 960px){
+  .header-box-content {padding:15px;}
+  .header-box-content h1 {font-size:1em;margin-bottom: 20px;}
+  .overlay-sm {padding: 5px;}
+  .block-wrapper {margin-bottom: 20px;}
+}
+//social menu
+.social-menu p {margin-bottom:0;}
+.social-menu .menu > li:not(.menu-text) > a {padding: 0.2rem 0.9rem;}
+//footer
+
+.footer-proto {
+  background-color: #ccc;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1rem;
+
+  .social a {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    line-height: 2rem;
+    margin: 0 3px 0 0;
+  }
+
+  .copywrite {
+    color: #333;
+    font-size: 0.875rem;
+    margin: 1rem 0 1rem 0;
+  }
+
+  .footer-links a {
+    list-style: none;
+    font-weight: normal;
+    color: #333;
+    padding: 3rem 0 2rem;
+    margin: 0;
+    font-size: 0.875rem;
+
+    &::after {
+      content: "•";
+      padding: 0 0.2rem 0 0.4rem;
+    }
+
+    &:last-child::after {
+      content: "";
+      padding: 0 0.4rem 0 0.8rem;
+    }
+  }
+
+
+  @media only screen and (min-width: 40.063em) {
+    padding: 4rem;
+
+    p {
+      text-align: left;
+    }
+
+    .social {
+      text-align: left;
+      margin: 0;
+    }
+
+}
+}
+
+.logo {
+  color: #333;
+  font-size: 1.5rem;
+}
+//label over image top right
+.label-wraper {position: relative;}
+.label-wraper .label {position: absolute; top:0; right:0;}
+
+//label over image bottom right
+.label-wraper-br {position: relative;}
+.label-wraper-br .label {position: absolute; top:0; right:0;}
+
+//Media object custom style for mobile
+@media only screen and (max-width: 960px){
+  .media-img img {width: 25% !important; float: left; margin-right: 10px; margin-bottom: 10px;}
+  .media-object-section img {width: 100%;}
+  .media-object-section {display: block;}
+}
+//Media object style
+.rounded-media img {border-radius: 50%; margin-bottom: -50px !important;}
+
+//Fun block - rollover-v2
+.fun-block-inner {position: relative;}
+.fun-block-inner .fun-block-text {position: absolute;left:0; bottom: 0; background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0; margin:30px; padding: 20px; border-radius: 15px;}
+@media only screen and (max-width: 960px){.fun-block-inner .fun-block-text {border-radius: 0; top:0; bottom: initial;position: relative;margin:0;}.fun-block-inner .fun-block-text {margin-top:5px;}}
+.fun-block-inner .fun-block-text p, .fun-block-inner .fun-block-text h3 {color: white;}
+.fun-block-inner .fun-block-text p {padding-left:40px;padding-right:30px;}
+h3.fun-heading {margin-left: 5px;}
+@media only screen and (max-width: 960px){h3.fun-heading {margin-left: 15px;}}
+@media only screen and (max-width: 768px){h3.fun-heading {margin-left: 25px;}}
+.fun-icon i {font-size:1.6em;background-color: white;padding: 5px 9px; border-radius: 50%;}
+.fun-block-inner .fun-block-text a {color: #ccc;}
+
+.letter-styled {margin-top: 23px; padding-top: 5px; width:55px; height: 55px; background-color: #666; font-weight:bold; text-align: center; border-radius: 50%; font-size:  1.8em; color: white;}
+.letter-styled.light {background-color: #ccc;}
+@media only screen and (max-width: 768px){.letter-styled {margin-left:auto;margin-right: auto;}}
