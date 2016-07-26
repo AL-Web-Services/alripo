@@ -72,7 +72,7 @@
 }
 
 .custom-thumbnail {
-  @include thumbnail()
+  @include thumbnail;
   border-radius: 50%;
 }
 @media screen and (min-width: 1024px) {.text-align {@include vertical-align();}}
