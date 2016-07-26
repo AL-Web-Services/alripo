@@ -339,7 +339,7 @@ p.thumb-label {color: white; font-size: 0.7em; text-align: center; font-weight: 
 .overlay-text-sm {
   top: 76%;
 }
-.overlay-text-sm a {color:white;}
+.overlay-text-sm a, .overlay-text a {color:white;}
 .overlay-sm {padding:15px;}
 .block-wrapper:hover .overlay-text, .block-wrapper:hover .overlay-text-sm {
   top:0;
