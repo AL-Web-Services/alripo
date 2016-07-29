@@ -46,6 +46,8 @@
   .m-t3-n {margin-top:-30px;}
   //all padding
   .p-ab {padding:15px;}
+  .p-ac {padding:20px;}
+  .p-ad {padding:30px;}
 
 }
 
@@ -111,8 +113,7 @@
 .custom-post {padding-top:20px;}
 .custom-post .event-day {font-size:0.9em;padding:2rem;}
 .styled-event .event-date {border-bottom:1px solid #666;font-size: 0.7em;}
-.events-small img {margin-top: 5px; border-bottom: 4px solid #666;}
-.events-small img.styled-event-blk {border-bottom: 4px solid black;}
+.events-small img {margin-top: 5px;}
 
 //Panels
 .header.panel {
@@ -338,7 +339,7 @@ p.thumb-label {color: white; font-size: 0.7em; text-align: center; font-weight: 
   color: white;
 }
 .overlay-text-sm {
-  top: 76%;
+  top: 77%;
 }
 .overlay-text-sm a, .overlay-text a {color:white;}
 .overlay-sm {padding:15px;}
@@ -451,11 +452,11 @@ p.thumb-label {color: white; font-size: 0.7em; text-align: center; font-weight: 
   .media-object-section {display: block;}
 }
 //Media object style
-.rounded-media img {border-radius: 50%; margin-bottom: -50px !important;}
+.rounded-media img {border-radius: 50%; margin-bottom: -50px !important; border: 6px solid #eee;}
 
 //Fun block - rollover-v2
 .fun-block-inner {position: relative;}
-.fun-block-inner .fun-block-text {position: absolute;left:0; bottom: 0; background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0; margin:30px; padding: 20px; border-radius: 15px;}
+.fun-block-inner .fun-block-text {position: absolute;left:0; bottom: 0; background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0; margin:30px; padding: 20px; border-radius: 15px;}
 @media only screen and (max-width: 960px){.fun-block-inner .fun-block-text {border-radius: 0; top:0; bottom: initial;position: relative;margin:0;}.fun-block-inner .fun-block-text {margin-top:5px;}}
 .fun-block-inner .fun-block-text p, .fun-block-inner .fun-block-text h3 {color: white;}
 .fun-block-inner .fun-block-text p {padding-left:40px;padding-right:30px;}
@@ -465,15 +466,41 @@ h3.fun-heading {margin-left: 5px;}
 .fun-icon i {font-size:1.6em;background-color: white;padding: 5px 9px; border-radius: 50%;}
 .fun-block-inner .fun-block-text a {color: #ccc;}
 
-.letter-styled {margin-top: 23px; padding-top: 5px; width:55px; height: 55px; background-color: #666; font-weight:bold; text-align: center; border-radius: 50%; font-size:  1.8em; color: white;}
+.letter-styled {display: table; margin-top: 23px; width:55px; height: 55px; background-color: #666; font-weight:bold; text-align: center; border-radius: 50%; font-size:  1.8em; color: white;}
+.letter-styled span {display:table-cell; vertical-align: middle;}
+.letter-styled .has-tip {border-bottom: 0 solid #666;}
 .letter-styled.light {background-color: #ccc;}
 @media only screen and (max-width: 768px){.letter-styled {margin-left:auto;margin-right: auto;}}
 
 //style category dots
-.category-btns {float: right;}
+.category-btns {float: right; margin-bottom: 10px;}
 .category-btns .icon-button span {width:15px; height:15px; background-color: #666; display: block; float: right; border-radius: 50%; margin-left: 3px;}
 .category-btns .icon-button span.gr1 {background-color: #666;}
 .category-btns .icon-button span.gr2 {background-color: #ccc;}
 .category-btns .icon-button span.gr3 {background-color: black;}
 .category-btns .icon-button span.gr4 {background-color: #eee;}
 .category-btns .icon-button span.gr5 {background-color: #333;}
+
+
+
+// *************************
+// Universal listing designs
+// *************************
+
+// Super Simple List
+.universal-list .label a {color:white;}
+.universal-list .list-info-v1 span {float:left;}
+
+// Fancy Modular Design List
+@media only screen and (min-width: 768px){
+  .universal-list .list-br {border-right:1px solid #eee;}
+  .universal-list .list-bl {border-left:1px solid #eee;}
+  .universal-list .list-bt {border-top:1px solid #eee;}
+  .universal-list .list-bb {border-bottom:1px solid #eee;}
+}
+
+.list-info-v2 {display:table;}
+.list-info-v2 .list-group-v2 {display:table-cell;vertical-align:bottom;}
+.list-info-v2 .list-group-v2b {display:table-cell;vertical-align:top;}
+@media only screen and (min-width: 768px){.list-info-v2 .list-group-v2b div {text-align:right;}}
+@media only screen and (max-width: 767px){.list-info-v2 .list-group-v2b div {margin-bottom:5px;}}
