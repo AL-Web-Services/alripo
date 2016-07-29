@@ -490,6 +490,7 @@ h3.fun-heading {margin-left: 5px;}
 // Super Simple List
 .universal-list .label a {color:white;}
 .universal-list .list-info-v1 span {float:left;}
+.universal-list .featured-tag {float: right;}
 
 // Fancy Modular Design List
 @media only screen and (min-width: 768px){
@@ -498,9 +499,26 @@ h3.fun-heading {margin-left: 5px;}
   .universal-list .list-bt {border-top:1px solid #eee;}
   .universal-list .list-bb {border-bottom:1px solid #eee;}
 }
+.universal-list .list-info-v2 {display:table;}
+.universal-list .list-info-v2 .list-group-v2 {display:table-cell;vertical-align:bottom;}
+.universal-list .list-info-v2 .list-group-v2b {display:table-cell;vertical-align:top;}
+@media only screen and (min-width: 768px){.universal-list .list-info-v2 .list-group-v2b div {text-align:right;}}
+@media only screen and (max-width: 767px){.universal-list .list-info-v2 .list-group-v2b div {margin-bottom:5px;}}
 
-.list-info-v2 {display:table;}
-.list-info-v2 .list-group-v2 {display:table-cell;vertical-align:bottom;}
-.list-info-v2 .list-group-v2b {display:table-cell;vertical-align:top;}
-@media only screen and (min-width: 768px){.list-info-v2 .list-group-v2b div {text-align:right;}}
-@media only screen and (max-width: 767px){.list-info-v2 .list-group-v2b div {margin-bottom:5px;}}
+//Top menu bar with sorting options
+.universal-list .tabs {background-color:#f8f8f8;}
+.universal-list .tabs li {display:inline;}
+
+// *************************
+// Thumbnail designs
+// *************************
+
+.universal-list .thumbnail-v1 {
+  background-color: #eee;
+  text-align: center;
+}
+.universal-list .thumbnail-v1 img {width:100%;height:auto;}
+
+
+//some experiment
+.block-height {display:block;min-height: 400px;}
