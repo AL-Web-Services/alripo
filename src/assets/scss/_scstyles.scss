@@ -510,7 +510,7 @@ h3.fun-heading {margin-left: 5px;}
 .universal-list .tabs li {display:inline;}
 
 // *************************
-// Thumbnail designs
+// Thumbnail listing designs
 // *************************
 
 .universal-list .thumbnail-v1 {
@@ -519,6 +519,38 @@ h3.fun-heading {margin-left: 5px;}
 }
 .universal-list .thumbnail-v1 img {width:100%;height:auto;}
 
+// *************************
+// News and Events Concept 2 Variations
+// *************************
 
-//some experiment
-.block-height {display:block;min-height: 400px;}
+//Categories with icon and animation
+.category-style-v2 span {
+  background-color: #ccc;
+  border-radius: 10px;
+  display: block;
+  margin: 20px auto -15px;
+  padding: 10px 10px 0;
+  text-align: center;
+  width: 150px;
+  transition-duration: 0.3s;
+}
+.category-style-v2 span {
+  &:after {
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 20px 18px 0 18px;
+    border-color: #ccc transparent transparent transparent;
+    position: relative;
+    top: 38px;
+    left: 0;
+  }
+}
+.category-style-v2 span i {display:block;margin:0;font-size:3em;}
+.category-style-v2 .category-text {
+  padding-top: 30px;
+  text-align: center;
+}
+@media only screen and (min-width: 768px){.category-style-v2 .category-text{border: 1px solid #ccc;}}
+.category-style-v2:hover span {transform: translateY(-10px);}
