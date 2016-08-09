@@ -1,0 +1,113 @@
+// *************************
+// Colors
+// *************************
+
+// Theme colors
+
+// white #ffffff
+// light grey #e8e8e8
+// darker grey #e8e8e8
+// orange #af332d
+// dark maroon #3d100e
+
+// *************************
+// Typography
+// *************************
+
+// Headings and paragraphs
+
+// *************************
+// Icons
+// *************************
+
+// Hero Icons
+
+
+// *************************
+// Homepage Styles
+// *************************
+
+// Top Half
+.hero-block {margin-bottom: 15px;margin-top: 15px;}
+
+// Hero Background Image
+.hero-image {
+  display: block;
+  height: auto;
+  min-height: 0;
+  overflow: hidden;
+  padding: 131px 0 209px;
+  position: relative;
+  background-color: #ccc;
+}
+.hero-image:before {
+  transform: rotate(1deg);
+  background: #f3f3f3 none repeat scroll 0 0;
+  top: -75px;
+  content: "";
+  height: 100px;
+  left: -10%;
+  position: absolute;
+  width: 120%;
+}
+.hero-image:after {
+  transform: rotate(-2.5deg);
+  background: #f3f3f3 none repeat scroll 0 0;
+  bottom: -55px;
+  content: "";
+  height: 100px;
+  left: -10%;
+  position: absolute;
+  width: 120%;
+}
+
+// Offset Block
+.offset-block {margin-top: -100px;position: relative; margin-bottom: -200px;}
+
+// Main Content
+article.main-content {min-height:900px;background-color: #fff;position: relative;}
+
+// Content Diagonal Footer
+.foot {
+  position: relative;
+  background-color: transparent;
+  height: 100px;
+  width: 100%;
+  display: block;
+}
+.foot:before {
+  transform: rotate(-2.5deg);
+  background: #666 none repeat scroll 0 0;
+  top: -35px;
+  content: "";
+  height: 100px;
+  left: -10%;
+  position: absolute;
+  width: 120%;
+}
+
+// *************************
+// Reusable Styles
+// *************************
+
+// Body
+body {background-color: #f3f3f3;}
+
+// Header
+
+// Menu
+
+// Buttons
+
+// Button Group
+
+// Dividers
+
+// Listing
+
+// Small Listing (for sidebar)
+
+// Article
+
+// Footer
+footer {height: 400px;background-color: #666;}

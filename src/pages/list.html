@@ -6,7 +6,8 @@
 </div>
 <div class="row universal-list">
     <div class="medium-3 columns">
-        <h5>Sort by category</h5>
+        <h2>Sort by category</h2>
+        <h5>Option 1: Checkmark</h5>
         <input id="checkbox13" type="checkbox" checked>
         <label for="checkbox13">All</label>
         <br />
@@ -26,33 +27,33 @@
         <label for="checkbox08">Outage Alerts</label>
         <hr>
         <a href="#" class="button">Update</a>
-        <h5>Recommended/Trending</h5>
+        <h5>Option 2: Dropdown</h5>
+            <select>
+                <option value="husker">Sort by Category</option>
+                <option value="starbuck">News</option>
+                <option value="hotdog">Events</option>
+                <option value="apollo">Resource Highlights</option>
+                <option value="apollo">Service Updates</option>
+                <option value="apollo">Outage Alerts</option>
+            </select>
+        <a href="#" class="button">Go!</a>
+        <!--<h5>Recommended/Trending</h5>
         <h5><a href="#">Wow Big News Wow Title Wow</a></h5>
         <h5><a href="#">Wow Big News Title Wow</a></h5>
         <h5><a href="#">Wow Big News Wow Title</a></h5>
         <h5><a href="#">Wow Big News</a></h5>
-        <h5><a href="#">Wow Big News Wow Title</a></h5>
+        <h5><a href="#">Wow Big News Wow Title</a></h5>-->
     </div>
     <div class="medium-9 columns styled-event">
 
         <div class="tabs-clear-styles">
             <div class="row">
+                <div class="medium-8 columns"><h1>Super Simple List Concept</h1></div>
                 <div class="medium-4 columns">
-                    <div class="p-ab">
-                        <select>
-                            <option value="husker">Sort by Category</option>
-                            <option value="starbuck">News</option>
-                            <option value="hotdog">Events</option>
-                            <option value="apollo">Resource Highlights</option>
-                            <option value="apollo">Service Updates</option>
-                            <option value="apollo">Outage Alerts</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="medium-8 columns">
-                    <ul class="tabs" data-tabs id="example-tabs">
-                        <li class="tabs-title is-active"><a href="#panel1" aria-selected="true"><span class="size-xl"><i class="fi-list-thumbnails"></i></span></a></li>
-                        <li class="tabs-title"><a href="#panel2"><span class="size-xl"><i class="fi-thumbnails"></i></span></a></li>
+                    <ul class="tabs sorting-toolkit" data-tabs id="example-tabs">
+                      <li class="tabs-title"><a href="#panel2"><span class="size-md"><i class="fi-thumbnails"></i></span></a></li>
+                        <li class="tabs-title is-active"><a href="#panel1" aria-selected="true"><span class="size-md"><i class="fi-list-thumbnails"></i></span></a></li>
+
                     </ul>
                 </div>
             </div>
@@ -60,8 +61,7 @@
                 <div class="tabs-panel is-active" id="panel1">
 
                     <!-- Super Simple List Concept begin -->
-                    <h1>Super Simple List Concept</h1>
-                    <hr>
+
                     <div class="callout m-b3 hide-it">
                         <div class="row">
                             <div class="medium-3 columns">
@@ -279,12 +279,12 @@
                 </div>
                 <div class="tabs-panel" id="panel2">
                     <!-- Rollover Block Concept begin -->
-                    <h1>Super Simple Thumbnail Concept</h1>
+                    <!--<h1>Concept 1: Using Equalizer</h1>-->
                     <hr>
                     <!-- Rollover Block Concept end -->
-                    <div class="row">
+                    <div class="row" data-equalizer data-equalize-on="medium">
                       <div>
-                        <div class="medium-4 columns">
+                        <div class="medium-6 large-4 columns">
                             <div class="callout small">
                                 <div class="m-b1 size-xxs"><span>Friday, June 15</span> <span>|</span> <span>by Jane Doe</span></div>
                                 <a href="#"><img src="http://placehold.it/250x150"></a>
@@ -292,10 +292,10 @@
                                 <p>Short summary proin sed consequat leo. Donec interdum consequat sapien sed ornare <a href="#">...</a></p>
 
                                 <div class="m-b1 size-xxs">Subject: This subject</div>
-                                <div class="m-b1 size-xxs">Tags: <span class="label"><a href="#">onetag</a></span> <span class="label"><a href="#">twotag</a></span> <span class="label"><a href="#">threetag</a></span> <span class="label"><a href="#">fourtag</a></span> <span class="label"><a href="#">moretag</a></span></div>
+                                <!--<div class="m-b1 size-xxs">Tags: <span class="label"><a href="#">onetag</a></span> <span class="label"><a href="#">twotag</a></span> <span class="label"><a href="#">threetag</a></span> <span class="label"><a href="#">fourtag</a></span> <span class="label"><a href="#">moretag</a></span></div>-->
                             </div>
                         </div>
-                        <div class="medium-4 columns">
+                        <div class="medium-6 large-4 columns">
                             <div class="callout small">
                                 <div class="m-b1 size-xxs"><span>Friday, June 15</span> <span>|</span> <span>by Jane Doe</span></div>
                                 <a href="#"><img src="http://placehold.it/250x150"></a>
@@ -303,10 +303,10 @@
                                 <p>Short summary proin sed consequat leo. Donec interdum consequat sapien sed ornare <a href="#">...</a></p>
 
                                 <div class="m-b1 size-xxs">Subject: This subject</div>
-                                <div class="m-b1 size-xxs">Tags: <span class="label"><a href="#">onetag</a></span> <span class="label"><a href="#">twotag</a></span> <span class="label"><a href="#">threetag</a></span> <span class="label"><a href="#">fourtag</a></span> <span class="label"><a href="#">moretag</a></span></div>
+                                <!--<div class="m-b1 size-xxs">Tags: <span class="label"><a href="#">onetag</a></span> <span class="label"><a href="#">twotag</a></span> <span class="label"><a href="#">threetag</a></span> <span class="label"><a href="#">fourtag</a></span> <span class="label"><a href="#">moretag</a></span></div>-->
                             </div>
                         </div>
-                        <div class="medium-4 columns">
+                        <div class="medium-6 large-4 columns">
                             <div class="callout small">
                                 <div class="m-b1 size-xxs"><span>Friday, June 15</span> <span>|</span> <span>by Jane Doe</span></div>
                                 <a href="#"><img src="http://placehold.it/250x150"></a>
@@ -314,7 +314,18 @@
                                 <p>Short summary proin sed consequat leo. Donec interdum consequat sapien sed ornare <a href="#">...</a></p>
 
                                 <div class="m-b1 size-xxs">Subject: This subject</div>
-                                <div class="m-b1 size-xxs">Tags: <span class="label"><a href="#">onetag</a></span> <span class="label"><a href="#">twotag</a></span> <span class="label"><a href="#">threetag</a></span> <span class="label"><a href="#">fourtag</a></span> <span class="label"><a href="#">moretag</a></span></div>
+                                <!--<div class="m-b1 size-xxs">Tags: <span class="label"><a href="#">onetag</a></span> <span class="label"><a href="#">twotag</a></span> <span class="label"><a href="#">threetag</a></span> <span class="label"><a href="#">fourtag</a></span> <span class="label"><a href="#">moretag</a></span></div>-->
+                            </div>
+                        </div>
+                        <div class="medium-6 large-4 columns">
+                            <div class="callout small">
+                                <div class="m-b1 size-xxs"><span>Friday, June 15</span> <span>|</span> <span>by Jane Doe</span></div>
+                                <a href="#"><img src="http://placehold.it/250x150"></a>
+                                <h2><a href="#">Wow Big News Wow Title</a></h2>
+                                <p>Short summary proin sed consequat leo. Donec interdum consequat sapien sed ornare <a href="#">...</a></p>
+
+                                <div class="m-b1 size-xxs">Subject: This subject</div>
+                                <!--<div class="m-b1 size-xxs">Tags: <span class="label"><a href="#">onetag</a></span> <span class="label"><a href="#">twotag</a></span> <span class="label"><a href="#">threetag</a></span> <span class="label"><a href="#">fourtag</a></span> <span class="label"><a href="#">moretag</a></span></div>-->
                             </div>
                         </div>
                         </div>
