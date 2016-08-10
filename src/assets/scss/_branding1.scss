@@ -5,7 +5,7 @@
 // Theme colors
 
 // white #ffffff
-// light grey #e8e8e8
+// light grey #f3f3f3
 // darker grey #e8e8e8
 // orange #af332d
 // dark maroon #3d100e
@@ -28,37 +28,34 @@
 // *************************
 
 // Top Half
-.hero-block {margin-bottom: 15px;margin-top: 15px;}
+.hero-block {margin-bottom: 15px;margin-top: 15px; background-color: #e8e8e8;}
 
 // Hero Background Image
+
 .hero-image {
-  display: block;
-  height: auto;
-  min-height: 0;
-  overflow: hidden;
-  padding: 131px 0 209px;
-  position: relative;
-  background-color: #ccc;
-}
-.hero-image:before {
-  transform: rotate(1deg);
-  background: #f3f3f3 none repeat scroll 0 0;
-  top: -75px;
-  content: "";
-  height: 100px;
-  left: -10%;
-  position: absolute;
-  width: 120%;
-}
-.hero-image:after {
-  transform: rotate(-2.5deg);
-  background: #f3f3f3 none repeat scroll 0 0;
-  bottom: -55px;
-  content: "";
-  height: 100px;
-  left: -10%;
-  position: absolute;
-  width: 120%;
+    display: block;
+    height: auto;
+    min-height: 0;
+    overflow: hidden;
+    padding: 131px 0 209px;
+    position: relative;
+    background-color: #ccc;
+    &:before, &:after {
+      background: #f3f3f3 none repeat scroll 0 0;
+      content: "";
+      height: 100px;
+      left: -10%;
+      position: absolute;
+      width: 120%;
+    }
+    &:before {
+      transform: rotate(1deg);
+      top: -75px;
+    }
+    &:after {
+      transform: rotate(-2.5deg);
+      bottom: -55px;
+    }
 }
 
 // Offset Block
@@ -68,26 +65,22 @@
 article.main-content {min-height:900px;background-color: #fff;position: relative;}
 
 // Content Diagonal Footer
-.foot {
-  position: relative;
-  background-color: transparent;
-  height: 100px;
-  width: 100%;
-  display: block;
+.foot-wrapper {overflow: hidden;}
+.foot-sm {
+  	width: 0;
+  	height: 0;
+  	border-top: 30px solid white;
+  	border-right: 1200px solid transparent;
 }
-.foot:before {
-  transform: rotate(-2.5deg);
-  background: #666 none repeat scroll 0 0;
-  top: -35px;
-  content: "";
-  height: 100px;
-  left: -10%;
-  position: absolute;
-  width: 120%;
+.foot {
+  	width: 0;
+  	height: 0;
+  	border-top: 60px solid white;
+  	border-right: 800px solid transparent;
 }
 
 // *************************
-// Reusable Styles
+// Core Reusable Styles
 // *************************
 
 // Body
