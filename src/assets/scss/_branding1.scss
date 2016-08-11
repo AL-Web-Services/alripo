@@ -10,9 +10,27 @@
 // orange #af332d
 // dark maroon #3d100e
 
+$foundation-palette: (
+  primary: #af332d !important,
+  secondary: #e8e8e8,
+  success: green,
+  warning: red,
+  alert: orange,
+);
+
+$ivory: #f3f3f3;
+$maroon: #3d100e;
+
 // *************************
 // Typography
 // *************************
+
+h1, h2, h3, h4, h5, h6 {font-family: 'Varela Round', sans-serif; text-transform: uppercase;}
+
+p {font-family: 'Arimo', sans-serif;}
+
+//font sizes
+
 
 // Headings and paragraphs
 
@@ -27,8 +45,45 @@
 // Homepage Styles
 // *************************
 
-// Top Half
-.hero-block {margin-bottom: 15px;margin-top: 15px; background-color: #e8e8e8;}
+// Header logo and Banner
+.header-wrapper {position: relative; background: linear-gradient(to right, black 0%,black 50%,#000000 50%,#591d1b 50%,#591d1b 100%); /* W3C */}
+/*.logo {
+  height: 160px;
+  width: 350px;
+  background: url('/assets/img/logo.png') no-repeat -10px center;
+  position: absolute;
+  left: 0;
+  top: 0;
+}*/
+.banner {
+  margin-left: auto;
+  margin-right: auto;
+  height: 160px;
+  background: url('/assets/img/deco/header-banner.png') no-repeat center center;
+  display: block;
+}
+@media only screen and (max-width: 1934px){.banner {background-position: left center;}}
+@media only screen and (max-width: 1024px){.banner {background-position: -100px center;}}
+
+/*
+.logo-wrapper {
+  width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.logo-wrapper img {position: absolute; left: 0; top: 0;}*/
+
+// Hero Search and Hours
+.hero-block {background-color: #fff;}
+.hero-menu {background-color: #e8e8e8;}
+
+//Padding
+.hero-search {padding:50px 65px 20px;}
+@media only screen and (max-width: 768px){
+  .hero-search {padding:15px;}
+}
+.hero-hours {padding:50px 65px 20px;}
 
 // Hero Background Image
 
@@ -62,7 +117,12 @@
 .offset-block {margin-top: -100px;position: relative; margin-bottom: -200px;}
 
 // Main Content
+
+section {margin-bottom: 15px;}
+
 article.main-content {min-height:900px;background-color: #fff;position: relative;}
+
+article {padding:50px 65px 20px;}
 
 // Content Diagonal Footer
 .foot-wrapper {overflow: hidden;}
@@ -87,16 +147,21 @@ article.main-content {min-height:900px;background-color: #fff;position: relative
 body {background-color: #f3f3f3;}
 
 // Header
-
+header {margin-bottom: 15px;}
 // Menu
 
 // Buttons
 
 // Button Group
 
+// Blockquote
+blockquote {border-left: 10px solid #af332d;}
+
 // Dividers
 
 // Listing
+.media-header-wrapper {float:left;}
+.media-header blockquote {float: right;}
 
 // Small Listing (for sidebar)
 

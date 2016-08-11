@@ -48,12 +48,20 @@
 $global-font-size: 90%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
+//Sasha changed global colors for Concept 1 brand design
+//$foundation-palette: (
+//  primary: #594F4F,
+//  secondary: #547980,
+//  success: #45ADA8,
+//  warning: #EC5840,
+//  alert: #FF9A43,
+//);
 $foundation-palette: (
-  primary: #594F4F,
-  secondary: #547980,
-  success: #45ADA8,
-  warning: #EC5840,
-  alert: #FF9A43,
+  primary: #af332d,
+  secondary: #e8e8e8,
+  success: #69c076,
+  warning: orange,
+  alert: red,
 );
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
