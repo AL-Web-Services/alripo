@@ -1,128 +1,519 @@
-<header>
-  <div class="expanded row">
-    <div class="header-wrapper">
-          <div class="banner"></div>
-    </div>
-  </div>
-  <button class="button">search</button>
-</header>
+<div class="header-wrapper margin-b">
+    <div class="hero-menu">
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+                    <button class="menu-icon" type="button" data-toggle></button>
+                </div>
 
-<section class="row">
-    <div class="medium-12 columns">
-        <div class="hero-block">
-          <div class="row">
-            <div class="large-5 large-push-7 columns">
-              <div class="hero-hours">
-                <blockquote>
-                  <h2>Today's Hours</h2>
-                  <p>Monday, Month 25, 2016</p>
-                </blockquote>
-              </div>
-            </div>
-            <div class="large-7 large-pull-5 columns">
-              <div class="hero-search">
-                <!-- start Neena's code from landing1.html -->
-                <h2>Start My Research <i class="fi-info has-tip bottom" aria-haspopup="true" title='The “one-stop” search for finding research materials. Enter your search terms to find books, articles, media and more.' data-tooltip></i></h2>
-                <form method="GET" action="http://auraria.summon.serialssolutions.com/">
-                    <div class="input-group">
-                        <input class="input-group-field" type="text" placeholder="Find articles, books, media, journals and more" id="search_string_All" name="q">
-                        <!--    <input type="submit" name="Search" value="Search" class="submit"> -->
-                        <span class="input-group-label">Search</span>
+                <div class="top-bar" id="main-menu">
+                    <div class="top-bar-left">
+                        <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
+                            <li class="has-submenu">
+                                <a href="#">One</a>
+                                <ul class="submenu menu vertical" data-submenu>
+                                    <li><a href="#">One</a></li>
+                                    <li><a href="#">Two</a></li>
+                                    <li><a href="#">Three</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Two</a></li>
+                            <li><a href="#">Three</a></li>
+                        </ul>
+
                     </div>
-                    <input id=" value=" name="keep_r" type="hidden" />
-                    <div>
-                        <input checked="checked" title="Search for all materials" type="radio" name="cmd" value="" id="summonAll" />
-                        <label for="summonAll">Articles, books and more</label>
-                        <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Journal Article)" id="summonArticles" />
-                        <label for="summonArticles">Articles only</label>
-                        <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Book / eBook)" id="summonBooks" />
-                        <label for="summonBooks">Books only</label>
-                        <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Audio Recording,f|ContentType,Video Recording,f|ContentType,Streaming Video)" title="search for" id="summonMedia" />
-                        <label for="summonMedia">Media only</label>
+                    <div class="top-bar-right">
+                        <ul class="dropdown menu" data-dropdown-menu>
+                            <li class="site-search">
+                                <form method="GET" action="http://auraria.summon.serialssolutions.com/">
+                                    <div class="input-group">
+                                        <input class="input-group-field" type="text" placeholder="Search entire site" name="b">
+                                        <!--    <input type="submit" name="Search" value="Search" class="submit"> -->
+                                        <span class="input-group-label">Search</span>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
                     </div>
-                </form>
-                <p class="float-right"><a target="_blank" href="http://auraria.summon.serialssolutions.com/#!/advanced" title="Use Advanced Search">Advanced Search >></a></p>
-                <!-- end Neena's code from landing1.html -->
-              </div>
+                </div>
             </div>
-          </div>
-      </div>
+        </div>
     </div>
-    <div class="medium-12 columns">
-        <div class="hero-menu">
+
+    <div class="banner">
+    </div>
+</div>
+
+<div class="main-content">
+
+    <section class="row">
+
+        <div class="medium-12 columns">
+
+            <!--<div class="hero-menu">
+              <div class="foot-wrapper">
+                  <div class="foot-sm-top"></div>
+              </div>
+          </div>-->
+
+            <div class="hero-block">
+                <div class="row">
+                    <div class="large-5 large-push-7 columns">
+                        <div class="hero-hours">
+                            <blockquote>
+                                <div class="media-object clearfix">
+                                    <div class="media-object-section">
+                                        <h2><span class="mobile-hours"></span>Today's Hours - <span class="mobile-hours"><a href="#">9:00am - 5:00pm <i class="fi-clock"></i></a></span></h2>
+                                        <p class="hours-desktop">Monday, Month 25, 2016</p>
+                                    </div>
+                                    <div class="media-object-section hours-desktop">
+                                        <div class="simple-icons"><i class="fi-clock"></i></div>
+                                    </div>
+                                </div>
+                                <div class="row columns hours-desktop" data-equlizer>
+                                    <button class="dropdown button" type="button" data-toggle="hours-dropdown" data-equalizer-watch="hour-bar">7:30am - 9:00pm </button>
+
+                                    <div class="dropdown-pane" id="hours-dropdown" data-dropdown data-hover="true">
+                                        <table class="responsive">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Sun</td>
+                                                    <td class="text-right">9:00am - 5:00pm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Mon-Thurs</td>
+                                                    <td class="text-right">7:30am - 9:00pm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fri</td>
+                                                    <td class="text-right">7:30am - 5:00pm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sat</td>
+                                                    <td class="text-right">9:00am - 5:00pm</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <p class="hours-desktop"><a href="#" class="button hollow">All hours</a></p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="large-7 large-pull-5 columns">
+                        <div class="hero-search">
+
+                            <div class="row">
+                                <div class="medium-12 columns">
+                                    <h1>Start My Research <i class="fi-info has-tip bottom" aria-haspopup="true" title='The “one-stop” search for finding research materials. Enter your search terms to find books, articles, media and more.' data-tooltip></i></h1>
+                                </div>
+                            </div>
+
+                            <!-- start Neena's code from landing1.html -->
+
+                            <form method="GET" action="http://auraria.summon.serialssolutions.com/">
+                                <div class="input-group">
+                                    <input class="input-group-field" type="text" placeholder="Find articles, books, media, journals and more" id="search_string_All" name="q">
+                                    <!--    <input type="submit" name="Search" value="Search" class="submit"> -->
+                                    <span class="input-group-label">Search</span>
+                                </div>
+                                <input id=" value=" name="keep_r" type="hidden" />
+                                <div>
+                                    <input checked="checked" title="Search for all materials" type="radio" name="cmd" value="" id="summonAll" />
+                                    <label for="summonAll">Articles, books and more</label>
+                                    <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Journal Article)" id="summonArticles" />
+                                    <label for="summonArticles">Articles only</label>
+                                    <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Book / eBook)" id="summonBooks" />
+                                    <label for="summonBooks">Books only</label>
+                                    <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Audio Recording,f|ContentType,Video Recording,f|ContentType,Streaming Video)" title="search for" id="summonMedia" />
+                                    <label for="summonMedia">Media only</label>
+                                </div>
+                            </form>
+
+                            <p><a target="_blank" href="http://auraria.summon.serialssolutions.com/#!/advanced" title="Use Advanced Search">Advanced Search >></a></p>
+
+                            <!-- end Neena's code from landing1.html -->
+                            <div class="menu-secondary">
+                                <ul class="menu">
+                                    <li>
+                                        <h3><a href="#">Database List</a></h3></li>
+                                    <li>
+                                        <h3><a href="#">Skyline Catalog</a></h3></li>
+                                    <li>
+                                        <h3><a href="#">Journal List</a></h3></li>
+                                    <li>
+                                        <h3><a href="#">Research Guides</a></h3></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--<div class="hero-menu">
+                <div class="foot-wrapper">
+                    <div class="foot-sm"></div>
+                </div>
+            </div>-->
+        </div>
+
+        <div class="medium-12 columns">
+
+        </div>
+
+    </section>
+
+    <section class="row" data-equalizer="quicklinks" data-equalize-on="medium">
+        <div class="large-6 large-push-6 columns">
+            <article class="quicklinks-block margin-b" data-equalizer-watch="quicklinks">
+                <h1>Use the Library</h1>
+                <br />
+                <div class="row">
+                    <!-- start Neena's code from Landing1.html with quicklink icons -->
+                    <div class="columns medium-6">
+                        <div class="media-object clearfix">
+                            <div class="media-object-section link-icons">
+                                <a href="#"><span class="flex-icon"><i class="fi-link"></i></span></a>
+                            </div>
+                            <div class="media-object-section">
+                                <h3><a href="#">My Account</a></h3>
+                            </div>
+                        </div>
+                        <div class="media-object clearfix">
+                            <div class="media-object-section link-icons">
+                                <a href="#"><span class="flex-icon"><i class="fi-link"></i></span></a>
+                            </div>
+                            <div class="media-object-section">
+                                <h3><a href="#">Group Study Rooms</a></h3>
+                            </div>
+                        </div>
+                        <div class="media-object clearfix">
+                            <div class="media-object-section link-icons">
+                                <a href="#"><span class="flex-icon"><i class="fi-link"></i></span></a>
+                            </div>
+                            <div class="media-object-section">
+                                <h3><a href="#">Print, Scan and Copy</a></h3>
+                            </div>
+                        </div>
+                        <div class="media-object clearfix">
+                            <div class="media-object-section link-icons">
+                                <a href="#"><span class="flex-icon"><i class="fi-link"></i></span></a>
+                            </div>
+                            <div class="media-object-section">
+                                <h3><a href="#">Technology</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medium-6 columns">
+                        <div class="media-object clearfix">
+                            <div class="media-object-section link-icons">
+                                <a href="#"><span class="flex-icon"><i class="fi-link"></i></span></a>
+                            </div>
+                            <div class="media-object-section">
+                                <h3><a href="#">Course Reserves</a></h3>
+                            </div>
+                        </div>
+                        <div class="media-object clearfix">
+                            <div class="media-object-section link-icons">
+                                <a href="#"><span class="flex-icon"><i class="fi-link"></i></span></a>
+                            </div>
+                            <div class="media-object-section">
+                                <h3><a href="#">Faculty Services</a></h3>
+                            </div>
+                        </div>
+                        <div class="media-object clearfix">
+                            <div class="media-object-section link-icons">
+                                <a href="#"><span class="flex-icon"><i class="fi-link"></i></span></a>
+                            </div>
+                            <div class="media-object-section">
+                                <h3><a href="#">Digital Collections</a></h3>
+                            </div>
+                        </div>
+                        <div class="media-object clearfix">
+                            <div class="media-object-section link-icons">
+                                <a href="#"><span class="flex-icon"><i class="fi-link"></i></span></a>
+                            </div>
+                            <div class="media-object-section">
+                                <h3><a href="#">Borrow & Return</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end Neena's code from Landing1.html with quicklink icons -->
+                </div>
+
+                <div class="text-center">
+                    <a href="#" class="button hollow">All services</a>
+                </div>
+
+            </article>
+        </div>
+        <div class="large-6 large-pull-6 columns" data-equalizer-watch="quicklinks">
+
+            <!-- start Neena's code from Landing1.html - added optimization for mobile -->
+            <div class="image-wrapper overlay-fade-in">
+                <img src="/assets/img/homepage-img1.jpg" />
+                <div class="image-overlay-content">
+                    <h2>An Evening With Author Qais Akbar Omar</h2>
+                    <p class="lead">Join us for a free CU Boulder Friends of The Libraries summer event in Boulder: Staging Shakespeare in a War Zone: Values and Consequences An Evening with Qais Akbar Omar, author of <a href="#">A Night in the Emperor’s Garden</a></p>
+                    <div class="text-center">
+                        <a href="#" class="button hollow">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- end Neena's code from Landing1.html - added optimization for mobile -->
+
+        </div>
+    </section>
+
+    <div class="hero-image">
+
+        <div class="row small-up-3 medium-up-6 hero-icons text-center">
+            <div class="column">
+              <a class="flex-icon main-icon" href="#"><h2>Ask Us</h2></a>
+            </div>
+            <div class="column">
+                <a class="flex-icon" href="#"><span class="flex-icon"><i class="fi-comments"></i></span></a>
+            </div>
+            <div class="column">
+                <a class="flex-icon" href="#"><span class="flex-icon"><i class="fi-mobile"></i></span></a>
+            </div>
+            <div class="column">
+                <a class="flex-icon" href="#"><span class="flex-icon"><i class="fi-mail"></i></span></a>
+            </div>
+            <div class="column">
+                <a class="flex-icon" href="#"><span class="flex-icon"><i class="fi-torsos-female-male"></i></span></a>
+            </div>
+            <div class="column">
+                <a class="flex-icon" href="#"><span class="flex-icon"><i class="fi-telephone"></i></span></a>
+            </div>
+        </div>
+    </div>
+
+    <section class="row offset-block">
+
+        <div class="large-4 large-push-8 columns">
+            <div class="row" data-equalizer="sidebar" data-equalize-on="medium">
+                <div class="medium-6 large-12 columns margin-b" data-equalizer-watch="sidebar">
+                    <img src="/assets/img/homepage-img2.jpg" alt="" height="" width="">
+                    <article class="grey-bckr">
+                        <small>featured event</small>
+                        <h4><a href="#">Lorem ipsum dolor sit amet, adipisicing elit</a></h4>
+                        <p>Lorem ipsum dolor sit amet, adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam.</p>
+                    </article>
+                </div>
+                <div class="medium-6 large-12 columns">
+                    <article data-equalizer-watch="sidebar">
+                        <h1>Events</h1>
+
+                        <div class="row">
+                            <div class="medium-12 columns">
+                                <div class="event-date">
+                                    <p class="event-month">Sept</p>
+                                    <p class="event-day">18</p>
+                                </div>
+                                <div class="event-desc">
+                                    <h3 class="event-desc-header"><a href="#">Day in the Library for Future Apps</a></h3>
+                                    <p class="event-desc-detail"><span class="event-desc-time"></span>Classroom 116</p>
+                                </div>
+                            </div>
+                            <div class="medium-12 columns">
+                                <a href="#" class="button">Event Details</a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="medium-12 columns">
+                                <div class="event-date">
+                                    <p class="event-month">Sept</p>
+                                    <p class="event-day">18</p>
+                                </div>
+                                <div class="event-desc">
+                                    <h3 class="event-desc-header"><a href="#">Day in the Library for Future Apps</a></h3>
+                                    <p class="event-desc-detail"><span class="event-desc-time"></span>Classroom 116</p>
+                                </div>
+                            </div>
+                            <div class="medium-12 columns">
+                                <a href="#" class="button">Event Details</a>
+                            </div>
+                        </div>
+
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="large-8 large-pull-4 columns">
+            <article data-equalizer="listings" data-equalize-on="medium">
+
+                <h2>News & Events</h2>
+
+                <div class="row">
+
+                    <div class="medium-6 large-12 columns">
+                        <div class="media-object stack-for-small" data-equalizer-watch="listings">
+                            <div class="media-object-section">
+                                <img src="/assets/img/homepage-img3.jpg">
+                            </div>
+                            <div class="media-object-section">
+                                <div class="row">
+                                    <div class="large-8 columns">
+                                        <small>news</small>
+                                        <h4><a href="#">Spaces at Auraria Library</a></h4>
+                                    </div>
+                                    <div class="large-4 columns">
+                                        <div class="media-date">
+                                            <p>01/01/17
+                                                <br />by John Doe</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-divider"></div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam. Lorem consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing
+                                    elit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="medium-6 large-12 columns">
+                        <div class="media-object stack-for-small" data-equalizer-watch="listings">
+                            <div class="media-object-section">
+                                <img src="/assets/img/homepage-img4.jpg">
+                            </div>
+                            <div class="media-object-section">
+                                <div class="row">
+                                    <div class="large-8 columns">
+                                        <small>featured resources</small>
+                                        <h4><a href="#">Getting Ready for College</a></h4>
+                                    </div>
+                                    <div class="large-4 columns">
+                                        <div class="media-date">
+                                            <p>01/01/17
+                                                <br />by John Doe</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-divider"></div>
+                                <p>Lorem ipsum dolor sit amet, adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="medium-6 large-12 columns">
+                        <div class="media-object stack-for-small" data-equalizer-watch="listings">
+                            <div class="media-object-section">
+                                <img src="/assets/img/homepage-img5.jpg">
+                            </div>
+                            <div class="media-object-section">
+                                <div class="row">
+                                    <div class="large-8 columns">
+                                        <small>news</small>
+                                        <h4><a href="#">Chevo Studios Begins Public Art Installation</a></h4>
+                                    </div>
+                                    <div class="large-4 columns">
+                                        <div class="media-date">
+                                            <p>01/01/17
+                                                <br />by John Doe</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-divider"></div>
+                                <p>Lorem ipsum dolor sit amet, adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="medium-6 large-12 columns">
+                        <div class="media-object stack-for-small" data-equalizer-watch="listings">
+                            <div class="media-object-section">
+                                <img src="/assets/img/homepage-img6.jpg">
+                            </div>
+                            <div class="media-object-section">
+                                <div class="row">
+                                    <div class="large-8 columns">
+                                        <small>resource highlight</small>
+                                        <h4><a href="#">New Digital Collection Documents Pre-Campus Auraria</a></h4>
+                                    </div>
+                                    <div class="large-4 columns">
+                                        <div class="media-date">
+                                            <p>01/01/17
+                                                <br />by John Doe</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-divider"></div>
+                                <p>The Bill Trimble Collection is now live and accessible via the Auraria Library Digital Collections.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <a href="#" class="button hollow">See all news</a>
+                    </div>
+
+                </div>
+
+
+            </article>
             <div class="foot-wrapper">
-                <div class="foot-sm"></div>
-            </div>
-            <div class="menu-centered">
-              <ul class="menu center">
-                <li><a href="#">Database List</a></li>
-                <li><a href="#">Skyline Catalog</a></li>
-                <li><a href="#">Journal List</a></li>
-                <li><a href="#">Research Guides</a></li>
-              </ul>
+                <div class="foot"></div>
             </div>
         </div>
 
-    </div>
+    </section>
 
-</section>
-
-<section class="row">
-    <div class="medium-6 columns">
-        <img src="http://placehold.it/600x415" alt="" height="" width="">
-    </div>
-    <div class="medium-6 columns">
-        <img src="http://placehold.it/600x415" alt="" height="" width="">
-    </div>
-</section>
-
-<div class="hero-image">
-  <div class="menu-centered">
-    <ul class="menu center">
-      <li><a href="#">Ask us</a></li>
-      <li><a href="#">Icon</a></li>
-      <li><a href="#">Icon</a></li>
-      <li><a href="#">Icon</a></li>
-      <li><a href="#">Icon</a></li>
-      <li><a href="#">Icon</a></li>
-    </ul>
-  </div>
 </div>
-
-<section class="row offset-block">
-    <div class="medium-8 columns">
-        <article class="main-content">
-          <div class="media-object stack-for-small">
-            <div class="media-object-section">
-                <img src="http://placehold.it/200x135">
-            </div>
-            <div class="media-object-section">
-              <div class="row">
-<div class="large-8 columns">
-  <small>news</small>
-  <h4>New Spaces at Auraria Library</h4>
-</div>
-<div class="large-4 columns">
-  <blockquote>
-    01/01/17<br />
-    by John Doeldkjfsklfldskn
-  </blockquote>
-</div>
-              </div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam. Lorem consectetur adipisicing elit.</p>
-            </div>
-          </div>
-        </article>
-        <div class="foot-wrapper">
-            <div class="foot"></div>
-        </div>
-    </div>
-    <div class="medium-4 columns">
-        <img src="http://placehold.it/600x440" alt="" height="" width="">
-        <img src="http://placehold.it/600x440" alt="" height="" width="">
-    </div>
-</section>
 
 <footer>
-
+    <div class="row" data-equalizer="footer" data-equalize-on="large">
+        <div class="small-12 large-3 columns" data-equalizer-watch="footer">
+            <h2>Auraria Library</h2>
+            <img alt="advertisement of ShamWow" src="http://placehold.it/260x100&text=Logo">
+            <p>Connect:</p>
+            <ul class="inline-list link-icons">
+                <a href="#"><span class="flex-icon"><i class="fi-social-facebook"></i></span></a>
+                <a href="#"><span class="flex-icon"><i class="fi-social-twitter"></i></span></a>
+                <a href="#"><span class="flex-icon"><i class="fi-social-linkedin"></i></span></a>
+                <a href="#"><span class="flex-icon"><i class="fi-social-github"></i></span></a>
+            </ul>
+            <p class="copywrite"><a href="#">©Auraria Library</a></p>
+        </div>
+        <div class="small-12 large-3 columns" data-equalizer-watch="footer">
+            <h2>Contact Us</h2>
+            <p>
+                1100 Lawrence Street
+                <br /> Denver, CO 80204
+                <br />
+                <a href="#">303-556-2740 | Ask Us</a>
+            </p>
+            <p>
+                <img alt="advertisement of ShamWow" src="http://placehold.it/400x200&text=Map">
+            </p>
+            <p>
+                <small>Auraria Higher Education Center</small>
+            </p>
+        </div>
+        <div class="small-12 large-3 columns" data-equalizer-watch="footer">
+            <h2> News & Events</h2>
+            <p><a href="#">Spaces at Auraria Library</a></p>
+            <p><a href="#">Getting Ready for College</a></p>
+            <p><a href="#">Chevo Studios Begins Public Art Installation</a></p>
+        </div>
+        <div class="small-12 large-3 columns" data-equalizer-watch="footer">
+          <h2>About</h2>
+            <p>Auraria Library serves three schools on one urban campus:</p>
+            <p><a href="#">University of Colorado</a></p>
+            <p><a href="#">Denver Metropolitan State University of Denver</a></p>
+            <p><a href="#">Community College of Denver</a></p>
+            <div class="media-object clearfix">
+                <div class="media-object-section">
+                    <img alt="advertisement of ShamWow" src="http://placehold.it/100x50&text=Logo">
+                </div>
+                <div class="media-object-section">
+                    <p>A Federal Depository Library</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>

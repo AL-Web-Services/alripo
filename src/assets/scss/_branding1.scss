@@ -10,35 +10,47 @@
 // orange #af332d
 // dark maroon #3d100e
 
-$foundation-palette: (
-  primary: #af332d !important,
-  secondary: #e8e8e8,
-  success: green,
-  warning: red,
-  alert: orange,
-);
-
 $ivory: #f3f3f3;
 $maroon: #3d100e;
+$orange: #d5441c; /* from actual swatch */
+$darker-orange: #af332d;
+$dark-grey: #e8e8e8;
 
 // *************************
 // Typography
 // *************************
 
-h1, h2, h3, h4, h5, h6 {font-family: 'Varela Round', sans-serif; text-transform: uppercase;}
-
-p {font-family: 'Arimo', sans-serif;}
-
-//font sizes
-
-
 // Headings and paragraphs
+
+h1, h2, h3, h4, h5, h6 {font-family: 'Varela Round', sans-serif; -webkit-font-smoothing: antialiased;}
+
+p {font-family: 'Arimo', sans-serif; font-size: 1.1em;}
 
 // *************************
 // Icons
 // *************************
 
 // Hero Icons
+.hero-icons a.flex-icon, .hero-icons span.flex-icon {display: flex; align-items:center; justify-content: center;}
+.hero-icons a {width:70px; height: 70px; background-color: $maroon; border-radius: 50%; display: block; margin-left: auto; margin-right: auto;}
+.hero-icons span {width: 60px; height: 60px; background-color: $orange; display: block; border-radius: 50%;}
+.hero-icons span:hover {background-color: lighten( $orange, 10% );}
+.hero-icons i {color: white; font-size: 2.6em;}
+//.hero-icons a:first-child {width: 100px; height: 100px;}
+
+// Quicklink Icons
+.link-icons span.flex-icon {display: flex; align-items:center; justify-content: center;}
+.link-icons span {width: 30px; height: 30px; background-color: darken( $dark-grey, 10% ); display: block; border-radius: 50%;}
+.link-icons span:hover {background-color: darken( $dark-grey, 20% );}
+.link-icons i {color: white; font-size: 1.5em;}
+
+// Simple Icons
+.simple-icons i {color: #69c076; font-size: 3.4em; line-height: 0;}
+// Icon Hours mobile-hours
+.mobile-hours i {color: #69c076; font-size: 1.5em;}
+
+//uitility
+.margin-b {margin-bottom: 15px;}
 
 
 // *************************
@@ -46,44 +58,67 @@ p {font-family: 'Arimo', sans-serif;}
 // *************************
 
 // Header logo and Banner
-.header-wrapper {position: relative; background: linear-gradient(to right, black 0%,black 50%,#000000 50%,#591d1b 50%,#591d1b 100%); /* W3C */}
-/*.logo {
-  height: 160px;
-  width: 350px;
-  background: url('/assets/img/logo.png') no-repeat -10px center;
-  position: absolute;
-  left: 0;
-  top: 0;
-}*/
+.header-wrapper {position: relative; background: linear-gradient(to right, white 0%,white 50%,#ffffff 50%,#bf463e 50%,#bf463e 100%); /* W3C */}
 .banner {
   margin-left: auto;
   margin-right: auto;
   height: 160px;
-  background: url('/assets/img/deco/header-banner.png') no-repeat center center;
+  background: url('/assets/img/deco/header-banner2.png') no-repeat center center;
   display: block;
 }
 @media only screen and (max-width: 1934px){.banner {background-position: left center;}}
 @media only screen and (max-width: 1024px){.banner {background-position: -100px center;}}
 
-/*
-.logo-wrapper {
-  width: 1920px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
+// Hero menu
+@media only screen and (min-width: 1024px){
+  .hero-menu {position: absolute; left: 0; bottom: 0; width: 100%;}
+  .hero-menu .top-bar, .top-bar ul {background-color: transparent;}
+  .hero-menu .top-bar {padding: 0 0.5rem 0 0;}
+  .hero-menu a {color: white;}
 }
-.logo-wrapper img {position: absolute; left: 0; top: 0;}*/
 
-// Hero Search and Hours
-.hero-block {background-color: #fff;}
-.hero-menu {background-color: #e8e8e8;}
+// Hero Search
+.hero-search [type="checkbox"] + label, .hero-search [type="radio"] + label {margin-left: 0;margin-right: 0.7rem;}
+.hero-search h1 {font-size: 2rem;}
+.hero-search [type="text"], .hero-search [type="password"], .hero-search [type="date"], .hero-search [type="datetime"], .hero-search [type="datetime-local"], .hero-search [type="month"], .hero-search [type="week"], .hero-search [type="email"], .hero-search [type="number"], .hero-search [type="search"], .hero-search [type="tel"], .hero-search [type="time"], .hero-search [type="url"], .hero-search [type="color"], textarea{box-shadow: none; border: 1px solid #666; background-color: #f3f3f3;}
+.hero-search input::placeholder, textarea::placeholder {color: #666;}
+.hero-search .input-group-label {background-color: $orange; color: white; cursor: pointer; border: none;}
+.hero-search .input-group-label:hover {background-color: darken( $orange, 10% );}
+.hero-block {background-color: white;}
+
+//Hours
+.hero-hours {height: 100%; position: relative;}
+.hero-hours:before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-bottom: 100px solid red;
+	border-left: 0 solid transparent;
+	border-right: 50px solid transparent;
+	height: 0;
+	width: 100px;
+}
+@media only screen and (min-width: 1024px){ span.mobile-hours {display:none;}}
+@media only screen and (max-width: 1023px){.hours-desktop {display: none;}}
+
+//Quicklinks block
+@media only screen and (min-width: 1024px){.quicklinks-block {border-bottom: 10px solid $darker-orange;}}
+.quicklinks-block h3 {font-size: 1.1em;}
+.quicklinks-block .media-object-section {float: left;}
 
 //Padding
-.hero-search {padding:50px 65px 20px;}
+.hero-search, .hero-hours {padding:50px 65px 20px;}
 @media only screen and (max-width: 768px){
-  .hero-search {padding:15px;}
+  .hero-search{padding:15px;}
+  .hero-hours {padding: 15px 15px 0;}
 }
-.hero-hours {padding:50px 65px 20px;}
+
+//Secondary menu
+.menu-secondary {padding:0; margin-top: 30px; border-top: 1px solid #ccc;}
+.menu-secondary .menu > li:not(.menu-text) > h3 a {padding: 0.7rem 1rem;}
+.menu-secondary .menu > li:first-child h3 a {padding-left: 0;}
+.menu-secondary h3 {font-size: 1.1em; margin-top: 3px;}
+.hero-hours {background-color: white;}
 
 // Hero Background Image
 
@@ -94,7 +129,7 @@ p {font-family: 'Arimo', sans-serif;}
     overflow: hidden;
     padding: 131px 0 209px;
     position: relative;
-    background-color: #ccc;
+    background: url('/assets/img/hero-img.jpg') no-repeat center center / cover;
     &:before, &:after {
       background: #f3f3f3 none repeat scroll 0 0;
       content: "";
@@ -120,9 +155,11 @@ p {font-family: 'Arimo', sans-serif;}
 
 section {margin-bottom: 15px;}
 
-article.main-content {min-height:900px;background-color: #fff;position: relative;}
-
-article {padding:50px 65px 20px;}
+// Article
+.main-content article {padding:50px 65px 20px; background-color: white;}
+@media only screen and (max-width: 1024px){.main-content article {padding:20px;}}
+@media only screen and (max-width: 768px){.main-content article{padding:15px;}}
+article.grey-bckr {background-color: #e8e8e8;}
 
 // Content Diagonal Footer
 .foot-wrapper {overflow: hidden;}
@@ -130,6 +167,12 @@ article {padding:50px 65px 20px;}
   	width: 0;
   	height: 0;
   	border-top: 30px solid white;
+  	border-right: 1200px solid transparent;
+}
+.foot-sm-top {
+  	width: 0;
+  	height: 0;
+  	border-bottom: 30px solid white;
   	border-right: 1200px solid transparent;
 }
 .foot {
@@ -147,25 +190,51 @@ article {padding:50px 65px 20px;}
 body {background-color: #f3f3f3;}
 
 // Header
-header {margin-bottom: 15px;}
+
 // Menu
 
+
+// *************************
+// Overlay image modification - in final stylesheet will remove !important, it is only for prototype
+// *************************
+
+//Overlay color
+.overlay-fade-in p {font-size: initial !important;}
+.overlay-fade-in a {color: white; font-weight: bold;}
+.overlay-fade-in a:hover {color: #ccc;}
+.image-wrapper {border: 0 solid white; border-radius: 0;}
+.image-overlay-content {padding: 50px 65px 20px; background-color: #bf463e !important;}
+//Overlay fade in mobile
+@media only screen and (max-width: 1024px){
+  .overlay-fade-in img {display: none;}
+  .overlay-fade-in h2 {opacity: 1 !important;}
+  .overlay-fade-in {border-radius: 0 !important;}
+  .image-overlay-content {padding: 15px; border-bottom: 10px solid $maroon; opacity: 1 !important; background-color: #bf463e !important; position: relative !important;}
+}
+
 // Buttons
+.hero-button {}
+.skewed-button {}
 
 // Button Group
 
 // Blockquote
-blockquote {border-left: 10px solid #af332d;}
+blockquote {border-left: 10px solid $darker-orange;}
 
 // Dividers
+.block-divider {display: block; width: 100%;height: 1px;}
 
 // Listing
 .media-header-wrapper {float:left;}
-.media-header blockquote {float: right;}
+.media-header .media-date {float: right;}
 
-// Small Listing (for sidebar)
+// Small Listing (event)
+.event-date .event-month {padding: 0; background: $dark-grey none repeat scroll 0 0;}
+.event-date .event-day {padding: 0 1rem; font-size: 1.5rem;}
 
 // Article
 
 // Footer
-footer {height: 400px;background-color: #666;}
+footer {height: auto;background-color: #666; padding-top: 230px;}
+footer h1, footer h2, footer h3, footer p {color: white;}
+footer a {color: $dark-grey;}
