@@ -55,19 +55,26 @@ $global-lineheight: 1.5;
 //  success: #45ADA8,
 //  warning: #EC5840,
 //  alert: #FF9A43,
+// $light-gray: #e6e6e6;
+// $medium-gray: #cacaca;
+// $dark-gray: #8a8a8a;
+// $black: #0a0a0a;
+// $white: #fefefe;
 //);
 $foundation-palette: (
-  primary: #594F4F,
+  primary: #666666,
   secondary: #af332d,
   success: #69c076,
   warning: orange,
-  alert: red,
+  alert: #af332d,
 );
-$light-gray: #e6e6e6;
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
-$black: #0a0a0a;
-$white: #fefefe;
+$light-gray: #f3f3f3;
+$medium-gray: #cccccc;
+$dark-gray: #666666;
+$off-black: #333333;
+$black: #000000;
+$white: #ffffff;
+//Sasha changed global colors for Concept 1 brand design
 $body-background: $white;
 $body-font-color: $black;
 $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;

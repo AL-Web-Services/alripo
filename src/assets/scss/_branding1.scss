@@ -6,11 +6,12 @@
 
 // white #ffffff
 // light grey #f3f3f3
-// darker grey #e8e8e8
-// orange #af332d
+// medium grey #cccccc
+// dark grey #666666
+// orange #d5441c
+// maroon #af332d
 // dark maroon #3d100e
 
-$ivory: #f3f3f3;
 $maroon: #3d100e;
 $orange: #d5441c; /* from actual swatch */
 $darker-orange: #af332d;
@@ -22,7 +23,7 @@ $dark-grey: #e8e8e8;
 
 // Headings and paragraphs
 
-h1, h2, h3, h4, h5, h6 {font-family: 'Varela Round', sans-serif; -webkit-font-smoothing: antialiased;}
+h1, h2, h3, h4, h5, h6 {font-family: 'Varela Round', sans-serif;}
 
 p {font-family: 'Arimo', sans-serif; font-size: 1.1em;}
 
@@ -36,7 +37,10 @@ p {font-family: 'Arimo', sans-serif; font-size: 1.1em;}
 .hero-icons span {width: 60px; height: 60px; background-color: $orange; display: block; border-radius: 50%;}
 .hero-icons span:hover {background-color: lighten( $orange, 10% );}
 .hero-icons i {color: white; font-size: 2.6em;}
-//.hero-icons a:first-child {width: 100px; height: 100px;}
+.hero-icons a.main-icon {width: 100px; height: 100px; color: white; margin-top: -15px;} //wanted to use :first-child but it is not working for me
+@media only screen and (max-width: 1024px){.hero-icons a.main-icon {margin-bottom: 15px;}}
+//footer .hero-icons {margin-left: initial; margin-right: initial;}
+footer .hero-icons a.main-icon {background-color: #ccc; width: 80px; height: 80px;}
 
 // Quicklink Icons
 .link-icons span.flex-icon {display: flex; align-items:center; justify-content: center;}
@@ -46,10 +50,28 @@ p {font-family: 'Arimo', sans-serif; font-size: 1.1em;}
 
 // Simple Icons
 .simple-icons i {color: #69c076; font-size: 3.4em; line-height: 0;}
-// Icon Hours mobile-hours
+
+// Icon Hours mobile
 .mobile-hours i {color: #69c076; font-size: 1.5em;}
 
-//uitility
+// Icon My account
+.menu-text a {background-color: $orange; border-radius: 15px;}
+.hero-menu ul li.menu-text a {color: white;}
+//.menu-text {padding: 0;}
+//.menu-text .utility-icon {display: inline-block;}
+//.utility-icon span {background-color: #fff;}
+//.utility-icon i {color: #333;}
+
+//Social Icons
+@media only screen and (max-width: 1024px){.social-icons {display: flex; justify-content: center;}}
+ul.social-icons {margin-left:0;}
+.social-icons span {float: left; margin-left: 2px; margin-right: 2px;}
+.social-icons span.flex-icon {display: flex; align-items:center; justify-content: center;}
+.social-icons span {width: 30px; height: 30px; background-color: darken( $dark-grey, 10% ); display: block; border-radius: 50%;}
+.social-icons span:hover {background-color: darken( $dark-grey, 20% );}
+.social-icons i {color: $off-black; font-size: 1.5em;}
+
+//utitility class
 .margin-b {margin-bottom: 15px;}
 
 
@@ -59,6 +81,8 @@ p {font-family: 'Arimo', sans-serif; font-size: 1.1em;}
 
 // Header logo and Banner
 .header-wrapper {position: relative; background: linear-gradient(to right, white 0%,white 50%,#ffffff 50%,#bf463e 50%,#bf463e 100%); /* W3C */}
+.banner {border-bottom: 10px solid darken( #af332d, 10% );}
+@media only screen and (max-width: 768px){.header-wrapper {display: none;}}
 .banner {
   margin-left: auto;
   margin-right: auto;
@@ -71,19 +95,34 @@ p {font-family: 'Arimo', sans-serif; font-size: 1.1em;}
 
 // Hero menu
 @media only screen and (min-width: 1024px){
-  .hero-menu {position: absolute; left: 0; bottom: 0; width: 100%;}
+  //.hero-menu {position: absolute; left: 0; bottom: 0; width: 100%;}
   .hero-menu .top-bar, .top-bar ul {background-color: transparent;}
   .hero-menu .top-bar {padding: 0 0.5rem 0 0;}
-  .hero-menu a {color: white;}
+  .hero-menu {border-bottom: 2px solid #333; border-top: 2px solid #333;}
+  //.hero-menu a {color: white;}
 }
+.hero-menu {background-color: #ccc;}
+.hero-menu .title-bar {background-color: #ccc; color: #333; box-shadow: 0 7px 0 #333, 0 14px 0 #333;}
+.hero-menu ul li a {color: #333; font-size: 1.1em; font-family: 'Varela Round', sans-serif;}
+.hero-menu .menu-icon:after {background: #333 none repeat scroll 0 0;}
+.hero-menu .menuitem {padding: 0.7rem 1rem;}
 
-// Hero Search
+// Hero Search form, site search form
 .hero-search [type="checkbox"] + label, .hero-search [type="radio"] + label {margin-left: 0;margin-right: 0.7rem;}
 .hero-search h1 {font-size: 2rem;}
 .hero-search [type="text"], .hero-search [type="password"], .hero-search [type="date"], .hero-search [type="datetime"], .hero-search [type="datetime-local"], .hero-search [type="month"], .hero-search [type="week"], .hero-search [type="email"], .hero-search [type="number"], .hero-search [type="search"], .hero-search [type="tel"], .hero-search [type="time"], .hero-search [type="url"], .hero-search [type="color"], textarea{box-shadow: none; border: 1px solid #666; background-color: #f3f3f3;}
-.hero-search input::placeholder, textarea::placeholder {color: #666;}
+.hero-search input::placeholder, .hero-search textarea::placeholder, .site-search input::placeholder, .site-search textarea::placeholder {color: #666;}
 .hero-search .input-group-label {background-color: $orange; color: white; cursor: pointer; border: none;}
 .hero-search .input-group-label:hover {background-color: darken( $orange, 10% );}
+
+//Site search form
+.site-search input {font-size: 1em;}
+.site-search .input-group-field {height: 2rem;}
+.site-search .input-group-label {background-color: darken( $dark-grey, 30% );; color: white; cursor: pointer; width: 30px; height: 30px; padding: 0; border-radius: 50%;}
+.site-search .input-group-label:hover {background-color: darken( $dark-grey, 40% );}
+.site-search .input-group {margin-top: 15px; margin-bottom: 5px;}
+
+//Hero block
 .hero-block {background-color: white;}
 
 //Hours
@@ -115,7 +154,7 @@ p {font-family: 'Arimo', sans-serif; font-size: 1.1em;}
 
 //Secondary menu
 .menu-secondary {padding:0; margin-top: 30px; border-top: 1px solid #ccc;}
-.menu-secondary .menu > li:not(.menu-text) > h3 a {padding: 0.7rem 1rem;}
+.menu-secondary .menu h3 a {padding: 0.7rem 1rem; color: #333;}
 .menu-secondary .menu > li:first-child h3 a {padding-left: 0;}
 .menu-secondary h3 {font-size: 1.1em; margin-top: 3px;}
 .hero-hours {background-color: white;}
@@ -195,15 +234,91 @@ body {background-color: #f3f3f3;}
 
 
 // *************************
-// Overlay image modification - in final stylesheet will remove !important, it is only for prototype
+// Overlay image modification
 // *************************
 
-//Overlay color
-.overlay-fade-in p {font-size: initial !important;}
-.overlay-fade-in a {color: white; font-weight: bold;}
-.overlay-fade-in a:hover {color: #ccc;}
-.image-wrapper {border: 0 solid white; border-radius: 0;}
-.image-overlay-content {padding: 50px 65px 20px; background-color: #bf463e !important;}
+
+.image-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+}
+
+.image-overlay-content {
+  background-color: #bf463e;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  padding: 50px 65px 20px;
+}
+
+// modifier classes
+
+.overlay-fade-in {
+
+  p {
+    letter-spacing: 0.15em;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.2s linear;
+  }
+
+  a {color: white; font-weight: bold;
+
+    &:hover {color: #ccc;}
+
+    }
+
+  img {
+    transition: all 0.2s linear;
+  }
+
+  .image-overlay-content {
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+  }
+
+  h2 {
+    color: #f2f2f2;
+    font-size: 1.8rem;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    //background: rgba(0,0,0,0.7);
+  }
+
+  .button {
+    background: #FFF;
+    border: none;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: #ccc;
+    }
+  }
+
+  &:hover img {
+    transform: scale(1.02);
+  }
+
+  &:hover .image-overlay-content {
+    opacity: 1;
+  }
+
+  &:hover h2, p, .button {
+    opacity: 1;
+  }
+
+  &:hover p {
+    transition-delay: 0.1s;
+  }
+}
+
 //Overlay fade in mobile
 @media only screen and (max-width: 1024px){
   .overlay-fade-in img {display: none;}
@@ -220,13 +335,14 @@ body {background-color: #f3f3f3;}
 
 // Blockquote
 blockquote {border-left: 10px solid $darker-orange;}
+blockquote, blockquote p {color: #333;}
 
 // Dividers
 .block-divider {display: block; width: 100%;height: 1px;}
 
 // Listing
 .media-header-wrapper {float:left;}
-.media-header .media-date {float: right;}
+.media-header .media-date {float: right; background-color: $dark-grey;}
 
 // Small Listing (event)
 .event-date .event-month {padding: 0; background: $dark-grey none repeat scroll 0 0;}
@@ -238,3 +354,38 @@ blockquote {border-left: 10px solid $darker-orange;}
 footer {height: auto;background-color: #666; padding-top: 230px;}
 footer h1, footer h2, footer h3, footer p {color: white;}
 footer a {color: $dark-grey;}
+@media only screen and (max-width: 1024px){
+  footer {text-align: center;}
+  footer ul {margin: 0;}
+  footer ul li {list-style-type: none;}
+}
+footer ul li {color: #fff;}
+
+.utility-menu-bottom {background-color: #333; color: white;}
+.utility-menu-bottom a {color: white;}
+
+.google-map {opacity: 0.6;}
+.google-map:hover {opacity: 1;}
+
+// Responive map
+/*@media only screen and (max-width: 1024px){
+  .map-responsive {display: none;}
+}
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}*/
+
+
+// *************************
+// News Events
+// *************************

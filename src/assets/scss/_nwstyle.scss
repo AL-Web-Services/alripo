@@ -174,7 +174,7 @@ $img-hover-global-radius: 4px;
 // modifier classes
 
 .overlay-fade-in {
-  
+
   p {
     letter-spacing: 0.15em;
     color: #f4f4f4;
@@ -182,18 +182,18 @@ $img-hover-global-radius: 4px;
     opacity: 0;
     transition: all 0.2s linear;
   }
-  
+
   img {
     transition: all 0.2s linear;
   }
 
-  
+
   .image-overlay-content {
     opacity: 0;
     background-color: rgba(0,0,0, 0.4);
     transition: all 0.4s ease-in-out;
   }
-  
+
   h2 {
     color: #f2f2f2;
     font-size: 1.8rem;
@@ -202,11 +202,11 @@ $img-hover-global-radius: 4px;
     transition: all 0.2s ease-in-out;
     //background: rgba(0,0,0,0.7);
   }
-  
+
   .button {
     display: inline-block;
     text-decoration: none;
-    padding: 7px 14px; 
+    padding: 7px 14px;
     background: #FFF;
     color: #222;
     text-transform: uppercase;
@@ -215,44 +215,44 @@ $img-hover-global-radius: 4px;
     border: 1px solid #999;
     opacity: 0;
     transition: all 0.2s ease-in-out;
-    
+
     &:hover {
       box-shadow: 0 0 5px #000;
     }
   }
-  
+
   &:hover img {
     transform: scale(1.2);
   }
-  
+
   &:hover .image-overlay-content {
     opacity: 1;
   }
-  
+
   &:hover h2, p, .button {
     opacity: 1;
   }
-  
+
   &:hover p {
     transition-delay: 0.1s;
   }
-  
+
   &:hover .button {
     transition-delay: 0.2s;
   }
   &:hover figcaption {
     display: none;
   }
-} 
+}
 
 
 
 .overlay-slide-in-left {
-  
+
   img {
     transition: all 0.3s ease-in-out;
   }
-  
+
   .image-overlay-content {
     background-image: url(http://www.awwwards.com/awards/images/2015/04/pattern.jpg);
     background-color: rgba(0,0,0,0.3);
@@ -261,7 +261,7 @@ $img-hover-global-radius: 4px;
     transition: all 0.4s ease-in-out;
     box-shadow: 0 0 7px #ccc;
   }
-  
+
   h2{
     font-size: 1.8rem;
     background: rgba(255, 255, 255, 0.7);
@@ -269,7 +269,7 @@ $img-hover-global-radius: 4px;
     color: #000;
     box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
   }
-  
+
   p {
     opacity: 0;
     color: #333;
@@ -279,7 +279,7 @@ $img-hover-global-radius: 4px;
   .button {
     display: inline-block;
     text-decoration: none;
-    padding: 7px 14px; 
+    padding: 7px 14px;
     background: #000;
     color: #fff;
     text-transform: uppercase;
@@ -294,7 +294,7 @@ $img-hover-global-radius: 4px;
 
   &:hover .image-overlay-content {
     transform: translateX(0px);
-  } 
+  }
 
   &:hover img {
     transform: translateX(80%);
@@ -306,14 +306,14 @@ $img-hover-global-radius: 4px;
     transition-delay: 0.4s;
   }
 }
-  
-  
+
+
 .overlay-fade-in-new-background {
-  
+
   .button {
     display: inline-block;
     text-decoration: none;
-    padding: 7px 14px; 
+    padding: 7px 14px;
     background: #000;
     color: #fff;
     text-transform: uppercase;
@@ -322,24 +322,24 @@ $img-hover-global-radius: 4px;
     position: relative;
     opacity: 0;
     transition: all 0.2s ease-in-out;
-    
+
     &:hover {
       box-shadow: 0 0 5px #fff;
       background-color: #222;
     }
   }
-  
+
   p{
-    font-size: 28px; 
+    font-size: 28px;
   }
-  
+
   .image-overlay-content {
     opacity: 0;
     //background-image: url(http://subtlepatterns.com/patterns/gplaypattern.png);
     background-color: rgba(255,255,255, 0.5);
     transition: all 0.4s ease-in-out;
   }
-  
+
   h2 {
     color: #000;
     font-size: 1.6rem;
@@ -347,46 +347,46 @@ $img-hover-global-radius: 4px;
     opacity: 0;
     transition: all 0.2s ease-in-out;
   }
-  
+
   p {
     opacity: 0;
     transition: all 0.2s linear;
   }
-  
+
   img{
     transition: all 0.2s ease-in-out;
   }
-  
+
   &:hover img {
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
     filter: gray;
     -webkit-filter: grayscale(100%);
     transform: scale(1.5);
   }
-  
+
   &:hover .image-overlay-content {
     opacity: 1;
   }
-  
+
   &:hover h2, p, .button {
     opacity: 1;
   }
-  
+
   &:hover p {
     transition-delay: 0.1s;
   }
-  
+
   &:hover .button {
     transition-delay: 0.2s;
   }
-} 
+}
 
 
 /////////////////////////////////////////////////
 //Hours Style  //
 /////////////////////////////////////////////////
 .period-style{
-  font-size: 1.2em; 
+  font-size: 1.2em;
   margin-bottom: 0;
 }
 .tr-even-width{
@@ -421,4 +421,3 @@ $img-hover-global-radius: 4px;
 .morelink {
     display: block;
 }
-
