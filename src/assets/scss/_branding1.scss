@@ -36,11 +36,12 @@ p {font-family: 'Arimo', sans-serif; font-size: 1.1em;}
   a {
     width:70px; height: 70px; background-color: $maroon; border-radius: 50%; display: block; margin-left: auto; margin-right: auto;
   }
-  a.flex-icon, span.flex-icon{
+  a, span{
     display: flex; align-items:center; justify-content: center;
   }
   span {
     width: 60px; height: 60px; background-color: $orange; display: block; border-radius: 50%;
+    &:hover {background-color: lighten( $orange, 10% );}
   }
   i {
     color: white; font-size: 2.6em;
@@ -51,7 +52,7 @@ p {font-family: 'Arimo', sans-serif; font-size: 1.1em;}
 //.hero-icons a {width:70px; height: 70px; background-color: $maroon; border-radius: 50%; display: block; margin-left: auto; margin-right: auto;}
 //.hero-icons span {width: 60px; height: 60px; background-color: $orange; display: block; border-radius: 50%;}
 //.hero-icons i {color: white; font-size: 2.6em;}
-.hero-icons span:hover {background-color: lighten( $orange, 10% );}
+//.hero-icons span:hover {background-color: lighten( $orange, 10% );}
 .hero-icons a.main-icon {width: 100px; height: 100px; color: white; margin-top: -15px;} //wanted to use :first-child but it is not working for me
 .hero-icons a.main-icon:hover {background-color: darken( $maroon, 10% );}
 @media only screen and (max-width: 1024px){.hero-icons a.main-icon {margin-bottom: 15px;}}
