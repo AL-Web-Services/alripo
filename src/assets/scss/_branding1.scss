@@ -56,7 +56,7 @@ p {font-family: 'Arimo', sans-serif; font-size: 1.1em;}
 .hero-icons a.main-icon {width: 100px; height: 100px; color: white; margin-top: -15px;} //wanted to use :first-child but it is not working for me
 .hero-icons a.main-icon:hover {background-color: darken( $maroon, 10% );}
 @media only screen and (max-width: 1024px){.hero-icons a.main-icon {margin-bottom: 15px;}}
-footer .hero-icons a.main-icon {background-color: darken( #ccc, 20% ); width: 80px; height: 80px; margin-top: 15px;}
+footer .hero-icons a.main-icon {background-color: darken( #ccc, 20% ); width: 80px; height: 80px; margin-top: 5px;}
 
 // Quicklink Icons
 .link-icons {
