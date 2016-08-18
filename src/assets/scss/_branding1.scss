@@ -69,11 +69,46 @@ footer .hero-icons a.main-icon {background-color: darken( #ccc, 20% ); width: 80
 .mobile-hours i {color: map-get($foundation-palette, success); font-size: 1.5em;}
 
 // Icon My account
-.menu-text a {background-color: $orange; border-radius: 15px;}
+//.menu-text a {background-color: $orange; border-radius: 15px;}
+.menu-text i {background-color: $orange; border-radius: 15px; padding-top: 3px; width: 25px; height: 25px; text-align: center;}
 .hero-menu ul li.menu-text a {color: $white;}
 
 // Icon Question mark
 .icon-question {font-weight: bold; color: #333; font-size: 1.5em;}
+
+//Icon divider
+.icon-divider-wrapper {
+  position: relative;
+  width: 100px;
+  height: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+}
+.icon-divider {
+  width: 15px;
+  height: 15px;
+  border: 6px solid $white;
+  background-color: #ccc;
+  border-radius: 50%;
+  position: absolute;
+  left: 43px;
+  top: 0;
+  z-index: 100;
+}
+.icon-divider-line {
+  width: 100px;
+  height: 2px;
+  border-bottom: 2px solid $white;
+  position: absolute;
+  left: 0;
+  top: 6px;
+  z-index: 50;
+}
+.icon-divider-grey {border: 6px solid #ccc; background-color: $white;}
+.icon-divider-line-grey {border-bottom: 2px solid #ccc;}
 
 //Social Icons
 @media only screen and (max-width: 1024px){
@@ -89,7 +124,7 @@ ul.social-icons {margin-left:0;}
 // Schools color logos icons
 .logo-icons {
 span.cu, span.metro, span.community, span.ahec {
-  margin-right: 25px;
+  margin-right: 20px;
     &::before, &::after {
         position: absolute;
         content: "";
@@ -99,42 +134,42 @@ span.cu, span.metro, span.community, span.ahec {
   }
 span.cu { // University of Colorado Denver
     &::before {
-      border-top: 25px solid #cfb880;
-      border-right: 25px solid transparent;
+      border-top: 20px solid #cfb880;
+      border-right: 20px solid transparent;
     }
     &::after {
-      border-top: 25px solid transparent;
-      border-right: 25px solid black;
+      border-top: 20px solid transparent;
+      border-right: 20px solid black;
     }
   }
 span.metro { // Metropolitan State University of Denver
     &::before {
-      border-top: 25px solid #d01944;
-      border-right: 25px solid transparent;
+      border-top: 20px solid #d01944;
+      border-right: 20px solid transparent;
     }
     &::after {
-      border-top: 25px solid transparent;
-      border-right: 25px solid #1b477b;
+      border-top: 20px solid transparent;
+      border-right: 20px solid #1b477b;
     }
   }
 span.community { // Community College of Denver
     &::before {
-      border-top: 25px solid #fbb931;
-      border-right: 25px solid transparent;
+      border-top: 20px solid #fbb931;
+      border-right: 20px solid transparent;
     }
     &::after {
-      border-top: 25px solid transparent;
-      border-right: 25px solid #54277d;
+      border-top: 20px solid transparent;
+      border-right: 20px solid #54277d;
     }
   }
 span.ahec { // Auraria Higher Education Center
     &::before {
-      border-top: 25px solid #aed5ea;
-      border-right: 25px solid transparent;
+      border-top: 20px solid #aed5ea;
+      border-right: 20px solid transparent;
     }
     &::after {
-      border-top: 25px solid transparent;
-      border-right: 25px solid #137fc2;
+      border-top: 20px solid transparent;
+      border-right: 20px solid #137fc2;
     }
   }
 }
@@ -181,6 +216,9 @@ span.ahec { // Auraria Higher Education Center
     &:after {background: #333 none repeat scroll 0 0;}
   }
   .menuitem {padding: 0.7rem 1rem;}
+  li.menu-text > a {padding: 0 1rem;}
+  .menu-text {padding: 0.9rem 1rem 0.5rem; font-weight: normal;}
+
 }
 /* above compiles to */
 //.hero-menu {background-color: #666;}
@@ -205,7 +243,7 @@ span.ahec { // Auraria Higher Education Center
   .input-group-label{
     &:hover {background-color: darken( $dark-grey, 40% );}
   }
-  .input-group {margin-top: 15px; margin-bottom: 5px; position: relative;}
+  .input-group {margin-top: 12px; margin-bottom: 5px; position: relative;}
   .input-group-icon {position: absolute; right: 8px; top: 2px;}
 }
 /* above compiles to */
@@ -257,7 +295,10 @@ span.ahec { // Auraria Higher Education Center
 }
 
 //Padding
-.hero-search, .hero-hours {padding:50px 45px 20px;}
+.hero-hours {padding-top: 50px;}
+.hero-search { //, .hero-hours
+  padding: 50px 65px 20px;//padding:50px 45px 20px;
+}
 @media only screen and (max-width: 768px){
   .hero-search{padding:15px;}
   .hero-hours {padding: 15px 15px 0;}
@@ -307,8 +348,9 @@ section {margin-bottom: 15px;}
 
 // Article
 .main-content article {padding:50px 65px 20px; background-color: $white;}
+.main-content article.alt-padding {padding: 30px 45px 20px;}
 @media only screen and (max-width: 1024px){
-  .main-content article {padding:20px;}
+  .main-content article, .main-content article.alt-padding {padding:20px;}
 }
 @media only screen and (max-width: 768px){
   .main-content article{padding:15px;}
@@ -355,12 +397,13 @@ body {background-color: #f3f3f3;}
   overflow: hidden;
   position: relative;
   text-align: left;
-  padding: 25px 45px 20px; // trying for image alignment with search
-  background-color: #fff; // trying for image alignment with search
+  //padding: 25px 45px 20px; // trying for image alignment with search
+  //background-color: #f8f8f8; // trying for image alignment with search
 }
 
 .image-overlay-content {
-  background-color: #666;
+  background: rgba(102,102,102,0.9);
+  //background-color: #666;//change color background-color: #666;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -368,6 +411,7 @@ body {background-color: #f3f3f3;}
   top: 0;
   left: 0;
   padding: 50px 65px 20px;
+  //border-bottom: 10px solid $orange; //add
 }
 
 .overlay-fade-in {
@@ -379,7 +423,9 @@ body {background-color: #f3f3f3;}
     transition: all 0.2s linear;
   }
 
-  a {color: $white; font-weight: bold;
+  a {
+    color: $white;
+    font-weight: bold;
 
     &:hover {color: #ccc;}
 
@@ -387,7 +433,7 @@ body {background-color: #f3f3f3;}
 
   img {
     transition: all 0.2s linear;
-    border: 3px solid #000;
+    //border: 1px solid #666;
   }
 
   .image-overlay-content {
@@ -436,32 +482,57 @@ body {background-color: #f3f3f3;}
   .overlay-fade-in img {display: none;}
   .overlay-fade-in h2 {opacity: 1 !important;}
   .overlay-fade-in {border-radius: 0 !important;}
-  .image-overlay-content {padding: 15px; border-bottom: 10px solid $maroon; opacity: 1 !important; background-color: #bf463e !important; position: relative !important;}
+  .image-overlay-content {
+    padding: 15px;
+    border-bottom: 10px solid $orange;
+    opacity: 1 !important;
+    background-color: #666; //change color background-color: #bf463e !important;
+    position: relative !important;}
 }
 
 // Blockquote
-blockquote {border-left: 10px solid $darker-orange;}
+blockquote {border-left: 10px solid $orange;}
 blockquote, blockquote p {color: #333;}
 
 // Dividers and borders
-.block-divider {display: block; width: 100%;height: 1px;}
+.block-divider {display: block; width: 100%;height: 1px; margin-bottom: 2.5rem;}
 @media only screen and (min-width: 1024px){
-  .border-foot {border-bottom: 10px solid $darker-orange;}
+  .border-foot {border-bottom: 10px solid $orange;}
 }
 
 // Listing
-.media-header-wrapper {float:left;}
-.media-date {
-  float: right; background-color: $dark-grey; font-size: 0.8em; padding: 5px;
-  p {
-    margin-bottom: 0;
+.listing {
+  .media-header-wrapper {float:left;}
+  //.media-object img {border-left: 4px solid $orange;}
+  .media-date {
+    //float: right;
+    //background-color: $dark-grey;
+    font-size: 0.9em;
+    color: #333;
+    //padding: 5px;
+    p {
+      margin-bottom: 0;
+    }
+    i {
+      font-style: normal;
+    }
   }
 }
 @media only screen and (max-width: 1024px){.media-date {float: none; background-color: transparent;}}
 
 // Small Listing (event)
-.event-date .event-month {padding: 0; background: $dark-grey none repeat scroll 0 0;}
-.event-date .event-day {padding: 0 1rem; font-size: 1.5rem; border-bottom: 1px solid #666;}
+.listing-event {padding-top: 10px; margin-bottom: 10px;}
+@media only screen and (min-width: 1024px){.listing-event {background-color: #f8f8f8;}}
+.listing-event h4.event-desc-header {font-size: 1.1rem;}
+.listing-event h4.event-desc-header a {color: #333;}
+//.listing-event .event-desc .event-desc-time {font-weight: normal; font-size: 0.9em;}
+.listing-event .event-date .event-month {color: #fff; padding: 0; background: #666 none repeat scroll 0 0; margin-top: 5px;}
+.listing-event .event-date .event-day {padding: 0 1rem; font-size: 0.8em; border: 1px solid #666;}
+.listing-event .button {padding: 0.4em 1em; color: lighten(#666, 10%); color: white;}
+.listing-event .event-desc-where {float:left; line-height: 2.7;}
+.listing-event .event-desc-where i {font-style: normal; color: #666;}
+.listing-event .event-desc-detail {float: right;}
+.listing-event .divider-listing {margin-bottom: 10px; display: block;}
 
 // Article
 

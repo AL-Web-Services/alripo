@@ -98,19 +98,14 @@
             </div>
             <!-- end of new top menu behavior -->
             <!--row hide + flydown -->
+            <!--
             <div class="row hide-first" id="flymenu" data-toggler data-animate="fade-in fade-out" data-closable>
                 <button class="close-button" type="button" aria-label="Dismiss alert" data-close>
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <div class="columns callout">
-                    <!-- <div class="input-group">
-                    <input class="input-group-field" type="text" placeholder="Search this site" id="search_string_All" name="q">
-                    <span class="input-group-label"><i class="fi-magnifying-glass"></i></span>
-                </div> -->
                     <p>Concept prototyping for responsive menu handling</p>
                     <p>A handy see it all flydown menu would be ideal for providing "view everything we have" features for desktop display. Burger menu can be utilized for smartphone</p>
-
-
                 </div>
                 <div class="columns large-3 medium-6 small-12">
                     <span><strong>Group 1</strong></span>
@@ -150,7 +145,7 @@
                 </div>
 
 
-            </div>
+            </div>-->
             <!--end of hide + flydown menu-->
             <!-- my sidebar content -->
             <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
@@ -190,7 +185,7 @@
         <div class="medium-12 columns">
             <div class="hero-block">
                 <div class="row">
-                    <div class="large-5 large-push-7 columns">
+                    <div class="large-4 large-push-8 columns">
                         <div class="hero-hours">
                             <blockquote>
                                 <div class="media-object clearfix">
@@ -232,7 +227,7 @@
                             </blockquote>
                         </div>
                     </div>
-                    <div class="large-7 large-pull-5 columns">
+                    <div class="large-8 large-pull-4 columns">
                         <div class="hero-search">
 
                             <div class="row">
@@ -364,7 +359,7 @@
                     <!-- end Neena's code from Landing1.html with quicklink icons -->
                 </div>
 
-                <div class="text-center">
+                <div class="text-right">
                     <a href="#" class="button hollow">All services</a>
                 </div>
 
@@ -373,7 +368,7 @@
         <div class="large-6 large-pull-6 columns" data-equalizer-watch="quicklinks">
 
             <!-- start Neena's code from Landing1.html - added optimization for mobile -->
-            <div class="image-wrapper overlay-fade-in border-foot">
+            <div class="image-wrapper overlay-fade-in">
                 <img src="/assets/img/homepage-img1.jpg" />
                 <div class="image-overlay-content">
                     <h2>An Evening With Author Qais Akbar Omar</h2>
@@ -382,6 +377,7 @@
                         <a href="#" class="button hollow">Learn More</a>
                     </div>
                 </div>
+
             </div>
             <!-- end Neena's code from Landing1.html - added optimization for mobile -->
 
@@ -418,17 +414,84 @@
             <div class="row" data-equalizer="sidebar" data-equalize-on="medium">
                 <div class="medium-6 large-12 columns margin-b" data-equalizer-watch="sidebar">
                     <img src="/assets/img/homepage-img2.jpg" alt="" height="" width="">
-                    <article class="grey-bckr">
-                        <small>featured event</small>
-                        <h4><a href="#">Lorem ipsum dolor sit amet, adipisicing elit</a></h4>
-                        <p>Lorem ipsum dolor sit amet, adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam.</p>
+                    <article class="grey-bckr alt-padding">
+                        <!--<small>featured event</small>-->
+                        <h1><a href="#">Special Collections Celebrates 2016 Women's History Month</a></h1>
+                        <div class="icon-divider-wrapper">
+                          <div class="icon-divider"></div>
+                          <div class="icon-divider-line"></div>
+                        </div>
+                        <p>This is a place for promoting featured collections or services</p>
                     </article>
                 </div>
                 <div class="medium-6 large-12 columns">
-                    <article class="border-foot" data-equalizer-watch="sidebar">
-                        <h1>Events</h1>
+                    <article class="alt-padding border-foot" data-equalizer-watch="sidebar">
+                        <h2>Events</h2>
+
+                        <!--<div class="row">
+                            <div class="medium-12 columns listing-event">
+                                <div class="event-date">
+                                    <p class="event-month">Sept</p>
+                                    <p class="event-day">18</p>
+                                </div>
+                                <div class="event-desc">
+                                    <h4 class="event-desc-header"><a href="#">Library of the Future Campus Event, Library of the Future Campus Event</a></h4>
+                                    <p class="event-desc-detail"><span class="event-desc-time">Classroom 116 | <a href="#">Details</a></span></p>
+                                </div>
+                            </div>
+                        </div>-->
+  <div  data-equalizer="sidebar-list" data-equalize-on="medium">
+
 
                         <div class="row">
+                            <div class="medium-12 columns listing-event">
+                                <div class="event-date">
+                                    <p class="event-month">Oct</p>
+                                    <p class="event-day">19</p>
+                                </div>
+                                <div class="event-desc" data-equalizer-watch="sidebar-list">
+                                    <h4 class="event-desc-header"><a href="#">Lessons from Today's Libraries Talk, lessons from Today's Libraries Talk</a></h4>
+                                </div>
+                                  <div class="divider-listing"></div>
+                                  <div class="event-desc-where">
+                                    <a href="#"><i class="fi-marker"> Classroom 100</i></a>
+                                  </div>
+                                <div class="event-desc-detail">
+                                  <span class="event-desc-time">
+                                    <a class="button" href="#">Details</a>
+                                  </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="medium-12 columns listing-event">
+                                <div class="event-date">
+                                    <p class="event-month">Sept</p>
+                                    <p class="event-day">15</p>
+                                </div>
+                                <div class="event-desc" data-equalizer-watch="sidebar-list">
+                                    <h4 class="event-desc-header"><a href="#">Lessons from Today's Libraries Talk</a></h4>
+                                </div>
+                                  <div class="divider-listing"></div>
+                                <div class="event-desc-where">
+                                  <a href="#"><i class="fi-marker"> Classroom 100</i></a>
+                                </div>
+                                <div class="event-desc-detail">
+                                  <span class="event-desc-time">
+                                    <a class="button" href="#">Details</a>
+                                  </span>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="icon-divider-wrapper">
+                          <div class="icon-divider icon-divider-grey"></div>
+                          <div class="icon-divider-line icon-divider-line-grey"></div>
+                        </div>
+
+                        <!--<div class="row">
                             <div class="medium-12 columns">
                                 <div class="event-date">
                                     <p class="event-month">Sept</p>
@@ -442,23 +505,7 @@
                             <div class="medium-12 columns">
                                 <a href="#" class="button">Event Details</a>
                             </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="medium-12 columns">
-                                <div class="event-date">
-                                    <p class="event-month">Sept</p>
-                                    <p class="event-day">18</p>
-                                </div>
-                                <div class="event-desc">
-                                    <h3 class="event-desc-header"><a href="#">Day in the Library for Future Apps</a></h3>
-                                    <p class="event-desc-detail"><span class="event-desc-time"></span>Classroom 116</p>
-                                </div>
-                            </div>
-                            <div class="medium-12 columns">
-                                <a href="#" class="button">Event Details</a>
-                            </div>
-                        </div>
+                        </div>-->
 
                     </article>
                 </div>
@@ -472,33 +519,96 @@
 
                 <div class="row">
 
-                    <div class="medium-6 large-12 columns">
+                    <div class="medium-6 large-12 columns listing">
                         <div class="media-object stack-for-small" data-equalizer-watch="listings">
                             <div class="media-object-section">
                                 <img src="/assets/img/homepage-img3.jpg">
                             </div>
                             <div class="media-object-section">
                                 <div class="row">
-                                    <div class="large-8 columns">
-                                        <small>news</small>
+                                    <div class="large-12 columns">
                                         <h4><a href="#">Spaces at Auraria Library</a></h4>
-                                    </div>
-                                    <div class="large-4 columns">
-                                        <div class="media-date">
-                                            <p>01/01/17
-                                                <br />by John Doe</p>
-                                        </div>
+                                        <p class="media-date">
+                                            <span><i class="fi-torso"> by John Doe &nbsp;&nbsp;</i></span>
+                                            <span><i class="fi-calendar"> 01.01.17 &nbsp;&nbsp;</i></span>
+                                        </p>
                                     </div>
                                 </div>
-                                <div class="block-divider"></div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam. Lorem consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit.
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing
+                                    elit <a href="#">...</a>
                                 </p>
                             </div>
                         </div>
+                        <div class="block-divider"></div>
                     </div>
 
-                    <div class="medium-6 large-12 columns">
+                    <div class="medium-6 large-12 columns listing">
+                        <div class="media-object stack-for-small" data-equalizer-watch="listings">
+                            <div class="media-object-section">
+                                <img src="/assets/img/homepage-img4.jpg">
+                            </div>
+                            <div class="media-object-section">
+                                <div class="row">
+                                    <div class="large-12 columns">
+                                        <h4><a href="#">Getting Ready for College</a></h4>
+                                        <p class="media-date">
+                                            <span><i class="fi-torso"> by John Doe &nbsp;&nbsp;</i></span>
+                                            <span><i class="fi-calendar"> 01.01.17 &nbsp;&nbsp;</i></span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam <a href="#">...</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="block-divider"></div>
+                    </div>
+
+                    <div class="medium-6 large-12 columns listing">
+                        <div class="media-object stack-for-small" data-equalizer-watch="listings">
+                            <div class="media-object-section">
+                                <img src="/assets/img/homepage-img5.jpg">
+                            </div>
+                            <div class="media-object-section">
+                                <div class="row">
+                                    <div class="large-12 columns">
+                                        <h4><a href="#">Chevo Studios Begins Public Art Installation</a></h4>
+                                        <p class="media-date">
+                                            <span><i class="fi-torso"> by John Doe &nbsp;&nbsp;</i></span>
+                                            <span><i class="fi-calendar"> 01.01.17 &nbsp;&nbsp;</i></span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <p>Recusandae impedit beatae, lorem ipsum dolor sit amet, adipisicing elit. Ipsum delectus aperiam nesciunt magni facilis ullam <a href="#">...</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="block-divider"></div>
+                    </div>
+
+                    <div class="medium-6 large-12 columns listing">
+                        <div class="media-object stack-for-small" data-equalizer-watch="listings">
+                            <div class="media-object-section">
+                                <img src="/assets/img/homepage-img6.jpg">
+                            </div>
+                            <div class="media-object-section">
+                                <div class="row">
+                                    <div class="large-12 columns">
+                                        <h3><a href="#">New Digital Collection Documents Pre-Campus Auraria</a></h3>
+                                        <p class="media-date">
+                                            <span><i class="fi-torso"> by John Doe &nbsp;&nbsp;</i></span>
+                                            <span><i class="fi-calendar"> 01.01.17 &nbsp;&nbsp;</i></span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <p>The Bill Trimble Collection is now live and accessible via the Auraria Library Digital Collections <a href="#">...</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="block-divider"></div>
+                    </div>
+
+                    <!--<div class="medium-6 large-12 columns">
                         <div class="media-object stack-for-small" data-equalizer-watch="listings">
                             <div class="media-object-section">
                                 <img src="/assets/img/homepage-img4.jpg">
@@ -520,55 +630,7 @@
                                 <p>Lorem ipsum dolor sit amet, adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam.</p>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="medium-6 large-12 columns">
-                        <div class="media-object stack-for-small" data-equalizer-watch="listings">
-                            <div class="media-object-section">
-                                <img src="/assets/img/homepage-img5.jpg">
-                            </div>
-                            <div class="media-object-section">
-                                <div class="row">
-                                    <div class="large-8 columns">
-                                        <small>news</small>
-                                        <h4><a href="#">Chevo Studios Begins Public Art Installation</a></h4>
-                                    </div>
-                                    <div class="large-4 columns">
-                                        <div class="media-date">
-                                            <p>01/01/17
-                                                <br />by John Doe</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="block-divider"></div>
-                                <p>Lorem ipsum dolor sit amet, adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="medium-6 large-12 columns">
-                        <div class="media-object stack-for-small" data-equalizer-watch="listings">
-                            <div class="media-object-section">
-                                <img src="/assets/img/homepage-img6.jpg">
-                            </div>
-                            <div class="media-object-section">
-                                <div class="row">
-                                    <div class="large-8 columns">
-                                        <small>resource highlight</small>
-                                        <h4><a href="#">New Digital Collection Documents Pre-Campus Auraria</a></h4>
-                                    </div>
-                                    <div class="large-4 columns">
-                                        <div class="media-date">
-                                            <p>01/01/17
-                                                <br />by John Doe</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="block-divider"></div>
-                                <p>The Bill Trimble Collection is now live and accessible via the Auraria Library Digital Collections.</p>
-                            </div>
-                        </div>
-                    </div>
+                    </div>-->
 
                     <div class="text-center">
                         <a href="#" class="button hollow">See all news</a>
@@ -666,7 +728,7 @@
                         <a href="#"><span class="flex-icon"><i class="fi-social-facebook"></i></span></a>
                         <a href="#"><span class="flex-icon"><i class="fi-social-twitter"></i></span></a>
                         <a href="#"><span class="flex-icon"><i class="fi-social-linkedin"></i></span></a>
-                        <a href="#"><span class="flex-icon"><i class="fi-social-github"></i></span></a>
+                        <a href="#"><span class="flex-icon"><i class="fi-mail"></i></span></a>
                     </ul>
 
                 </div>
