@@ -44,11 +44,11 @@
         <nav>
 
             <!-- new top menu behavior -->
-            <div class="title-bar hide-for-medium" data-responsive-toggle="example-menu">
+            <div class="title-bar" data-responsive-toggle="example-menu">
                 <button class="menu-icon" type="button" data-toggle="offCanvasLeft"></button>
                 <div class="title-bar-title">Menu</div>
             </div>
-            <div class="row show-for-medium">
+            <div class="row menu-large">
                 <div class="top-bar-left">
                     <ul class="menu">
                         <li class="menu-text"><a href="#"><i class="fi-torso"></i> My Account</a></li>
@@ -155,7 +155,7 @@
                 <div class="row">
                     <div class="small-12 small-centered columns">
                         <ul class="vertical menu">
-                            <li><a href="/index.html" target="_blank">Home</a></li>
+                            <li><a href="/branding1/branding1.html" target="_blank">Home</a></li>
                             <li><a href="#">Find</a></li>
                             <li><a href="#">Services</a></li>
                             <li><a href="#">About</a></li>
@@ -180,17 +180,18 @@
 
 <div class="main-content">
 
+<!-- begin Main Search and Hours -->
     <section class="row">
-
         <div class="medium-12 columns">
             <div class="hero-block">
                 <div class="row">
+                  <!-- begin hours -->
                     <div class="large-4 large-push-8 columns">
                         <div class="hero-hours">
                             <blockquote>
                                 <div class="media-object clearfix">
                                     <div class="media-object-section">
-                                        <h2><span class="mobile-hours"></span>Today's Hours - <span class="mobile-hours"><a href="#">9:00am - 5:00pm <i class="fi-clock"></i></a></span></h2>
+                                        <h2><span class="mobile-hours"></span>Today's Hours <span class="hours-desktop"><br /><a href="#">9:00am - 5:00pm </a></span><span class="mobile-hours">: <a href="#">9:00am - 5:00pm <i class="fi-clock"></i></a></span></h2>
                                         <p class="hours-desktop">Monday, Month 25, 2016</p>
                                     </div>
                                     <div class="media-object-section hours-desktop">
@@ -227,6 +228,9 @@
                             </blockquote>
                         </div>
                     </div>
+                    <!-- end hours -->
+
+                    <!-- begin main search -->
                     <div class="large-8 large-pull-4 columns">
                         <div class="hero-search">
 
@@ -245,19 +249,35 @@
                                     <span class="input-group-label">Search</span>
                                 </div>
                                 <input id=" value=" name="keep_r" type="hidden" />
-                                <div>
-                                    <input checked="checked" title="Search for all materials" type="radio" name="cmd" value="" id="summonAll" />
-                                    <label for="summonAll">Articles, books and more</label>
-                                    <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Journal Article)" id="summonArticles" />
-                                    <label for="summonArticles">Articles only</label>
-                                    <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Book / eBook)" id="summonBooks" />
-                                    <label for="summonBooks">Books only</label>
-                                    <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Audio Recording,f|ContentType,Video Recording,f|ContentType,Streaming Video)" title="search for" id="summonMedia" />
-                                    <label for="summonMedia">Media only</label>
+                                <div class="search-options">
+                                <input checked="checked" title="Search for all materials" type="radio" name="cmd" value="" id="summonAll" />
+                                <label for="summonAll">Articles, books and more</label>
+                                <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Journal Article)" id="summonArticles" />
+                                <label for="summonArticles">Articles only</label>
+                                <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Book / eBook)" id="summonBooks" />
+                                <label for="summonBooks">Books only</label>
+                                <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Audio Recording,f|ContentType,Video Recording,f|ContentType,Streaming Video)" title="search for" id="summonMedia" />
+                                <label for="summonMedia">Media only</label>
                                 </div>
+                                <!--<div class="search-options">
+                                    <div class="form-group">
+                                      <input checked="checked" title="Search for all materials" type="radio" name="cmd" value="" id="summonAll" />
+                                      <label for="summonAll">Articles, books and more</label>
+                                    </div>
+                                    <div class="form-group">
+                                      <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Journal Article)" id="summonArticles" />
+                                      <label for="summonArticles">Articles only</label>
+                                    </div>
+                                    <div class="form-group">
+                                      <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Book / eBook)" id="summonBooks" />
+                                      <label for="summonBooks">Books only</label>
+                                    </div>
+                                    <div class="form-group">
+                                      <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Audio Recording,f|ContentType,Video Recording,f|ContentType,Streaming Video)" title="search for" id="summonMedia" />
+                                      <label for="summonMedia">Media only</label>
+                                    </div>
+                                </div>-->
                             </form>
-
-                            <p><a target="_blank" href="http://auraria.summon.serialssolutions.com/#!/advanced" title="Use Advanced Search">Advanced Search >></a></p>
 
                             <!-- end Neena's code from landing1.html -->
                             <div class="menu-secondary">
@@ -273,21 +293,26 @@
                                 </ul>
                             </div>
 
+                            <p class="advanced-search"><a target="_blank" href="http://auraria.summon.serialssolutions.com/#!/advanced" title="Use Advanced Search">Advanced Search >></a></p>
+
                         </div>
                     </div>
+                    <!-- end main search -->
+
                 </div>
             </div>
         </div>
-
     </section>
+<!-- end Main Search and Hours -->
 
+<!-- begin Overlay Photo Feature and Quicklinks -->
     <section class="row" data-equalizer="quicklinks" data-equalize-on="medium">
+      <!-- begin Quicklinks -->
         <div class="large-6 large-push-6 columns">
             <article class="quicklinks-block margin-b border-foot" data-equalizer-watch="quicklinks">
                 <h1>Use the Library</h1>
                 <br />
                 <div class="row">
-                    <!-- start Neena's code from Landing1.html with quicklink icons -->
                     <div class="columns medium-6">
                         <div class="media-object clearfix">
                             <div class="media-object-section link-icons">
@@ -356,7 +381,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- end Neena's code from Landing1.html with quicklink icons -->
                 </div>
 
                 <div class="text-right">
@@ -365,9 +389,9 @@
 
             </article>
         </div>
+        <!-- end Quicklinks -->
+        <!-- begin Overlay Photo Feature -->
         <div class="large-6 large-pull-6 columns" data-equalizer-watch="quicklinks">
-
-            <!-- start Neena's code from Landing1.html - added optimization for mobile -->
             <div class="image-wrapper overlay-fade-in">
                 <img src="/assets/img/homepage-img1.jpg" />
                 <div class="image-overlay-content">
@@ -377,15 +401,14 @@
                         <a href="#" class="button hollow">Learn More</a>
                     </div>
                 </div>
-
             </div>
-            <!-- end Neena's code from Landing1.html - added optimization for mobile -->
-
         </div>
+        <!-- end Overlay Photo Feature -->
     </section>
+<!-- end Photo Feature and Quicklinks -->
 
+<!-- Begin Transparent banner and icon row -->
     <div class="hero-image">
-
         <div class="row small-up-3 medium-up-6 hero-icons text-center">
             <div class="column">
                 <a class="flex-icon main-icon" href="#"><h2>Ask Us</h2></a>
@@ -407,9 +430,11 @@
             </div>
         </div>
     </div>
+<!-- End Transparent banner and icon row -->
 
+<!-- Begin News and Events listings content and sidebar -->
     <section class="row offset-block">
-
+        <!-- sidebar begin -->
         <div class="large-4 large-push-8 columns">
             <div class="row" data-equalizer="sidebar" data-equalize-on="medium">
                 <div class="medium-6 large-12 columns margin-b" data-equalizer-watch="sidebar">
@@ -440,7 +465,7 @@
                                 </div>
                             </div>
                         </div>-->
-  <div  data-equalizer="sidebar-list" data-equalize-on="medium">
+                    <div  data-equalizer="sidebar-list" data-equalize-on="medium">
 
 
                         <div class="row">
@@ -452,9 +477,9 @@
                                 <div class="event-desc" data-equalizer-watch="sidebar-list">
                                     <h4 class="event-desc-header"><a href="#">Lessons from Today's Libraries Talk, lessons from Today's Libraries Talk</a></h4>
                                 </div>
-                                  <div class="divider-listing"></div>
+
                                   <div class="event-desc-where">
-                                    <a href="#"><i class="fi-marker"> Classroom 100</i></a>
+                                    <a href="#"><i class="fi-marker"> Discovery Wall</i></a>
                                   </div>
                                 <div class="event-desc-detail">
                                   <span class="event-desc-time">
@@ -473,9 +498,9 @@
                                 <div class="event-desc" data-equalizer-watch="sidebar-list">
                                     <h4 class="event-desc-header"><a href="#">Lessons from Today's Libraries Talk</a></h4>
                                 </div>
-                                  <div class="divider-listing"></div>
+
                                 <div class="event-desc-where">
-                                  <a href="#"><i class="fi-marker"> Classroom 100</i></a>
+                                  <a href="#"><i class="fi-marker"> Collaborative Classroom</i></a>
                                 </div>
                                 <div class="event-desc-detail">
                                   <span class="event-desc-time">
@@ -511,7 +536,9 @@
                 </div>
             </div>
         </div>
+        <!-- sidebar end -->
 
+        <!-- News and Events listings block begin -->
         <div class="large-8 large-pull-4 columns">
             <article data-equalizer="listings" data-equalize-on="medium">
 
@@ -643,11 +670,14 @@
                 <div class="foot"></div>
             </div>
         </div>
+        <!-- News and Events listings block end -->
 
     </section>
+<!-- End News and Events listings content and sidebar -->     
 
 </div>
 
+<!-- Footer begin -->
 <footer>
     <div class="row" data-equalizer="footer" data-equalize-on="large">
         <div data-equalizer="footer-blocks" data-equalize-on="large">
@@ -698,7 +728,7 @@
                 <div class="icon-wrapper social-icons">
                   <div class="media-object clearfix">
                       <div class="media-object-section">
-                          <a href="#"><span class="flex-icon icon-orange"><div class="icon-question">?</div></span></a>
+                          <a href="#"><span class="flex-icon"><div class="icon-question">?</div></span></a>
                       </div>
                       <div class="media-object-section">
                           <p class="lead"><a href="#">Ask Us</a></p>
@@ -706,13 +736,12 @@
                   </div>
                   <div class="media-object clearfix">
                       <div class="media-object-section">
-                          <a href="#"><span class="flex-icon icon-green"><i class="fi-lightbulb success"></i></span></a>
+                          <a href="#"><span class="flex-icon"><i class="fi-lightbulb success"></i></span></a>
                       </div>
                       <div class="media-object-section">
                           <p class="lead"><a href="#">Tell Us</a></p>
                       </div>
                   </div>
-                    <!--<div class="hero-icons"><a class="flex-icon main-icon" href="#"><h2>Ask Us</h2></a></div>-->
                 </div>
                 <p>
                     <br />
@@ -743,6 +772,7 @@
     </div>
 </footer>
 
+<!-- Schools footer begin -->
 <div class="utility-menu-bottom">
     <div class="row">
         <div class="large-12 columns">
