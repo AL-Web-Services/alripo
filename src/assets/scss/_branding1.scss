@@ -356,10 +356,23 @@ ul.social-icons {
   margin-left: auto;
   margin-right: auto;
   height: 160px;
-  background: url('/assets/img/deco/header-banner2.png') no-repeat center center;
+  //background: url('/assets/img/deco/header-banner2.png') no-repeat center center;
   display: block;
   border-bottom: 2px solid $orange;
 }
+.optone {
+  background: url('/assets/img/banner/header-banner1.png') no-repeat center center;
+}
+.opttwo {
+  background: url('/assets/img/banner/header-banner2.png') no-repeat center center;
+}
+.optthree{
+  background: url('/assets/img/banner/header-banner3.png') no-repeat center center;
+}
+.optfour {
+  background: url('/assets/img/banner/header-banner4.png') no-repeat center center;
+}
+
 @media only screen and (max-width: 1934px){
   .banner {background-position: left center;}
 }
