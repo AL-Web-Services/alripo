@@ -48,34 +48,21 @@
 $global-font-size: 90%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
-//Sasha changed global colors for Concept 1 brand design
-//$foundation-palette: (
-//  primary: #594F4F,
-//  secondary: #547980,
-//  success: #45ADA8,
-//  warning: #EC5840,
-//  alert: #FF9A43,
-// $light-gray: #e6e6e6;
-// $medium-gray: #cacaca;
-// $dark-gray: #8a8a8a;
-// $black: #0a0a0a;
-// $white: #fefefe;
-//);
+
 $foundation-palette: (
-  primary: #666666,
-  secondary: #af332d,
-  success: #69c076,
-  warning: orange,
-  alert: #af332d,
+ primary: #51535C,
+ secondary: #CF4520,
+ success: #3399cc,
+ warning: #CF4520,
+ alert: #FF9A43,
 );
-$light-gray: #f3f3f3;
-$medium-gray: #cccccc;
-$dark-gray: #666666;
+$light-gray: #F2EEEA;
+$medium-gray: #B4B2AE;
+$dark-gray: #51535C;
 $off-black: #333333;
 $black: #000000;
 $white: #ffffff;
 $transparent: transparent;
-//Sasha changed global colors for Concept 1 brand design
 $body-background: $white;
 $body-font-color: $black;
 $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
@@ -88,6 +75,26 @@ $global-radius: 0;
 $global-text-direction: ltr;
 $global-flexbox: false;
 $print-transparent-backgrounds: true;
+//Sasha changed global colors for Concept 1 brand design
+// $foundation-palette: (
+//   primary: #666666,
+//   secondary: #af332d,
+//   success: #69c076,
+//   warning: orange,
+//   alert: #af332d,
+// );
+// $light-gray: #f3f3f3;
+// $medium-gray: #cccccc;
+// $dark-gray: #666666;
+// $off-black: #333333;
+// $black: #000000;
+// $white: #ffffff;
+// $transparent: transparent;
+//Sasha changed global colors for Concept 1 brand design
+
+//end of sasha change
+//AL color dark blue #006699 lighter blue #3399cc
+
 
 @include add-foundation-colors;
 

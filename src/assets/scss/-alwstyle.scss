@@ -1,30 +1,12 @@
 // *************************
-// Colors
+// branding 1 global style
 // *************************
-
-// Theme colors
-
-// white #ffffff
-// light grey #f3f3f3
-// medium grey #cccccc
-// dark grey #666666
-// orange #cf4520
-// dark maroon #3d100e
-
-// $orange: #cf4520;
-// $maroon: #3d100e;
-// $dark-grey: #f3f3f3;
-
+$brand-accent: map-get($foundation-palette, secondary);
+$brand-accent-dark: map-get($foundation-palette, primary);
+$accent-gray: $light-gray;
 // *************************
 // Typography
 // *************************
-
-// Headings and paragraphs
-
-h1, h2, h3, h4, h5, h6 {font-family: 'Varela Round', sans-serif;}
-
-p {font-family: 'Arimo', sans-serif; font-size: 1.1em;}
-
 
 // *************************
 // Padding and margin
@@ -43,7 +25,6 @@ p {font-family: 'Arimo', sans-serif; font-size: 1.1em;}
       padding:15px;
   }
 }
-
 //utility margin
 .margin-b {margin-bottom: 15px;}
 
@@ -59,7 +40,7 @@ section {margin-bottom: 15px;}
   a {
     width:70px;
     height: 70px;
-    background-color: $secondary;
+    background-color: $brand-accent;
     border-radius: 50%;
     display: block;
     margin-left: auto;
@@ -73,11 +54,11 @@ section {margin-bottom: 15px;}
   span {
     width: 60px;
     height: 60px;
-    background-color: $orange;
+    background-color: $brand-accent;
     display: block;
     border-radius: 50%;
     &:hover {
-      background-color: lighten( $orange, 10% );
+      background-color: lighten( $brand-accent, 10% );
     }
   }
   i {
@@ -90,7 +71,7 @@ section {margin-bottom: 15px;}
     color: $white;
     margin-top: -15px;
     &:hover {
-      background-color: darken( $maroon, 10% );
+      background-color: darken( $brand-accent-dark, 10% );
     }
     @media only screen and (max-width: 1024px){
       margin-bottom: 15px;
@@ -107,11 +88,11 @@ section {margin-bottom: 15px;}
   span {
     width: 30px;
     height: 30px;
-    background-color: darken( $dark-grey, 10% );
+    background-color: darken( $accent-gray, 10% );
     display: block;
     border-radius: 50%;
     &:hover {
-      background-color: darken( $dark-grey, 20% );
+      background-color: darken( $accent-gray, 20% );
     }
     }
   i {
@@ -134,7 +115,7 @@ section {margin-bottom: 15px;}
 // Icon My account
 .hero-menu {
   .menu-text i {
-    background-color: $orange;
+    background-color: $brand-accent;
     border-radius: 15px;
     padding-top: 3px;
     width: 25px;
@@ -200,7 +181,7 @@ ul.social-icons {
     margin-right: 2px;
     width: 30px;
     height: 30px;
-    background-color: darken( $dark-grey, 10% );
+    background-color: darken( $accent-gray, 10% );
     display: block; border-radius: 50%;
     &.flex-icon {
       display: flex;
@@ -208,7 +189,7 @@ ul.social-icons {
       justify-content: center;
     }
     &:hover {
-      background-color: darken( $dark-grey, 20% );
+      background-color: darken( $accent-gray, 20% );
     }
   }
   i {
@@ -339,9 +320,9 @@ ul.social-icons {
 .site-search {
   input {font-size: 1em;}
   .input-group-field {height: 2rem;}
-  .input-group-label {background-color: darken( $dark-grey, 30% );; color: $white; cursor: pointer; width: 30px; height: 30px; padding: 0; border-radius: 50%;}
+  .input-group-label {background-color: darken( $accent-gray, 30% );; color: $white; cursor: pointer; width: 30px; height: 30px; padding: 0; border-radius: 50%;}
   .input-group-label{
-    &:hover {background-color: darken( $dark-grey, 40% );}
+    &:hover {background-color: darken( $accent-gray, 40% );}
   }
   .input-group {margin-top: 12px; margin-bottom: 5px; position: relative;}
   .input-group-icon {position: absolute; right: 8px; top: 2px;}
@@ -358,7 +339,7 @@ ul.social-icons {
   height: 160px;
   //background: url('/assets/img/deco/header-banner2.png') no-repeat center center;
   display: block;
-  border-bottom: 2px solid $orange;
+  border-bottom: 2px solid $brand-accent;
 }
 .optone {
   background: url('/assets/img/banner/header-banner1.png') no-repeat center center;
@@ -387,8 +368,8 @@ ul.social-icons {
 .hero-search h1 {font-size: 2rem;}
 .hero-search [type="text"], .hero-search [type="password"], .hero-search [type="date"], .hero-search [type="datetime"], .hero-search [type="datetime-local"], .hero-search [type="month"], .hero-search [type="week"], .hero-search [type="email"], .hero-search [type="number"], .hero-search [type="search"], .hero-search [type="tel"], .hero-search [type="time"], .hero-search [type="url"], .hero-search [type="color"], textarea{box-shadow: none; border: 1px solid #666; background-color: #f3f3f3;}
 .hero-search input::placeholder, .hero-search textarea::placeholder, .site-search input::placeholder, .site-search textarea::placeholder {color: #666;}
-.hero-search .input-group-label {background-color: $orange; color: $white; cursor: pointer; border: none;}
-.hero-search .input-group-label:hover {background-color: darken( $orange, 10% );}
+.hero-search .input-group-label {background-color: $brand-accent; color: $white; cursor: pointer; border: none;}
+.hero-search .input-group-label:hover {background-color: darken( $brand-accent, 10% );}
 
 //search options and advanced search
 .search-options [type="checkbox"] + label, .search-options [type="radio"] + label {margin-right: 4.3rem;}
@@ -481,22 +462,22 @@ article.grey-bckr {background-color: #e8e8e8;}
 // Content with Diagonal Footer
 .foot-wrapper {overflow: hidden;}
 .foot-sm {
-  	width: 0;
-  	height: 0;
-  	border-top: 30px solid $white;
-  	border-right: 1200px solid transparent;
+    width: 0;
+    height: 0;
+    border-top: 30px solid $white;
+    border-right: 1200px solid transparent;
 }
 .foot-sm-top {
-  	width: 0;
-  	height: 0;
-  	border-bottom: 30px solid $white;
-  	border-right: 1200px solid transparent;
+    width: 0;
+    height: 0;
+    border-bottom: 30px solid $white;
+    border-right: 1200px solid transparent;
 }
 .foot {
-  	width: 0;
-  	height: 0;
-  	border-top: 60px solid $white;
-  	border-right: 900px solid transparent;
+    width: 0;
+    height: 0;
+    border-top: 60px solid $white;
+    border-right: 900px solid transparent;
 }
 
 // *************************
@@ -532,7 +513,7 @@ body {background-color: #f3f3f3;}
   top: 0;
   left: 0;
   padding: 50px 65px 20px;
-  //border-bottom: 10px solid $orange; //add
+  //border-bottom: 10px solid $brand-accent; //add
 }
 
 .overlay-fade-in {
@@ -605,29 +586,29 @@ body {background-color: #f3f3f3;}
   .overlay-fade-in {border-radius: 0 !important;}
   .image-overlay-content {
     padding: 15px;
-    border-bottom: 10px solid $orange;
+    border-bottom: 10px solid $brand-accent;
     opacity: 1 !important;
     background-color: #666; //change color background-color: #bf463e !important;
     position: relative !important;}
 }
 
 // Blockquote
-blockquote {border-left: 10px solid $orange;}
+blockquote {border-left: 10px solid $brand-accent;}
 blockquote, blockquote p {color: #333;}
 
 // Dividers and borders
 .block-divider {display: block; width: 100%;height: 1px; margin-bottom: 2.5rem;}
 @media only screen and (min-width: 1024px){
-  .border-foot {border-bottom: 10px solid $orange;}
+  .border-foot {border-bottom: 10px solid $brand-accent;}
 }
 
 // Listing
 .listing {
   .media-header-wrapper {float:left;}
-  //.media-object img {border-left: 4px solid $orange;}
+  //.media-object img {border-left: 4px solid $brand-accent;}
   .media-date {
     //float: right;
-    //background-color: $dark-grey;
+    //background-color: $accent-gray;
     font-size: 0.9em;
     color: #333;
     //padding: 5px;
@@ -658,7 +639,7 @@ blockquote, blockquote p {color: #333;}
 // Footer
 footer {height: auto;background-color: #666; padding-top: 230px;}
 footer h1, footer h2, footer h3, footer p {color: $white;}
-footer a {color: $dark-grey;}
+footer a {color: $accent-gray;}
 @media only screen and (max-width: 960px){
   footer {text-align: center;}
   footer ul {margin: 0;}
@@ -700,7 +681,3 @@ footer hr {margin-top: 0; border: 6px solid #ccc; opacity: 0.2;}
   &:hover {opacity: 1;}
 }
 
-
-// *************************
-// News Events
-// *************************

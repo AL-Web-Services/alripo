@@ -207,20 +207,20 @@ These buttons are used for less important, secondary actions on a page.
   </div>
   <div class="column">
     <div class="color-block">
-      <span style="background: #547980"></span>
-        secondary:<br />#547980
+      <span style="background: #CF4520"></span>
+        secondary:<br />#CF4520
     </div>
   </div>
   <div class="column">
     <div class="color-block">
-      <span style="background: #45ADA8"></span>
-      success:<br />#45ADA8
+      <span style="background:#3399cc"></span>
+      success:<br />#3399cc
     </div>
   </div>
   <div class="column">
     <div class="color-block">
-      <span style="background: #ec5840"></span>
-      warning:<br />#ec5840
+      <span style="background: #E87162"></span>
+      warning:<br />#E87162
     </div>
   </div>
   <div class="column">
@@ -229,6 +229,31 @@ These buttons are used for less important, secondary actions on a page.
       alert:<br />#FF9A43
     </div>
   </div>
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #F2EEEA"></span>
+      light-gary:<br />#F2EEEA
+    </div>
+  </div>
+  <div class="column">
+    <div class="color-block">
+      <span style="background: #B4B2AE"></span>
+      medium:<br />#B4B2AE
+    </div>
+  </div>
+   <div class="column">
+    <div class="color-block">
+      <span style="background: #51535C"></span>
+      dark-grary:<br />#51535C
+    </div>
+  </div>
+     <div class="column">
+    <div class="color-block">
+      <span style="background: #333333"></span>
+      off-black:<br />#333333
+    </div>
+  </div>
+
 </div>
 
 
