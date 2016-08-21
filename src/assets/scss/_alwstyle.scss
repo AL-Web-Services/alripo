@@ -1,0 +1,290 @@
+// *************************
+// Dependency
+// *************************
+
+@import url(https://fonts.googleapis.com/css?family=Varela+Round|Arimo:400,700);
+
+// *************************
+// Branding 1 global variables
+// *************************
+
+// Color
+$brand-accent: map-get($foundation-palette, secondary);
+$brand-accent-dark: map-get($foundation-palette, primary);
+$accent-gray: $light-gray;
+$deco-border: 1px solid $dark-gray;
+
+
+// *************************
+// Branding 1 global styles
+// *************************
+
+//icon badge
+.icon-color-b{
+background-color:$brand-accent;
+}
+.icon-color-d{
+background-color:$off-black;
+}
+
+
+// Typography
+
+// *************************
+// Utility Menu - Header
+// *************************
+// utility-menu
+.al-utilitiy-menu {
+  // background: $dark-gray;
+ ul.menu{
+height: 40px;
+font-size: .9rem;
+background: $transparent;
+ }
+}
+
+
+//Site search form
+.site-search {
+  .input-group {
+    margin-top: 0.5rem; 
+    border: none;}
+  //.input-group {margin-top: 12px; margin-bottom: 5px; position: relative;}
+  .input-group-label{
+    background-color: $transparent; 
+    border: none;
+    margin-left: -5rem;
+  }
+  .input-group-field {
+    border: none;
+    margin-left: 3rem;
+    width: 250px;
+  }
+}
+
+// *************************
+// Branding banner
+// *************************
+
+.banner {
+  margin-left: auto;
+  margin-right: auto;
+  height: 130px;
+  //background: url('/assets/img/deco/header-banner2.png') no-repeat center center;
+  display: block;
+  border-bottom: 2px solid $brand-accent;
+}
+//design options, remove later//
+.optone {
+  //background: url('/assets/img/deco/CUD_students_0388w.jpg') no-repeat center center;
+  background: url('/assets/img/alwtheme/alcolorflat.jpg') no-repeat center center;
+  background-size: 100%;
+  padding-top:1rem;
+  padding-bottom:0;
+}
+//nw edit end//
+
+
+
+// *************************
+// Main Content Row - Search
+// *************************
+
+
+// *************************
+// Main Content Row - Today Hour
+// *************************
+
+
+// *************************
+// Main Content Row 2- Promo
+// *************************
+
+// *************************
+// Main Content Row 2- qLinks
+// *************************
+
+// *************************
+// Main Content Row 4- Ask Us
+// *************************
+// Ask Us Block Background Image
+.askus-bg {
+    display: block;
+    height: auto;
+    min-height: 0;
+    overflow: hidden;
+    padding: 131px 0 209px;
+    position: relative;
+    background: url('/assets/img/hero-img.jpg') no-repeat center center / cover;
+    &:before, &:after {
+      background: $light-gray none repeat scroll 0 0;
+      content: "";
+      height: 100px;
+      left: -10%;
+      position: absolute;
+      width: 120%;
+    }
+    &:before {
+      //transform: rotate(1deg);
+      top: -75px;
+    }
+    &:after {
+      transform: rotate(-2.5deg);
+      bottom: -55px;
+    }
+}
+
+// Ask Us Icons
+.askus-icons {
+  i, a {
+    color: $white;
+  }
+  i {
+    font-size: 2.6em;
+  }
+
+  //main ask us label
+  a.main-icon {
+    width: 100px;
+    height: 100px;
+    margin-top: -15px;
+    &:hover {
+      //background-color: darken( $brand-accent, 10% );
+      background-color: $brand-accent;
+    }
+    // @media only screen and (max-width: 1024px){
+    //   margin-bottom: 15px;
+    // }
+  }
+
+  //individual ask us service icons
+
+  a {
+    width:70px;
+    height: 70px;
+    background-color: $dark-gray;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  a, span{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+  }
+  span {
+    width: 60px;
+    height: 60px;
+    background-color: $brand-accent;
+    display: block;
+    border-radius: 50%;
+    &:hover {
+      background-color: lighten( $dark-gray, 10% );
+    }
+  }
+
+}
+// *************************
+// Main Content Row 3- News & Events
+// *************************
+
+
+// *************************
+// Footer - AL
+// *************************
+
+.al-footer {
+  height: auto;
+  background-color: $dark-gray; 
+  padding-top: 230px;
+  h1, h2, h3, p, a {
+    color: $light-gray;
+  }
+  a, a:visitd {
+    transform: underline;
+  }
+ .ask-tell li {
+  padding-right:1rem;
+ }
+
+}
+.social-icons{
+  //if needed adddtional style
+}
+
+
+// Footer Utility Menu
+.utility-menu-footer {background-color: #333; color: #ccc;}
+.utility-menu-footer a {color: #ccc;}
+.utility-menu-bottom .menu > li:not(.menu-text) > a {padding: 2rem 1rem;}
+@media only screen and (max-width: 960px){
+  .utility-menu-footer {background-color: #666; text-align: center;}
+  .utility-menu-footer .media-object {margin-bottom: 0;}
+  .utility-menu-footer .media-object-section img {display: none;}
+  .utility-menu-footer.menu, .utility-menu-bottom .menu > li {display: block;}
+  .utility-menu-footer .menu > li:not(.menu-text) > a {padding: 0;}
+}
+
+
+// *************************
+// Footer - Schools color logos icons
+// *************************
+
+
+
+.logo-icons {
+  @media only screen and (min-width: 1024px){
+  span.cu, span.metro, span.community, span.ahec {
+  margin-right: 20px;
+  &::before, &::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+  }
+  }
+ span.cu { // University of Colorado Denver
+  &::before {
+    border-top: 20px solid #cfb880;
+    border-right: 20px solid transparent;
+  }
+  &::after {
+    border-top: 20px solid transparent;
+    border-right: 20px solid black;
+  }
+  }
+ span.metro { // Metropolitan State University of Denver
+  &::before {
+    border-top: 20px solid #d01944;
+    border-right: 20px solid transparent;
+  }
+  &::after {
+    border-top: 20px solid transparent;
+    border-right: 20px solid #1b477b;
+  }
+  }
+ span.community { // Community College of Denver
+  &::before {
+    border-top: 20px solid #fbb931;
+    border-right: 20px solid transparent;
+  }
+  &::after {
+    border-top: 20px solid transparent;
+    border-right: 20px solid #54277d;
+  }
+  }
+ span.ahec { // Auraria Higher Education Center
+  &::before {
+    border-top: 20px solid #aed5ea;
+    border-right: 20px solid transparent;
+  }
+  &::after {
+    border-top: 20px solid transparent;
+    border-right: 20px solid #137fc2;
+  }
+  }
+  }
+}
+
+

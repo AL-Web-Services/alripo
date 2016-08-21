@@ -1,0 +1,547 @@
+<!--AL Header -->
+<header>
+    <!--sticky top-nav menu-->
+    <div data-sticky-container>
+        <div class="top-bar al-utilitiy-menu row" data-sticky data-options="marginTop:0;" style="width:100%">
+            <div class="top-bar-left large-6 ">
+                <ul class="menu">
+                    <li><i class="badge fi-torso icon-color-b"></i></li>
+                    <li><a href="#"> My Account</a></li>
+                    <li>
+                        <div class="site-search">
+                            <form>
+                                <div class="input-group">
+                                    <input class="input-group-field" type="text" placeholder="Search entire site" name="b">
+                                    <span class="input-group-label"><i class="fi-magnifying-glass"></i></span>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <ul class="dropdown menu" data-dropdown-menu>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Find</a>
+                        <ul class="menu">
+                            <li><a href="#">Link 1</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a>
+                        <ul class="menu">
+                            <li><a href="#">...</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Ask Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--end of sticky top-nav -->
+    <!-- Start banner -->
+    <div class="header-wrapper">
+        <div class="banner optone">
+            <div class="row columns"><img class="sitelogo" src="/assets/img/alwtheme/redlogo.png" Alt="Auraria Library" Title="Auraria Library Home"></div>
+        </div>
+    </div>
+    <!-- end banner -->
+</header>
+<!--end AL Header -->
+
+<!--main content row 1 : Search, Hours -->
+<div class="expanded">
+    <div class="row home-main-row" data-equalizer>
+
+    <!-- start my search block -->
+        <div class="columns large-7 small-12 callout" data-equalizer-watch>
+            <h2>Start My Research <i class="fi-info has-tip bottom" aria-haspopup="true" title='The “one-stop” search for finding research materials. Enter your search terms to find books, articles, media and more.' data-tooltip></i></h2>
+            <form method="GET" action="http://auraria.summon.serialssolutions.com/">
+                <div class="input-group">
+                    <input class="input-group-field" type="text" placeholder="Find articles, books, media, journals and more" id="search_string_All" name="q">
+                    <!--    <input type="submit" name="Search" value="Search" class="submit"> -->
+                    <span class="input-group-label">Search</span>
+                </div>
+                <input id=" value=" name="keep_r" type="hidden" />
+                <div>
+                    <input checked="checked" title="Search for all materials" type="radio" name="cmd" value="" id="summonAll" />
+                    <label for="summonAll">Articles, books and more</label>
+                    <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Journal Article)" id="summonArticles" />
+                    <label for="summonArticles">Articles only</label>
+                    <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Book / eBook)" id="summonBooks" />
+                    <label for="summonBooks">Books only</label>
+                    <input class="filter-radio" type="radio" name="cmd" value="addFacetValueFilters(ContentType,Audio Recording,f|ContentType,Video Recording,f|ContentType,Streaming Video)" title="search for" id="summonMedia" />
+                    <label for="summonMedia">Media only</label>
+                </div>
+            </form>
+            <p class="float-right"><a target="_blank" href="http://auraria.summon.serialssolutions.com/#!/advanced" title="Use Advanced Search">Advanced Search >></a></p>
+            <!--addtional options -->
+            <div class="columns large-centered">
+                <div class="button-group expanded" data-equalizer="bar">
+                    <button class="button" href="#" data-equalizer-watch="bar">Databases List</button>
+                    <button class="button" href="#" data-equalizer-watch="bar">Skyline Catalog</button>
+                    <button class="button" href="#" data-equalizer-watch="bar">Journal List</button>
+                    <button class="button" href="#" data-equalizer-watch="bar">Research Guides</button>
+                </div>
+            </div>
+            <!--end of addtional options-->
+        </div>
+    <!-- end my search block -->
+
+        <div class="columns show-for-large large-5 callout" data-equalizer-watch>
+            <h2><i class="fi-clock primary"></i> Today's Hours</h2>
+            <p>Monday, June 27, 2016</p>
+            <div class="row columns" data-equlizer>
+                <button class="dropdown button" type="button" data-toggle="example-dropdown" data-equalizer-watch="hour-bar">7:30am - 9:00pm </button>
+                <button class="button success" type="button" data-equalizer-watch="hour-bar">Open</button>
+                <div class="dropdown-pane" id="example-dropdown" data-dropdown data-hover="true">
+                    <table class="responsive">
+                        <tbody>
+                            <tr>
+                                <td>Sun</td>
+                                <td class="text-right">9:00am - 5:00pm</td>
+                            </tr>
+                            <tr>
+                                <td>Mon-Thurs</td>
+                                <td class="text-right">7:30am - 9:00pm</td>
+                            </tr>
+                            <tr>
+                                <td>Fri</td>
+                                <td class="text-right">7:30am - 5:00pm</td>
+                            </tr>
+                            <tr>
+                                <td>Sat</td>
+                                <td class="text-right">9:00am - 5:00pm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <p class="float-right"><a href="/almockups/allhours.html">All Hours >></a></p>
+        </div>
+        <!-- end of the hours -->
+</div>
+<!--end expanded -->
+<!--end main content row 1 : Search, Hours -->
+
+<!--main content row 2 : Promo, quick links-->
+
+<!--end main content row 2 : Promo, quick links-->
+
+<!--main content row 3 : Ask Us-->
+<div class="askus-bg">
+    <div class="row small-up-3 medium-up-6 askus-icons text-center">
+        <div class="columns">
+            <a class="main-icon" href="#"><h2>Ask Us</h2></a>
+        </div>
+        <div class="columns">
+            <a href="#"><span><i class="fi-comments"></i></span></a>
+        </div>
+        <div class="columns">
+            <a href="#"><span><i class="fi-mobile"></i></span></a>
+        </div>
+        <div class="columns">
+            <a href="#"><span><i class="fi-mail"></i></span></a>
+        </div>
+        <div class="columns">
+            <a href="#"><span><i class="fi-torsos-female-male"></i></span></a>
+        </div>
+        <div class="columns">
+            <a href="#"><span><i class="fi-telephone"></i></span></a>
+        </div>
+    </div>
+</div>
+<!--end main content row 3 : Ask Us-->
+
+<!--main content row 4 : News & Events-->
+
+<!-- Begin News and Events listings content and sidebar -->
+<section class="row offset-block">
+    <!-- sidebar begin -->
+    <div class="large-4 large-push-8 columns">
+        <div class="row" data-equalizer="sidebar" data-equalize-on="medium">
+            <div class="medium-6 large-12 columns margin-b" data-equalizer-watch="sidebar">
+                <img src="/assets/img/homepage-img2.jpg" alt="" height="" width="">
+                <article class="grey-bckr alt-padding">
+                    <!--<small>featured event</small>-->
+                    <h1><a href="#">Special Collections Celebrates 2016 Women's History Month</a></h1>
+                    <div class="icon-divider-wrapper">
+                      <div class="icon-divider"></div>
+                      <div class="icon-divider-line"></div>
+                    </div>
+                    <p>This is a place for promoting featured collections or services</p>
+                </article>
+            </div>
+            <div class="medium-6 large-12 columns">
+                <article class="alt-padding border-foot" data-equalizer-watch="sidebar">
+                    <h2>Events</h2>
+
+                    <!--<div class="row">
+                        <div class="medium-12 columns listing-event">
+                            <div class="event-date">
+                                <p class="event-month">Sept</p>
+                                <p class="event-day">18</p>
+                            </div>
+                            <div class="event-desc">
+                                <h4 class="event-desc-header"><a href="#">Library of the Future Campus Event, Library of the Future Campus Event</a></h4>
+                                <p class="event-desc-detail"><span class="event-desc-time">Classroom 116 | <a href="#">Details</a></span></p>
+                            </div>
+                        </div>
+                    </div>-->
+                <div  data-equalizer="sidebar-list" data-equalize-on="medium">
+
+
+                    <div class="row">
+                        <div class="medium-12 columns listing-event">
+                            <div class="event-date">
+                                <p class="event-month">Oct</p>
+                                <p class="event-day">19</p>
+                            </div>
+                            <div class="event-desc" data-equalizer-watch="sidebar-list">
+                                <h4 class="event-desc-header"><a href="#">Lessons from Today's Libraries Talk, lessons from Today's Libraries Talk</a></h4>
+                            </div>
+
+                              <div class="event-desc-where">
+                                <a href="#"><i class="fi-marker"> Discovery Wall</i></a>
+                              </div>
+                            <div class="event-desc-detail">
+                              <span class="event-desc-time">
+                                <a class="button" href="#">Details</a>
+                              </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="medium-12 columns listing-event">
+                            <div class="event-date">
+                                <p class="event-month">Sept</p>
+                                <p class="event-day">15</p>
+                            </div>
+                            <div class="event-desc" data-equalizer-watch="sidebar-list">
+                                <h4 class="event-desc-header"><a href="#">Lessons from Today's Libraries Talk</a></h4>
+                            </div>
+
+                            <div class="event-desc-where">
+                              <a href="#"><i class="fi-marker"> Collaborative Classroom</i></a>
+                            </div>
+                            <div class="event-desc-detail">
+                              <span class="event-desc-time">
+                                <a class="button" href="#">Details</a>
+                              </span>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="icon-divider-wrapper">
+                      <div class="icon-divider icon-divider-grey"></div>
+                      <div class="icon-divider-line icon-divider-line-grey"></div>
+                    </div>
+
+                </article>
+            </div>
+        </div>
+    </div>
+    <!-- sidebar end -->
+
+    <!-- News and Events listings block begin -->
+    <div class="large-8 large-pull-4 columns">
+        <article data-equalizer="listings" data-equalize-on="medium">
+
+            <h2>News & Events</h2>
+
+            <div class="row">
+
+                <div class="medium-6 large-12 columns listing">
+                    <div class="media-object stack-for-small" data-equalizer-watch="listings">
+                        <div class="media-object-section">
+                            <img src="/assets/img/homepage-img3.jpg">
+                        </div>
+                        <div class="media-object-section">
+                            <div class="row">
+                                <div class="large-12 columns">
+                                    <h4><a href="#">Spaces at Auraria Library</a></h4>
+                                    <p class="media-date">
+                                        <span><i class="fi-torso"> by John Doe &nbsp;&nbsp;</i></span>
+                                        <span><i class="fi-calendar"> 01.01.17 &nbsp;&nbsp;</i></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing
+                                elit <a href="#">...</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="block-divider"></div>
+                </div>
+
+                <div class="medium-6 large-12 columns listing">
+                    <div class="media-object stack-for-small" data-equalizer-watch="listings">
+                        <div class="media-object-section">
+                            <img src="/assets/img/homepage-img4.jpg">
+                        </div>
+                        <div class="media-object-section">
+                            <div class="row">
+                                <div class="large-12 columns">
+                                    <h4><a href="#">Getting Ready for College</a></h4>
+                                    <p class="media-date">
+                                        <span><i class="fi-torso"> by John Doe &nbsp;&nbsp;</i></span>
+                                        <span><i class="fi-calendar"> 01.01.17 &nbsp;&nbsp;</i></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam <a href="#">...</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="block-divider"></div>
+                </div>
+
+                <div class="medium-6 large-12 columns listing">
+                    <div class="media-object stack-for-small" data-equalizer-watch="listings">
+                        <div class="media-object-section">
+                            <img src="/assets/img/homepage-img5.jpg">
+                        </div>
+                        <div class="media-object-section">
+                            <div class="row">
+                                <div class="large-12 columns">
+                                    <h4><a href="#">Chevo Studios Begins Public Art Installation</a></h4>
+                                    <p class="media-date">
+                                        <span><i class="fi-torso"> by John Doe &nbsp;&nbsp;</i></span>
+                                        <span><i class="fi-calendar"> 01.01.17 &nbsp;&nbsp;</i></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <p>Recusandae impedit beatae, lorem ipsum dolor sit amet, adipisicing elit. Ipsum delectus aperiam nesciunt magni facilis ullam <a href="#">...</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="block-divider"></div>
+                </div>
+
+                <div class="medium-6 large-12 columns listing">
+                    <div class="media-object stack-for-small" data-equalizer-watch="listings">
+                        <div class="media-object-section">
+                            <img src="/assets/img/homepage-img6.jpg">
+                        </div>
+                        <div class="media-object-section">
+                            <div class="row">
+                                <div class="large-12 columns">
+                                    <h3><a href="#">New Digital Collection Documents Pre-Campus Auraria</a></h3>
+                                    <p class="media-date">
+                                        <span><i class="fi-torso"> by John Doe &nbsp;&nbsp;</i></span>
+                                        <span><i class="fi-calendar"> 01.01.17 &nbsp;&nbsp;</i></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <p>The Bill Trimble Collection is now live and accessible via the Auraria Library Digital Collections <a href="#">...</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="block-divider"></div>
+                </div>
+
+                <!--<div class="medium-6 large-12 columns">
+                    <div class="media-object stack-for-small" data-equalizer-watch="listings">
+                        <div class="media-object-section">
+                            <img src="/assets/img/homepage-img4.jpg">
+                        </div>
+                        <div class="media-object-section">
+                            <div class="row">
+                                <div class="large-8 columns">
+                                    <small>featured resources</small>
+                                    <h4><a href="#">Getting Ready for College</a></h4>
+                                </div>
+                                <div class="large-4 columns">
+                                    <div class="media-date">
+                                        <p>01/01/17
+                                            <br />by John Doe</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-divider"></div>
+                            <p>Lorem ipsum dolor sit amet, adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam.</p>
+                        </div>
+                    </div>
+                </div>-->
+
+                <div class="text-center">
+                    <a href="#" class="button hollow">See all news</a>
+                </div>
+
+            </div>
+
+        </article>
+        <div class="foot-wrapper">
+            <div class="foot"></div>
+        </div>
+    </div>
+    <!-- News and Events listings block end -->
+
+</section>
+
+<!--end main content row 4 : News & Events-->
+
+<!-- Library Footer begin -->
+<footer class="al-footer">
+    <div class="row" data-equalizer="footer" data-equalize-on="large">
+        <div data-equalizer="footer-blocks" data-equalize-on="large">
+            <div class="small-12 large-4 columns footer-column" data-equalizer-watch="footer">
+                <div data-equalizer-watch="footer-blocks">
+                    <h2>Auraria Library</h2>
+                    <hr>
+                    <img alt="Auraria Library Logo" src="/assets/img/auraria-library-logo-white.png" width="250" height="auto">
+                    <p>
+                        <br />
+                    </p>
+                </div>
+                <hr>
+                <div class="media-object stack-for-small clearfix">
+                    <div class="media-object-section">
+                        <img alt="Federal Depository Library Logo" src="/assets/img/alwtheme/fdlp-emblem-bwt.png" width="50" height="50">
+                    </div>
+                    <div class="media-object-section">
+                        <p>A Federal Depository Library</p>
+                    </div>
+                </div>
+                <p>
+                    <br />
+                </p>
+            </div>
+            <div class="small-12 large-4 columns footer-column" data-equalizer-watch="footer">
+                <div data-equalizer-watch="footer-blocks">
+                    <h2>Contact Us</h2>
+                    <hr>
+                    <div class="row">
+                        <div class="large-4 columns">
+                            <p>
+                                <a class="google-map" href="https://maps.google.com/maps?q=Auraria+Library,+Lawrence+Street,+Denver,+CO&hl=en&ll=39.742735,-104.995308&spn=0.027422,0.053387&sll=39.745325,-105.000875&sspn=0.006855,0.013347&oq=auraria+library&hq=Auraria+Library,+Lawrence+Street,+Denver,+CO&t=m&z=15"><img alt="Auraria Library Map" src="/assets/img/map.png" width="120" height="120"></a>
+                            </p>
+                        </div>
+                        <div class="large-8 columns">
+                            <p class="lead">
+                                1100 Lawrence Street
+                                <br /> Denver, CO 80204
+                                <br />
+                                <a href="#">303-556-2740</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <ul class="menu ask-tell">
+                <li>
+                <span class="badge icon-color-d "><b>?</b></span> 
+                <span><a href="#">Ask Us</a></span>
+                </li>
+
+                <li><span class="badge icon-color-d"><i class="fi-lightbulb"></i></span>
+                <span><a href="#">Tell Us</a></span>
+                </li>
+                </ul>
+
+                <!-- <div class="icon-wrapper social-icons">
+                    <div class="media-object clearfix">
+                        <div class="media-object-section">
+                            <a href="#"><span class="badge icon-color-d"><div class="icon-question">?</div></span></a>
+                        </div>
+                        <div class="media-object-section">
+                            <p class="lead"><a href="#">Ask Us</a></p>
+                        </div>
+                    </div>
+                    <div class="media-object clearfix">
+                        <div class="media-object-section">
+                            <a href="#"><span class="badge icon-color-d"><i class="fi-lightbulb success"></i></span></a>
+                        </div>
+                        <div class="media-object-section">
+                            <p class="lead"><a href="#">Tell Us</a></p>
+                        </div>
+                    </div>
+                </div> -->
+               
+            </div>
+            <div class="small-12 large-4 columns footer-column" data-equalizer-watch="footer">
+                <div data-equalizer-watch="footer-blocks">
+                    <h2>Connect</h2>
+                    <hr>
+                    <p class="lead">Follow Us:</p>
+                    <ul class="menu">
+                        <a href="#"><span class="badge icon-color-d"><i class="fi-social-facebook "></i></span></a>
+                        <a href="#"><span class="badge icon-color-d"><i class="fi-social-twitter"></i></span></a>
+                        <a href="#"><span class="badge icon-color-d"><i class="fi-social-linkedin"></i></span></a>
+                        <a href="#"><span class="badge icon-color-d"><i class="fi-mail"></i></span></a>
+                    </ul>
+                </div>
+                <hr>
+                <p class="copywrite"><a href="#">© Auraria Library</a></p>
+                <p>
+                    <br />
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Library Footer end -->
+
+<!-- AHEC footer begin -->
+<div class="utility-menu-footer">
+    <div class="row">
+        <div class="large-12 columns">
+            <ul class="menu expanded">
+                <li>Auraria Library serves three schools on one urban campus:</li>
+                <li>
+                    <a href="#">
+                        <div class="media-object stack-for-small clearfix">
+                            <div class="media-object-section">
+                                <div class="logo-icons"><span class="cu"></span></div>
+                            </div>
+                            <div class="media-object-section">
+                                University of Colorado Denver
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="media-object stack-for-small clearfix">
+                            <div class="media-object-section">
+                                <div class="logo-icons"><span class="metro"></span></div>
+                            </div>
+                            <div class="media-object-section">
+                                Metropolitan State University of Denver
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="media-object stack-for-small clearfix">
+                            <div class="media-object-section">
+                                <div class="logo-icons"><span class="community"></span></div>
+                            </div>
+                            <div class="media-object-section">
+                                Community College of Denver
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="media-object stack-for-small clearfix">
+                            <div class="media-object-section">
+                                <div class="logo-icons"><span class="ahec"></span></div>
+                            </div>
+                            <div class="media-object-section">
+                                Auraria Higher Education Center
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- end AHEC footer  footer -->

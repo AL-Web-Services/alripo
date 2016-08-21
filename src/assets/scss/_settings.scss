@@ -50,11 +50,12 @@ $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 
 $foundation-palette: (
- primary: #51535C,
+ //primary: #51535C,
+ primary:#594F4F,
  secondary: #CF4520,
  success: #3399cc,
  warning: #CF4520,
- alert: #FF9A43,
+ alert: #B4B2AE,
 );
 $light-gray: #F2EEEA;
 $medium-gray: #B4B2AE;
@@ -601,8 +602,8 @@ $tooltip-radius: $global-radius;
 
 // 36. Top Bar
 // -----------
-
-$topbar-padding: 0.5rem;
+//$topbar-padding: 0.5rem;
+//$topbar-padding: 0.5rem;
 $topbar-background: $light-gray;
 $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 1rem;

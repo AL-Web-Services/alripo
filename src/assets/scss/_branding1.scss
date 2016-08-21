@@ -11,9 +11,9 @@
 // orange #cf4520
 // dark maroon #3d100e
 
-// $orange: #cf4520;
-// $maroon: #3d100e;
-// $dark-grey: #f3f3f3;
+$orange: #cf4520;
+$maroon: #3d100e;
+$dark-grey: #f3f3f3;
 
 // *************************
 // Typography
@@ -59,7 +59,7 @@ section {margin-bottom: 15px;}
   a {
     width:70px;
     height: 70px;
-    background-color: $secondary;
+    background-color: $maroon;
     border-radius: 50%;
     display: block;
     margin-left: auto;
@@ -356,18 +356,10 @@ ul.social-icons {
   margin-left: auto;
   margin-right: auto;
   height: 160px;
-  //background: url('/assets/img/deco/header-banner2.png') no-repeat center center;
+  background: url('/assets/img/deco/header-banner2.png') no-repeat center center;
   display: block;
   border-bottom: 2px solid $orange;
 }
-.optone {
-  background: url('/assets/img/banner/header-banner1.png') no-repeat center center;
-}
-.opttwo {
-  background: url('/assets/img/banner/header-banner4.png') no-repeat center center;
-}
-
-
 @media only screen and (max-width: 1934px){
   .banner {background-position: left center;}
 }
