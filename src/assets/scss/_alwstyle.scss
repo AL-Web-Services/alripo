@@ -2,7 +2,7 @@
 // Dependency
 // *************************
 
-@import url(https://fonts.googleapis.com/css?family=Varela+Round|Arimo:400,700);
+//@import url(https://fonts.googleapis.com/css?family=Varela+Round|Arimo:400,700);
 
 // *************************
 // Branding 1 global variables
@@ -12,12 +12,37 @@
 $brand-accent: map-get($foundation-palette, secondary);
 $brand-accent-dark: map-get($foundation-palette, primary);
 $accent-gray: $light-gray;
+$big-padding: 2rem;
+$small-padding:0.5em;
 $deco-border: 1px solid $dark-gray;
-
+//$img-hover-global-radius: 4px;
 
 // *************************
 // Branding 1 global styles
 // *************************
+
+h4 {
+  a, a:visited {
+  color:$brand-accent-dark;
+  }
+} 
+.authors{
+  color:$dark-gray;
+}
+
+
+
+.headline-image-wrapper {
+  width: 100%;
+  height: 100%;
+  //border: 10px solid $white;
+  overflow: hidden;
+  //position: relative;
+  //text-align: left;
+  //border-radius: $img-hover-global-radius;
+  //padding:$global-padding;
+}
+
 
 //icon badge
 .icon-color-b{
@@ -117,7 +142,7 @@ background: $transparent;
     position: relative;
     background: url('/assets/img/hero-img.jpg') no-repeat center center / cover;
     &:before, &:after {
-      background: $light-gray none repeat scroll 0 0;
+      background: $white none repeat scroll 0 0;
       content: "";
       height: 100px;
       left: -10%;
@@ -189,6 +214,159 @@ background: $transparent;
 // Main Content Row 3- News & Events
 // *************************
 
+// News and events
+
+// move up closer to aksu 
+.marcomm-block {
+  // move up position to be closer to aksu 
+  margin-top: -150px;
+  position: relative; 
+  margin-bottom: -200px;
+  
+
+  //main news listing style
+  .news-item{
+  padding-bottom: $big-padding;
+
+  }
+
+  //news listing style
+ .news-list-top{
+     background: $white;
+     padding:$big-padding;
+  }
+  // Diagonal deco at the end of news
+  .corner-wrapper {
+    overflow: hidden;
+  }
+  .corner {
+      width: 0;
+      height: 0;
+      border-top: 60px solid $white;
+      border-right: 900px solid transparent;
+
+  }
+
+  //news sidebar for events and featured
+
+  .news-sidebar {
+    //padding:$block-padding;
+    //background: $light-gray;
+    .featured-content {
+        padding: $big-padding;
+    }
+    .featured {
+        background: $light-gray;
+    }
+    .event-list {
+        background: $white;
+        border-bottom: solid 5px $brand-accent;
+        padding:$global-padding;
+    }
+    .event-item {
+        padding: $global-padding;
+    }
+   
+
+    //event style from building block
+    // .event {
+    //   padding: 1rem 1rem 1rem 0;
+    //   display: table;
+    // }
+
+    .event-date {
+      width: 6rem;
+      margin: 0 auto 1rem;
+      display: table-cell;
+      width: auto;
+
+      .event-month {
+        margin: 0;
+        background: #eee;
+        padding: 0.5rem;
+        text-align: center;
+      }
+
+      .event-day {
+        margin: 0;
+        border: 1px solid #eee;
+        padding: 0 1.2rem;
+        text-align: center;
+        font-size: 1.5rem;
+      }
+    }
+
+    .event-desc {
+      padding: 0 0 0 1rem;
+      text-align: left;
+      display: table-cell;
+      vertical-align: top;
+
+      .event-desc-header {
+        margin: 0 0 0.5rem 0;
+        padding: 0;
+      }
+
+      .event-desc-detail {
+        margin: 0 0 0.25rem;
+        padding: 0;
+      }
+
+      .event-desc-info {
+        font-weight: bold;
+      }
+
+      .rsvp.button {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        margin: 0;
+      }
+    }
+
+  }
+}
+
+//.marcomm-block .alt-padding {padding: 30px 45px 20px;}
+// @media only screen and (max-width: 1024px){
+//   .main-content article, .main-content article.alt-padding {padding:20px;}
+// }
+// @media only screen and (max-width: 768px){
+//   .main-content article{padding:15px;}
+// }#e8e8e8
+.grey-bckr {background-color:$brand-accent;}
+
+// // Listing
+// .marcomm-block .listing {
+//   .media-header-wrapper {float:left;}
+//   //.media-object img {border-left: 4px solid $orange;}
+//   .media-date {
+//     //float: right;
+//     //background-color: $dark-grey;
+//     font-size: 0.9em;
+//     color: #333;
+//     //padding: 5px;
+//     p {
+//       margin-bottom: 0;
+//     }
+//     i {
+//       font-style: normal;
+//     }
+//   }
+// }
+
+// // Small Listing (event)
+// .listing-event {padding-top: 10px; margin-bottom: 10px;}
+// @media only screen and (min-width: 1024px){.listing-event {background-color: #f8f8f8;}}
+// .listing-event h4.event-desc-header {font-size: 1.1rem;}
+// .listing-event h4.event-desc-header a {color: #333;}
+// .listing-event .event-date .event-month {color: #fff; padding: 0; background: #666 none repeat scroll 0 0; margin-top: 5px;}
+// .listing-event .event-date .event-day {padding: 0 1rem; font-size: 0.8em; border: 1px solid #666;}
+// .listing-event .button {padding: 0.4em 1em; color: lighten(#666, 10%); color: white;}
+// .listing-event .event-desc-where {line-height: 2.7;}
+// .listing-event .event-desc-where i {font-style: normal; color: #666;}
+// .listing-event .event-desc-detail {float: right;}
+
+
 
 // *************************
 // Footer - AL
@@ -214,24 +392,16 @@ background: $transparent;
 }
 
 
-// Footer Utility Menu
-.utility-menu-footer {background-color: #333; color: #ccc;}
-.utility-menu-footer a {color: #ccc;}
-.utility-menu-bottom .menu > li:not(.menu-text) > a {padding: 2rem 1rem;}
-@media only screen and (max-width: 960px){
-  .utility-menu-footer {background-color: #666; text-align: center;}
-  .utility-menu-footer .media-object {margin-bottom: 0;}
-  .utility-menu-footer .media-object-section img {display: none;}
-  .utility-menu-footer.menu, .utility-menu-bottom .menu > li {display: block;}
-  .utility-menu-footer .menu > li:not(.menu-text) > a {padding: 0;}
-}
-
-
 // *************************
 // Footer - Schools color logos icons
 // *************************
 
-
+.utility-menu-footer{
+  background: $off-black;
+  span, p, a {
+    color: $light-gray;
+  }
+}
 
 .logo-icons {
   @media only screen and (min-width: 1024px){
@@ -287,4 +457,16 @@ background: $transparent;
   }
 }
 
+  // .foot-sm {
+  //     width: 0;
+  //     height: 0;
+  //     border-top: 30px solid $white;
+  //     border-right: 1200px solid transparent;
+  // }
+  //.foot-sm-top {
+  //     width: 0;
+  //     height: 0;
+  //     border-bottom: 30px solid $white;
+  //     border-right: 1200px solid transparent;
+  // }
 
