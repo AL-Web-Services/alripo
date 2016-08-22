@@ -180,17 +180,17 @@ $img-hover-global-radius: 4px;
     color: #f4f4f4;
     font-size: 100%;
     opacity: 0;
-    transition: all 0.2s linear;
+    //transition: all 0.2s linear;
   }
   
   img {
-    transition: all 0.2s linear;
+    //transition: all 0.2s linear;
   }
 
   
   .image-overlay-content {
     opacity: 0;
-    background-color: rgba(0,0,0, 0.4);
+    background: rgba(81,83,92, 0.6);
     transition: all 0.4s ease-in-out;
   }
   
@@ -222,7 +222,7 @@ $img-hover-global-radius: 4px;
   }
   
   &:hover img {
-    transform: scale(1.2);
+    transform: scale(1);
   }
   
   &:hover .image-overlay-content {

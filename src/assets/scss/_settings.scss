@@ -50,23 +50,23 @@ $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 
 $foundation-palette: (
- //primary: #51535C,
+ //primary: #51535C, cold dark gray
  //primary:#594F4F, warm chocolate
  primary:#51535C,
- secondary: #CF4520,
+ secondary: #CF4520, //accest 
  success: #3399cc,
  warning: #CF4520,
  alert: #B4B2AE,
 );
 //$light-gray: #F2EEEA; warm light gray
 $light-gray: #f3f3f3;
-$medium-gray: #B4B2AE;
+$medium-gray: #cccccc;
 $dark-gray: #51535C;
 $off-black: #333333;
 $black: #000000;
 $white: #ffffff;
 $transparent: transparent;
-$body-background: $white;
+$body-background: $light-gray;
 $body-font-color: $black;
 $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;

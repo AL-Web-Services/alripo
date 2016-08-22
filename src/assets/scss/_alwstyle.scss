@@ -15,6 +15,7 @@ $accent-gray: $light-gray;
 $big-padding: 2rem;
 $small-padding:0.5em;
 $deco-border: 1px solid $dark-gray;
+$block-border-accent:5px solid $brand-accent;
 //$img-hover-global-radius: 4px;
 
 // *************************
@@ -64,10 +65,14 @@ background-color:$off-black;
  ul.menu{
 height: 40px;
 font-size: .9rem;
-background: $transparent;
+background: $light-gray;
  }
 }
+img.sitelogo {
+  background: $white;
+  padding: $big-padding;
 
+}
 
 //Site search form
 .site-search {
@@ -97,7 +102,7 @@ background: $transparent;
   height: 130px;
   //background: url('/assets/img/deco/header-banner2.png') no-repeat center center;
   display: block;
-  border-bottom: 2px solid $brand-accent;
+  border-bottom: $block-border-accent;
 }
 //design options, remove later//
 .optone {
@@ -111,23 +116,142 @@ background: $transparent;
 
 
 
-// *************************
-// Main Content Row - Search
-// *************************
+// *********************************
+// Main Content Row - Search & Hours
+// *********************************
+.main-row-wrapper{
+  background: $white;
+}
+.main-row {
+  padding: $big-padding;
+
+  .today-hours {
+    border-left: $block-border-accent;
+    padding:0 $big-padding;
+  }
+}
 
 
-// *************************
 // Main Content Row - Today Hour
-// *************************
 
 
-// *************************
-// Main Content Row 2- Promo
-// *************************
 
-// *************************
+// ***********************************
+// Main Content Row 2- Promo & qLinks
+// ***********************************
+.second-main{
+  // background-color: map-get($foundation-palette, warning);
+  background-color: $transparent;
+  background-size: cover;
+  padding:$big-padding $global-padding;
+  margin: $global-padding auto;
+}
+
+// promo affect
+
+.image-wrapper {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(0,0,0,0.04);
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  //border-radius: $img-hover-global-radius;
+}
+
+.image-overlay-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.overlay-fade-in {
+  
+  p {
+    letter-spacing: 0.15em;
+    color: #f4f4f4;
+    font-size: 1.2rem;
+    opacity: 0;
+    //transition: all 0.2s linear;
+  }
+  
+  img {
+    //transition: all 0.2s linear;
+  }
+
+  
+  .image-overlay-content {
+    opacity: 0;
+    background: rgba(81,83,92, 0.8);
+    transition: all 0.4s ease-in-out;
+  }
+  
+  h2 {
+    color: #f2f2f2;
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    //background: rgba(0,0,0,0.7);
+  }
+  
+  .button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px; 
+    background: #FFF;
+    color: #222;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000;
+    position: relative;
+    border: 1px solid #999;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    
+    &:hover {
+      box-shadow: 0 0 5px #000;
+    }
+  }
+  
+  &:hover img {
+    transform: scale(1);
+  }
+  
+  &:hover .image-overlay-content {
+    opacity: 1;
+  }
+  
+  &:hover h2, p, .button {
+    opacity: 1;
+  }
+  
+  &:hover p {
+    transition-delay: 0.1s;
+  }
+  
+  &:hover .button {
+    transition-delay: 0.2s;
+  }
+  &:hover figcaption {
+    display: none;
+  }
+} 
+
+
 // Main Content Row 2- qLinks
-// *************************
+.quick-link-list {
+  background: $white;
+  padding: $big-padding;
+  .quick-link {
+    padding: $small-padding 0;
+  }
+}
+
 
 // *************************
 // Main Content Row 4- Ask Us
@@ -142,7 +266,7 @@ background: $transparent;
     position: relative;
     background: url('/assets/img/hero-img.jpg') no-repeat center center / cover;
     &:before, &:after {
-      background: $white none repeat scroll 0 0;
+      background: $body-background none repeat scroll 0 0;
       content: "";
       height: 100px;
       left: -10%;
@@ -252,15 +376,20 @@ background: $transparent;
   .news-sidebar {
     //padding:$block-padding;
     //background: $light-gray;
-    .featured-content {
-        padding: $big-padding;
-    }
     .featured {
-        background: $light-gray;
+        background: $transparent;
+        padding:0 $global-padding;
+    }
+    .featured-content {
+      padding:$big-padding;
+      background: darken($light-gray, 4%);
+      border-bottom: $block-border-accent;
+      margin-bottom: $global-margin;
+
     }
     .event-list {
         background: $white;
-        border-bottom: solid 5px $brand-accent;
+        border-bottom: $block-border-accent;
         padding:$global-padding;
     }
     .event-item {
