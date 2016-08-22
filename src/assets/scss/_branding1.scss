@@ -31,12 +31,12 @@ p {font-family: 'Arimo', sans-serif; font-size: 1.1em;}
 // *************************
 
 //Padding for search and hours
-.hero-hours {
+/*.hero-hours {
   padding: 50px 0 0 15px;
   @media only screen and (max-width: 768px){
     padding: 15px 15px 0;
   }
-}
+}*/
 .hero-search {
   padding: 50px 65px 20px;
   @media only screen and (max-width: 768px){
@@ -120,16 +120,16 @@ section {margin-bottom: 15px;}
 }*/
 
 // Simple Icons - hours icon
-.simple-icons i {
+/*.simple-icons i {
   color: map-get($foundation-palette, success);
   font-size: 3.4em;
   line-height: 0;
-}
+}*/
 // Simple Icons - hours icon mobile
-.mobile-hours i {
+/*.mobile-hours i {
   color: map-get($foundation-palette, success);
   font-size: 1.5em;
-}
+}*/
 
 // Icon My account
 .hero-menu {
