@@ -142,9 +142,9 @@ section {margin-bottom: 15px;}
     text-align: center;
     border: 1px solid #333;
   }
-  //ul li.menu-text a {
-    //color: $white;
-  //}
+}
+ul li.menu-text a {
+  color: $white;
 }
 
 // Icon Question mark
@@ -190,9 +190,6 @@ section {margin-bottom: 15px;}
 .icon-divider-line-grey {border-bottom: 2px solid #ccc;}
 
 //Social Icons
-ul.social-icons {
-  margin-left:0;
-}
 .social-icons {
   span {
     float: left;
@@ -220,6 +217,14 @@ ul.social-icons {
     justify-content: center;
   }
 }
+ul.social-icons {
+  margin-left:0;
+} // This gave me an error when I referenced parent selector below
+/*
+ul.& {
+  margin-left:0;
+}
+*/
 
 
 // Schools color logos icons
