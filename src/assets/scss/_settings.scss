@@ -247,13 +247,18 @@ $accordionmenu-arrow-color: $primary-color;
 
 $badge-background: $primary-color;
 $badge-color: foreground($badge-background);
-// $badge-padding: 0.3em;
+//$badge-padding: 0.3em;
 // $badge-minwidth: 2.1em;
 // $badge-font-size: 0.6rem;
 //style changed by nw
-$badge-padding: 0.3em 0.2em;
+//$badge-padding: 0.3em 0.2em;
+//$badge-minwidth: 2.2em;
+//$badge-font-size: .9rem;
+
+$badge-padding: 0.4em;
 $badge-minwidth: 2.2em;
-$badge-font-size: .9rem;
+$badge-font-size: 1rem;
+//testing styles Sasha
 
 // 10. Breadcrumbs
 // ---------------
