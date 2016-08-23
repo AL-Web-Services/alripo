@@ -2,11 +2,11 @@
 <header>
     <!--sticky top-nav menu-->
     <div data-sticky-container>
-        <div class="top-bar al-utilitiy-menu row" data-sticky data-options="marginTop:0;" style="width:100%">
+        <div class="top-bar al-utilitiy-menu" data-sticky data-options="marginTop:0;" style="width:100%">
             <div class="top-bar-left large-6 ">
                 <ul class="menu">
                     <li><i class="badge fi-torso icon-color-b"></i></li>
-                    <li><a href="#"> My Account</a></li>
+                    <li><a href="#">My Account</a></li>
                     <li>
                         <div class="site-search">
                             <form>
@@ -44,7 +44,8 @@
     <!-- Start banner -->
     <div class="header-wrapper">
         <div class="banner optone">
-            <div class="row columns"><img class="sitelogo" src="/assets/img/alwtheme/logosmall.png" Alt="Auraria Library" Title="Auraria Library Home"></div>
+            <!-- <div class="row columns"><img class="sitelogo" src="/assets/img/alwtheme/logosmall.png" Alt="Auraria Library" Title="Auraria Library Home"></div> -->
+            <div class="row columns"><img class="sitelogo" src="/assets/img/alwtheme/redlogo.png" Alt="Auraria Library" Title="Auraria Library Home"></div>
         </div>
     </div>
     <!-- end banner -->
@@ -56,13 +57,13 @@
     <div class="row main-row" data-equalizer>
 
         <!-- start my search block -->
-        <div class="columns large-7 small-12" data-equalizer-watch>
+        <div class="columns large-7 small-12 main-search" data-equalizer-watch>
             <h2>Start My Research <i class="fi-info has-tip bottom" aria-haspopup="true" title='The “one-stop” search for finding research materials. Enter your search terms to find books, articles, media and more.' data-tooltip></i></h2>
             <form method="GET" action="http://auraria.summon.serialssolutions.com/">
                 <div class="input-group">
                     <input class="input-group-field" type="text" placeholder="Find articles, books, media, journals and more" id="search_string_All" name="q">
                     <!--    <input type="submit" name="Search" value="Search" class="submit"> -->
-                    <span class="input-group-label">Search</span>
+                    <span class="input-group-label search-button">Search</span>
                 </div>
                 <input id=" value=" name="keep_r" type="hidden" />
                 <div>
@@ -79,12 +80,12 @@
             <p class="float-right"><a target="_blank" href="http://auraria.summon.serialssolutions.com/#!/advanced" title="Use Advanced Search">Advanced Search >></a></p>
             <!--addtional options -->
             <hr />
-            <div class="columns large-centered">
+            <div class="columns more-resource-">
                 <div class="button-group expanded" data-equalizer="bar">
-                    <button class="button" href="#" data-equalizer-watch="bar">Databases List</button>
-                    <button class="button" href="#" data-equalizer-watch="bar">Skyline Catalog</button>
-                    <button class="button" href="#" data-equalizer-watch="bar">Journal List</button>
-                    <button class="button" href="#" data-equalizer-watch="bar">Research Guides</button>
+                    <button class="button more-button" href="#" data-equalizer-watch="bar">Databases List</button>
+                    <button class="button more-button" href="#" data-equalizer-watch="bar">Skyline Catalog</button>
+                    <button class="button more-button" href="#" data-equalizer-watch="bar">Journal List</button>
+                    <button class="button more-button" href="#" data-equalizer-watch="bar">Research Guides</button>
                 </div>
             </div>
             <!--end of addtional options-->
@@ -92,12 +93,23 @@
         <!-- end my search block -->
 
         <div class="columns show-for-large large-4 large-offset-1 today-hours" data-equalizer-watch>
-            <h2><i class="fi-clock primary"></i> Today's Hours</h2>
-            <p>Monday, June 27, 2016</p>
-            <div class="row columns" data-equlizer>
-                <button class="dropdown button" type="button" data-toggle="example-dropdown" data-equalizer-watch="hour-bar">7:30am - 9:00pm </button>
-                <button class="button success" type="button" data-equalizer-watch="hour-bar">Open</button>
-                <div class="dropdown-pane" id="example-dropdown" data-dropdown data-hover="true">
+            <h2 class="text-right">Monday, June 27, 2016</h2>
+            
+            <div class="row hours-info">
+                <div class="columns large-6">               
+                    <h3><i class="fi-clock icon-small primary"></i> Today's Hours</h3>
+                    <span class="hours-time">7:30am - 9:00pm</span>
+                    </h3>
+                </div>
+                <div class="columns large-6">    
+                    <div class="status-circle-open float-right"><span>Open</span></div>
+                </div>
+            </div>
+
+            <div class="row more-hours">
+                <button class="button dropdown" type="button" data-toggle="thisweek-dropdown">This Week Hours</button> 
+                <button class="button hollow"><a href="/almockups/allhours.html">All Hours</a></button>               
+                <div class="dropdown-pane" id="thisweek-dropdown" data-dropdown data-hover="true">
                     <table class="responsive">
                         <tbody>
                             <tr>
@@ -120,7 +132,6 @@
                     </table>
                 </div>
             </div>
-            <p class="float-right"><a href="/almockups/allhours.html">All Hours >></a></p>
         </div>
         <!-- end of the hours -->
     </div>
@@ -142,6 +153,7 @@
    
    <div class="quick-link-list large-6 medium-12 small-12 columns" data-equalizer-watch>
         <h2>Use the Library</h2>
+        <hr />
         <div class="columns medium-6">
             <div class="media-object quick-link">
                 <div class="media-object-section">
@@ -217,43 +229,42 @@
     </div>
     <!--end of left columns-->
 </div>
-
 <!--end main content row 2 : Promo, quick links-->
 
 <!--main content row 3 : Ask Us-->
 <div class="askus-bg">
-    <div class="row small-up-3 medium-up-6 askus-icons text-center">
-        <div class="columns">
-            <a class="main-icon" href="#"><h2>Ask Us</h2></a>
+    <div class="row small-up-6 medium-up-6 text-center">
+        <div class="columns main-icon">
+            <span><a href="#">Ask Us</a></span>
         </div>
-        <div class="columns">
+
+        <div class="columns askus-icons">
             <a href="#"><span><i class="fi-comments"></i></span></a>
         </div>
-        <div class="columns">
+        <div class="columns askus-icons">
             <a href="#"><span><i class="fi-mobile"></i></span></a>
         </div>
-        <div class="columns">
+        <div class="columns askus-icons">
             <a href="#"><span><i class="fi-mail"></i></span></a>
         </div>
-        <div class="columns">
+        <div class="columns askus-icons">
             <a href="#"><span><i class="fi-torsos-female-male"></i></span></a>
         </div>
-        <div class="columns">
-            <a href="#"><span><i class="fi-telephone"></i></span></a>
+        <div class="columns askus-icons">
+            <span><a href="#"><i class="fi-telephone"></i></a></span>
         </div>
     </div>
 </div>
 <!--end main content row 3 : Ask Us-->
 
 <!--main content row 4 : News & Events-->
-
-<!-- Begin News and Events listings content and sidebar -->
 <div class="row marcomm-block">
 
     <!-- News and Events listings block begin -->
     <div class="large-8 columns small-12 news-list">
         <div class="row news-list-top">
         <h2 class="cloumns sidebar-title">News</h2>
+        
             <!-- news row -->
             <div class="row media-object news-item">
                 <div class="large-6 columns show-for-large media-object-section">
@@ -277,7 +288,7 @@
                     <h4><a href="#">
                     New Architecture Book Donations from Finn Jorgensen
                     </a></h4>
-                    <p><span><i class="fi-torso"> By Karen Sobel</i></span>
+                    <p><span class="authors"><i class="fi-torso"> By Karen Sobel</i></span>
                         <!-- <span><i class="fi-calendar"> 11/23/16 &nbsp;&nbsp;</i></span> -->
                     </p>
                     <p>In March 2016, Denver architect Finn Jorgensen pursued his dream of moving to South America to continue his work. He generously gifted his large personal collection of architecture books to the Auraria Library.</p>
@@ -293,7 +304,7 @@
                     <h4><a href="#">
                     New Digital Collection Documents Pre-Campus Auraria
                     </a></h4>
-                    <p><span><i class="fi-torso"> By Matthew Mariner</i></span>
+                    <p><span class="authors"><i class="fi-torso"> By Matthew Mariner</i></span>
                         <!-- <span><i class="fi-calendar"> 11/23/16 &nbsp;&nbsp;</i></span> -->
                     </p>
                     <p>In March 2016, Denver architect Finn Jorgensen pursued his dream of moving to South America to continue his work. He generously gifted his large personal collection of architecture books to the Auraria Library.</p>
@@ -323,14 +334,15 @@
             <div class="row columns large-12">
               <div class="featured-content">
               <h2><a href="#">Featured Resources 03.16
-              <br /> Celebrating National Poetry Month</a></h2>
+              <br /> <small>Celebrating National Poetry Month</small></a></h2>
               </div>
             </div>
         </div>
 
         <!--event list-->
-        <div class="row columns event-list">
-                <h2 class="columns sidebar-title">Events</h2>
+        <div class="colunns event-list">
+                <h2 class="event-header">Events</h2>
+
                 
                 <!-- event item -->
 
@@ -346,7 +358,7 @@
                         <a href="#" class="rsvp button">Details</a>
                     </div>
                 </div>
-                <hr>
+                
                 <!-- end event item -->
                 <!-- event item -->
                 <div class="event event-item">
@@ -374,7 +386,6 @@
     <!-- end of news events sidebar -->
 
 </div>
-
 <!--end main content row 4 : News & Events-->
 
 <!-- Library Footer begin -->
@@ -385,15 +396,15 @@
                 <div data-equalizer-watch="footer-blocks">
                     <h2>Auraria Library</h2>
                     <hr>
-                    <img alt="Auraria Library Logo" src="/assets/img/auraria-library-logo-white.png" width="250" height="auto">
+                    <img class="alfooterlogo" alt="Auraria Library Logo" src="/assets/img/auraria-library-logo-white.png" width="250" height="auto">
                     <p>
                         <br />
                     </p>
                 </div>
                 <hr>
-                <div class="media-object stack-for-small clearfix">
-                    <div class="media-object-section">
-                        <img alt="Federal Depository Library Logo" src="/assets/img/alwtheme/fdlp-emblem-bwt.png" width="50" height="50">
+                <div class="media-object stack-for-small">
+                    <div class="media-object-section fdll">
+                        <img class="fdll" alt="Federal Depository Library Logo" src="/assets/img/alwtheme/fdlp-emblem-bwt.png">
                     </div>
                     <div class="media-object-section">
                         <p>A Federal Depository Library</p>
@@ -480,60 +491,56 @@
 
 <!-- AHEC footer begin -->
 <div class="utility-menu-footer">
-    <div class="row">
-        <div class="large-12 columns">
-            <ul class="menu expanded">
-                <li><span>Auraria Library serves three schools on one urban campus:</span></li>
-                <li>
-                    <a href="#">
-                        <div class="media-object stack-for-small clearfix">
+    <div class="row large-12">
+        
+          <!--   <div class="columns large-2">
+               <span>Auraria Library serves three schools on one urban campus:</span>
+            </div>   -->
+                    
+                        <div class="media-object columns large-3">
                             <div class="media-object-section">
-                                <div class="logo-icons"><span class="cu"></span></div>
+                                <div class="school-icons"><span class="cu"></span></div>
                             </div>
                             <div class="media-object-section">
-                                University of Colorado Denver
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="media-object stack-for-small clearfix">
-                            <div class="media-object-section">
-                                <div class="logo-icons"><span class="metro"></span></div>
-                            </div>
-                            <div class="media-object-section">
-                                Metropolitan State University of Denver
+                                <a href="#">University of Colorado Denver</a>
                             </div>
                         </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="media-object stack-for-small clearfix">
+                    
+              
+                    
+                        <div class="media-object columns large-3">
                             <div class="media-object-section">
-                                <div class="logo-icons"><span class="community"></span></div>
+                                <div class="school-icons"><span class="metro"></span></div>
                             </div>
                             <div class="media-object-section">
-                                Community College of Denver
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="media-object stack-for-small clearfix">
-                            <div class="media-object-section">
-                                <div class="logo-icons"><span class="ahec"></span></div>
-                            </div>
-                            <div class="media-object-section">
-                                Auraria Higher Education Center
+                                <a href="#">Metropolitan State University of Denver</a>
                             </div>
                         </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
+                  
+               
+                    
+                        <div class="media-object columns large-3">
+                            <div class="media-object-section">
+                                <div class="school-icons"><span class="community"></span></div>
+                            </div>
+                            <div class="media-object-section">
+                                <a href="#">Community College of Denver</a>
+                            </div>
+                        </div>
+                   
+                                  
+                        <div class="media-object columns large-3">
+                            <div class="media-object-section">
+                                <div class="school-icons"><span class="ahec"></span></div>
+                            </div>
+                            <div class="media-object-section">
+                                <a href="#">Auraria Higher Education Center</a>
+                            </div>
+                        </div>
+                    
+              
+            
+       
     </div>
 </div>
 <!-- end AHEC footer  footer -->

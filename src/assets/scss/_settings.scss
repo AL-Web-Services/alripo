@@ -45,25 +45,25 @@
 // 1. Global
 // ---------
 
-$global-font-size: 90%;
+$global-font-size: 95%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 
 $foundation-palette: (
  //primary: #51535C, cold dark gray
  //primary:#594F4F, warm chocolate
- primary:#51535C,
+ primary:#8E8E8E,//cold bluish gray
  secondary: #CF4520, //accest 
- success: #3399cc,
- warning: #CF4520,
- alert: #B4B2AE,
+ success: #006699, //branding dark blue
+ warning: #7AB63E,//branding green from AL branding guide
+ alert: #3399cc,//branding light blue from AL branding guide
 );
 //$light-gray: #F2EEEA; warm light gray
 $light-gray: #f3f3f3;
 $medium-gray: #cccccc;
-$dark-gray: #51535C;
-$off-black: #333333;
-$black: #000000;
+$dark-gray: #8E8E8E; //branding gray from AL branding guide
+$off-black: #51535C;
+$black: #333333;
 $white: #ffffff;
 $transparent: transparent;
 $body-background: $light-gray;
@@ -171,7 +171,7 @@ $header-color: inherit;
 $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-text-rendering: optimizeLegibility;
-$small-font-size: 80%;
+$small-font-size: 90%;
 $header-small-font-color: $medium-gray;
 $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
