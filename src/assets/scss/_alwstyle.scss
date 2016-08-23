@@ -58,7 +58,7 @@ $block-border-accent:5px solid $brand-accent;
 // Branding 1 global styles
 // *************************
 
-h2, h3, h4 {
+h1, h2, h3, h4 {
   a, a:visited {
   color:$black;
   }
@@ -86,46 +86,57 @@ h2, h3, h4 {
 background-color:$brand-accent;
 }
 .icon-color-d{
-background-color:$off-black;
+background-color:$black;
 }
 
-
-// Typography
 
 // *************************
 // Utility Menu - Header
 // *************************
 // utility-menu
-.al-utilitiy-menu {
-  // background: $dark-gray;
- ul.menu{
-  height: 40px;
-  font-size: .9rem;
+.top-bar {
   background: $light-gray;
+ padding: 0;
+ //border-top: $off-black 5px solid;
+  border-bottom: $brand-accent 1px solid;
+.my-account i {
+  color: $off-black;
+}
+
+ ul.menu {
+  //height: 40px;
+  background: $light-gray;
+  padding-top: 0;
+  padding-bottom: 0;
+ 
+  li {
+    padding-left: 1rem;
+  }
+  a, a:visited {
+    color: $off-black;
+  }
  }
 }
-img.sitelogo {
-  //background: $white;
-  background:$transparent;
-  padding: $big-padding;
 
-}
 
 //Site search form
 .site-search {
   .input-group {
     margin-top: 0.5rem; 
-    border: none;}
+    border: none;
+    
+  }
   //.input-group {margin-top: 12px; margin-bottom: 5px; position: relative;}
   .input-group-label{
     background-color: $transparent; 
     border: none;
-    margin-left: -5rem;
+   // margin-left: -5rem;
   }
   .input-group-field {
     border: none;
-    margin-left: 3rem;
-    width: 250px;
+    height: 2rem;
+    //margin-left: 3rem;
+   // width: 250px;
   }
 }
 
@@ -136,7 +147,7 @@ img.sitelogo {
 .banner {
   margin-left: auto;
   margin-right: auto;
-  height: 130px;
+  height: 129px;
   //background: url('/assets/img/deco/header-banner2.png') no-repeat center center;
   display: block;
   border-bottom: $block-border-accent;
@@ -146,10 +157,28 @@ img.sitelogo {
   //background: url('/assets/img/deco/CUD_students_0409w.jpg') no-repeat center center;
   background: url('/assets/img/alwtheme/albwgflat.jpg') no-repeat center center;
   background-size: 100%;
-  padding-top:1rem;
-  padding-bottom:0;
+  //padding-top:2px;
+  //padding-bottom:0.2rem;
+  img {
+    //box-shadow: 0 0 1px #000;
+  }
 }
-//nw edit end//
+.opttwo {
+  //background: url('/assets/img/deco/CUD_students_0409w.jpg') no-repeat center center;
+  background: url('/assets/img/alwtheme/albwgflat.jpg') no-repeat center center;
+  background-size: 100%;
+  //padding-top:2px;
+  //padding-bottom:0.2rem;
+  img {
+    //box-shadow: 0 0 1px #000;
+  }
+}
+img.sitelogo {
+  //background: $white;
+  background:$transparent;
+  padding: $big-padding;
+
+}
 
 
 
@@ -168,6 +197,7 @@ img.sitelogo {
   .more-button {
     font-weight: bold;
     color: $white;
+    //border: 1px solid $dark-gray;
     background-color: $dark-gray;
     &:hover{
       background-color: $brand-blue-dark;
@@ -328,6 +358,12 @@ img.sitelogo {
   .quick-link {
     padding: $small-padding 0;
   }
+  .badge {
+    background: $medium-gray;
+    &:hover {
+     background: $brand-blue-dark;
+    }
+  }
 }
 
 
@@ -357,8 +393,8 @@ img.sitelogo {
       top: -75px;
     }
     &:after {
-      transform: rotate(-2.5deg);
-      bottom: -55px;
+      transform: rotate(-6deg);
+      bottom: -75px;
     }
 }
 
@@ -413,43 +449,48 @@ img.sitelogo {
      padding:$big-padding;
   }
   // Diagonal deco at the end of news
-  .corner-wrapper {
-    overflow: hidden;
-  }
-  .corner {
-      width: 0;
-      height: 0;
-      border-top: 60px solid $white;
-      border-right: 900px solid transparent;
 
+  @include breakpoint(large) {
+    .corner-wrapper {
+      overflow: hidden;
+    }
+    .corner {
+        width: 0;
+        height: 0;
+        border-top: 60px solid $white;
+        border-right: 900px solid transparent;
+
+    }
   }
 
   //news sidebar for events and featured
 
   .news-sidebar {
-    //padding:$block-padding;
-    //background: $light-gray;
+    padding: 0 $global-padding;
+    //background: $medium-gray;
     .featured {
         background: $transparent;
-        padding:0 $global-padding;
+        //padding:0;
         small {
           color:$dark-gray;
         }
     }
+
     .featured-content {
       padding:$big-padding;
       background: darken($light-gray, 4%);
       border-bottom: $block-border-accent;
-      margin-bottom: $global-margin;
-
     }
     .event-list {
+        margin-top: $global-margin;
         background: $white;
         border-bottom: $block-border-accent;
-        padding:$global-padding;
+        //padding: $global-padding;
+       
+        
     }
-    .event-item {
-        padding: $big-padding 0;       
+    .event-item { 
+        padding:$big-padding $global-padding;
         border-top: $deco-border;
     }
    .event-header{
@@ -457,11 +498,6 @@ img.sitelogo {
    }
 
     //event style from building block
-     .event {
-      //padding: 1rem 1rem 1rem 0;
-      //padding:$big-padding;
-     //display: table;
-    }
 
     .event-date {
       width: 6rem;
