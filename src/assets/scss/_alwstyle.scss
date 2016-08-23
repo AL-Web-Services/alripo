@@ -94,32 +94,59 @@ background-color:$black;
 // Utility Menu - Header
 // *************************
 // utility-menu
-.top-bar {
-  background: $light-gray;
- padding: 0;
- //border-top: $off-black 5px solid;
-  border-bottom: $brand-accent 1px solid;
-.my-account i {
-  color: $off-black;
+.al-utilitiy-menu {
+    background: $light-gray;
+    padding: 0;
+    //border-top: $off-black 5px solid;
+    border-bottom: $brand-accent 1px solid;
+    .my-account i {
+        color: $off-black;
+    }
+    ul.menu {
+        //height: 40px;
+        background: $light-gray;
+        padding-top: 0;
+        padding-bottom: 0;
+        li {
+            padding-left: 1rem;
+        }
+        a,
+        a:visited {
+            color: $off-black;
+        }
+    }
 }
 
- ul.menu {
-  //height: 40px;
-  background: $light-gray;
-  padding-top: 0;
-  padding-bottom: 0;
- 
-  li {
-    padding-left: 1rem;
-  }
-  a, a:visited {
-    color: $off-black;
-  }
- }
+
+
+
+
+//b2
+.al-utilitiy-menu-d2 {
+    background: $off-black;
+    padding: 0;
+    //border-top: $off-black 5px solid;
+    border-bottom: $brand-accent 1px solid;
+    .my-account i {
+        color: $brand-accent;
+    }
+    ul.menu {
+        //height: 40px;
+        background: $off-black;
+        padding-top: 0;
+        padding-bottom: 0;
+        li {
+            padding-left: 1rem;
+        }
+        a,
+        a:visited {
+            color: $light-gray;
+        }
+    }
 }
 
 
-//Site search form
+//site search form foundation style
 .site-search {
   .input-group {
     margin-top: 0.5rem; 
@@ -128,17 +155,68 @@ background-color:$black;
   }
   //.input-group {margin-top: 12px; margin-bottom: 5px; position: relative;}
   .input-group-label{
-    background-color: $transparent; 
+    background-color: $white; 
     border: none;
    // margin-left: -5rem;
   }
   .input-group-field {
-    border: none;
+    border: 1px solid $white;
+    box-shadow: none;
     height: 2rem;
     //margin-left: 3rem;
-   // width: 250px;
+    width: 100%;
   }
 }
+//site search form foundation style end
+//codepen Expandable Search Form Pen by Prinzadi
+// input {
+//   outline: none;
+// }
+// input[type=search] {
+//   -webkit-appearance: textfield;
+//   -webkit-box-sizing: content-box;
+//   font-family: inherit;
+//   font-size: 100%;
+// }
+// input::-webkit-search-decoration,
+// input::-webkit-search-cancel-button {
+//   display: none; 
+// }
+
+
+// input[type=search] {
+//   background: #ededed url(http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+//   border: solid 1px #ccc;
+//   padding: 9px 10px 9px 32px;
+//   width: 100px;
+  
+//   //-webkit-border-radius: 10em;
+//   //-moz-border-radius: 10em;
+//   border-radius: 10em;
+  
+//   //-webkit-transition: all .5s;
+//   //-moz-transition: all .5s;
+//   transition: all .5s;
+// }
+// input[type=search]:focus {
+//   width: 250px;
+//   background-color: #fff;
+//   border-color: #66CC75;
+  
+//   //-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+//   //-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+//   box-shadow: 0 0 5px rgba(109,207,246,.5);
+// }
+
+
+// input:-moz-placeholder {
+//   color: #999;
+// }
+// input::-webkit-input-placeholder {
+//   color: #999;
+// }
+
+
 
 // *************************
 // Branding banner
@@ -150,35 +228,50 @@ background-color:$black;
   height: 129px;
   //background: url('/assets/img/deco/header-banner2.png') no-repeat center center;
   display: block;
-  border-bottom: $block-border-accent;
+  
 }
 //design options, remove later//
 .optone {
   //background: url('/assets/img/deco/CUD_students_0409w.jpg') no-repeat center center;
   background: url('/assets/img/alwtheme/albwgflat.jpg') no-repeat center center;
   background-size: 100%;
+  border-bottom: $block-border-accent;
   //padding-top:2px;
   //padding-bottom:0.2rem;
-  img {
-    //box-shadow: 0 0 1px #000;
+  img.sitelogo {
+    //background: $white;
+    background:$transparent;
+    padding: $big-padding;
+
   }
 }
+
+
+//b2
 .opttwo {
   //background: url('/assets/img/deco/CUD_students_0409w.jpg') no-repeat center center;
-  background: url('/assets/img/alwtheme/albwgflat.jpg') no-repeat center center;
+  background: $brand-accent url('/assets/img/alwtheme/banner-bg-01.jpg') no-repeat center center;
   background-size: 100%;
+  //border-bottom: 3px solid $off-black;
   //padding-top:2px;
   //padding-bottom:0.2rem;
-  img {
-    //box-shadow: 0 0 1px #000;
+  div.logo-bg{
+    background: url('/assets/img/alwtheme/diagonal1.svg') no-repeat;
+    height: 129px;
+  //     -webkit-transform: skew(20deg);
+  //      -moz-transform: skew(20deg);
+  //        -o-transform: skew(20deg);
+  //   background: $white;
+  //   height: 129px;
+  }
+  img.sitelogo {
+    //background: $white;
+    padding: $big-padding;
+    height: 129px;
   }
 }
-img.sitelogo {
-  //background: $white;
-  background:$transparent;
-  padding: $big-padding;
 
-}
+
 
 
 
@@ -203,6 +296,7 @@ img.sitelogo {
       background-color: $brand-blue-dark;
 
     }
+  
   }
   .input-group-label {
     background-color: $brand-accent; 
@@ -211,6 +305,25 @@ img.sitelogo {
     border: none;
   }
 
+}
+.main-search-2 {
+  .more-button {
+    font-weight: bold;
+    color: $white;
+    //border: 1px solid $dark-gray;
+    background-color: $off-black;
+    &:hover{
+      background-color: $brand-blue-dark;
+
+    }
+  
+  }
+  .input-group-label {
+    background-color: $brand-accent; 
+    color: $white; 
+    cursor: pointer; 
+    border: none;
+  }
 
 }
 // Main Content Row - Today Hour
@@ -242,6 +355,37 @@ img.sitelogo {
 
 }
 
+//
+.today-hours-2 {
+  padding-left: $big-padding;
+  border-left: $block-border-accent;
+  h3 {
+    color: map-get($foundation-palette, success);
+  }
+  .hours-info{
+    padding-top: $big-padding;
+    padding-bottom: $big-padding;
+  }
+  .hours-time{
+    font-size:1.2rem;
+  }
+
+  .status-circle-open {
+  @include alw-circle(60px, $brand-green,$light-gray);
+  }
+ 
+  .more-hours{
+    padding-left: $global-padding;
+    padding-top: $big-padding;
+    margin-left: auto;
+    margin-right:auto;
+  }
+  .secondary {
+    background-color: $off-black;
+
+  }
+
+}
 
 
 // ***********************************
@@ -365,7 +509,20 @@ img.sitelogo {
     }
   }
 }
-
+//b2
+.quick-link-list-2 {
+  background: $white;
+  padding: $big-padding;
+  .quick-link {
+    padding: $small-padding 0;
+  }
+  .badge {
+    background: $light-gray;
+    &:hover {
+     background: $brand-blue-dark;
+    }
+  }
+}
 
 // *************************
 // Main Content Row 4- Ask Us
@@ -417,6 +574,28 @@ img.sitelogo {
 }
 .askus-icons{
   @include alw-circle(4rem,$brand-accent,$dark-gray);
+  font-size: 2rem;
+  
+}
+
+//d2
+.main-icon-2{
+  
+  @include alw-circle(8rem, $off-black, $off-black);
+  font-size: 1.5rem;
+  margin-top: -2rem;
+
+  @include breakpoint(small only) {
+    @include alw-circle(4rem, $off-black, $off-black);
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 0;
+  }
+  
+  
+}
+.askus-icons-2{
+  @include alw-circle(4rem,$brand-accent,$off-black);
   font-size: 2rem;
   
 }
