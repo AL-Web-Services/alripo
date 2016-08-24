@@ -550,7 +550,7 @@ body {background-color: #f3f3f3;}
     }
 
   img {
-    transition: all 0.2s linear;
+    //transition: all 0.2s linear; //turn off for js
     //border: 1px solid #666;
   }
 
@@ -579,7 +579,7 @@ body {background-color: #f3f3f3;}
   }
 
   &:hover img {
-    transform: scale(1.02);
+    //transform: scale(1.02);//turn off for js
   }
 
   &:hover .image-overlay-content {
