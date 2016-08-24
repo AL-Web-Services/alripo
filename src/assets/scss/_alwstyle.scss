@@ -234,7 +234,7 @@ background-color:$black;
 //design options, remove later//
 .optone {
   //background: url('/assets/img/deco/CUD_students_0409w.jpg') no-repeat center center;
-  background: url('/assets/img/alwtheme/albwgflat.jpg') no-repeat center center;
+  background: url('/assets/img/alwtheme/albwgflat.jpg') no-repeat center 50%;
   background-size: 100%;
   border-bottom: $block-border-accent;
   //padding-top:2px;
@@ -244,6 +244,7 @@ background-color:$black;
     //background: $white;
     background:$transparent;
     padding: $big-padding;
+    height: 129px;
 
   }
 }
@@ -273,8 +274,24 @@ background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray
   }
 }
 
+//b3
+//design options, remove later//
+.optthree {
+  //background: url('/assets/img/deco/CUD_students_0409w.jpg') no-repeat center center;
+  background: url('/assets/img/alwtheme/alcolorflat.jpg') no-repeat center 10%;
+  background-size: 100%;
+  border-bottom: $block-border-accent;
+  //padding-top:2px;
+  //padding-bottom:0.2rem;
+  img.sitelogo {
 
+    //background: $white;
+    background:$transparent;
+    padding: $big-padding;
+    //height: 50px;
 
+  }
+}
 
 
 // *********************************
@@ -309,14 +326,7 @@ background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray
     &:hover{
       background-color: $brand-blue-dark;
 
-    }
-        //forms styling
-
-    [type="text"] {
-      background-color: $light-gray;
-    } 
-    //need to bring in more from sasah branding1.scss
-  
+    }  
   }
 
   .input-group-label {
@@ -325,6 +335,12 @@ background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray
     cursor: pointer; 
     border: none;
   }
+  //forms styling
+
+  [type="text"] {
+  background-color: $light-gray;
+  } 
+  //need to bring in more from sasah branding1.scss
 
 }
 .main-search-2 {
@@ -345,6 +361,14 @@ background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray
     cursor: pointer; 
     border: none;
   }
+
+  //forms styling
+
+  [type="text"] {
+  background-color: $light-gray;
+  } 
+  //need to bring in more from sasah branding1.scss
+
 
 }
 // Main Content Row - Today Hour
@@ -841,7 +865,7 @@ background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray
   //if needed adddtional style
 }
 .alfooterlogo {
-  width: 300px;
+  width: 250px;
   height: auto;
 }
 .fdll{
