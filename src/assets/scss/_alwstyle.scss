@@ -90,6 +90,7 @@ background-color:$black;
 }
 
 
+
 // *************************
 // Utility Menu - Header
 // *************************
@@ -239,6 +240,7 @@ background-color:$black;
   //padding-top:2px;
   //padding-bottom:0.2rem;
   img.sitelogo {
+
     //background: $white;
     background:$transparent;
     padding: $big-padding;
@@ -248,26 +250,26 @@ background-color:$black;
 
 
 //b2
+.header-wrapper-2 {
+  //border-bottom: 10px solid #862723; 
+position: relative; 
+background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray 50%,$brand-accent 50%,$brand-accent 100%); /* W3C */}
+
 .opttwo {
   //background: url('/assets/img/deco/CUD_students_0409w.jpg') no-repeat center center;
-  background: $brand-accent url('/assets/img/alwtheme/banner-bg-01.jpg') no-repeat center center;
-  background-size: 100%;
-  //border-bottom: 3px solid $off-black;
+  background: $transparent url('/assets/img/alwtheme/banner-version-v5.png') no-repeat center center;
+  //background-size: 100%;
+  border-bottom: 1px solid $white;
   //padding-top:2px;
   //padding-bottom:0.2rem;
   div.logo-bg{
     background: url('/assets/img/alwtheme/diagonal1.svg') no-repeat;
-    height: 129px;
-  //     -webkit-transform: skew(20deg);
-  //      -moz-transform: skew(20deg);
-  //        -o-transform: skew(20deg);
-  //   background: $white;
-  //   height: 129px;
+    height: 128px;
   }
   img.sitelogo {
     //background: $white;
-    padding: $big-padding;
-    height: 129px;
+    padding:$big-padding;
+    height: 120px;
   }
 }
 
@@ -281,6 +283,17 @@ background-color:$black;
 .main-row-wrapper{
   background: $white;
 }
+
+//b2
+.main-row-wrapper-2{
+  background: $white;
+
+  .main-row-2 {
+  padding: $big-padding;
+
+}
+
+}
 .main-row {
   padding: $big-padding;
 
@@ -291,13 +304,21 @@ background-color:$black;
     font-weight: bold;
     color: $white;
     //border: 1px solid $dark-gray;
+
     background-color: $dark-gray;
     &:hover{
       background-color: $brand-blue-dark;
 
     }
+        //forms styling
+
+    [type="text"] {
+      background-color: $light-gray;
+    } 
+    //need to bring in more from sasah branding1.scss
   
   }
+
   .input-group-label {
     background-color: $brand-accent; 
     color: $white; 
@@ -544,18 +565,43 @@ background-color:$black;
       left: -10%;
       position: absolute;
       width: 120%;
+
     }
     &:before {
       //transform: rotate(1deg);
       top: -75px;
     }
     &:after {
-      transform: rotate(-6deg);
-      bottom: -75px;
+      transform: rotate(-2.5deg);
+      bottom: -55px;
     }
 }
 
-
+// Hero Background Image
+// .askus-bg {
+//     display: block;
+//     height: auto;
+//     min-height: 0;
+//     overflow: hidden;
+//     padding: 131px 0 209px;
+//     position: relative;
+//     background: url('/assets/img/hero-img.jpg') no-repeat center center / cover;
+//     &:before, &:after {
+//       background: #f3f3f3 none repeat scroll 0 0;
+//       content: "";
+//       height: 100px;
+//       left: -10%;
+//       position: absolute;
+//       width: 120%;
+//     }
+//     &:before {
+//       transform: rotate(1deg);
+//       top: -75px;
+//     }
+//     &:after {
+//       transform: rotate(-2.5deg);
+//       bottom: -55px;
+//     }
 
 .main-icon{
   
