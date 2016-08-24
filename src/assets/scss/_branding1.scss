@@ -545,7 +545,7 @@ body {background-color: #f3f3f3;}
     color: $white;
     font-weight: bold;
 
-    &:hover {color: #ccc;}
+    //&:hover {color: #ccc;} //turn off for js
 
     }
 
@@ -555,7 +555,8 @@ body {background-color: #f3f3f3;}
   }
 
   .image-overlay-content {
-    opacity: 0;
+    //opacity: 0; //turn off for js
+    display: none; //for js
     transition: all 0.4s ease-in-out;
   }
 
@@ -573,26 +574,26 @@ body {background-color: #f3f3f3;}
     opacity: 0;
     transition: all 0.2s ease-in-out;
 
-    &:hover {
-      background-color: #ccc;
-    }
+    //&:hover {
+    //  background-color: #ccc; //turn off for js
+    //}
   }
 
-  &:hover img {
+  //&:hover img {
     //transform: scale(1.02);//turn off for js
-  }
+  //}
 
-  &:hover .image-overlay-content {
-    opacity: 1;
-  }
+  //&:hover .image-overlay-content {
+    //opacity: 1; //turn off for js
+  //}
 
-  &:hover h2, p, .button {
-    opacity: 1;
-  }
+  //&:hover h2, p, .button {
+    //opacity: 1;
+  //}
 
-  &:hover p {
-    transition-delay: 0.1s;
-  }
+  //&:hover p {
+    //transition-delay: 0.1s;//turn off for js
+  //}
 }
 
 //Overlay fade in mobile styling
