@@ -130,25 +130,28 @@ background-color:$black;
 
 .al-utilitiy-menu {
     background: $light-gray;
-    padding: 0;
+    padding: 0 $global-padding;
     border-bottom: $brand-accent 1px solid;
     .my-account i {
         color: $off-black;
         padding-right: $small-padding;
     }
-    ul.menu {
-        height: 45px;
-        background: $light-gray;
-        padding-top: 0;
-        padding-bottom: 0;
-        li {
-            padding-left: 1rem;
-        }
-        a,
-        a:visited {
-            color: $off-black;
-        }
-    }
+    // .menu {
+    //   height: 45px;
+    // }
+    // ul.menu {
+    //     height: 45px;
+    //     background: $light-gray;
+    //     padding-top: 0;
+    //     padding-bottom: 0;
+    //     li {
+    //         padding-left: 1rem;
+    //     }
+    //     a,
+    //     a:visited {
+    //         color: $off-black;
+    //     }
+    // }
 }
 
 
@@ -164,19 +167,19 @@ background-color:$black;
     .my-account i {
         color: $brand-accent;
     }
-    ul.menu {
-        height: 45px;
-        background: $off-black;
-        padding-top: 0;
-        padding-bottom: 0;
-        li {
-            padding-left: 1rem;
-        }
-        a,
-        a:visited {
-            color: $light-gray;
-        }
-    }
+    // ul.menu {
+    //     height: 45px;
+    //     background: $off-black;
+    //     padding-top: 0;
+    //     padding-bottom: 0;
+    //     li {
+    //         padding-left: 1rem;
+    //     }
+    //     a,
+    //     a:visited {
+    //         color: $light-gray;
+    //     }
+    // }
 }
 
 
