@@ -1,14 +1,50 @@
 <!--AL Header -->
+
+<div class="off-canvas-wrapper al-small-canvas">
+  <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+
+    <!-- off-canvas title bar for 'small' screen -->
+    <div class="title-bar al-utilitiy-menu-small" data-responsive-toggle="widemenu" data-hide-for="medium">
+      <div class="title-bar-left">
+        <button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
+        <span class="title-bar-title">Auraria Library</span>
+      </div>
+      <div class="title-bar-right">
+        <span class="title-bar-title"><i class="fi-torso"></i> My Account</span>
+        <!-- <button class="menu-icon" type="button" data-open="offCanvasRight"></button> -->
+      </div>
+    </div>
+
+    <!-- off-canvas left menu -->
+    <div class="off-canvas position-left al-small-canvas-menu" id="offCanvasLeft" data-off-canvas>
+     <button class="close-button" aria-label="Close menu" type="button" data-close>
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+    
+        <ul class="vertical dropdown menu lev-main" data-dropdown-menu>
+
+        <li><a href="#">Find</a></li>
+        <ul class="menu vertical lev-sub">
+              <li><a class="subitem" href="#">Thing 1</a></li>
+              <li><a class="subitem" href="#">Thing 2</a></li>
+              <li><a class="subitem" href="#">Thing 3</a></li>
+        </ul>
+
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Ask Us</a></li>
+        </ul>
+    </div>
+    <!--end of off-canvas left menu-->
 <header>
     <!--sticky top-nav menu-->
     <div data-sticky-container>
         <div class="top-bar al-utilitiy-menu show-for-medium" data-sticky data-options="marginTop:0;" style="width:100%">
-            <div class="top-bar-left large-6 medium-12">
+            <div class="top-bar-left large-6">
                 <ul class="menu">
-                    <li><a href="#"><span class="my-account"><i class="fi-home secondary icon-medium"></i>Home</a></li>
-                    <li><a href="#"><span class="my-account"><i class="fi-torso secondary icon-medium"></i> My Account</span></a></li>
-                    <li>
-                        <div class="site-search">
+<!--                     <li><span class="my-account"><a href="#"><i class="fi-home secondary icon-medium"></i> <span class="show-for-large"> Home</span></a></span></li>
+ -->                    <li><span class="my-account"><a href="#"><i class="fi-torso secondary"></i> <span class="show-for-large">My Account</span></a></span></li><li>
+                        <div class="site-search float-left">
                             <form>
                                 <div class="input-group">
                                     <input class="input-group-field" type="text" placeholder="Search entire site" name="b">
@@ -17,10 +53,12 @@
                             </form>
                         </div>
                     </li>
+
                 </ul>
             </div>
-            <div class="top-bar-right large-6 medium-12">
+            <div class="top-bar-right large-6">
                 <ul class="dropdown menu" data-dropdown-menu>
+                  
                     <li><a href="#">Find</a>
                         <ul class="menu">
                             <li><a href="#">Link 1</a></li>
@@ -45,12 +83,16 @@
         <div class="banner optone show-for-medium">
             <!-- <div class="row columns"><img class="sitelogo" src="/assets/img/alwtheme/logosmall.png" Alt="Auraria Library" Title="Auraria Library Home"></div> -->
             <div class="row columns">
-            <img class="sitelogo" src="/assets/img/alwtheme/redlogo.png" Alt="Auraria Library" Title="Auraria Library Home"></div>
+            <img class="sitelogo" src="/assets/img/alwtheme/redlogo.png" Alt="Auraria Library" Title="Auraria Library Home">
+            </div>
         </div>
     </div>
     <!-- end banner -->
 </header>
 <!--end AL Header -->
+
+<div class="off-canvas-content" data-off-canvas-content>
+
 
 <!--main content row 1 : Search, Hours -->
 <div class="main-row-wrapper">
@@ -80,18 +122,20 @@
             <p class="float-right"><a target="_blank" href="http://auraria.summon.serialssolutions.com/#!/advanced" title="Use Advanced Search">Advanced Search >></a></p>
             <!--addtional options -->
             <hr />
-            <div class="columns more-resource-">
-                <div class="button-group expanded" data-equalizer="bar">
-                    <button class="button more-button" href="#" data-equalizer-watch="bar">Databases List</button>
-                    <button class="button more-button" href="#" data-equalizer-watch="bar">Skyline Catalog</button>
-                    <button class="button more-button" href="#" data-equalizer-watch="bar">Journal List</button>
-                    <button class="button more-button" href="#" data-equalizer-watch="bar">Research Guides</button>
+            <div class="columns more-resource">
+                <div class="button-group" data-equalizer="bar">
+                    <a class="button more-button" href="#" data-equalizer-watch="bar">Databases List</a>
+                    <a class="button more-button" href="#" data-equalizer-watch="bar">Skyline Catalog</a>
+                    <a class="button more-button" href="#" data-equalizer-watch="bar">Journal List</a>
+                    <a class="button more-button" href="#" data-equalizer-watch="bar">Research Guides</a>
                 </div>
             </div>
             <!--end of addtional options-->
         </div>
         <!-- end my search block -->
-
+        <div class="columns hide-for-large small-12 today-hours">
+            <h2><i class="fi-clock primary"></i> Today's Hours - 7:30am to 10pm</h2><button class="button hollow"><a href="/almockups/allhours.html">All Hours</a></button>
+        </div>
         <div class="columns show-for-large large-4 large-offset-1 today-hours" data-equalizer-watch>
             
             <h2>Monday, June 27, 2016</h2>  
@@ -140,24 +184,25 @@
 <!--end main content row 1 : Search, Hours -->
 
 <!--main content row 2 : Promo, quick links-->
-<div class="row second-main" data-equalizer>
-    <div class="large-6 small-12 columns show-for-large" data-equalizer-watch>
+<div class="row second-main" data-equalizer data-equalize-on="large">
+    <div class="large-6 small-12 columns headline-news" data-equalizer-watch>
         <div class="image-wrapper overlay-fade-in">
             <img src="/assets/img/deco/bookdonation.jpg"/>
             <div class="image-overlay-content">
                 <h2>Generous Gifts from Denver Architect Finn Jorgensen</h2>
-                <p>In March 2016, Denver architect Finn Jorgensen generously gifted his large personal collection of architecture books to the Auraria Library. He hopes these books will encourage Auraria students who wish to follow his dreams of creating architectural beauty while protecting the environment.</p>
+                <p>In March 2016, Denver architect Finn Jorgensen generously gifted his large personal collection of architecture books to the Auraria Library. He hopes these books will encourage Auraria students who wish to follow his dreams of creating architectural beauty ....</p>
                 <a href="#" class="button">Learn More</a>
+                
             </div>
         </div>
     </div>
    
-   <div class="quick-link-list large-6 medium-12 small-12 columns" data-equalizer-watch>
+   <div class="quick-link-list large-6 medium-12 columns" data-equalizer-watch>
         <h2>Use the Library</h2>
-        <hr />
-        <div class="columns medium-6">
+        
+        <div class="columns small-6">
             <div class="media-object quick-link">
-                <div class="media-object-section">
+                <div class="media-object-section show-for-medium">
                     <a href="#"><span class="badge"><i class="fi-link"></i></span></a>
                 </div>
                 <div class="media-object-section">
@@ -165,7 +210,7 @@
                 </div>
             </div>
             <div class="media-object quick-link">
-                <div class="media-object-section">
+                <div class="media-object-section show-for-medium">
                     <a href="#"><span class="badge"><i class="fi-link"></i></span></a>
                 </div>
                 <div class="media-object-section">
@@ -173,7 +218,7 @@
                 </div>
             </div>
             <div class="media-object quick-link">
-                <div class="media-object-section">
+                <div class="media-object-section show-for-medium">
                     <a href="#"><span class="badge"><i class="fi-link"></i></span></a>
                 </div>
                 <div class="media-object-section">
@@ -181,7 +226,7 @@
                 </div>
             </div>
             <div class="media-object quick-link">
-                <div class="media-object-section">
+                <div class="media-object-section show-for-medium">
                     <a href="#"><span class="badge"><i class="fi-link"></i></span></a>
                 </div>
                 <div class="media-object-section">
@@ -189,10 +234,10 @@
                 </div>
             </div>
         </div>
-        <div class="medium-6 columns" data-equalizer-watch="quicklinks">
+        <div class="small-6 columns" data-equalizer-watch="quicklinks">
 
             <div class="media-object quick-link">
-                <div class="media-object-section">
+                <div class="media-object-section show-for-medium">
                     <a href="#"><span class="badge"><i class="fi-link"></i></span></a>
                 </div>
                 <div class="media-object-section">
@@ -201,7 +246,7 @@
             </div>
             <div class="media-object quick-link">
                             
-                <div class="media-object-section">
+                <div class="media-object-section show-for-medium">
                     <a href="#"><span class="badge"><i class="fi-link"></i></span></a>
                 </div>
                 <div class="media-object-section">
@@ -209,7 +254,7 @@
                 </div>
             </div>
             <div class="media-object quick-link">
-                <div class="media-object-section">
+                <div class="media-object-section show-for-medium">
                     <a href="#"><span class="badge"><i class="fi-link"></i></span></a>
                 </div>
                 <div class="media-object-section">
@@ -217,7 +262,7 @@
                 </div>
             </div>
              <div class="media-object quick-link">
-                <div class="media-object-section">
+                <div class="media-object-section show-for-medium">
                     <a href="#"><span class="badge"><i class="fi-link"></i></span></a>
                 </div>
                 <div class="media-object-section">
@@ -395,22 +440,15 @@
                     <h2>Auraria Library</h2>
                     <hr>
                     <img class="alfooterlogo" alt="Auraria Library Logo" src="/assets/img/auraria-library-logo-white.png" width="250" height="auto">
-                    <p>
-                        <br />
-                    </p>
+                 
                 </div>
                 <hr>
-                <div class="media-object stack-for-small">
-                    <div class="media-object-section fdll">
-                        <img class="fdll" alt="Federal Depository Library Logo" src="/assets/img/alwtheme/fdlp-emblem-bwt.png">
-                    </div>
-                    <div class="media-object-section">
-                        <p>A Federal Depository Library</p>
-                    </div>
+                
+                <div class="fdll">
+                     <p><img class="fdll" alt="Federal Depository Library Logo" src="/assets/img/alwtheme/fdlp-emblem-bwt.png"> A Federal Depository Library</p>
                 </div>
-                <p>
-                    <br />
-                </p>
+             
+               
             </div>
             <div class="small-12 large-4 columns footer-column" data-equalizer-watch="footer">
                 <div data-equalizer-watch="footer-blocks">
@@ -418,8 +456,8 @@
                     <hr>
                     <div class="row">
                         <div class="large-4 columns">
-                            <p>
-                                <a class="google-map" href="https://maps.google.com/maps?q=Auraria+Library,+Lawrence+Street,+Denver,+CO&hl=en&ll=39.742735,-104.995308&spn=0.027422,0.053387&sll=39.745325,-105.000875&sspn=0.006855,0.013347&oq=auraria+library&hq=Auraria+Library,+Lawrence+Street,+Denver,+CO&t=m&z=15"><img alt="Auraria Library Map" src="/assets/img/map.png" width="120" height="120"></a>
+                            <p class="map-icon">
+                                <a class="google-map" href="https://maps.google.com/maps?q=Auraria+Library,+Lawrence+Street,+Denver,+CO&hl=en&ll=39.742735,-104.995308&spn=0.027422,0.053387&sll=39.745325,-105.000875&sspn=0.006855,0.013347&oq=auraria+library&hq=Auraria+Library,+Lawrence+Street,+Denver,+CO&t=m&z=15"><img alt="Auraria Library Map" src="/assets/img/map.png"></a>
                             </p>
                         </div>
                         <div class="large-8 columns">
@@ -433,36 +471,16 @@
                     </div>
                 </div>
                 <hr>
+                
                 <ul class="menu ask-tell">
-                <li>
-                <span class="badge icon-color-d "><b>?</b></span> 
-                <span><a href="#">Ask Us</a></span>
-                </li>
+                    <li><span class="badge icon-color-d"><b>?</b></span> 
+                    <span><a href="#">Ask Us</a></span>
+                    </li>
 
-                <li><span class="badge icon-color-d"><i class="fi-lightbulb"></i></span>
-                <span><a href="#">Tell Us</a></span>
-                </li>
+                    <li><span class="badge icon-color-d"><i class="fi-lightbulb"></i></span>
+                    <span><a href="#">Tell Us</a></span>
+                    </li>
                 </ul>
-
-                <!-- <div class="icon-wrapper social-icons">
-                    <div class="media-object clearfix">
-                        <div class="media-object-section">
-                            <a href="#"><span class="badge icon-color-d"><div class="icon-question">?</div></span></a>
-                        </div>
-                        <div class="media-object-section">
-                            <p class="lead"><a href="#">Ask Us</a></p>
-                        </div>
-                    </div>
-                    <div class="media-object clearfix">
-                        <div class="media-object-section">
-                            <a href="#"><span class="badge icon-color-d"><i class="fi-lightbulb success"></i></span></a>
-                        </div>
-                        <div class="media-object-section">
-                            <p class="lead"><a href="#">Tell Us</a></p>
-                        </div>
-                    </div>
-                </div> -->
-               
             </div>
             <div class="small-12 large-4 columns footer-column" data-equalizer-watch="footer">
                 <div data-equalizer-watch="footer-blocks">
@@ -541,4 +559,6 @@
        
     </div>
 </div>
+        
+</div><!--off canvas content -->
 <!-- end AHEC footer  footer -->
