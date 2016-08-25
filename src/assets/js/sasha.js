@@ -103,3 +103,33 @@ $( "div.test-2" ).on({
     $( this ).removeClass( "inside-2" );
   }
 });
+
+//Test 4 slide div up and down
+
+if($(window).width() <= 1024) {
+  $( "div.test-3" ).on({
+    click: function() {
+      $( this ).toggleClass( "inside-3" );//.toggleClass( "inside-3" );
+    },mouseleave: function() {
+      $( this ).removeClass( "inside-3" );
+    }
+  });
+ }
+    else {
+      $( "div.test-3" ).on({
+        mouseenter: function() {
+          $( this ).toggleClass( "inside-3" );//.toggleClass( "inside-3" );
+        },mouseleave: function() {
+          $( this ).removeClass( "inside-3" );
+        }
+      });
+     }
+
+
+//$( "div.test-3" ).on({
+//  click: function() {
+//    $( this ).toggleClass( "inside-3" );//.toggleClass( "inside-3" );
+//  },mouseleave: function() {
+//    $( this ).removeClass( "inside-3" );
+//  }
+//});
