@@ -21,12 +21,21 @@ $small-padding:0.5em;
 $deco-border: 1px solid $light-gray;
 $block-border-accent:5px solid $brand-accent;
 
+
+
 //$img-hover-global-radius: 4px;
 
 // *************************
 //  global mixins
 // *************************
 
+//remove default off-canvas-content box shadow
+.off-canvas-content, .off-canvas-content {
+  box-shadow: none;
+}
+.with-logo img {
+  width: 160px;
+}
 
 
 //deco circle style, $circle-w width, $bcolor background clor
@@ -90,7 +99,7 @@ background-color:$brand-accent;
 background-color:$black;
 }
 
-// sub header link
+// sub header link for more news & events, and more
 .sub-header-link {
   border-left: 1px solid $black;
   margin-left: $global-margin;
@@ -132,65 +141,101 @@ background-color:$black;
     background: $light-gray;
     padding: 0 $global-padding;
     border-bottom: $brand-accent 1px solid;
-    .my-account i {
-        color: $off-black;
-        padding-right: $small-padding;
+    height: 45px;
+    .my-account {
+      padding-right: $big-padding;
+        i {
+          color: $off-black;
+          padding-right: $small-padding;
+        }
     }
-    // .menu {
-    //   height: 45px;
-    // }
-    // ul.menu {
-    //     height: 45px;
-    //     background: $light-gray;
-    //     padding-top: 0;
-    //     padding-bottom: 0;
-    //     li {
-    //         padding-left: 1rem;
-    //     }
-    //     a,
-    //     a:visited {
-    //         color: $off-black;
-    //     }
-    // }
+    ul.menu {
+      li a{
+      color:$black;
+      }
+      border: none; 
+       ul li a{
+        border: 0;
+        &:hover {
+          background: $white;
+        }
+      }
+
+    }
+
 }
-
-
-
 
 
 //b2
 .al-utilitiy-menu-d2 {
     background: $off-black;
-    padding: 0;
+    padding: 0 $global-padding;
     //border-top: $off-black 5px solid;
     border-bottom: $brand-accent 1px solid;
-    .my-account i {
-        color: $brand-accent;
+    .my-account {
+      padding-right: $big-padding;
+      i {
+          color: $brand-accent;
+          padding-right: $small-padding;
+      }
     }
-    // ul.menu {
-    //     height: 45px;
-    //     background: $off-black;
-    //     padding-top: 0;
-    //     padding-bottom: 0;
-    //     li {
-    //         padding-left: 1rem;
-    //     }
-    //     a,
-    //     a:visited {
-    //         color: $light-gray;
-    //     }
-    // }
+    ul.menu {
+      background: $off-black;   
+
+      border: none; 
+      a, a:visited {
+        color:$light-gray;
+      }
+      ul li a{
+      border: 0;
+        &:hover {
+          background: $brand-blue-dark;
+        }
+      }
+
+    }
 }
 
+//b3
+.al-utilitiy-menu-d3 {
+    background: $brand-blue-dark;
+    padding: 0 $global-padding;
+    color: $white;
+    //border-top: $off-black 5px solid;
+    border-bottom: $brand-accent 1px solid;
+    .my-account {
+      padding-right: $big-padding;
+      i {
+          color: $brand-accent;
+          padding-right: $small-padding;
+      }
+    }
+    ul.menu {
+      background: $brand-blue-dark;  
+      border: none; 
+      li.is-dropdown-submenu-parent > a::after{
+      border-color: $white transparent transparent;
+      }
+      a, a:visited {
+        color:$white;
+      }
+      ul li a{
+      border: 0;
+        &:hover {
+          background: $brand-blue-dark;
+        }
+      }
 
+    }
+}
 
 //site search form foundation style
 .site-search {
   .input-group {
-    margin-top: $small-padding;
-    margin-left: $small-padding;
     border: none;
     width: 200px;
+    padding: 0;
+    margin: 0;
   }
   .input-group-label{
     background-color: $white; 
@@ -199,60 +244,57 @@ background-color:$black;
   .input-group-field {
     border: 1px solid $white;
     box-shadow: none;
-    height: 30px;
     //width: 100%;
   }
 }
-//site search form foundation style end
-//codepen Expandable Search Form Pen by Prinzadi
-// input {
-//   outline: none;
-// }
-// input[type=search] {
-//   -webkit-appearance: textfield;
-//   -webkit-box-sizing: content-box;
-//   font-family: inherit;
-//   font-size: 100%;
-// }
-// input::-webkit-search-decoration,
-// input::-webkit-search-cancel-button {
-//   display: none; 
-// }
+//d2
+//site search form foundation style
+.site-search-d2 {
+  .input-group {
+    border: none;
+    width: 200px;
+    padding: 0;
+    margin: 0;
+  }
+  .input-group-label{
+    background-color: lighten($off-black, 10%); 
+    border: none;
+  }
+  .input-group-field {
+    border: 1px solid lighten($off-black, 10%);
+    box-shadow: none;
+     background-color: lighten($off-black, 10%); 
+    //width: 100%;
+  }
+  i {
+    color: $white;
+  }
+}
 
-
-// input[type=search] {
-//   background: #ededed url(http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
-//   border: solid 1px #ccc;
-//   padding: 9px 10px 9px 32px;
-//   width: 100px;
-  
-//   //-webkit-border-radius: 10em;
-//   //-moz-border-radius: 10em;
-//   border-radius: 10em;
-  
-//   //-webkit-transition: all .5s;
-//   //-moz-transition: all .5s;
-//   transition: all .5s;
-// }
-// input[type=search]:focus {
-//   width: 250px;
-//   background-color: #fff;
-//   border-color: #66CC75;
-  
-//   //-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
-//   //-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
-//   box-shadow: 0 0 5px rgba(109,207,246,.5);
-// }
-
-
-// input:-moz-placeholder {
-//   color: #999;
-// }
-// input::-webkit-input-placeholder {
-//   color: #999;
-// }
-
-
+//d3
+//site search form foundation style
+.site-search-d3 {
+  .input-group {
+    border: none;
+    width: 200px;
+    padding: 0;
+    margin: 0;
+  }
+  .input-group-label{
+    background-color: lighten($brand-blue-dark, 3%); 
+    border: none;
+  }
+  .input-group-field {
+    border: 1px solid lighten($brand-blue-dark, 3%);
+    box-shadow: none;
+     background-color: lighten($brand-blue-dark, 3%); 
+     //color:$white;
+    //width: 100%;
+  }
+  i {
+    color: $white;
+  }
+}
 
 // *************************
 // Branding banner
@@ -282,12 +324,12 @@ background-color:$black;
 
 //gradiant background for transitioning from gray to red
 .header-wrapper-2 {
-position: relative; 
-background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray 50%,$brand-accent 50%,$brand-accent 100%); /* W3C */}
-
+  border-bottom: 5px solid $white;
+  background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray 50%,$brand-accent 50%,$brand-accent 100%); 
+}
 .opttwo {
   background: $transparent url('/assets/img/alwtheme/banner-version-v5.png') no-repeat center center;
-  border-bottom: 1px solid $white;
+  //border-bottom: 5px solid $white;
   div.logo-bg{
     background: url('/assets/img/alwtheme/diagonal1.svg') no-repeat;
     height: 129px;
@@ -330,10 +372,10 @@ background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray
 
   .main-row-2 {
   padding: $big-padding;
-
+  }
 }
 
-}
+
 .main-row {
   padding: $big-padding;
 
@@ -373,6 +415,8 @@ background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray
   //need to bring in more from sasah branding1.scss
 
 }
+
+//d2
 .main-search-2 {
     .more-resource {
       text-align: center;
@@ -394,6 +438,37 @@ background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray
   }
   .input-group-label {
     background-color: $brand-accent; 
+    color: $white; 
+    cursor: pointer; 
+    border: none;
+  }
+  [type="text"] {
+  background-color: $light-gray;
+  } 
+}
+
+//d3
+.main-search-3 {
+    .more-resource {
+      text-align: center;
+      @include breakpoint(medium){
+       @include button-group-expand();
+      }
+      @include breakpoint(small only){
+       @include button-group-stack();
+      }
+    }
+  .more-button {
+    font-weight: bold;
+    color: $white;
+    //border: 1px solid $dark-gray;
+    background-color: $brand-blue-dark;
+    &:hover{
+      background-color: $brand-green;
+    }
+  }
+  .input-group-label {
+    background-color: $brand-blue-dark; 
     color: $white; 
     cursor: pointer; 
     border: none;
@@ -434,13 +509,29 @@ background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray
     padding-top: $big-padding;
     margin-left: auto;
     margin-right:auto;
-    .button{
-      background: $dark-gray;
-      color: $white;
-       &:hover{
-        background-color: $brand-blue-dark;
-      }
+    // .button{
+    //   background: $dark-gray;
+    //   color: $white;
+    //    &:hover{
+    //     background-color: $brand-blue-dark;
+    //   }
+    // }
+    .button.dropdown::after {
+        //content: '';
+        //display: block;
+        //width: 0;
+        //height: 0;
+        //border: inset 0.4em;
+        border-color: $dark-gray transparent transparent;
+        //border-top-style: solid;
+        //border-bottom-width: 0;
+       //position: relative;
+       // top: 0.4em;
+       // float: right;
+       // margin-left: 1em;
+        //display: inline-block;
     }
+
   }
 
 }
@@ -469,16 +560,81 @@ background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray
     padding-top: $big-padding;
     margin-left: auto;
     margin-right:auto;
-    .button{
-     background:$off-black; //eventually should setup as primary color
-      //color: $white;
-       &:hover{
-        background-color: $brand-blue-dark;
-      }
+    // .button{
+    //  background:$off-black; //eventually should setup as primary color
+    //   //color: $white;
+    //    &:hover{
+    //     background-color: $brand-blue-dark;
+    //   }
+    // }
+    .button.dropdown::after {
+        //content: '';
+        //display: block;
+        //width: 0;
+        //height: 0;
+        //border: inset 0.4em;
+        border-color: $off-black transparent transparent;
+        //border-top-style: solid;
+        //border-bottom-width: 0;
+       //position: relative;
+       // top: 0.4em;
+       // float: right;
+       // margin-left: 1em;
+        //display: inline-block;
     }
+
   }
 }
 
+//d3
+.today-hours-3 {
+  padding-left: $big-padding;
+  border-left: $block-border-accent;
+  h3 {
+    color: map-get($foundation-palette, success);
+  }
+  .hours-info{
+    padding-top: $big-padding;
+    padding-bottom: $big-padding;
+  }
+  .hours-time{
+    font-size:1.2rem;
+  }
+
+  .status-circle-open {
+  @include alw-circle(60px, $brand-green,$light-gray);
+  }
+  
+  .more-hours {
+    padding-left: $global-padding;
+    padding-top: $big-padding;
+    margin-left: auto;
+    margin-right:auto;
+    // .button{
+    //  background:$off-black; //eventually should setup as primary color
+    //   //color: $white;
+    //    &:hover{
+    //     background-color: $brand-blue-dark;
+    //   }
+    // }
+    .button.dropdown::after {
+        //content: '';
+        //display: block;
+        //width: 0;
+        //height: 0;
+        //border: inset 0.4em;
+        border-color: $off-black transparent transparent;
+        //border-top-style: solid;
+        //border-bottom-width: 0;
+       //position: relative;
+       // top: 0.4em;
+       // float: right;
+       // margin-left: 1em;
+        //display: inline-block;
+    }
+
+  }
+}
 
 // ***********************************
 // Main Content Row 2- Promo & qLinks
@@ -605,9 +761,12 @@ background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray
   padding: $big-padding;
   .quick-link {
     padding: $small-padding 0;
+    h2 {
+      font-size: 80%;
+    }
   }
   .badge {
-    background: $medium-gray;
+    background: $brand-blue-dark;
     &:hover {
      background: $brand-blue-dark;
     }
@@ -624,7 +783,25 @@ background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray
     padding: $small-padding 0;
   }
   .badge {
-    background: $light-gray;
+    background: $brand-blue-dark;
+    &:hover {
+     background: $brand-blue-dark;
+    }
+  }
+   h2 {
+    padding-bottom: $global-padding;
+  }
+}
+
+//b3
+.quick-link-list-3 {
+  background: $white;
+  padding: $big-padding;
+  .quick-link {
+    padding: $small-padding 0;
+  }
+  .badge {
+    background: $off-black;
     &:hover {
      background: $brand-blue-dark;
     }
@@ -719,6 +896,34 @@ background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray
 }
 .askus-icons-2{
   @include alw-circle(4rem,$brand-accent,$off-black);
+  font-size: 2rem;
+  
+}
+//d3
+.main-icon-3{
+  
+  @include alw-circle(8rem, $off-black, $off-black);
+  font-size: 1.5rem;
+  margin-top: -2rem;
+
+  @include breakpoint(small only) {
+    @include alw-circle(4rem, $off-black, $off-black);
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 0;
+  }
+  @include breakpoint(medium only) {
+    @include alw-circle(6rem, $off-black, $off-black);
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: -1rem;
+  }
+  
+  
+  
+}
+.askus-icons-3{
+  @include alw-circle(4rem,$brand-blue,$off-black);
   font-size: 2rem;
   
 }
@@ -850,6 +1055,12 @@ background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray
       .rsvp.button.detail-alt {
         background-color: $off-black;
       }
+
+      //d3
+      .rsvp.button.detail-alt3 {
+        background-color: $brand-blue-dark;
+      }
+
     }
 
   }
@@ -957,6 +1168,7 @@ background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray
 // *************************
 
 .utility-menu-footer{
+  
   background: $black;
   span, p, a {
     color: $light-gray;
@@ -1017,19 +1229,5 @@ background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray
         border-right: 20px solid #137fc2;
       }
     }
-  //}
-//}
 
-  // .foot-sm {
-  //     width: 0;
-  //     height: 0;
-  //     border-top: 30px solid $white;
-  //     border-right: 1200px solid transparent;
-  // }
-  //.foot-sm-top {
-  //     width: 0;
-  //     height: 0;
-  //     border-bottom: 30px solid $white;
-  //     border-right: 1200px solid transparent;
-  // }
 
