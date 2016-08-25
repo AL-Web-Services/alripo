@@ -69,7 +69,7 @@ h1, h2, h3, h4 {
 }
 
 
-
+//flex image wrappe
 .headline-image-wrapper {
   width: 100%;
   height: 100%;
@@ -90,7 +90,17 @@ background-color:$brand-accent;
 background-color:$black;
 }
 
-
+// sub header link
+.sub-header-link {
+  border-left: 1px solid $black;
+  margin-left: $global-margin;
+  a, a:visited {
+  padding-left: $global-padding;
+  //border-left: 1px solid $brand-accent;
+  font-size: 80%;
+  color:$brand-accent;
+  }
+}
 
 // *************************
 // Utility Menu - Header
@@ -121,14 +131,13 @@ background-color:$black;
 .al-utilitiy-menu {
     background: $light-gray;
     padding: 0;
-    //border-top: $off-black 5px solid;
     border-bottom: $brand-accent 1px solid;
     .my-account i {
         color: $off-black;
         padding-right: $small-padding;
     }
     ul.menu {
-        //height: 40px;
+        height: 45px;
         background: $light-gray;
         padding-top: 0;
         padding-bottom: 0;
@@ -156,7 +165,7 @@ background-color:$black;
         color: $brand-accent;
     }
     ul.menu {
-        //height: 40px;
+        height: 45px;
         background: $off-black;
         padding-top: 0;
         padding-bottom: 0;
@@ -178,24 +187,17 @@ background-color:$black;
     margin-top: $small-padding;
     margin-left: $small-padding;
     border: none;
-
-    //@include breakpoint(medium only) {
-      width: 200px;
-    //}
-    
+    width: 200px;
   }
-  //.input-group {margin-top: 12px; margin-bottom: 5px; position: relative;}
   .input-group-label{
     background-color: $white; 
     border: none;
-   // margin-left: -5rem;
   }
   .input-group-field {
     border: 1px solid $white;
     box-shadow: none;
-    //height: 2rem;
-    //margin-left: 3rem;
-    width: 100%;
+    height: 30px;
+    //width: 100%;
   }
 }
 //site search form foundation style end
@@ -257,20 +259,15 @@ background-color:$black;
   margin-left: auto;
   margin-right: auto;
   height: 129px;
-  //background: url('/assets/img/deco/header-banner2.png') no-repeat center center;
   display: block;
-  
 }
+
 //design options, remove later//
 .optone {
-  //background: url('/assets/img/deco/CUD_students_0409w.jpg') no-repeat center center;
   background: url('/assets/img/alwtheme/albwgflat.jpg') no-repeat center 50%;
   background-size: 100%;
   border-bottom: $block-border-accent;
-  //padding-top:2px;
-  //padding-bottom:0.2rem;
   img.sitelogo {
-    //background: $white;
     background:$transparent;
     padding: $big-padding $global-padding;
     height: 160px;
@@ -278,26 +275,21 @@ background-color:$black;
   }
 }
 
-
 //b2
+
+//gradiant background for transitioning from gray to red
 .header-wrapper-2 {
-  //border-bottom: 10px solid #862723; 
 position: relative; 
 background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray 50%,$brand-accent 50%,$brand-accent 100%); /* W3C */}
 
 .opttwo {
-  //background: url('/assets/img/deco/CUD_students_0409w.jpg') no-repeat center center;
   background: $transparent url('/assets/img/alwtheme/banner-version-v5.png') no-repeat center center;
-  //background-size: 100%;
   border-bottom: 1px solid $white;
-  //padding-top:2px;
-  //padding-bottom:0.2rem;
   div.logo-bg{
     background: url('/assets/img/alwtheme/diagonal1.svg') no-repeat;
-    height: 128px;
+    height: 129px;
   }
   img.sitelogo {
-    //background: $white;
     padding:$big-padding;
     height: 120px;
   }
@@ -347,23 +339,16 @@ background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray
 .main-search {
   .more-resource{
     text-align: center;
-    
     @include breakpoint(medium){
      @include button-group-expand();
     }
     @include breakpoint(small only){
      @include button-group-stack();
     }
-    // }
-
-
   }
   .more-button {
     font-weight: bold;
     color: $white;
-    //width:25%;
-    //border: 1px solid $dark-gray;
-
     background-color: $dark-gray;
     &:hover{
       background-color: $brand-blue-dark;
@@ -388,17 +373,13 @@ background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray
 .main-search-2 {
     .more-resource {
       text-align: center;
-      
       @include breakpoint(medium){
        @include button-group-expand();
       }
-
       @include breakpoint(small only){
        @include button-group-stack();
       }
     }
-
-
   .more-button {
     font-weight: bold;
     color: $white;
@@ -407,7 +388,6 @@ background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray
     &:hover{
       background-color: $brand-blue-dark;
     }
-  
   }
   .input-group-label {
     background-color: $brand-accent; 
@@ -415,15 +395,9 @@ background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray
     cursor: pointer; 
     border: none;
   }
-
-  //forms styling
-
   [type="text"] {
   background-color: $light-gray;
   } 
-  //need to bring in more from sasah branding1.scss
-
-
 }
 // Main Content Row - Today Hour
 
@@ -457,11 +431,18 @@ background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray
     padding-top: $big-padding;
     margin-left: auto;
     margin-right:auto;
+    .button{
+      background: $dark-gray;
+      color: $white;
+       &:hover{
+        background-color: $brand-blue-dark;
+      }
+    }
   }
 
 }
 
-//
+//d2
 .today-hours-2 {
   padding-left: $big-padding;
   border-left: $block-border-accent;
@@ -479,18 +460,20 @@ background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray
   .status-circle-open {
   @include alw-circle(60px, $brand-green,$light-gray);
   }
- 
-  .more-hours{
+  
+  .more-hours {
     padding-left: $global-padding;
     padding-top: $big-padding;
     margin-left: auto;
     margin-right:auto;
+    .button{
+     background:$off-black; //eventually should setup as primary color
+      //color: $white;
+       &:hover{
+        background-color: $brand-blue-dark;
+      }
+    }
   }
-  .secondary {
-    background-color: $off-black;
-
-  }
-
 }
 
 
@@ -745,16 +728,12 @@ background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray
 
 // move up closer to aksu 
 .marcomm-block {
+
   // move up position to be closer to aksu 
   margin-top: -150px;
   position: relative; 
   margin-bottom: -200px;
 
-  .news-list {
-   // margin-left: 1rem;
-
-  }
-  
   //main news listing style
   .news-item{
   padding-bottom: $global-padding;
