@@ -1,0 +1,56 @@
+/////////////////////////////////////////////
+// News and Events landing page
+/////////////////////////////////////////////
+
+// News and Events landing page has three main sections
+
+// Main
+.main-ne {
+
+}
+
+// Highlights
+.highlights-ne {
+
+}
+
+// Future Concepts
+.future-concepts-ne {
+
+}
+
+// style slide up and down effect toggle
+.highlight {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  .highlight-inner {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 110px;
+    background-color: black;
+    color: white;
+    transition:all 0.5s;
+    padding: 30px; // extra that should be replaced with padding variable
+  }
+}
+
+.highlight .slide-action {
+  height: 100%;
+}
+
+/////////////////////////////////////////////
+// News and Events landing page end
+/////////////////////////////////////////////
+
+/////////////////////////////////////////////
+// Listing page
+/////////////////////////////////////////////
+
+
+
+/////////////////////////////////////////////
+// Listing page end
+/////////////////////////////////////////////
