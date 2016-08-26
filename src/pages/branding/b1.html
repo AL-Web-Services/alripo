@@ -4,10 +4,10 @@
   <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 
     <!-- off-canvas title bar for 'small' screen -->
-    <div class="title-bar al-utilitiy-menu-small" data-responsive-toggle="widemenu" data-hide-for="medium">
+    <div class="title-bar al-utilitiy-menu-small" data-responsive-toggle="widemenu" data-hide-for="large">
       <div class="title-bar-left">
         <button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
-        <span class="title-bar-title with-logo"><img src="/assets/img/alwtheme/logosmalloneline.png"></span>
+        <span class="title-bar-title with-logo show-for-small-only"><img src="/assets/img/alwtheme/logosmalloneline.png"></span>
       </div>
       <div class="title-bar-right">
         <span class="title-bar-title"><i class="fi-torso"></i> My Account</span>
@@ -39,7 +39,7 @@
 <header>
     <!--sticky top-nav menu-->
     <div data-sticky-container>
-        <div class="top-bar al-utilitiy-menu show-for-medium" data-sticky data-options="marginTop:0;" style="width:100%">
+        <div class="top-bar al-utilitiy-menu show-for-large" data-sticky data-options="marginTop:0;" style="width:100%">
             <div class="top-bar-left large-6">
                 <ul class="menu">
 <!--                     <li><span class="my-account"><a href="#"><i class="fi-home secondary icon-medium"></i> <span class="show-for-large"> Home</span></a></span></li>
@@ -186,6 +186,7 @@
 
 <!--main content row 2 : Promo, quick links-->
 <div class="row second-main" data-equalizer data-equalize-on="large">
+    <!--promo left-->
     <div class="large-6 small-12 columns headline-news" data-equalizer-watch>
         <div class="image-wrapper overlay-fade-in">
             <img src="/assets/img/alwtheme/bookdonation.jpg" /> 
@@ -197,10 +198,11 @@
             </div>
         </div>
     </div>
-   
-   <div class="quick-link-list large-6 medium-12 columns" data-equalizer-watch>
+    <!--end promo left--> 
+    <!--quick link group-->
+    <div class="quick-link-list large-6 medium-12 columns" data-equalizer-watch>
         <h2>Use the Library<span class="sub-header-link"><a href="#">more options</a></span></h2>
-        
+        <!--quick link group -left-->
         <div class="columns small-6">
             <div class="media-object quick-link">
                 <div class="media-object-section show-for-medium">
@@ -235,6 +237,8 @@
                 </div>
             </div>
         </div>
+        <!--end quick link group -left-->
+        <!--quick link group -right-->
         <div class="small-6 columns" data-equalizer-watch="quicklinks">
 
             <div class="media-object quick-link">
@@ -272,9 +276,11 @@
             </div>
 
         </div>
-        
+        <!--end quick link group -right-->
+
     </div>
-    <!--end of left columns-->
+         
+    <!--end quick link group-->
 </div>
 <!--end main content row 2 : Promo, quick links-->
 
