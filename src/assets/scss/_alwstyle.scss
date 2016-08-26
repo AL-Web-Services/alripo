@@ -14,29 +14,18 @@ $brand-accent-dark: map-get($foundation-palette, primary);
 $brand-green:map-get($foundation-palette, warning);
 $brand-blue-dark:map-get($foundation-palette, success);
 $brand-blue:map-get($foundation-palette, alert);
-$accent-gray: $light-gray;
 $big-padding: 2rem;
 $bigger-padding: 2rem;
 $small-padding:0.5em;
 $deco-border: 1px solid $light-gray;
 $block-border-accent:5px solid $brand-accent;
+$branding-banner:"/assets/img/alwtheme/albwgflat.jpg";
+$askus-bg-img:'/assets/img/alwtheme/askusbw.jpg';
 
-
-
-//$img-hover-global-radius: 4px;
 
 // *************************
 //  global mixins
 // *************************
-
-//remove default off-canvas-content box shadow
-.off-canvas-content, .off-canvas-content {
-  box-shadow: none;
-}
-.with-logo img {
-  width: 160px;
-}
-
 
 //deco circle style, $circle-w width, $bcolor background clor
 @mixin alw-circle ($circle-w, $bcolor, $ecolor){
@@ -61,35 +50,51 @@ $block-border-accent:5px solid $brand-accent;
       background-color: lighten($bcolor, 10% );
     }
   }
-  
 }
-
+//2 color square style
+@mixin brand-square($size, $color1, $color2) {
+  span{
+    margin-right: $size;
+    &::before, &::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    }
+    &::before {
+        border-top: $size solid $color1;
+        border-right: $size solid transparent;
+    }
+    &::after {
+      border-top: $size solid transparent;
+      border-right: $size solid $color2;
+    }
+  }
+}
 // *************************
 // Branding 1 global styles
 // *************************
+
+//remove default off-canvas-content box shadow
+.off-canvas-content, .off-canvas-content {
+  box-shadow: none;
+}
+.with-logo img {
+  width: 160px;
+}
 
 h1, h2, h3, h4 {
   a, a:visited {
   color:$black;
   }
 } 
-.authors{
-  color:$dark-gray;
-}
 
-
-//flex image wrappe
+//all headline image wrapper
 .headline-image-wrapper {
   width: 100%;
   height: 100%;
-  //border: 10px solid $white;
   overflow: hidden;
-  //position: relative;
-  //text-align: left;
-  //border-radius: $img-hover-global-radius;
-  //padding:$global-padding;
 }
-
 
 //icon badge
 .icon-color-b{
@@ -99,7 +104,7 @@ background-color:$brand-accent;
 background-color:$black;
 }
 
-// sub header link for more news & events, and more
+// sub header link style "| more....""
 .sub-header-link {
   border-left: 1px solid $black;
   margin-left: $global-margin;
@@ -112,17 +117,15 @@ background-color:$black;
 }
 
 // *************************
-// Utility Menu - Header
+//  Utility Menu - Header
 // *************************
 // utility-menu
 .al-small-canvas {
   background-color: $off-black;
-
   .al-utilitiy-menu-small,.al-small-canvas-menu {
     background-color: inherit;
        a, a:visited {
         color: $white;
-        //font-weight: bold;
     }
   }
  
@@ -130,18 +133,15 @@ background-color:$black;
   .lev-sub li{
     a, a:visited {
         color: $medium-gray;
-        //font-weight: bold;
         margin-left: $small-padding;
-        //background: lighten($dark-gray, 1%);
     }
   }
 }
 
 .al-utilitiy-menu {
-    background: $light-gray;
     padding: 0 $global-padding;
-    border-bottom: $brand-accent 1px solid;
-    height: 45px;
+    border-bottom:1px solid $brand-accent;
+
     .my-account {
       padding-right: $big-padding;
         i {
@@ -149,155 +149,47 @@ background-color:$black;
           padding-right: $small-padding;
         }
     }
+
+    //utility menu style
     ul.menu {
-      li a{
+      li a {
       color:$black;
       }
       border: none; 
-       ul li a{
-        border: 0;
+       ul li{     
+         &:last-child {
+         border-bottom:1px solid $brand-accent; 
+        }
+       }
+       ul li a {       
+        border: 0;        
         &:hover {
           background: $white;
         }
       }
-
+    }   
+  //site search form foundation style
+  .site-search {
+    .input-group {
+      border: none;
+      //width: 200px;
+      padding: 0;
+      margin: 0;
     }
-
-}
-
-
-//b2
-.al-utilitiy-menu-d2 {
-    background: $off-black;
-    padding: 0 $global-padding;
-    //border-top: $off-black 5px solid;
-    border-bottom: $brand-accent 1px solid;
-    .my-account {
-      padding-right: $big-padding;
-      i {
-          color: $brand-accent;
-          padding-right: $small-padding;
-      }
+    .input-group-label{
+      background-color: $white; 
+      border: none;
     }
-    ul.menu {
-      background: $off-black;   
-
-      border: none; 
-      a, a:visited {
-        color:$light-gray;
-      }
-      ul li a{
-      border: 0;
-        &:hover {
-          background: $brand-blue-dark;
-        }
-      }
-
+    .input-group-field {
+      border: 1px solid $white;
+      box-shadow: none;
+      //width: 100%;
     }
-}
-
-//b3
-.al-utilitiy-menu-d3 {
-    background: $brand-blue-dark;
-    padding: 0 $global-padding;
-    color: $white;
-    //border-top: $off-black 5px solid;
-    border-bottom: $brand-accent 1px solid;
-    .my-account {
-      padding-right: $big-padding;
-      i {
-          color: $brand-accent;
-          padding-right: $small-padding;
-      }
-    }
-    ul.menu {
-      background: $brand-blue-dark;  
-      border: none; 
-      li.is-dropdown-submenu-parent > a::after{
-      border-color: $white transparent transparent;
-      }
-      a, a:visited {
-        color:$white;
-      }
-      ul li a{
-      border: 0;
-        &:hover {
-          background: $brand-blue-dark;
-        }
-      }
-
-    }
-}
-
-//site search form foundation style
-.site-search {
-  .input-group {
-    border: none;
-    width: 200px;
-    padding: 0;
-    margin: 0;
-  }
-  .input-group-label{
-    background-color: $white; 
-    border: none;
-  }
-  .input-group-field {
-    border: 1px solid $white;
-    box-shadow: none;
-    //width: 100%;
-  }
-}
-//d2
-//site search form foundation style
-.site-search-d2 {
-  .input-group {
-    border: none;
-    width: 200px;
-    padding: 0;
-    margin: 0;
-  }
-  .input-group-label{
-    background-color: lighten($off-black, 10%); 
-    border: none;
-  }
-  .input-group-field {
-    border: 1px solid lighten($off-black, 10%);
-    box-shadow: none;
-     background-color: lighten($off-black, 10%); 
-    //width: 100%;
-  }
-  i {
-    color: $white;
-  }
-}
-
-//d3
-//site search form foundation style
-.site-search-d3 {
-  .input-group {
-    border: none;
-    width: 200px;
-    padding: 0;
-    margin: 0;
-  }
-  .input-group-label{
-    background-color: lighten($brand-blue-dark, 3%); 
-    border: none;
-  }
-  .input-group-field {
-    border: 1px solid lighten($brand-blue-dark, 3%);
-    box-shadow: none;
-     background-color: lighten($brand-blue-dark, 3%); 
-     //color:$white;
-    //width: 100%;
-  }
-  i {
-    color: $white;
   }
 }
 
 // *************************
-// Branding banner
+//  Branding banner
 // *************************
 
 .banner {
@@ -305,826 +197,16 @@ background-color:$black;
   margin-right: auto;
   height: 129px;
   display: block;
-}
-
-//design options, remove later//
-.optone {
-  background: url('/assets/img/alwtheme/albwgflat.jpg') no-repeat center 50%;
+  background: url($branding-banner) no-repeat center 50%;
   background-size: 100%;
   border-bottom: $block-border-accent;
+  border-top: $brand-accent 1px solid;
   img.sitelogo {
     background:$transparent;
     padding: $big-padding $global-padding;
     height: 160px;
-
   }
 }
-
-//b2
-
-//gradiant background for transitioning from gray to red
-.header-wrapper-2 {
-  border-bottom: 5px solid $white;
-  background: linear-gradient(to right, $light-gray 0%,$light-gray 50%,$light-gray 50%,$brand-accent 50%,$brand-accent 100%); 
-}
-.opttwo {
-  background: $transparent url('/assets/img/alwtheme/banner-version-v5.png') no-repeat center center;
-  //border-bottom: 5px solid $white;
-  div.logo-bg{
-    background: url('/assets/img/alwtheme/diagonal1.svg') no-repeat;
-    height: 129px;
-  }
-  img.sitelogo {
-    padding:$big-padding;
-    height: 120px;
-  }
-}
-
-//b3
-//design options, remove later//
-.optthree {
-  //background: url('/assets/img/deco/CUD_students_0409w.jpg') no-repeat center center;
-  background: url('/assets/img/alwtheme/alcolorflat.jpg') no-repeat center 10%;
-  background-size: 100%;
-  border-bottom: $block-border-accent;
-  //padding-top:2px;
-  //padding-bottom:0.2rem;
-  img.sitelogo {
-    //background: $white;
-    background:$transparent;
-    padding: $big-padding;
-    margin-top: $global-margin;
-    height: 100px;
-  }
-}
-
-
-// *********************************
-// Main Content Row - Search & Hours
-// *********************************
-.main-row-wrapper{
-  background: $white;
-}
-
-//b2
-.main-row-wrapper-2{
-  background: $white;
-
-  .main-row-2 {
-  padding: $big-padding;
-  }
-}
-
-
-.main-row {
-  padding: $big-padding;
-
-}
-
-.main-search {
-  .more-resource{
-    text-align: center;
-    @include breakpoint(medium){
-     @include button-group-expand();
-    }
-    @include breakpoint(small only){
-     @include button-group-stack();
-    }
-  }
-  .more-button {
-    font-weight: bold;
-    color: $white;
-    background-color: $dark-gray;
-    &:hover{
-      background-color: $brand-blue-dark;
-
-    }  
-  }
-
-  .input-group-label {
-    background-color: $brand-accent; 
-    color: $white; 
-    cursor: pointer; 
-    border: none;
-  }
-  //forms styling
-
-  [type="text"] {
-  background-color: $light-gray;
-  } 
-  //need to bring in more from sasah branding1.scss
-
-}
-
-//d2
-.main-search-2 {
-    .more-resource {
-      text-align: center;
-      @include breakpoint(medium){
-       @include button-group-expand();
-      }
-      @include breakpoint(small only){
-       @include button-group-stack();
-      }
-    }
-  .more-button {
-    font-weight: bold;
-    color: $white;
-    //border: 1px solid $dark-gray;
-    background-color: $off-black;
-    &:hover{
-      background-color: $brand-blue-dark;
-    }
-  }
-  .input-group-label {
-    background-color: $brand-accent; 
-    color: $white; 
-    cursor: pointer; 
-    border: none;
-  }
-  [type="text"] {
-  background-color: $light-gray;
-  } 
-}
-
-//d3
-.main-search-3 {
-    .more-resource {
-      text-align: center;
-      @include breakpoint(medium){
-       @include button-group-expand();
-      }
-      @include breakpoint(small only){
-       @include button-group-stack();
-      }
-    }
-  .more-button {
-    font-weight: bold;
-    color: $white;
-    //border: 1px solid $dark-gray;
-    background-color: $brand-blue-dark;
-    &:hover{
-      background-color: $brand-green;
-    }
-  }
-  .input-group-label {
-    background-color: $brand-blue-dark; 
-    color: $white; 
-    cursor: pointer; 
-    border: none;
-  }
-  [type="text"] {
-  background-color: $light-gray;
-  } 
-}
-// Main Content Row - Today Hour
-
-.today-hours {
-
-  @include breakpoint(medium down){
-    border-top:$deco-border;
-    padding-top:$small-padding;
-  }
-
-  padding-left: $big-padding;
-  border-left: $block-border-accent;
-
-  h3 {
-    color: map-get($foundation-palette, success);
-  }
-  .hours-info{
-    padding-top: $big-padding;
-    padding-bottom: $big-padding;
-  }
-  .hours-time{
-    font-size:1.2rem;
-  }
-
-  .status-circle-open {
-  @include alw-circle(60px, $brand-green,$light-gray);
-  }
- 
-  .more-hours{
-    padding-left: $global-padding;
-    padding-top: $big-padding;
-    margin-left: auto;
-    margin-right:auto;
-    // .button{
-    //   background: $dark-gray;
-    //   color: $white;
-    //    &:hover{
-    //     background-color: $brand-blue-dark;
-    //   }
-    // }
-    .button.dropdown::after {
-        //content: '';
-        //display: block;
-        //width: 0;
-        //height: 0;
-        //border: inset 0.4em;
-        border-color: $dark-gray transparent transparent;
-        //border-top-style: solid;
-        //border-bottom-width: 0;
-       //position: relative;
-       // top: 0.4em;
-       // float: right;
-       // margin-left: 1em;
-        //display: inline-block;
-    }
-
-  }
-
-}
-
-//d2
-.today-hours-2 {
-  padding-left: $big-padding;
-  border-left: $block-border-accent;
-  h3 {
-    color: map-get($foundation-palette, success);
-  }
-  .hours-info{
-    padding-top: $big-padding;
-    padding-bottom: $big-padding;
-  }
-  .hours-time{
-    font-size:1.2rem;
-  }
-
-  .status-circle-open {
-  @include alw-circle(60px, $brand-green,$light-gray);
-  }
-  
-  .more-hours {
-    padding-left: $global-padding;
-    padding-top: $big-padding;
-    margin-left: auto;
-    margin-right:auto;
-    // .button{
-    //  background:$off-black; //eventually should setup as primary color
-    //   //color: $white;
-    //    &:hover{
-    //     background-color: $brand-blue-dark;
-    //   }
-    // }
-    .button.dropdown::after {
-        //content: '';
-        //display: block;
-        //width: 0;
-        //height: 0;
-        //border: inset 0.4em;
-        border-color: $off-black transparent transparent;
-        //border-top-style: solid;
-        //border-bottom-width: 0;
-       //position: relative;
-       // top: 0.4em;
-       // float: right;
-       // margin-left: 1em;
-        //display: inline-block;
-    }
-
-  }
-}
-
-//d3
-.today-hours-3 {
-  padding-left: $big-padding;
-  border-left: $block-border-accent;
-  h3 {
-    color: map-get($foundation-palette, success);
-  }
-  .hours-info{
-    padding-top: $big-padding;
-    padding-bottom: $big-padding;
-  }
-  .hours-time{
-    font-size:1.2rem;
-  }
-
-  .status-circle-open {
-  @include alw-circle(60px, $brand-green,$light-gray);
-  }
-  
-  .more-hours {
-    padding-left: $global-padding;
-    padding-top: $big-padding;
-    margin-left: auto;
-    margin-right:auto;
-    // .button{
-    //  background:$off-black; //eventually should setup as primary color
-    //   //color: $white;
-    //    &:hover{
-    //     background-color: $brand-blue-dark;
-    //   }
-    // }
-    .button.dropdown::after {
-        //content: '';
-        //display: block;
-        //width: 0;
-        //height: 0;
-        //border: inset 0.4em;
-        border-color: $off-black transparent transparent;
-        //border-top-style: solid;
-        //border-bottom-width: 0;
-       //position: relative;
-       // top: 0.4em;
-       // float: right;
-       // margin-left: 1em;
-        //display: inline-block;
-    }
-
-  }
-}
-
-// ***********************************
-// Main Content Row 2- Promo & qLinks
-// ***********************************
-.second-main{
-  // background-color: map-get($foundation-palette, warning);
-  background-color:$transparent;
-  //background-size: cover;
-  //padding:$global-padding $global-padding;
-  //margin: $big-padding auto;
-padding:$big-padding $global-padding;
-  .headline-news p{
-    @include breakpoint(small only){
-      display:none;
-    }
-  }
-
-
-  // promo affect
-
-  .image-wrapper {
-    width: 100%;
-    height: 100%;
-    border: 0px solid rgba(0,0,0,0.04);
-    overflow: hidden;
-    position: relative;
-    text-align: left;
-    background: $white;
-    //padding:$global-padding;
-    //margin-left: -$global-padding;
-    //border-radius: $img-hover-global-radius;
-  }
-
-  .image-overlay-content {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .overlay-fade-in {
-    
-    p {
-      letter-spacing: 0.15em;
-      color: #f4f4f4;
-      font-size: 1.2rem;
-      opacity: 0;
-      //transition: all 0.2s linear;
-    }
-    
-    img {
-      //transition: all 0.2s linear;
-    }
-
-    
-    .image-overlay-content {
-      opacity: 0;
-      //background: rgba(81,83,92, 0.9);
-      //background: rgba(142,142,142, 0.9);
-      background: rgba(0,102,153, 0.9);
-      transition: all 0.4s ease-in-out;
-    }
-    
-    h2 {
-      color: #f2f2f2;
-      font-size: 1.8rem;
-      margin-top: 1rem;
-      opacity: 0;
-      transition: all 0.2s ease-in-out;
-      //background: rgba(0,0,0,0.7);
-    }
-    
-    .button {
-      display: inline-block;
-      text-decoration: none;
-      padding: 7px 14px; 
-      background: #FFF;
-      color: #222;
-      text-transform: uppercase;
-      box-shadow: 0 0 1px #000;
-      position: relative;
-      border: 1px solid #999;
-      opacity: 0;
-      transition: all 0.2s ease-in-out;
-      
-      &:hover {
-        box-shadow: 0 0 5px #000;
-      }
-    }
-    
-    &:hover img {
-      transform: scale(1);
-    }
-    
-    &:hover .image-overlay-content {
-      opacity: 1;
-    }
-    
-    &:hover h2, p, .button {
-      opacity: 1;
-    }
-    
-    &:hover p {
-      transition-delay: 0.1s;
-    }
-    
-    &:hover .button {
-      transition-delay: 0.2s;
-    }
-    &:hover figcaption {
-      display: none;
-    }
-  } 
-
-}
-
-
-
-
-// Main Content Row 2- qLinks
-.quick-link-list {
-  //margin-left:-1rem;
-  padding: $big-padding;
-  @include breakpoint(medium){
-  background: $white;
-  }
-  h2 {
-    padding-bottom: $global-padding;
-  }
-
-  h3 {
-    @media only screen and (max-width: 1240px){
-      font-size: 90%;
-    }
-
-
-  }
-//fixing equalizer on large vs photo dimension display for large screen smaller than 1150px 
-  .quick-link {
-    @media only screen and (max-width: 1240px){
-    padding: .1rem 0;
-    }
-    padding: $small-padding 0;
-    }
-  
-  .badge {
-    background: $brand-blue-dark;
-    &:hover {
-     background: $dark-gray;
-    }
-  }
-
-}
-//b2
-.quick-link-list-2 {
-  background: $white;
-  padding: $big-padding;
-  .quick-link {
-    padding: $small-padding 0;
-  }
-  .badge {
-    background: $brand-blue-dark;
-    &:hover {
-     background: $brand-blue-dark;
-    }
-  }
-   h2 {
-    padding-bottom: $global-padding;
-  }
-}
-
-//b3
-.quick-link-list-3 {
-  background: $white;
-  padding: $big-padding;
-  .quick-link {
-    padding: $small-padding 0;
-  }
-  .badge {
-    background: $off-black;
-    &:hover {
-     background: $brand-blue-dark;
-    }
-  }
-   h2 {
-    padding-bottom: $global-padding;
-  }
-}
-
-// *************************
-// Main Content Row 4- Ask Us
-// *************************
-// Ask Us Block Background Image
-.askus-bg {
-    display: block;
-    height: auto;
-    min-height: 0;
-    overflow: hidden;
-    padding:6rem 0 13rem;
-    //padding: 131px 0 209px;
-    position: relative;
-    background: url('/assets/img/alwtheme/askusbw.jpg') no-repeat center 70% / cover;
-    &:before, &:after {
-      background: $body-background none repeat scroll 0 0;
-      content: "";
-      height: 75px;
-      left: -2-%;
-      position: absolute;
-      width: 120%;
-
-    }
-    &:before {
-      //transform: rotate(1deg);
-      top: -75px;
-    }
-    &:after {
-      transform: rotate(-3.5deg);
-      bottom: -75px;
-    }
-}
-
-
-.main-icon{
-  
-  @include alw-circle(8rem, $dark-gray, $dark-gray);
-  font-size: 1.5rem;
-  margin-top: -2rem;
-
-  @include breakpoint(small only) {
-    @include alw-circle(4rem, $dark-gray, $dark-gray);
-    font-size: 1rem;
-    font-weight: bold;
-    margin-top: 0;
-  }
-  @include breakpoint(medium only) {
-    @include alw-circle(6rem, $dark-gray, $dark-gray);
-    font-size: 1rem;
-    font-weight: bold;
-    margin-top: -1rem;
-  }
-  
-  
-}
-.askus-icons{
-  @include alw-circle(4rem,$brand-accent,$dark-gray);
-  font-size: 2rem;
-  
-}
-
-//d2
-.main-icon-2{
-  
-  @include alw-circle(8rem, $off-black, $off-black);
-  font-size: 1.5rem;
-  margin-top: -2rem;
-
-  @include breakpoint(small only) {
-    @include alw-circle(4rem, $off-black, $off-black);
-    font-size: 1rem;
-    font-weight: bold;
-    margin-top: 0;
-  }
-  @include breakpoint(medium only) {
-    @include alw-circle(6rem, $off-black, $off-black);
-    font-size: 1rem;
-    font-weight: bold;
-    margin-top: -1rem;
-  }
-  
-  
-  
-}
-.askus-icons-2{
-  @include alw-circle(4rem,$brand-accent,$off-black);
-  font-size: 2rem;
-  
-}
-//d3
-.main-icon-3{
-  
-  @include alw-circle(8rem, $off-black, $off-black);
-  font-size: 1.5rem;
-  margin-top: -2rem;
-
-  @include breakpoint(small only) {
-    @include alw-circle(4rem, $off-black, $off-black);
-    font-size: 1rem;
-    font-weight: bold;
-    margin-top: 0;
-  }
-  @include breakpoint(medium only) {
-    @include alw-circle(6rem, $off-black, $off-black);
-    font-size: 1rem;
-    font-weight: bold;
-    margin-top: -1rem;
-  }
-  
-  
-  
-}
-.askus-icons-3{
-  @include alw-circle(4rem,$brand-blue,$off-black);
-  font-size: 2rem;
-  
-}
-
-// *************************
-// Main Content Row 3- News & Events
-// *************************
-
-// News and events
-
-// move up closer to aksu 
-.marcomm-block {
-
-  // move up position to be closer to aksu 
-  margin-top: -150px;
-  position: relative; 
-  margin-bottom: -200px;
-
-  //main news listing style
-  .news-item{
-  padding-bottom: $global-padding;
-  border-top: $deco-border;
-  padding-top: $big-padding;
-
-  }
-
-  //news listing style
- .news-list-top{
-     background: $white;
-     padding:$big-padding;
-  }
-  // Diagonal deco at the end of news
-
-  @include breakpoint(large) {
-    .corner-wrapper {
-      overflow: hidden;
-    }
-    .corner {
-        width: 0;
-        height: 0;
-        border-top: 60px solid $white;
-        border-right: 900px solid transparent;
-
-    }
-  }
-
-  //news sidebar for events and featured
-
-  .news-sidebar {
-    //padding: 0 $global-padding;
-    //background: $medium-gray;
-    .featured {
-        background: $transparent;
-        //padding:0;
-        small {
-          color:$dark-gray;
-        }
-    }
-
-    .featured-content {
-      padding:$big-padding;
-      background: darken($light-gray, 4%);
-      border-bottom: $block-border-accent;
-    }
-    .event-list {
-        margin-top: $global-margin;
-        background: $white;
-        border-bottom: $block-border-accent;
-        //padding: $global-padding;
-    }
-    .event-item { 
-        padding:$big-padding $global-padding;
-        border-top: $deco-border;
-    }
-   .event-header{
-    padding: $global-padding;
-   }
-
-    //event style from building block
-
-    .event-date {
-      width: 6rem;
-      margin: 0 auto 1rem;
-      display: table-cell;
-      width: auto;
-
-      .event-month {
-        margin: 0;
-        background: #eee;
-        padding: 0.5rem;
-        text-align: center;
-      }
-
-      .event-day {
-        margin: 0;
-        border: 1px solid #eee;
-        padding: 0 1.2rem;
-        text-align: center;
-        font-size: 1.5rem;
-      }
-    }
-
-    .event-desc {
-      padding: 0 0 0 1rem;
-      text-align: left;
-      display: table-cell;
-      vertical-align: top;
-
-      .event-desc-header {
-        margin: 0 0 0.5rem 0;
-        padding: 0;
-      }
-
-      .event-desc-detail {
-        margin: 0 0 0.25rem;
-        padding: 0;
-      }
-
-      .event-desc-info {
-        font-weight: bold;
-      }
-
-      .rsvp.button {
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        margin: 0;
-      }
-      //d2 
-      .rsvp.button.detail-alt {
-        background-color: $off-black;
-      }
-
-      //d3
-      .rsvp.button.detail-alt3 {
-        background-color: $brand-blue-dark;
-      }
-
-    }
-
-  }
-}
-
-//.marcomm-block .alt-padding {padding: 30px 45px 20px;}
-// @media only screen and (max-width: 1024px){
-//   .main-content article, .main-content article.alt-padding {padding:20px;}
-// }
-// @media only screen and (max-width: 768px){
-//   .main-content article{padding:15px;}
-// }#e8e8e8
-.grey-bckr {background-color:$brand-accent;}
-
-// // Listing
-// .marcomm-block .listing {
-//   .media-header-wrapper {float:left;}
-//   //.media-object img {border-left: 4px solid $orange;}
-//   .media-date {
-//     //float: right;
-//     //background-color: $dark-grey;
-//     font-size: 0.9em;
-//     color: #333;
-//     //padding: 5px;
-//     p {
-//       margin-bottom: 0;
-//     }
-//     i {
-//       font-style: normal;
-//     }
-//   }
-// }
-
-// // Small Listing (event)
-// .listing-event {padding-top: 10px; margin-bottom: 10px;}
-// @media only screen and (min-width: 1024px){.listing-event {background-color: #f8f8f8;}}
-// .listing-event h4.event-desc-header {font-size: 1.1rem;}
-// .listing-event h4.event-desc-header a {color: #333;}
-// .listing-event .event-date .event-month {color: #fff; padding: 0; background: #666 none repeat scroll 0 0; margin-top: 5px;}
-// .listing-event .event-date .event-day {padding: 0 1rem; font-size: 0.8em; border: 1px solid #666;}
-// .listing-event .button {padding: 0.4em 1em; color: lighten(#666, 10%); color: white;}
-// .listing-event .event-desc-where {line-height: 2.7;}
-// .listing-event .event-desc-where i {font-style: normal; color: #666;}
-// .listing-event .event-desc-detail {float: right;}
-
-
-
 // *************************
 // Footer - AL
 // *************************
@@ -1174,18 +256,13 @@ padding:$big-padding $global-padding;
     width:50px;
     height:auto;
   }
-
-
 }
-
-
 
 // *************************
 // Footer - Schools color logos icons
 // *************************
 
-.utility-menu-footer{
-  
+.utility-menu-footer{  
   background: $black;
   span, p, a {
     color: $light-gray;
@@ -1193,58 +270,455 @@ padding:$big-padding $global-padding;
   padding-top: $global-padding;
 }
 
-//.logo-icons {
-  //@media only screen and (min-width: 1024px){
-    .school-icons{
-      span {
-      margin-right: 20px;
-        &::before, &::after {
-          position: absolute;
-          content: "";
-          width: 0;
-          height: 0;
+.cu {@include brand-square(20px,#cfb880, #000);}
+.metro {@include brand-square(20px,#d01944, #1b477b);}
+.ccd {@include brand-square(20px,#fbb931, #54277d);}
+.ahec {@include brand-square(20px,#aed5ea, #137fc2);}
+
+// *********************************
+//  Home - Main Content Row - Search & Hours
+// *********************************
+.main-row-wrapper{
+  background: $white;
+  .main-row {
+  padding: $big-padding;
+  }
+
+}
+
+//main search block
+.main-search {
+  .more-resource{
+    text-align: center;
+    @include breakpoint(medium){
+     @include button-group-expand();
+    }
+    @include breakpoint(small only){
+     @include button-group-stack();
+    }
+  }
+  .more-button {
+    font-weight: bold;
+    color: $white;
+    background-color: $dark-gray;
+    &:hover{
+      background-color: $brand-blue-dark;
+
+    }  
+  }
+
+  .input-group-label {
+    background-color: $brand-accent; 
+    color: $white; 
+    cursor: pointer; 
+    border: none;
+  }
+  //forms styling
+
+  [type="text"] {
+  background-color: $light-gray;
+  } 
+  //need to bring in more from sasah branding1.scss
+
+}
+//end main search block
+
+// Main Content Row - Today Hour
+.today-hours {
+
+  @include breakpoint(medium down){
+    border-top:$deco-border;
+    padding-top:$small-padding;
+  }
+
+  padding-left: $big-padding;
+  border-left: $block-border-accent;
+
+  h3 {
+    color: map-get($foundation-palette, success);
+  }
+  .hours-info{
+    padding-top: $big-padding;
+    padding-bottom: $big-padding;
+  }
+  .hours-time{
+    font-size:1.2rem;
+  }
+
+  .status-circle-open {
+  @include alw-circle(60px, $brand-green,$light-gray);
+  }
+ 
+  .more-hours{
+    padding-left: $global-padding;
+    padding-top: $big-padding;
+    margin-left: auto;
+    margin-right:auto;
+    //overide default dropdown arrow color
+    .button.dropdown::after {       
+        border-color: $dark-gray transparent transparent;       
+    }
+  }
+}
+// End Main Content Row - Today Hour
+
+// ***********************************
+//  Home - Main Content Row 2- Promo & qLinks
+// ***********************************
+.second-main{
+  background-color:$transparent;
+  padding:$big-padding $global-padding;
+  .headline-news p{
+    @include breakpoint(small only){
+      display:none;
+    }
+  }
+
+  // promo affect
+  .promo-image-wrapper {
+    width: 100%;
+    height: 100%;
+    border: 0px solid rgba(0,0,0,0.04);
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    background: $white;
+  
+  } 
+  //promo image hover over affect
+  //hover over image content 
+    .promo-image-overlay-content {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+  .overlay-fade-in {    
+    p {
+      letter-spacing: 0.15em;
+      color: #f4f4f4;
+      font-size: 1.2rem;
+      opacity: 0;
+      //transition: all 0.2s linear;
+    }    
+      
+    .promo-image-overlay-content {
+      opacity: 0;
+      //background: rgba(81,83,92, 0.9);
+      //background: rgba(142,142,142, 0.9);
+      background: rgba(0,102,153, 0.9);
+      transition: all 0.4s ease-in-out;
+    }
+    
+    h2 {
+      color: #f2f2f2;
+      font-size: 1.8rem;
+      margin-top: 1rem;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+    }
+    
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      padding: 7px 14px; 
+      background: #FFF;
+      color: #222;
+      text-transform: uppercase;
+      box-shadow: 0 0 1px #000;
+      position: relative;
+      border: 1px solid #999;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+      
+      &:hover {
+        box-shadow: 0 0 5px #000;
+      }
+    }
+    
+    &:hover img {
+      transform: scale(1);
+    }
+    
+    &:hover .promo-image-overlay-content {
+      opacity: 1;
+    }
+    
+    &:hover h2, p, .button {
+      opacity: 1;
+    }
+    
+    &:hover p {
+      transition-delay: 0.1s;
+    }
+    
+    &:hover .button {
+      transition-delay: 0.2s;
+    }
+    &:hover figcaption {
+      display: none;
+    }
+  } 
+  //promo image hover over affect
+
+}
+//end second main
+
+// Main Content Row 2- qLinks
+.quick-link-list {
+  //margin-left:-1rem;
+  padding: $big-padding;
+  @include breakpoint(medium){
+  background: $white;
+  }
+
+  h2 {
+    padding-bottom: $global-padding;
+  }
+  //shrink font size for smaller large screen
+  h3 {
+    @media only screen and (max-width: 1240px){
+      font-size: 90%;
+    }
+
+
+  }
+  //fixing equalizer on large vs photo dimension display for large screen smaller than 1150px 
+  .quick-link {
+    //shrink padding for smaller large screen
+    @media only screen and (max-width: 1240px){
+    padding: .1rem 0;
+    }
+    padding: $small-padding 0;
+    }
+  
+  .badge {
+    background: $brand-blue-dark;
+    &:hover {
+     background: $dark-gray;
+    }
+  }
+
+}
+//end quick link list
+
+// *************************
+//  Home - Main Content Row 4- Ask Us
+// *************************
+// Ask Us Block Background Image
+.askus-bg {
+    display: block;
+    height: auto;
+    min-height: 0;
+    overflow: hidden;
+    padding:6rem 0 13rem;
+    //padding: 131px 0 209px;
+    position: relative;
+    background: url($askus-bg-img) no-repeat center 70% / cover;
+    &:before, &:after {
+      background: $body-background none repeat scroll 0 0;
+      content: "";
+      height: 75px;
+      left: -2-%;
+      position: absolute;
+      width: 120%;
+    }
+    &:before {
+      //transform: rotate(1deg);
+      top: -75px;
+    }
+    &:after {
+      transform: rotate(-3.5deg);
+      bottom: -75px;
+    }
+}
+
+.main-icon{  
+  @include alw-circle(8rem, $dark-gray, $dark-gray);
+  font-size: 1.5rem;
+  margin-top: -2rem;
+
+  @include breakpoint(small only) {
+    @include alw-circle(4rem, $dark-gray, $dark-gray);
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 0;
+  }
+  @include breakpoint(medium only) {
+    @include alw-circle(6rem, $dark-gray, $dark-gray);
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: -1rem;
+  }  
+}
+.askus-icons{
+  @include alw-circle(4rem,$brand-accent,$dark-gray);
+  font-size: 2rem;
+  
+}
+
+// *************************
+// Main Content Row 3- News & Events
+// *************************
+
+// News and events
+
+// move up closer to aksu 
+.marcomm-block {
+  //authors style
+  .authors{
+  color:$dark-gray;
+  }
+
+  // move up position to be closer to aksu 
+  margin-top: -150px;
+  position: relative; 
+  margin-bottom: -200px;
+
+  //main news listing style
+  .news-item{
+  padding-bottom: $global-padding;
+  border-top: $deco-border;
+  padding-top: $big-padding;
+
+  }
+
+  //news listing style
+ .news-list-top{
+     background: $white;
+     padding:$big-padding;
+  }
+  // Diagonal deco at the end of news
+
+  @include breakpoint(large) {
+    .corner-wrapper {
+      overflow: hidden;
+    }
+    .corner {
+        width: 0;
+        height: 0;
+        border-top: 60px solid $white;
+        border-right: 900px solid transparent;
+
+    }
+  }
+
+  //news sidebar for featured
+  .news-sidebar {
+    .featured {
+        background: $transparent;
+        //padding:0;
+        small {
+          color:$dark-gray;
         }
-      }
     }
-   span.cu { // University of Colorado Denver
-      &::before {
-        border-top: 20px solid #cfb880;
-        border-right: 20px solid transparent;
-      }
-      &::after {
-        border-top: 20px solid transparent;
-        border-right: 20px solid black;
-      }
+
+    .featured-content {
+      padding:$big-padding;
+      background: darken($light-gray, 4%);
+      border-bottom: $block-border-accent;
     }
-   span.metro { // Metropolitan State University of Denver
-      &::before {
-        border-top: 20px solid #d01944;
-        border-right: 20px solid transparent;
-      }
-      &::after {
-        border-top: 20px solid transparent;
-        border-right: 20px solid #1b477b;
-      }
+
+  }
+  //end news sidebar for featured
+
+  //event list style from building block
+  .event-list {
+      margin-top: $global-margin;
+      background: $white;
+      border-bottom: $block-border-accent;
+     
+  }
+
+  .event-header{
+    padding: $global-padding;
+  }
+
+  //event item style
+
+  .event-item { 
+    padding:$big-padding $global-padding;
+    border-top: $deco-border;
+     h3 a {
+      font-size: 90%;
     }
-   span.community { // Community College of Denver
-      &::before {
-        border-top: 20px solid #fbb931;
-        border-right: 20px solid transparent;
-      }
-      &::after {
-        border-top: 20px solid transparent;
-        border-right: 20px solid #54277d;
-      }
+  }
+  .event-date {
+    margin: 0 auto $global-padding;
+    display: table-cell;
+    width: auto;
+
+    .event-month {
+      margin: 0;
+      background: $light-gray;
+      padding: $small-padding;
+      text-align: center;
     }
-   span.ahec { // Auraria Higher Education Center
-      &::before {
-        border-top: 20px solid #aed5ea;
-        border-right: 20px solid transparent;
-      }
-      &::after {
-        border-top: 20px solid transparent;
-        border-right: 20px solid #137fc2;
-      }
+    .event-day {
+      margin: 0;
+      border: 1px solid $light-gray;
+      padding: 0 $global-padding;
+      text-align: center;
     }
+  }
+  .event-desc {
+    padding: 0 0 0 $global-padding;
+    text-align: left;
+    display: table-cell;
+    vertical-align: top;
+
+    .event-desc-header {
+      margin: 0 0 $small-padding 0;
+      padding: 0;
+    }
+
+    .event-desc-detail {
+      margin: 0 0 $small-padding;
+      padding: 0;
+    }
+
+    .event-desc-info {
+      font-weight: bold;
+    }
+    .rsvp.button {
+      padding-top: $small-padding;
+      padding-bottom: $small-padding;
+      margin: 0;
+    }
+    
+  }
+  //end of event listing style
+
+}
+
+// *************************
+//  ADI 
+// *************************
+
+/////////////////////////////////////////////////
+//database design //
+/////////////////////////////////////////////////
+
+//database result new and trial badge style
+.cbadge{
+  width: 2.5rem;
+  height: 2.5rem;
+
+}
+//summary more and less toggle
+.morecontent{
+  span {
+    display: none;
+  }
+}
+.morelink {
+    display: block;
+}
+
 
 

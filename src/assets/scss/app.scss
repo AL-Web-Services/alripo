@@ -52,16 +52,14 @@
 @include motion-ui-animations;
 
 //web services added the following styles
-//addon - misc styles borrowed from building blocks//
+
 //foundation icons font style
-@import 'addon';
 @import 'components/foundation-icons';
 
-//branding work add on
-//@import url(https://fonts.googleapis.com/css?family=Varela+Round|Arimo:400,700);
+//use for production style
 @import 'alwstyle';
-//@import 'branding1';
-//prototyping sytle can be turned off
+
+//temporary style
 @import 'nwstyle';
 //@import 'scstyles';
 
