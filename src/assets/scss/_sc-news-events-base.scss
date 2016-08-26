@@ -1,4 +1,17 @@
 /////////////////////////////////////////////
+// Variables - will be replaced by Neena's style variables
+/////////////////////////////////////////////
+
+$mainSpacing: 2rem;
+$secondarySpacing: 1.5rem;
+$transparentBlack: rgba(102, 102, 102, 0.9);
+
+//@mixin negative-effect {
+//  color: $white;
+//  background-color: $transparentBlack;
+//}
+
+/////////////////////////////////////////////
 // News and Events landing page
 /////////////////////////////////////////////
 
@@ -6,12 +19,25 @@
 
 // Main
 .main-ne {
-
 }
-
-// Highlights
-.highlights-ne {
-
+//slide up and down effect toggle - styling only - later adopt from neena's
+.highlight {
+ margin-bottom: $mainSpacing;
+}
+.highlight-inner {
+ background-color: $transparentBlack;
+ color: $white;
+ padding: $secondarySpacing;
+ h1 {
+   color: $white;
+ }
+ & p:first-child {
+   margin-bottom: $mainSpacing;
+ }
+ a {
+   color: $white;
+ }
+ //end - slide up and down effect toggle - styling only
 }
 
 // Future Concepts
@@ -19,7 +45,7 @@
 
 }
 
-// style slide up and down effect toggle
+// slide up and down effect toggle - reusable functionality only
 .highlight {
   position: relative;
   width: 100%;
@@ -29,16 +55,23 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 110px;
-    background-color: black;
-    color: white;
+    height: 105px;
     transition:all 0.5s;
-    padding: 30px; // extra that should be replaced with padding variable
+    //@media screen and (max-width: 1024px) {
+    //  position: relative;
+    //  height: auto;
+    //}
+  }
+  .slide-action {
+    height: 100%;
   }
 }
 
-.highlight .slide-action {
-  height: 100%;
+//Rounded thumbnail
+
+.rounded-thumbnail {
+  @include thumbnail;
+  border-radius: 50%;
 }
 
 /////////////////////////////////////////////
