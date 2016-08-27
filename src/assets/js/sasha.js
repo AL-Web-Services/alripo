@@ -21,3 +21,13 @@ if ($(window).width() <= 1024) {
         }
     });
 }
+
+$(window).load(function(){
+
+  $('#masonry-container').masonry({
+
+    itemSelector: '#masonry-container div'
+
+  });
+
+});
