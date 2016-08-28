@@ -50,7 +50,6 @@ $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 
 $foundation-palette: (
-
  primary:#8E8E8E,//warm medium gray from branding guide
  secondary: #CF4520, //accest 
  success: #006699, //branding dark blue
@@ -61,8 +60,10 @@ $foundation-palette: (
 $light-gray: #f3f3f3;
 $medium-gray: #cccccc;
 $dark-gray: #8E8E8E; //branding gray from AL branding guide #8E8E8E
-$off-black: #51535C;
-$black: #333333;
+//$off-black: #51535C;
+$off-black: #474747;
+//$off-black: #555555;
+$black: #1c1c1c;
 $white: #ffffff;
 $transparent: transparent;
 $body-background: $light-gray;
@@ -77,25 +78,6 @@ $global-radius: 0;
 $global-text-direction: ltr;
 $global-flexbox: false;
 $print-transparent-backgrounds: true;
-//Sasha changed global colors for Concept 1 brand design
-// $foundation-palette: (
-//   primary: #666666,
-//   secondary: #af332d,
-//   success: #69c076,
-//   warning: orange,
-//   alert: #af332d,
-// );
-// $light-gray: #f3f3f3;
-// $medium-gray: #cccccc;
-// $dark-gray: #666666;
-// $off-black: #333333;
-// $black: #000000;
-// $white: #ffffff;
-// $transparent: transparent;
-//Sasha changed global colors for Concept 1 brand design
-
-//end of sasha change
-//AL color dark blue #006699 lighter blue #3399cc
 
 
 @include add-foundation-colors;
@@ -105,8 +87,8 @@ $print-transparent-backgrounds: true;
 
 $breakpoints: (
   small: 0,
-  medium: 640px,
-  //medium: 760px,
+  //medium: 640px,
+  medium: 760px,
   large: 1024px,
   xlarge: 1200px,
   xxlarge: 1440px,
@@ -133,26 +115,10 @@ $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-sizes: (
-  // small: (
-  //   'h1': 24,
-  //   'h2': 20,
-  //   'h3': 19,
-  //   'h4': 18,
-  //   'h5': 17,
-  //   'h6': 16,
-  // ),
-  // medium: (
-  //   'h1': 48,
-  //   'h2': 40,
-  //   'h3': 31,
-  //   'h4': 25,
-  //   'h5': 20,
-  //   'h6': 16,
-  // ),
   small: (
     'h1': 20,
     'h2': 16,
-    'h3': 15,
+    'h3': 16,
     'h4': 14,
     'h5': 13,
     'h6': 12,
