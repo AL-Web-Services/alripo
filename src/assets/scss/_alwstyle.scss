@@ -366,18 +366,16 @@ background-color:$black;
 //  Home - Main Content Row 2- Promo & qLinks
 // ***********************************
 .second-main{
-  background-color:$transparent;
-  padding:$big-padding $global-padding;
+  @include breakpoint(medium down){
+    padding:$global-padding 0;
+    background: $white;
+  }
+  padding:$global-padding;
   .headline-news p {
-    // @include breakpoint(small only){
-    //   display:none;
-    // }
-
     @media only screen and (max-width: 480px){
       display:none;
     }
   }
-
   // promo affect
   .promo-image-wrapper {
     width: 100%;
@@ -387,8 +385,21 @@ background-color:$black;
     position: relative;
     text-align: left;
     background: $white;
-  
+
   } 
+  .promo-image-overlay-content {
+  background: rgba(0,102,153, 0.9); //brand dark blue
+  padding: $big-padding;
+  color:$light-gray;
+   .button {
+      background: $brand-accent;
+      box-shadow: 0 0 1px $black;    
+      &:hover {
+        box-shadow: 0 0 5px $black;
+      }
+    }
+  }
+  @include breakpoint(large) {
   //promo image hover over affect
   //hover over image content 
     .promo-image-overlay-content {
@@ -401,15 +412,13 @@ background-color:$black;
       padding-left: $big-padding;
       padding-right: $big-padding;
     }
-
   .overlay-fade-in {    
     p {
       letter-spacing: 0.1em;
       color: $light-gray;
       opacity: 0;
       //transition: all 0.2s linear;
-    }    
-      
+    }       
     .promo-image-overlay-content {
       opacity: 0;
       //background: rgba(81,83,92, 0.9);
@@ -417,49 +426,32 @@ background-color:$black;
       background: rgba(0,102,153, 0.9); //brand dark blue
       transition: all 0.4s ease-in-out;
     }
-    
     h2 {
       color: $light-gray;
       //font-size: 1.8rem;
       margin-top: $global-padding;
       opacity: 0;
       transition: all 0.2s ease-in-out;
-    }
-    
+    }  
     .button {
-      // display: inline-block;
-      // text-decoration: none;
-      // padding: 7px 14px; 
       background: $brand-accent;
-      // color: #222;
-      // //text-transform: uppercase;
-      box-shadow: 0 0 1px $black;
-      // position: relative;
-      // border: 1px solid #999;
-      // opacity: 0;
-      // transition: all 0.2s ease-in-out;
-      
+      box-shadow: 0 0 1px $black;    
       &:hover {
         box-shadow: 0 0 5px $black;
       }
     }
-    
     &:hover img {
-      transform: scale(1);
-    }
-    
+      //transform: scale(1);
+    }   
     &:hover .promo-image-overlay-content {
       opacity: 1;
     }
-    
     &:hover h2, p, .button {
       opacity: 1;
     }
-    
     &:hover p {
       transition-delay: 0.1s;
-    }
-    
+    }    
     &:hover .button {
       transition-delay: 0.2s;
     }
@@ -468,7 +460,7 @@ background-color:$black;
     }
   } 
   //promo image hover over affect
-
+ }
 }
 //end second main
 
@@ -476,21 +468,25 @@ background-color:$black;
 .quick-link-list {
   //margin-left:-1rem;
   padding: $big-padding;
-  @include breakpoint(medium){
   background: $white;
-  }
-
   h2 {
     padding-bottom: $global-padding;
   }
+  @include breakpoint(medium down) {
+   border-top: 1px solid $brand-accent;
+  }
+
   //shrink font size for smaller large screen
   h3 {
     @media only screen and (max-width: 1240px){
       font-size: 90%;
     }
-
-
+    @media only screen and (max-width: 480px){
+      //display: none;
+      font-size: 78%;
+    }
   }
+
   //fixing equalizer on large vs photo dimension display for large screen smaller than 1150px 
   .quick-link {
     //shrink padding for smaller large screen
@@ -499,13 +495,18 @@ background-color:$black;
     }
     padding: $small-padding 0;
     }
-  
+
   .badge {
+    @media only screen and (max-width: 480px){
+      //display: none;
+      font-size: 0.01rem;
+    }
     background: $brand-blue-dark;
     &:hover {
      background: $dark-gray;
     }
   }
+
 
 }
 //end quick link list
@@ -582,6 +583,14 @@ background-color:$black;
   margin-top: -150px;
   position: relative; 
   margin-bottom: -200px;
+ 
+  .news-list{
+    @include breakpoint (medium down) {
+      border-left: $global-padding solid $brand-accent;
+      border-bottom: 1px solid $light-gray;
+    }
+
+  }
 
   //main news listing style
   .news-item{
