@@ -28,19 +28,18 @@ $askus-bg-img:'/assets/img/alwtheme/askusbw.jpg';
 // *************************
 
 //deco circle style, $circle-w width, $bcolor background clor
+//hack,for text based albadge span need to have albadge class
 @mixin alw-circle ($circle-w, $bcolor, $ecolor){
-  span, a, i{
+  i, .albadge, .albadge a{
     color: $white;
   }
 
-  span{
+  span i, span.albadge{
     width:$circle-w;
     height:$circle-w;
     background-color: $bcolor;
     border-radius: 50%;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     display: flex;
     align-items:center;
     justify-content: center;
@@ -83,7 +82,7 @@ $askus-bg-img:'/assets/img/alwtheme/askusbw.jpg';
   width: 160px;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4{
   a, a:visited {
   color:$black;
   }
@@ -303,7 +302,6 @@ background-color:$black;
     background-color: $dark-gray;
     &:hover{
       background-color: $brand-blue-dark;
-
     }  
   }
 
@@ -314,26 +312,20 @@ background-color:$black;
     border: none;
   }
   //forms styling
-
   [type="text"] {
   background-color: $light-gray;
   } 
-  //need to bring in more from sasah branding1.scss
-
 }
 //end main search block
 
 // Main Content Row - Today Hour
 .today-hours {
-
   @include breakpoint(medium down){
     border-top:$deco-border;
     padding-top:$small-padding;
   }
-
   padding-left: $big-padding;
   border-left: $block-border-accent;
-
   h3 {
     color: map-get($foundation-palette, success);
   }
@@ -344,11 +336,9 @@ background-color:$black;
   .hours-time{
     font-size:1.2rem;
   }
-
   .status-circle-open {
   @include alw-circle(60px, $brand-green,$light-gray);
   }
- 
   .more-hours{
     padding-left: $global-padding;
     padding-top: $big-padding;
@@ -400,7 +390,7 @@ background-color:$black;
     }
   }
   @include breakpoint(large) {
-  //promo image hover over affect
+  //promo image hover over affect only on large
   //hover over image content 
     .promo-image-overlay-content {
       width: 100%;
@@ -469,44 +459,37 @@ background-color:$black;
   //margin-left:-1rem;
   padding: $big-padding;
   background: $white;
-  h2 {
-    padding-bottom: $global-padding;
-  }
   @include breakpoint(medium down) {
    border-top: 1px solid $brand-accent;
-  }
-
-  //shrink font size for smaller large screen
-  h3 {
-    @media only screen and (max-width: 1240px){
-      font-size: 90%;
     }
-    @media only screen and (max-width: 480px){
-      //display: none;
-      font-size: 78%;
-    }
+  h2 {
+    padding-bottom: $global-padding;
   }
 
   //fixing equalizer on large vs photo dimension display for large screen smaller than 1150px 
   .quick-link {
-    //shrink padding for smaller large screen
-    @media only screen and (max-width: 1240px){
-    padding: .1rem 0;
-    }
+    @include alw-circle(20px,$brand-blue-dark,$brand-blue-dark);
+    padding:$global-padding 0;
+    @media only screen and (max-width: 480px){
     padding: $small-padding 0;
     }
-
-  .badge {
-    @media only screen and (max-width: 480px){
-      //display: none;
-      font-size: 0.01rem;
-    }
-    background: $brand-blue-dark;
-    &:hover {
-     background: $dark-gray;
+    a, a:visited,{
+      color: $black;
+      &:hover{
+        color:$brand-blue-dark;
+      }
+      @media only screen and (max-width: 1240px){
+        font-size: 100%;
+      }
+      @media only screen and (max-width: 480px){
+        font-size: 78%;
+      }
+    }       
+    i {
+     float: left;
+     margin-right: 1rem;
     }
   }
-
 
 }
 //end quick link list
@@ -520,7 +503,7 @@ background-color:$black;
     height: auto;
     min-height: 0;
     overflow: hidden;
-    padding:6rem 0 13rem;
+    padding:5rem 0 13rem;
     //padding: 131px 0 209px;
     position: relative;
     background: url($askus-bg-img) no-repeat center 70% / cover;
@@ -543,6 +526,11 @@ background-color:$black;
 }
 
 .main-icon{  
+  span{
+    margin-left: auto;
+  margin-right:auto;
+
+  }
   @include alw-circle(8rem, $dark-gray, $dark-gray);
   font-size: 1.5rem;
   margin-top: -2rem;
@@ -561,9 +549,12 @@ background-color:$black;
   }  
 }
 .askus-icons{
+  span i{
+  margin-left: auto;
+  margin-right: auto;
+  }
   @include alw-circle(4rem,$brand-accent,$dark-gray);
   font-size: 2rem;
-  
 }
 
 // *************************
