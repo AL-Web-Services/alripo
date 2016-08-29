@@ -21,6 +21,7 @@ $deco-border: 1px solid $light-gray;
 $block-border-accent:5px solid $brand-accent;
 $branding-banner:"/assets/img/alwtheme/albwgflat.jpg";
 $askus-bg-img:'/assets/img/alwtheme/askusbw.jpg';
+$footer-main-color:#51535C;
 
 
 // *************************
@@ -28,12 +29,11 @@ $askus-bg-img:'/assets/img/alwtheme/askusbw.jpg';
 // *************************
 
 //deco circle style, $circle-w width, $bcolor background clor
-//hack,for text based albadge span need to have albadge class
+//hack- for text based badge, albadge span need to use "albadge" class
 @mixin alw-circle ($circle-w, $bcolor, $ecolor){
   i, .albadge, .albadge a{
     color: $white;
   }
-
   span i, span.albadge{
     width:$circle-w;
     height:$circle-w;
@@ -127,8 +127,6 @@ background-color:$black;
         color: $white;
     }
   }
-
-
   .lev-sub li{
     a, a:visited {
         color: $medium-gray;
@@ -136,7 +134,7 @@ background-color:$black;
     }
   }
 }
-
+//utility menu style
 .al-utilitiy-menu {
     padding: 0 $global-padding;
     border-bottom:1px solid $brand-accent;
@@ -148,8 +146,6 @@ background-color:$black;
           padding-right: $small-padding;
         }
     }
-
-    //utility menu style
     ul.menu {
       li a {
       color:$black;
@@ -190,8 +186,8 @@ background-color:$black;
 // *************************
 //  Branding banner
 // *************************
-
 .banner {
+  background:$light-gray;
   margin-left: auto;
   margin-right: auto;
   height: 129px;
@@ -217,7 +213,7 @@ background-color:$black;
     }
   }
   height: auto;
-  background-color: $off-black;
+  background-color: $footer-main-color;
   padding-top: 300px;
   h2 {
     font-size: 1.3rem;
@@ -260,7 +256,6 @@ background-color:$black;
 // *************************
 // Footer - Schools color logos icons
 // *************************
-
 .utility-menu-footer{
   background: $black;
   span, p, a {
@@ -282,7 +277,6 @@ background-color:$black;
   .main-row {
   padding: $big-padding;
   }
-
 }
 
 //main search block
@@ -304,7 +298,6 @@ background-color:$black;
       background-color: $brand-blue-dark;
     }
   }
-
   .input-group-label {
     background-color: $brand-accent;
     color: $white;
@@ -478,34 +471,66 @@ background-color:$black;
       &:hover{
         color:$brand-blue-dark;
       }
-      @media only screen and (max-width: 1240px){
-        font-size: 100%;
+      i {
+      float: left;
+      margin-right: 1rem;
       }
+      //custom breakpoint for shrink text size
       @media only screen and (max-width: 480px){
         font-size: 78%;
+        i {
+         margin-right: .25rem;
+        }
+      }
+      //iphone 1 to 4 and other small screen devices
+      @media only screen and (max-width: 400px){
+        font-size: 70%;
+        i {
+          display:none;
+        }
       }
     }
-    i {
-     float: left;
-     margin-right: 1rem;
-    }
   }
-
 }
 //end quick link list
 
 // *************************
 //  Home - Main Content Row 4- Ask Us
 // *************************
-// Ask Us Block Background Image
+
+// Ask Us Block Background style with diagonal
+// .askus-bg {
+//     display: block;
+//     height: auto;
+//     min-height: 0;
+//     overflow: hidden;
+//     padding:5rem 0 13rem;
+//     //padding: 131px 0 209px;
+//     position: relative;
+//     background: url($askus-bg-img) no-repeat center 70% / cover;
+//     &:before, &:after {
+//       background: $body-background none repeat scroll 0 0;
+//       content: "";
+//       height: 75px;
+//       left: -2-%;
+//       position: absolute;
+//       width: 120%;
+//     }
+//     &:before {
+//       //transform: rotate(1deg);
+//       top: -75px;
+//     }
+//     &:after {
+//       transform: rotate(-3.5deg);
+//       bottom: -75px;
+//     }
+// }
 .askus-bg {
     display: block;
     height: auto;
     min-height: 0;
     overflow: hidden;
-    padding:15rem 0 13rem; // diagonal background fix
-    //padding:5rem 0 13rem;
-    //padding: 131px 0 209px;
+    padding:5rem 0 13rem; // diagonal background fix
     position: relative;
     background: url($askus-bg-img) no-repeat center 70% / cover;
     &:before, &:after {
@@ -518,7 +543,7 @@ background-color:$black;
     }
     &:before {
       //transform: rotate(1deg);
-      top: -75px;
+      top: -200px;
     }
     &:after {
       transform: rotate(-3.5deg);
@@ -526,36 +551,43 @@ background-color:$black;
     }
 }
 
+
 .main-icon{
   span{
-    margin-left: auto;
+  margin-left: auto;
   margin-right:auto;
-
   }
+
   @include alw-circle(8rem, $dark-gray, $dark-gray);
   font-size: 1.5rem;
   margin-top: -2rem;
 
-  @include breakpoint(small only) {
-    @include alw-circle(4rem, $dark-gray, $dark-gray);
-    font-size: 1rem;
-    font-weight: bold;
-    margin-top: 0;
-  }
   @include breakpoint(medium only) {
     @include alw-circle(6rem, $dark-gray, $dark-gray);
     font-size: 1rem;
     font-weight: bold;
     margin-top: -1rem;
   }
+
+  @include breakpoint(small only) {
+    @include alw-circle(3rem, $dark-gray, $dark-gray);
+    font-size: .9rem;
+    font-weight: bold;
+    margin-top: 0;
+  }
+
 }
 .askus-icons{
+  font-size: 2rem;
+  @include alw-circle(4rem,$brand-accent,$dark-gray);
   span i{
   margin-left: auto;
   margin-right: auto;
   }
-  @include alw-circle(4rem,$brand-accent,$dark-gray);
-  font-size: 2rem;
+  @include breakpoint(small only) {
+    @include alw-circle(3rem,$brand-accent,$dark-gray);
+    font-size: 1.25rem;
+  }
 }
 
 // *************************
