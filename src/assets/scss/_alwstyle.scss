@@ -525,25 +525,51 @@ background-color:$black;
 //       bottom: -75px;
 //     }
 // }
+// .askus-bg {
+//     display: block;
+//     height: auto;
+//     min-height: 0;
+//     overflow: hidden;
+//     padding:15rem 0 13rem; // diagonal background fix
+//     position: relative;
+//     background: url($askus-bg-img) no-repeat center 70% / cover;
+//     &:before, &:after {
+//       background: $body-background none repeat scroll 0 0;
+//       content: "";
+//       height: 200px; // diagonal background fix
+//       left: -2-%;
+//       position: absolute;
+//       width: 120%;
+//     }
+//     &:before {
+//       //transform: rotate(1deg);
+//       top: -75px;
+//     }
+//     &:after {
+//       transform: rotate(-3.5deg);
+//       bottom: -75px;
+//     }
+// }
+
 .askus-bg {
     display: block;
     height: auto;
     min-height: 0;
     overflow: hidden;
-    padding:15rem 0 13rem; // diagonal background fix
+    padding:5rem 0 13rem; // diagonal background fix
     position: relative;
     background: url($askus-bg-img) no-repeat center 70% / cover;
     &:before, &:after {
       background: $body-background none repeat scroll 0 0;
       content: "";
-      height: 200px; // diagonal background fix
-      left: -2-%;
+      height: 180px; // diagonal background fix
+      left: -2%;
       position: absolute;
       width: 120%;
     }
     &:before {
       //transform: rotate(1deg);
-      top: -75px;
+      top: -200px;
     }
     &:after {
       transform: rotate(-3.5deg);
