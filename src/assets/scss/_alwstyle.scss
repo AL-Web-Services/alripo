@@ -543,7 +543,7 @@ background-color:$black;
     }
     &:before {
       //transform: rotate(1deg);
-      top: -200px;
+      top: -200px; // diagonal background fix
     }
     &:after {
       transform: rotate(-3.5deg);
