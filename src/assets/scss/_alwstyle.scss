@@ -121,11 +121,34 @@ background-color:$black;
 // utility-menu
 .al-small-canvas {
   background-color: $off-black;
+
+  .title-bar{
+    padding: $small-padding;
+    font-size: 110%;
+    .menu-icon {
+     width: 2rem;
+     padding-top:$small-padding;
+    }
+
+  }
+
   .al-utilitiy-menu-small,.al-small-canvas-menu {
     background-color: inherit;
        a, a:visited {
         color: $white;
     }
+    .close-button {
+      color: $white;
+    }
+  }
+  .al-small-canvas-menu li {
+    font-size: 1.1rem;
+    padding-top: $small-padding;
+    padding-bottom: $small-padding;
+    &:hover{
+      background: $dark-gray;
+    }
+
   }
   .lev-sub li{
     a, a:visited {
