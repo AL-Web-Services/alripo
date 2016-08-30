@@ -51,7 +51,7 @@ $global-lineheight: 1.5;
 
 $foundation-palette: (
  primary:#8E8E8E,//warm medium gray from branding guide
- secondary: #CF4520, //accest 
+ secondary: #CF4520, //accest
  success: #006699, //branding dark blue
  warning: #7AB63E,//branding green from AL branding guide
  alert: #3399cc,//branding light blue from AL branding guide
@@ -527,7 +527,8 @@ $tab-background: $white;
 $tab-background-active: $light-gray;
 $tab-item-font-size: rem-calc(12);
 $tab-item-background-hover: $white;
-$tab-item-padding: 1.25rem 1.5rem;
+// $tab-item-padding: 1.25rem 1.5rem;
+$tab-item-padding: 0 0.2rem 0 0; // Changed setting SC
 $tab-expand-max: 6;
 $tab-content-background: $white;
 $tab-content-border: $light-gray;

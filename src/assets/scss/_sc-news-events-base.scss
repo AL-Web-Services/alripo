@@ -74,64 +74,95 @@ $transparentBlack: rgba(102, 102, 102, 0.9);
   border-radius: 50%;
 }
 
-// sorting toolbar
+// generic toolbar
 
 .toolbar {
-  // remove padding around tabs
+  // style toolbar tabs
+  .tabs-title .label {
+    cursor: pointer;
+    padding: 0.5rem 0.65rem;
+  }
   .tabs-title > a {
     padding: 0 0.2rem 0 0;
   }
-  //small search height
-  .small-search .input-group-field {
-    height: 1.9rem;
-    font-size: 0.9rem;
+  //toolbar search styling - for future
+  // .small-search .input-group-field {
+  //   height: 1.9rem;
+  //   font-size: 0.9rem;
+  // }
+}
+
+//temp
+// .news-item-list img {width: 100%; height: auto;}
+// span.card-inner {
+//   border: 1px solid #666;
+//   display: block;
+//   padding: 10px;
+//   margin-bottom: 10px;
+// }
+
+.list-views {
+  .tabs-panel {
+    // Remove extra padding on tabs for mobile. We already have padding on masonry cards
+    @media only screen and (max-width: 768px) {
+      padding: 0;
+    }
   }
-}
-
-//Fix for issue of Equalizer not working inside tabs-title https://github.com/zurb/foundation-sites/issues/8556
-.tabs-panel {
-  display: block;
-  height: 0;
-  overflow: hidden;
-  padding: 0;
-}
-
-.tabs-panel.is-active {
-  height: auto;
-  padding: 1rem;
-}
-
-.gallery-card {
-  span {
+  span.callout {
     display: block;
   }
 }
 
+//Fix for issue of Equalizer not working inside tabs-title https://github.com/zurb/foundation-sites/issues/8556
+// .tabs-panel {
+//   display: block;
+//   height: 0;
+//   overflow: hidden;
+//   padding: 0;
+// }
+//
+// .tabs-panel.is-active {
+//   height: auto;
+//   padding: 1rem;
+// }
+
+// .gallery-card {
+//   span {
+//     display: block;
+//   }
+// }
+
+//Fix masonry padding
+// .masonry-container .column {
+//   padding: 5px;
+//   border: 1px solid #666;
+// }
+
 
 //Style Image/No Imge blocks
-.gallery-card-date {
-  position: relative;
-  background-color: #f8f8f8;
-  span {
-    position: absolute;
-    left: 10px;
-    bottom: 10px;
-    //event circle style
-    background-color: white;
-    border-radius: 50%;
-    width: 60px;
-  }
-}
-.gallery-card-inner {
-  border-bottom: 4px solid #666;
-  margin-bottom: 15px;
-  position: relative;
-  span {
-    position: absolute;
-    right: 0;
-    bottom: 5px;
-  }
-}
+// .gallery-card-date {
+//   position: relative;
+//   background-color: #f8f8f8;
+//   span {
+//     position: absolute;
+//     left: 10px;
+//     bottom: 10px;
+//     //event circle style
+//     background-color: white;
+//     border-radius: 50%;
+//     width: 60px;
+//   }
+// }
+// .gallery-card-inner {
+//   border-bottom: 4px solid #666;
+//   margin-bottom: 15px;
+//   position: relative;
+//   span {
+//     position: absolute;
+//     right: 0;
+//     bottom: 5px;
+//   }
+// }
 
 /////////////////////////////////////////////
 // News and Events landing page end
