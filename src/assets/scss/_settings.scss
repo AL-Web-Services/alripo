@@ -45,38 +45,28 @@
 // 1. Global
 // ---------
 
-$global-font-size: 90%;
+$global-font-size: 95%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
-//Sasha changed global colors for Concept 1 brand design
-//$foundation-palette: (
-//  primary: #594F4F,
-//  secondary: #547980,
-//  success: #45ADA8,
-//  warning: #EC5840,
-//  alert: #FF9A43,
-// $light-gray: #e6e6e6;
-// $medium-gray: #cacaca;
-// $dark-gray: #8a8a8a;
-// $black: #0a0a0a;
-// $white: #fefefe;
-//);
+
 $foundation-palette: (
-  primary: #666666,
-  secondary: #af332d,
-  success: #69c076,
-  warning: orange,
-  alert: #af332d,
+ primary:#8E8E8E,//warm medium gray from branding guide
+ secondary: #CF4520, //accest 
+ success: #006699, //branding dark blue
+ warning: #7AB63E,//branding green from AL branding guide
+ alert: #3399cc,//branding light blue from AL branding guide
 );
+//$light-gray: #F2EEEA; warm light gray
 $light-gray: #f3f3f3;
 $medium-gray: #cccccc;
-$dark-gray: #666666;
-$off-black: #333333;
-$black: #000000;
+$dark-gray: #8E8E8E; //branding gray from AL branding guide #8E8E8E
+//$off-black: #51535C;
+$off-black: #474747;
+//$off-black: #555555;
+$black: #1c1c1c;
 $white: #ffffff;
 $transparent: transparent;
-//Sasha changed global colors for Concept 1 brand design
-$body-background: $white;
+$body-background: $light-gray;
 $body-font-color: $black;
 $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
@@ -89,6 +79,7 @@ $global-text-direction: ltr;
 $global-flexbox: false;
 $print-transparent-backgrounds: true;
 
+
 @include add-foundation-colors;
 
 // 2. Breakpoints
@@ -96,7 +87,7 @@ $print-transparent-backgrounds: true;
 
 $breakpoints: (
   small: 0,
-  medium: 640px,
+  medium: 760px,
   large: 1024px,
   xlarge: 1200px,
   xxlarge: 1440px,
@@ -123,26 +114,10 @@ $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-sizes: (
-  // small: (
-  //   'h1': 24,
-  //   'h2': 20,
-  //   'h3': 19,
-  //   'h4': 18,
-  //   'h5': 17,
-  //   'h6': 16,
-  // ),
-  // medium: (
-  //   'h1': 48,
-  //   'h2': 40,
-  //   'h3': 31,
-  //   'h4': 25,
-  //   'h5': 20,
-  //   'h6': 16,
-  // ),
   small: (
     'h1': 20,
     'h2': 16,
-    'h3': 15,
+    'h3': 16,
     'h4': 14,
     'h5': 13,
     'h6': 12,
@@ -150,10 +125,10 @@ $header-sizes: (
   medium: (
     'h1': 24,
     'h2': 20,
-    'h3': 19,
-    'h4': 18,
-    'h5': 17,
-    'h6': 16,
+    'h3': 18,
+    'h4': 16,
+    'h5': 15,
+    'h6': 14,
   ),
 
 );
@@ -161,7 +136,7 @@ $header-color: inherit;
 $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-text-rendering: optimizeLegibility;
-$small-font-size: 80%;
+$small-font-size: 90%;
 $header-small-font-color: $medium-gray;
 $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
@@ -594,8 +569,8 @@ $tooltip-radius: $global-radius;
 
 // 36. Top Bar
 // -----------
-
-$topbar-padding: 0.5rem;
+//$topbar-padding: 0.5rem;
+//$topbar-padding: 0.5rem;
 $topbar-background: $light-gray;
 $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 1rem;

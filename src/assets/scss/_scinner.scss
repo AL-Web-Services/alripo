@@ -1,0 +1,31 @@
+.inner-banner {
+  background-color: #666;
+  padding: 0rem 0 13rem;
+}
+
+.inner-block {
+  .corner-top {
+      border-bottom: 100px solid #ffffff;
+      border-left: 1200px solid transparent;
+      border-top: none;
+    }
+  .corner-bottom {
+    border-left: 1200px solid transparent;
+  }
+  .inner-heading {
+    margin-top: -110px;
+  }
+  .round-thumbnail {
+    border-radius: 50%;
+    border: 5px solid #8e8e8e;
+  }
+  h1 {
+    font-size: 3em;
+    font-family: 'Vollkorn', serif;
+  }
+  .inner-lead-text {
+    font-size: 1.5em;
+    padding: 30px;
+    color: #666;
+  }
+}
