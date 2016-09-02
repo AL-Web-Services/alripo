@@ -1,31 +1,92 @@
+//Inner banner
 .inner-banner {
-  background-color: #666;
+  background-color: $brand-blue;
+  padding: 0rem 0 15rem;
+  border-bottom: 5px solid $white;
+  //Smaller banner on mobile
+  @media only screen and (max-width: 768px){
+    padding: 0rem 0 8rem;
+  }
+}
+//Inner banner with two colors
+.inner-banner-v2:after {
+  background-color: $brand-blue-dark;
+}
+.inner-banner-v2 {
   padding: 0rem 0 13rem;
 }
 
+//Inner banner with single color
+.inner-banner-alt-color {
+  background-color: $footer-main-color;
+}
+.inner-banner-with-text {
+  border-bottom: none;
+  color: $white;
+  h1 {
+    font-size: 4em;
+    font-family: 'Vollkorn', serif;
+  }
+}
+
+//Style main content on inner pages
 .inner-block {
+  //Inner block will not have border-left on mobile
+  .news-list {
+    border-left: none;
+  }
+  //New styles for large diagonals on full width content blocks
   .corner-top {
-      border-bottom: 100px solid #ffffff;
+      border-bottom: 70px solid $white;
       border-left: 1200px solid transparent;
       border-top: none;
     }
+  .coner-top-grey {
+    border-bottom: 70px solid $footer-main-color;
+  }
   .corner-bottom {
     border-left: 1200px solid transparent;
   }
+  //Style Banner heading - on mobile negative margin disappears
   .inner-heading {
-    margin-top: -110px;
-  }
-  .round-thumbnail {
-    border-radius: 50%;
-    border: 5px solid #8e8e8e;
-  }
-  h1 {
-    font-size: 3em;
-    font-family: 'Vollkorn', serif;
+    margin-top: -100px;
+    @media only screen and (max-width: 768px){
+      margin-top: 0;
+    }
+    //Style heading and intro paragraph
+    h1 {
+      font-size: 3em;
+      font-family: 'Vollkorn', serif;
+    }
   }
   .inner-lead-text {
-    font-size: 1.5em;
-    padding: 30px;
-    color: #666;
+    padding: 2rem 2rem 4rem;
+    color: $footer-main-color;
   }
+  //Style inner heading without negative margin
+  .inner-heading-v2 {
+    margin-top: 0;
+    blockquote {
+      border-left: 5px solid $brand-accent;
+    }
+  }
+}
+//Different alignments of main content for different layouts
+.inner-block-v2 {
+  margin-top: -110px;
+}
+
+.inner-block-v3 {
+  margin-top: -250px;
+  color: $white;
+}
+//Color of block on layout with dark header block
+.inner-block-v3 .news-list-top {
+  background: $footer-main-color;
+}
+
+//Rounded thumbnail style to reuse
+.round-thumbnail {
+  border-radius: 50%;
+  border: 5px solid $brand-accent;
 }
