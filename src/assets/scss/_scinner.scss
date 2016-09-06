@@ -24,13 +24,14 @@
   border-bottom: none;
   color: $white;
   h1 {
-    font-size: 4em;
+    font-size: 3em;
     font-family: 'Vollkorn', serif;
   }
 }
 
 //Style main content on inner pages
 .inner-block {
+  margin-top: -120px;
   //Inner block will not have border-left on mobile
   .news-list {
     border-left: none;
@@ -70,6 +71,12 @@
       border-left: 5px solid $brand-accent;
     }
   }
+  .inner-content {
+    @media only screen and (max-width: 768px){
+      border: none;
+      padding: 0;
+    }
+  }
 }
 //Different alignments of main content for different layouts
 .inner-block-v2 {
@@ -79,6 +86,9 @@
 .inner-block-v3 {
   margin-top: -250px;
   color: $white;
+  @media only screen and (max-width: 768px){
+    margin-top: -170px;
+  }
 }
 //Color of block on layout with dark header block
 .inner-block-v3 .news-list-top {
@@ -89,4 +99,11 @@
 .round-thumbnail {
   border-radius: 50%;
   border: 5px solid $brand-accent;
+}
+
+//Add margin to marcomm blocks
+.marcomm-row {
+  .featured-content {
+    margin-bottom: 15px;
+  }
 }
