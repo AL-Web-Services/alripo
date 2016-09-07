@@ -1,20 +1,22 @@
+//See settings.scss for change on line 182 for $lead-font-size
+
 //New variables to add
 $font-family-serif: 'Vollkorn', serif;
 
+/////////////////////////////////////////////////////////
+//Mixins
+/////////////////////////////////////////////////////////
+
 //New Mixins to add
 @mixin serif-header ($text-font, $text-size, $text-padding, $text-border) {
-    .serif-header {
         font-family: $text-font;
         font-size: $text-size;
         padding: $text-padding;
         border-bottom: $text-border;
-    }
 }
 @mixin round-thumbnail ($rnd-thumbnail-radius, $rnd-thumbnail-border) {
-    .round-thumbnail {
         border-radius: $rnd-thumbnail-radius;
         border: $rnd-thumbnail-border;
-    }
 }
 
 /////////////////////////////////////////////////////////
@@ -22,9 +24,13 @@ $font-family-serif: 'Vollkorn', serif;
 /////////////////////////////////////////////////////////
 
 //serif header
-@include serif-header($font-family-serif, 2.5em, 2rem, 27px solid $light-gray);
+.serif-header {
+  @include serif-header($font-family-serif, 2.5em, 2rem, 27px solid $light-gray);
+}
 //round thumbnail
-@include round-thumbnail(50%, 5px solid $brand-accent);
+.round-thumbnail {
+  @include round-thumbnail(50%, 5px solid $brand-accent);
+}
 //Round thumbnail icon spacing
 .thumbnail-offset {
     margin-top: 10px;
@@ -54,7 +60,17 @@ $font-family-serif: 'Vollkorn', serif;
 }
 
 /////////////////////////////////////////////////////////
-//This section: styles for generic pages
+//This section: styles for generic information pages
+/////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////
+// New classes have been added for generic information pages:
+// 1. .inner-banner - banner for generic page
+// 2. .main-wrapper - offsetts main content block against banner and footer
+// 3. .main-content - wraps around and styles text block of page content
+// 4. .inner-sidebar - styles sidebar on mobile (with border left)
+// 5. .content-bordered-wrapper - adds "hours" style border to content block (doesnt include sidebar)
+// 6. .content-paragraph-block - styles headings in content
 /////////////////////////////////////////////////////////
 
 //Inner banner
