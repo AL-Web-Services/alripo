@@ -1,7 +1,11 @@
+//New variables to add into global-width
+$font-family-serif: 'Vollkorn', serif;
+
+
 //Inner banner
 .inner-banner {
   background-color: $brand-blue;
-  padding: 0rem 0 15rem;
+  padding: 0rem 0 11rem;
   border-bottom: 5px solid $white;
   //Smaller banner on mobile
   @media only screen and (max-width: 768px){
@@ -24,7 +28,7 @@
   border-bottom: none;
   color: $white;
   h1 {
-    font-size: 3em;
+    font-size: 2.5em;
     font-family: 'Vollkorn', serif;
   }
 }
@@ -50,7 +54,7 @@
   }
   //Style Banner heading - on mobile negative margin disappears
   .inner-heading {
-    margin-top: -100px;
+    margin-top: -70px;
     @media only screen and (max-width: 768px){
       margin-top: 0;
     }
@@ -84,7 +88,7 @@
 }
 
 .inner-block-v3 {
-  margin-top: -250px;
+  margin-top: -200px;
   color: $white;
   @media only screen and (max-width: 768px){
     margin-top: -170px;

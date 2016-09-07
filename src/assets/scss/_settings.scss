@@ -51,7 +51,7 @@ $global-lineheight: 1.5;
 
 $foundation-palette: (
  primary:#8E8E8E,//warm medium gray from branding guide
- secondary: #CF4520, //accest 
+ secondary: #CF4520, //accest
  success: #006699, //branding dark blue
  warning: #7AB63E,//branding green from AL branding guide
  alert: #3399cc,//branding light blue from AL branding guide
@@ -178,7 +178,8 @@ $abbr-underline: 1px dotted $black;
 // 5. Typography Helpers
 // ---------------------
 
-$lead-font-size: $global-font-size * 1.25;
+//$lead-font-size: $global-font-size * 1.25;
+$lead-font-size: $global-font-size * 1.4; //sc global change
 $lead-lineheight: 1.6;
 $subheader-lineheight: 1.4;
 $subheader-color: $dark-gray;
