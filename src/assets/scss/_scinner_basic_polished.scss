@@ -119,7 +119,6 @@ $font-family-serif: 'Vollkorn', serif;
             padding-left: $big-padding;
         }
     }
-    //content
     .content-height {
         min-height: 500px; //min height for cases when too little content - desktop
         @include breakpoint (medium up) {
@@ -138,4 +137,27 @@ $font-family-serif: 'Vollkorn', serif;
         border-top: $deco-border;
         padding-top: $big-padding;
     }
+}
+
+/////////////////////////////////////////////////////////
+//Related block styling
+/////////////////////////////////////////////////////////
+
+.content-height-related {
+  min-height: 450px; //for pages that have related content
+}
+.related-block {
+   //spacing
+  padding: $big-padding $big-padding 0;
+  @include breakpoint (medium up) {
+    margin-top: $big-padding;
+  }
+  //background color on mobile
+  @include breakpoint (small down) {
+    background-color: $light-gray;
+  }
+  //soften color of bullet points
+  li {
+    color: $off-black;
+  }
 }
