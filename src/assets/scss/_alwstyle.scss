@@ -86,7 +86,7 @@ h1, h2, h3, h4{
   a, a:visited {
   color:$black;
   }
-} 
+}
 
 //all headline image wrapper
 .headline-image-wrapper {
@@ -173,19 +173,19 @@ background-color:$black;
       li a {
       color:$black;
       }
-      border: none; 
-       ul li{     
+      border: none;
+       ul li{
          &:last-child {
-         border-bottom:1px solid $brand-accent; 
+         border-bottom:1px solid $brand-accent;
         }
        }
-       ul li a {       
-        border: 0;        
+       ul li a {
+        border: 0;
         &:hover {
           background: $white;
         }
       }
-    }   
+    }
   //site search form foundation style
   .site-search {
     .input-group {
@@ -195,7 +195,7 @@ background-color:$black;
       margin: 0;
     }
     .input-group-label{
-      background-color: $white; 
+      background-color: $white;
       border: none;
     }
     .input-group-field {
@@ -236,7 +236,7 @@ background-color:$black;
     }
   }
   height: auto;
-  background-color: $footer-main-color; 
+  background-color: $footer-main-color;
   padding-top: 300px;
   h2 {
     font-size: 1.3rem;
@@ -279,7 +279,7 @@ background-color:$black;
 // *************************
 // Footer - Schools color logos icons
 // *************************
-.utility-menu-footer{  
+.utility-menu-footer{
   background: $black;
   span, p, a {
     color: $light-gray;
@@ -319,18 +319,18 @@ background-color:$black;
     background-color: $dark-gray;
     &:hover{
       background-color: $brand-blue-dark;
-    }  
+    }
   }
   .input-group-label {
-    background-color: $brand-accent; 
-    color: $white; 
-    cursor: pointer; 
+    background-color: $brand-accent;
+    color: $white;
+    cursor: pointer;
     border: none;
   }
   //forms styling
   [type="text"] {
   background-color: $light-gray;
-  } 
+  }
 }
 //end main search block
 
@@ -361,8 +361,8 @@ background-color:$black;
     margin-left: auto;
     margin-right:auto;
     //overide default dropdown arrow color
-    .button.dropdown::after {       
-        border-color: $dark-gray transparent transparent;       
+    .button.dropdown::after {
+        border-color: $dark-gray transparent transparent;
     }
   }
 }
@@ -392,14 +392,14 @@ background-color:$black;
     text-align: left;
     background: $white;
 
-  } 
+  }
   .promo-image-overlay-content {
   background: rgba(0,102,153, 0.9); //brand dark blue
   padding: $big-padding;
   color:$light-gray;
    .button {
       background: $brand-accent;
-      box-shadow: 0 0 1px $black;    
+      box-shadow: 0 0 1px $black;
       &:hover {
         box-shadow: 0 0 5px $black;
       }
@@ -407,7 +407,7 @@ background-color:$black;
   }
   @include breakpoint(large) {
   //promo image hover over affect only on large
-  //hover over image content 
+  //hover over image content
     .promo-image-overlay-content {
       width: 100%;
       height: 100%;
@@ -418,13 +418,13 @@ background-color:$black;
       padding-left: $big-padding;
       padding-right: $big-padding;
     }
-  .overlay-fade-in {    
+  .overlay-fade-in {
     p {
       letter-spacing: 0.1em;
       color: $light-gray;
       opacity: 0;
       //transition: all 0.2s linear;
-    }       
+    }
     .promo-image-overlay-content {
       opacity: 0;
       //background: rgba(81,83,92, 0.9);
@@ -438,17 +438,17 @@ background-color:$black;
       margin-top: $global-padding;
       opacity: 0;
       transition: all 0.2s ease-in-out;
-    }  
+    }
     .button {
       background: $brand-accent;
-      box-shadow: 0 0 1px $black;    
+      box-shadow: 0 0 1px $black;
       &:hover {
         box-shadow: 0 0 5px $black;
       }
     }
     &:hover img {
       //transform: scale(1);
-    }   
+    }
     &:hover .promo-image-overlay-content {
       opacity: 1;
     }
@@ -457,14 +457,14 @@ background-color:$black;
     }
     &:hover p {
       transition-delay: 0.1s;
-    }    
+    }
     &:hover .button {
       transition-delay: 0.2s;
     }
     &:hover figcaption {
       display: none;
     }
-  } 
+  }
   //promo image hover over affect
  }
 }
@@ -482,7 +482,7 @@ background-color:$black;
     padding-bottom: $global-padding;
   }
 
-  //fixing equalizer on large vs photo dimension display for large screen smaller than 1150px 
+  //fixing equalizer on large vs photo dimension display for large screen smaller than 1150px
   .quick-link {
     @include alw-circle(20px,$brand-blue-dark,$brand-blue-dark);
     padding:$global-padding 0;
@@ -502,7 +502,7 @@ background-color:$black;
       @media only screen and (max-width: 480px){
         font-size: 78%;
         i {
-         margin-right: .25rem; 
+         margin-right: .25rem;
         }
       }
       //iphone 1 to 4 and other small screen devices
@@ -512,7 +512,7 @@ background-color:$black;
           display:none;
         }
       }
-    }       
+    }
   }
 }
 //end quick link list
@@ -601,7 +601,7 @@ background-color:$black;
 }
 
 
-.main-icon{  
+.main-icon{
   span{
   margin-left: auto;
   margin-right:auto;
@@ -616,8 +616,8 @@ background-color:$black;
     font-size: 1rem;
     font-weight: bold;
     margin-top: -1rem;
-  } 
-   
+  }
+
   @include breakpoint(small only) {
     @include alw-circle(3rem, $dark-gray, $dark-gray);
     font-size: .9rem;
@@ -645,18 +645,18 @@ background-color:$black;
 
 // News and events
 
-// move up closer to aksu 
+// move up closer to aksu
 .marcomm-block {
   //authors style
   .authors{
   color:$dark-gray;
   }
 
-  // move up position to be closer to aksu 
+  // move up position to be closer to aksu
   margin-top: -150px;
-  position: relative; 
+  position: relative;
   margin-bottom: -200px;
- 
+
   .news-list{
     @include breakpoint (medium down) {
       border-left: $global-padding solid $brand-accent;
@@ -717,7 +717,7 @@ background-color:$black;
       margin-top: $global-margin;
       background: $white;
       border-bottom: $block-border-accent;
-     
+
   }
 
   .event-header{
@@ -726,7 +726,7 @@ background-color:$black;
 
   //event item style
 
-  .event-item { 
+  .event-item {
     padding:$big-padding $global-padding;
     border-top: $deco-border;
      h3 a {
@@ -775,14 +775,14 @@ background-color:$black;
       padding-bottom: $small-padding;
       margin: 0;
     }
-    
+
   }
   //end of event listing style
 
 }
 
 // *************************
-//  ADI 
+//  ADI
 // *************************
 
 /////////////////////////////////////////////////
@@ -804,6 +804,3 @@ background-color:$black;
 .morelink {
     display: block;
 }
-
-
-
