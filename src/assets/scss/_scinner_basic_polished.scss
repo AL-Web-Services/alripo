@@ -203,6 +203,32 @@ $font-family-serif: 'Vollkorn', serif;
 }
 
 /////////////////////////////////////////////////////////
+// Inner intro block
+/////////////////////////////////////////////////////////
+
+.intro-block {
+  .big-corner-top {
+    border-bottom: 60px solid $white;
+  }
+  .intro-block-body {
+    border-bottom: 30px solid darken($light-gray, 4%);
+  }
+}
+
+/////////////////////////////////////////////////////////
+// Hours Header
+/////////////////////////////////////////////////////////
+
+.info-top {
+  border-top: 1px solid $light-gray;
+  background-color: $footer-main-color;
+  color: $white;
+  p {
+    margin-bottom: 0.3rem;
+  }
+}
+
+/////////////////////////////////////////////////////////
 //News/Events, Featured - fancy layout
 /////////////////////////////////////////////////////////
 
@@ -236,6 +262,7 @@ $font-family-serif: 'Vollkorn', serif;
   margin-bottom: $global-padding;
   @include breakpoint (medium down) {
     margin-top: 0;
+    margin-bottom: 0;
   }
   .content-bordered-wrapper {
     @include breakpoint (medium up) {
@@ -261,7 +288,7 @@ $font-family-serif: 'Vollkorn', serif;
       bottom: 0;
       left: 0;
       width: 70%;
-      padding:$global-padding;
+      padding:$big-padding;
       background-color: rgba(255, 255, 255, 0.9);
       border-bottom: $block-border-accent;
       @include breakpoint (medium down) {
@@ -298,7 +325,7 @@ $font-family-serif: 'Vollkorn', serif;
 .featured-headline-gray {
   position: relative;
   background-color: $light-gray;
-  @include breakpoint (medium down) {
+  @include breakpoint (small down) {
     margin-bottom: $global-padding;
     background-color: transparent;
   }
@@ -314,6 +341,10 @@ $font-family-serif: 'Vollkorn', serif;
   }
   .featured-headline-text {
     padding:$big-padding $global-padding $global-padding 0;
+    @include breakpoint (medium down) {
+      background-color: $light-gray;
+      padding: $big-padding;
+    }
     .button {
       margin: 0;
     }
@@ -321,10 +352,10 @@ $font-family-serif: 'Vollkorn', serif;
 }
 .featured-headline-title {
   @include breakpoint (medium down) {
-    background-color: $light-gray;
+    // background-color: $light-gray;
     padding-top: $global-padding;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid $brand-accent;
+    // padding-bottom: 0.5rem;
+    // border-bottom: 1px solid $brand-accent;
   }
 }
 .info-box {
@@ -379,8 +410,11 @@ $font-family-serif: 'Vollkorn', serif;
 //News and events listings
 .event-listing, .news-listing {
   border-top: 1px solid #f3f3f3;
-  padding-top: $global-padding;
-  padding-bottom: $global-padding;
+  padding-top: $big-padding;
+  padding-bottom: $big-padding;
+  &:last-child {
+    padding-bottom: 0;
+  }
   a, a:visited {
     color: $black;
     &:hover {
