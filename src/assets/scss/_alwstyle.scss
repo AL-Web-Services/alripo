@@ -70,9 +70,208 @@ $footer-main-color:#51535C;
     }
   }
 }
+
+@mixin round-thumbnail ($rnd-thumbnail-radius, $rnd-thumbnail-border) {
+        border-radius: $rnd-thumbnail-radius;
+        border: $rnd-thumbnail-border;
+}
+
+@mixin diagbanner-leftlong ($diagbg, $padtop,$padbottom) {
+  display: block;
+    height: auto;
+    min-height: 0;
+    overflow: hidden;
+    padding:$padtop 0 $padbottom 0; // diagonal background fix
+    position: relative;
+    background: $diagbg  no-repeat center 70% / cover;
+    &:before, &:after {
+      background: $body-background none repeat scroll 0 0;
+      content: "";
+      height: 180px; // diagonal background fix
+      left: -2%;
+      position: absolute;
+      width: 120%;
+    }
+    &:before {
+      //transform: rotate(1deg);
+      top: -200px;
+    }
+    &:after {
+      transform: rotate(-3.5deg);
+      bottom: -75px;
+    }
+
+}
+@mixin diagbanner-rightlong ($diagbg, $padtop,$padbottom) {
+  display: block;
+  height: auto;
+  min-height: 0;
+  overflow: hidden;
+  //padding:0 0 20rem;
+  padding:$padtop 0 $padbottom 0; // diagonal background fix
+  position: relative;
+  background: $diagbg no-repeat center 95% / cover;
+  &:before, &:after {
+    background: $body-background none repeat scroll 0 0;
+    content: "";
+    right: -2%;
+    height: 180px;
+    position: absolute;
+    width: 105%;
+  }
+  &:before {
+    top: -180px;
+  }
+  &:after {
+    transform: rotate(3deg);
+    bottom: -75px;
+  }
+}
+
+@mixin blocktopwithcorner ($martop,$cornerbg,$contentpad) {
+  margin-top: $martop;
+  position: relative;
+  @include breakpoint (medium down) {
+      margin-top: 0;
+  }
+  //main content within contnet top
+  .title-icon-group{
+    img {
+      width: 8rem;
+      margin-top: 0rem;
+    }
+    h1 {
+      padding-top: 1rem;
+    }
+
+    margin-bottom: -4rem;
+  }
+  .row-corner-top {
+  border-bottom: 4rem solid $cornerbg;
+  border-right: $global-width solid transparent;
+  height: 0;
+  width: 0;
+  }
+  .main-content {
+      @include breakpoint (medium down) {
+      }
+      background-color: $cornerbg;
+      padding: $contentpad;
+  }
+
+}
 // *************************
 // Branding 1 global styles
 // *************************
+//new
+ /////////////////////////////////////////////////////////
+// Hours Header
+/////////////////////////////////////////////////////////
+
+.info-top {
+  border-top: 1px solid $light-gray;
+  background-color: $off-black;
+  color: $white;
+  p {
+    margin-bottom: 0.3rem;
+  }
+}
+
+.contenttop-with-corner{
+  @include blocktopwithcorner(-20rem,$medium-gray,$global-padding);
+
+}
+
+.title-icon-img {
+  @include round-thumbnail(50%, 5px solid $medium-gray);
+}
+.diagonal-topleftlong {
+  @include diagbanner-leftlong ($white, 10rem, 12rem);
+}
+.diagonal-topleftlong-dark{
+  @include diagbanner-leftlong ($dark-gray, 4rem, 8rem);
+}
+.diagonal-toprightlong {
+  @include diagbanner-rightlong ($light-gray, 5rem, 12rem);
+}
+.diagonal-toprightlong-white {
+  @include diagbanner-rightlong ($white, 12rem, 10rem);
+}
+
+$font-family-serif: 'Vollkorn', serif;
+h1 {
+  font-family: $font-family-serif;
+  font-size: 2.5rem;
+}
+.title-icon {
+  margin-right: $bigger-padding;
+}
+
+
+
+//end new
+
+//main content wrapper
+
+.main-content-wrapper {
+    //main wrapper margins
+    margin-bottom: -200px;
+    position: relative;
+    @include breakpoint (medium down) {
+        margin-top: 0;
+    }
+    //main content padding, background, and border
+    .main-content {
+        @include breakpoint (medium down) {
+            padding: 0;
+        }
+        min-height: 500px; //min height for cases when too little content - desktop
+        @include breakpoint (medium up) {
+        min-height: 750px; //min height for cases when too little content - desktop
+        }
+        background-color: $white;
+        padding: $big-padding;
+    }
+    //sidebar
+    .inner-sidebar {
+        @include breakpoint (medium down) {
+            border-left: $global-padding solid $brand-accent;
+            padding-bottom: $big-padding;
+            padding-left: $big-padding;
+        }
+    }
+    //content
+    .content-height {
+        min-height: 500px; //min height for cases when too little content - desktop
+        @include breakpoint (medium up) {
+            min-height: 750px; //min height for cases when too little content - desktop
+        }
+    }
+    // .content-bordered-wrapper {
+    //     @include breakpoint (medium down) {
+    //         border-left: $global-padding solid $brand-accent;
+    //     }
+    //     padding-left: $big-padding;
+    //     border-left: $block-border-accent;
+    // }
+    // .content-paragraph-block {
+    //     padding-bottom: $global-padding;
+    //     border-top: $deco-border;
+    //     padding-top: $big-padding;
+    // }
+}
+
+//diaganol corner for regular node - decorative - bottom
+.big-corner-wrapper {
+    overflow: hidden;
+}
+.big-corner-bottom {
+    border-top: 60px solid $white;
+    border-left: 1200px solid transparent;
+    height: 0;
+    width: 0;
+}
+
 
 //remove default off-canvas-content box shadow
 .off-canvas-content, .off-canvas-content {
