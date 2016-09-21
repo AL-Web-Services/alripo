@@ -141,6 +141,7 @@ $footer-main-color:#51535C;
     img {
       width: 8rem;
       margin-top: 0rem;
+      margin-left: 2rem;
     }
     h1 {
       padding-top: 1rem;
@@ -217,6 +218,10 @@ h1 {
     @include round-thumbnail (50%, 5px solid $white);
 }
 
+.new-margin{
+  margin-top:-22rem;
+
+}
 //end new
 
 //main content wrapper
