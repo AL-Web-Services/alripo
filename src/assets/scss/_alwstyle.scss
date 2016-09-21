@@ -135,7 +135,9 @@ $footer-main-color:#51535C;
       margin-top: 0;
   }
   //main content within contnet top
-  .title-icon-group{
+  .title-icon{
+    margin-bottom: -4rem;
+    margin-right: $contentpad;
     img {
       width: 8rem;
       margin-top: 0rem;
@@ -143,8 +145,6 @@ $footer-main-color:#51535C;
     h1 {
       padding-top: 1rem;
     }
-
-    margin-bottom: -4rem;
   }
   .row-corner-top {
   border-bottom: 4rem solid $cornerbg;
@@ -158,7 +158,6 @@ $footer-main-color:#51535C;
       background-color: $cornerbg;
       padding: $contentpad;
   }
-
 }
 // *************************
 // Branding 1 global styles
@@ -176,26 +175,36 @@ $footer-main-color:#51535C;
     margin-bottom: 0.3rem;
   }
 }
+$lighter-gray:lighten($medium-gray, 10%);
 
 .contenttop-with-corner{
-  @include blocktopwithcorner(-20rem,$medium-gray,$global-padding);
-
+  @include blocktopwithcorner(-20rem,$white,$big-padding);
+  .page-title-group {
+    img {
+    @include round-thumbnail (50%, 5px solid $white);
+    }
+    .title-icon {
+       @include alw-circle(2rem, $brand-accent, $white);
+       span {
+        margin-top: 3rem;
+      }
+    }
+  }
 }
 
-.title-icon-img {
-  @include round-thumbnail(50%, 5px solid $medium-gray);
+.diagonal-toprightlong {
+  @include diagbanner-rightlong ($lighter-gray, 12rem, 10rem);
 }
+
 .diagonal-topleftlong {
   @include diagbanner-leftlong ($white, 10rem, 12rem);
 }
 .diagonal-topleftlong-dark{
   @include diagbanner-leftlong ($dark-gray, 4rem, 8rem);
 }
-.diagonal-toprightlong {
-  @include diagbanner-rightlong ($light-gray, 5rem, 12rem);
-}
+
 .diagonal-toprightlong-white {
-  @include diagbanner-rightlong ($white, 12rem, 10rem);
+  @include diagbanner-rightlong ($footer-main-color, 12rem, 10rem);
 }
 
 $font-family-serif: 'Vollkorn', serif;
@@ -203,11 +212,10 @@ h1 {
   font-family: $font-family-serif;
   font-size: 2.5rem;
 }
-.title-icon {
-  margin-right: $bigger-padding;
+
+.round-image {
+    @include round-thumbnail (50%, 5px solid $white);
 }
-
-
 
 //end new
 
