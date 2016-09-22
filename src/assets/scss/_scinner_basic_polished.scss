@@ -321,6 +321,7 @@ $font-family-serif: 'Vollkorn', serif;
     margin-bottom: $global-padding;
   }
 }
+
 //mid section: featured and Did you know?
 .featured-headline-gray {
   position: relative;
@@ -458,5 +459,114 @@ $font-family-serif: 'Vollkorn', serif;
 .simple-news-list .news-listing {
   h1:first-child, h2:first-child, h3:first-child, h4:first-child {
     margin-top: $global-padding;
+  }
+}
+/////////////////////////////////////////////////////////
+//News-events v2
+/////////////////////////////////////////////////////////
+
+.img-backgr-wrapper {
+    background: rgba(0, 0, 0, 0) url("/assets/img/inner-pages/news-events-bckgr.jpg") no-repeat scroll center 40% / cover ;
+    height: 300px;
+  .big-headline {
+    padding-top: $big-padding;
+    h1 {
+      font-weight: bold;
+      color: #006699;
+      font-size: 3em;
+    }
+    .lead {
+      color: white;
+      font-weight: bold;
+      text-shadow: 1px 1px $dark-gray;
+    }
+  }
+}
+.intro-content {
+  padding: 4rem 3rem $global-padding;
+  background-color: $white;
+  img {
+    margin-top: -100px;
+    border: 5px solid white;
+  }
+}
+.general-content {
+  padding: 0 3rem $big-padding;
+  background-color: $white;
+}
+
+.general-content-bordered {
+  border-bottom: 5px solid $dark-gray;
+  padding: 4rem 3rem $global-padding;
+  // background-color: $medium-gray;
+  background-color: $white;
+}
+
+//News Events Categories Section
+.categories-v2 {
+  background-color: $medium-gray;
+  background-image: none;
+
+}
+
+.quote-banner {
+  display: block;
+  height: auto;
+  min-height: 0;
+  overflow: hidden;
+  padding:0 0 10rem;
+  position: relative;
+  background: rgba(0, 0, 0, 0) url("/assets/img/inner-pages/cover.jpg") no-repeat scroll center 55% / cover ;
+  margin-bottom: -100px;
+  color: $white;
+  .lead {
+    font-family: $font-family-serif;
+  }
+  .quote-banner-inner {
+    margin-top: 7%;
+  }
+}
+
+.bordered-right {
+  // border-right: 5px solid $brand-accent;
+  p {
+    font-size: 95%;
+    letter-spacing: 0.1em;
+  }
+}
+//Slider
+.orbit-container {
+  border: 1px solid $light-gray;
+}
+
+.orbit-slide {
+  padding: $big-padding;
+}
+
+.orbit-bullets button {
+  background-color: $dark-gray;
+  width: 0.7rem;
+  height: 0.7rem;
+}
+
+.orbit-bullets button.is-active {
+	background-color: $brand-accent;
+}
+
+.orbit-previous, .orbit-next {
+  padding: 0.5em;
+  color: $black;
+}
+
+.list-box {
+  padding: $big-padding;
+  border-top: 30px solid $medium-gray;
+  border-bottom: 30px solid $medium-gray;
+  h1, h2, h3, h4 {
+    font-weight: bold;
+  }
+  p {
+    font-size: 95%;
+    letter-spacing: 0.1em;
   }
 }
