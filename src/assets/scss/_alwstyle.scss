@@ -218,10 +218,121 @@ h1 {
     @include round-thumbnail (50%, 5px solid $white);
 }
 
+//temporary
 .new-margin{
   margin-top:-22rem;
 
 }
+
+
+.post-module {
+  position: relative;
+  z-index: 1;
+  //display: block;
+  background: $white;
+  //min-width: 3px;
+  height: 500px;
+  box-shadow: 0px 1px 2px 0px $medium-gray;
+  //box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s linear 0s;
+  &:hover {
+    box-shadow: 0px 1px 25px 0px $medium-gray;
+     
+    .card-image {
+      img {       
+        //transform: scale(1.1);
+        //opacity: .8;
+        filter:brightness(110%);
+      }
+    }
+  }
+  .card-image {
+    //background: $black;
+    min-height: 200px;
+    //overflow: hidden;
+    img {
+    }
+    .date {
+      position: absolute;
+      top: $global-padding;
+      right: $global-padding;
+      z-index: 1;
+      background: $brand-accent;
+      width: 4rem;
+      height: 4rem;
+      padding: $small-padding 0;
+      border-radius:100%;
+      color: $white;
+      font-weight: 700;
+      text-align: center;
+      .day {
+      }
+      .month {
+        font-size: 80%;
+        text-transform: uppercase;
+      }
+    }
+    img {
+      display: block;
+      //width: 120%;
+    }
+  }
+  .post-content {
+    position: absolute;
+    min-height: 300px;
+    bottom: 0;
+    background: $white;
+    width: 100%;
+    padding: $big-padding;
+    box-sizing: border-box;
+    transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;;
+    .category {
+      position: absolute;
+      top: -34px;
+      left: 0;
+      background: $brand-accent;
+      padding: 10px 15px;
+      color: $white;
+      font-size: 90%;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .title {
+      margin: 0;
+      padding: 0 0 $global-padding;
+      color: $off-black;
+      //font-size: 2rem;
+      //font-weight: 700;
+    }
+    .sub-title {
+      margin: 0;
+      padding: 0 0 $global-padding;
+      color:$brand-accent;
+      font-weight: 400;
+    }
+    .description {
+      //display: none;
+      color: $off-black;
+    }
+    .post-meta {
+      color: $dark-gray;
+      a {
+        color: $dark-gray;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 //end new
 
 //main content wrapper
@@ -727,64 +838,6 @@ background-color:$black;
     }       
   }
 }
-//end quick link list
-
-// *************************
-//  Home - Main Content Row 4- Ask Us
-// *************************
-
-// Ask Us Block Background style with diagonal
-// .askus-bg {
-//     display: block;
-//     height: auto;
-//     min-height: 0;
-//     overflow: hidden;
-//     padding:5rem 0 13rem;
-//     //padding: 131px 0 209px;
-//     position: relative;
-//     background: url($askus-bg-img) no-repeat center 70% / cover;
-//     &:before, &:after {
-//       background: $body-background none repeat scroll 0 0;
-//       content: "";
-//       height: 75px;
-//       left: -2-%;
-//       position: absolute;
-//       width: 120%;
-//     }
-//     &:before {
-//       //transform: rotate(1deg);
-//       top: -75px;
-//     }
-//     &:after {
-//       transform: rotate(-3.5deg);
-//       bottom: -75px;
-//     }
-// }
-// .askus-bg {
-//     display: block;
-//     height: auto;
-//     min-height: 0;
-//     overflow: hidden;
-//     padding:15rem 0 13rem; // diagonal background fix
-//     position: relative;
-//     background: url($askus-bg-img) no-repeat center 70% / cover;
-//     &:before, &:after {
-//       background: $body-background none repeat scroll 0 0;
-//       content: "";
-//       height: 200px; // diagonal background fix
-//       left: -2-%;
-//       position: absolute;
-//       width: 120%;
-//     }
-//     &:before {
-//       //transform: rotate(1deg);
-//       top: -75px;
-//     }
-//     &:after {
-//       transform: rotate(-3.5deg);
-//       bottom: -75px;
-//     }
-// }
 
 .askus-bg {
     display: block;
