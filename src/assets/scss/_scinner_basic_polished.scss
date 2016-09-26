@@ -461,13 +461,42 @@ $font-family-serif: 'Vollkorn', serif;
     margin-top: $global-padding;
   }
 }
+//News Events Categories Section - alternative color background
+.categories-v2 {
+  background-color: $medium-gray;
+  background-image: none;
+  .albadge-bckg-1 {
+    background: rgba(0, 0, 0, 0.5) url("/assets/img/inner-pages/thumb1.jpg") no-repeat scroll center 40% / cover ;
+  }
+  .albadge-bckg-2 {
+    background: rgba(0, 0, 0, 0) url("/assets/img/inner-pages/thumb2.jpg") no-repeat scroll center 40% / cover ;
+  }
+  .albadge-bckg-3 {
+    background: rgba(0, 0, 0, 0) url("/assets/img/inner-pages/thumb3.jpg") no-repeat scroll center 40% / cover ;
+  }
+  .albadge-bckg-4 {
+    background: rgba(0, 0, 0, 0) url("/assets/img/inner-pages/thumb4.jpg") no-repeat scroll center 40% / cover ;
+  }
+  .main-icon{
+    // span{
+    // margin-left: auto;
+    // margin-right:auto;
+    // }
+    @include alw-circle(7rem, $brand-accent, $dark-gray);
+    font-size: 1.3rem;
+    margin-bottom: $global-padding;
+    text-shadow: -1px 2px $black;
+    font-weight: bold;
+  }
+}
 /////////////////////////////////////////////////////////
-//News-events v2
+//Featured
 /////////////////////////////////////////////////////////
 
 .img-backgr-wrapper {
     background: rgba(0, 0, 0, 0) url("/assets/img/inner-pages/news-events-bckgr.jpg") no-repeat scroll center 40% / cover ;
     height: 300px;
+    margin-bottom: -100px;
   .big-headline {
     padding-top: $big-padding;
     h1 {
@@ -476,7 +505,7 @@ $font-family-serif: 'Vollkorn', serif;
       font-size: 3em;
     }
     .lead {
-      color: white;
+      color: $white;
       font-weight: bold;
       text-shadow: 1px 1px $dark-gray;
     }
@@ -484,37 +513,43 @@ $font-family-serif: 'Vollkorn', serif;
 }
 .intro-content {
   padding: 4rem 3rem $global-padding;
+  @include breakpoint(medium down) {
+    padding: 0;
+  }
   background-color: $white;
   img {
     margin-top: -100px;
-    border: 5px solid white;
+    border: 5px solid $white;
+    @include breakpoint(medium down) {
+      margin-top: 0;
+    }
   }
 }
 .general-content {
   padding: 0 3rem $big-padding;
+  @include breakpoint(medium down) {
+    padding: 0;
+  }
   background-color: $white;
 }
 
 .general-content-bordered {
   border-bottom: 5px solid $dark-gray;
   padding: 4rem 3rem $global-padding;
-  // background-color: $medium-gray;
+  @include breakpoint(medium down) {
+    padding: 0;
+  }
   background-color: $white;
 }
-
-//News Events Categories Section
-.categories-v2 {
-  background-color: $medium-gray;
-  background-image: none;
-
-}
-
 .quote-banner {
   display: block;
   height: auto;
   min-height: 0;
   overflow: hidden;
   padding:0 0 10rem;
+  @include breakpoint(medium down) {
+    padding: 0;
+  }
   position: relative;
   background: rgba(0, 0, 0, 0) url("/assets/img/inner-pages/cover.jpg") no-repeat scroll center 55% / cover ;
   margin-bottom: -100px;
@@ -527,39 +562,11 @@ $font-family-serif: 'Vollkorn', serif;
   }
 }
 
-.bordered-right {
-  // border-right: 5px solid $brand-accent;
-  p {
-    font-size: 95%;
-    letter-spacing: 0.1em;
-  }
-}
-//Slider
-.orbit-container {
-  border: 1px solid $light-gray;
-}
-
-.orbit-slide {
-  padding: $big-padding;
-}
-
-.orbit-bullets button {
-  background-color: $dark-gray;
-  width: 0.7rem;
-  height: 0.7rem;
-}
-
-.orbit-bullets button.is-active {
-	background-color: $brand-accent;
-}
-
-.orbit-previous, .orbit-next {
-  padding: 0.5em;
-  color: $black;
-}
-
 .list-box {
   padding: $big-padding;
+  @include breakpoint(medium down) {
+    padding: 0;
+  }
   border-top: 30px solid $medium-gray;
   border-bottom: 30px solid $medium-gray;
   h1, h2, h3, h4 {
@@ -568,5 +575,63 @@ $font-family-serif: 'Vollkorn', serif;
   p {
     font-size: 95%;
     letter-spacing: 0.1em;
+  }
+}
+
+//Slider
+
+.orbit-small {
+  .orbit-container {
+    border: 1px solid $light-gray;
+  }
+  .orbit-slide {
+    padding: $big-padding;
+  }
+  .orbit-bullets button {
+    background-color: $dark-gray;
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+  .orbit-bullets button.is-active {
+  	background-color: $brand-accent;
+  }
+  .orbit-previous, .orbit-next {
+    padding: 0.5em;
+    color: $black;
+  }
+}
+
+/////////////////////////////////////////////////////////
+//Gallery List View
+/////////////////////////////////////////////////////////
+
+.gallery-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  max-height: 1600px;
+  max-width:  100%;
+  overflow-x: hidden;
+  position: relative;
+  @include breakpoint(medium down) {
+    max-height: none;
+  }
+  // Make sure that masonry cards are able to be styled with callout class
+  .callout{
+    display: block;
+    box-shadow: 0 10px 6px -6px #777;
+    border-color: $light-gray;
+    img {
+      margin-bottom: $global-padding;
+    }
+  }
+  .column {
+    width: 33%;
+    flex-basis: content;
+    @include breakpoint(medium down) {
+      width: 100%;
+    }
   }
 }

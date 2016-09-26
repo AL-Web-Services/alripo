@@ -1,0 +1,35 @@
+//Note: changed default tabs padding setting in _settings.sass line 531
+
+// generic toolbar
+
+.toolbar {
+  // style toolbar controls
+  .label {
+    cursor: pointer;
+    padding: 0.5rem 0.65rem;
+  }
+}
+
+// Generic List and Gallery styles using Foundation tabs
+
+.list-views {
+  .tabs-panel {
+  // Remove extra padding on tabs for mobile. We already have padding on masonry cards
+    @media only screen and (max-width: 768px) {
+      padding: 0;
+    }
+  }
+  // Make sure that masonry cards are able to be styled with callout class
+  .callout {
+    display: block;
+  }
+}
+
+.listing-block {
+  margin-top: 0;
+  margin-bottom: 0;
+  // Make sure that masonry cards are able to be styled with callout class
+  .callout, .event-list, .event-item {
+    display: block;
+  }
+}
