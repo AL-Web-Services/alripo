@@ -20,7 +20,7 @@ $small-padding:0.5em;
 $deco-border: 1px solid $light-gray;
 $block-border-accent:5px solid $brand-accent;
 $branding-banner:"/assets/img/alwtheme/albwgflat.jpg";
-$askus-bg-img:'/assets/img/alwtheme/askusbw.jpg';
+$askus-bg-img:'/assets/img/alwtheme/albwgflat.jpg';
 $footer-main-color:#51535C;
 
 
@@ -70,9 +70,332 @@ $footer-main-color:#51535C;
     }
   }
 }
+
+@mixin round-thumbnail ($rnd-thumbnail-radius, $rnd-thumbnail-border) {
+        border-radius: $rnd-thumbnail-radius;
+        border: $rnd-thumbnail-border;
+}
+
+@mixin diagbanner-leftlong ($diagbg, $padtop,$padbottom) {
+  display: block;
+    height: auto;
+    min-height: 0;
+    overflow: hidden;
+    padding:$padtop 0 $padbottom 0; // diagonal background fix
+    position: relative;
+    background: $diagbg  no-repeat center 70% / cover;
+    &:before, &:after {
+      background: $body-background none repeat scroll 0 0;
+      content: "";
+      height: 180px; // diagonal background fix
+      left: -2%;
+      position: absolute;
+      width: 120%;
+    }
+    &:before {
+      //transform: rotate(1deg);
+      top: -200px;
+    }
+    &:after {
+      transform: rotate(-3.5deg);
+      bottom: -75px;
+    }
+
+}
+@mixin diagbanner-rightlong ($diagbg, $padtop,$padbottom) {
+  display: block;
+  height: auto;
+  min-height: 0;
+  overflow: hidden;
+  //padding:0 0 20rem;
+  padding:$padtop 0 $padbottom 0; // diagonal background fix
+  position: relative;
+  background: $diagbg no-repeat center 95% / cover;
+  &:before, &:after {
+    background: $body-background none repeat scroll 0 0;
+    content: "";
+    right: -2%;
+    height: 180px;
+    position: absolute;
+    width: 105%;
+  }
+  &:before {
+    top: -180px;
+  }
+  &:after {
+    transform: rotate(3deg);
+    bottom: -75px;
+  }
+}
+
+@mixin blocktopwithcorner ($martop,$cornerbg,$contentpad) {
+  margin-top: $martop;
+  position: relative;
+  @include breakpoint (medium down) {
+      margin-top: 0;
+  }
+  //main content within contnet top
+  .title-icon{
+    margin-bottom: -4rem;
+    margin-right: $contentpad;
+    img {
+      width: 8rem;
+      margin-top: 0rem;
+      margin-left: 2rem;
+    }
+    h1 {
+      padding-top: 1rem;
+    }
+  }
+  .row-corner-top {
+  border-bottom: 4rem solid $cornerbg;
+  border-right: $global-width solid transparent;
+  height: 0;
+  width: 0;
+  }
+  .main-content {
+      @include breakpoint (medium down) {
+      }
+      background-color: $cornerbg;
+      padding: $contentpad;
+  }
+}
 // *************************
 // Branding 1 global styles
 // *************************
+//new
+ /////////////////////////////////////////////////////////
+// Hours Header
+/////////////////////////////////////////////////////////
+
+.info-top {
+  border-top: 1px solid $light-gray;
+  background-color: $off-black;
+  color: $white;
+  p {
+    margin-bottom: 0.3rem;
+  }
+}
+$lighter-gray:lighten($medium-gray, 10%);
+
+.contenttop-with-corner{
+  @include blocktopwithcorner(-20rem,$white,$big-padding);
+  .page-title-group {
+    img {
+    @include round-thumbnail (50%, 5px solid $white);
+    }
+    .title-icon {
+       @include alw-circle(2rem, $brand-accent, $white);
+       span {
+        margin-top: 3rem;
+      }
+    }
+  }
+}
+
+.diagonal-toprightlong {
+  @include diagbanner-rightlong ($lighter-gray, 12rem, 10rem);
+}
+
+.diagonal-topleftlong {
+  @include diagbanner-leftlong ($white, 10rem, 12rem);
+}
+.diagonal-topleftlong-dark{
+  @include diagbanner-leftlong ($dark-gray, 4rem, 8rem);
+}
+
+.diagonal-toprightlong-white {
+  @include diagbanner-rightlong ($footer-main-color, 12rem, 10rem);
+}
+
+$font-family-serif: 'Vollkorn', serif;
+h1 {
+  font-family: $font-family-serif;
+  font-size: 2.5rem;
+}
+
+.round-image {
+    @include round-thumbnail (50%, 5px solid $white);
+}
+
+//temporary
+.new-margin{
+  margin-top:-22rem;
+
+}
+
+
+.post-module {
+  position: relative;
+  z-index: 1;
+  //display: block;
+  background: $white;
+  //min-width: 3px;
+  height: 500px;
+  box-shadow: 0px 1px 2px 0px $medium-gray;
+  //box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s linear 0s;
+  &:hover {
+    box-shadow: 0px 1px 25px 0px $medium-gray;
+     
+    .card-image {
+      img {       
+        //transform: scale(1.1);
+        //opacity: .8;
+        filter:brightness(110%);
+      }
+    }
+  }
+  .card-image {
+    //background: $black;
+    min-height: 200px;
+    //overflow: hidden;
+    img {
+    }
+    .date {
+      position: absolute;
+      top: $global-padding;
+      right: $global-padding;
+      z-index: 1;
+      background: $brand-accent;
+      width: 4rem;
+      height: 4rem;
+      padding: $small-padding 0;
+      border-radius:100%;
+      color: $white;
+      font-weight: 700;
+      text-align: center;
+      .day {
+      }
+      .month {
+        font-size: 80%;
+        text-transform: uppercase;
+      }
+    }
+    img {
+      display: block;
+      //width: 120%;
+    }
+  }
+  .post-content {
+    position: absolute;
+    min-height: 300px;
+    bottom: 0;
+    background: $white;
+    width: 100%;
+    padding: $big-padding;
+    box-sizing: border-box;
+    transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;;
+    .category {
+      position: absolute;
+      top: -34px;
+      left: 0;
+      background: $brand-accent;
+      padding: 10px 15px;
+      color: $white;
+      font-size: 90%;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .title {
+      margin: 0;
+      padding: 0 0 $global-padding;
+      color: $off-black;
+      //font-size: 2rem;
+      //font-weight: 700;
+    }
+    .sub-title {
+      margin: 0;
+      padding: 0 0 $global-padding;
+      color:$brand-accent;
+      font-weight: 400;
+    }
+    .description {
+      //display: none;
+      color: $off-black;
+    }
+    .post-meta {
+      color: $dark-gray;
+      a {
+        color: $dark-gray;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+//end new
+
+//main content wrapper
+
+.main-content-wrapper {
+    //main wrapper margins
+    margin-bottom: -200px;
+    position: relative;
+    @include breakpoint (medium down) {
+        margin-top: 0;
+    }
+    //main content padding, background, and border
+    .main-content {
+        @include breakpoint (medium down) {
+            padding: 0;
+        }
+        min-height: 500px; //min height for cases when too little content - desktop
+        @include breakpoint (medium up) {
+        min-height: 750px; //min height for cases when too little content - desktop
+        }
+        background-color: $white;
+        padding: $big-padding;
+    }
+    //sidebar
+    .inner-sidebar {
+        @include breakpoint (medium down) {
+            border-left: $global-padding solid $brand-accent;
+            padding-bottom: $big-padding;
+            padding-left: $big-padding;
+        }
+    }
+    //content
+    .content-height {
+        min-height: 500px; //min height for cases when too little content - desktop
+        @include breakpoint (medium up) {
+            min-height: 750px; //min height for cases when too little content - desktop
+        }
+    }
+    // .content-bordered-wrapper {
+    //     @include breakpoint (medium down) {
+    //         border-left: $global-padding solid $brand-accent;
+    //     }
+    //     padding-left: $big-padding;
+    //     border-left: $block-border-accent;
+    // }
+    // .content-paragraph-block {
+    //     padding-bottom: $global-padding;
+    //     border-top: $deco-border;
+    //     padding-top: $big-padding;
+    // }
+}
+
+//diaganol corner for regular node - decorative - bottom
+.big-corner-wrapper {
+    overflow: hidden;
+}
+.big-corner-bottom {
+    border-top: 60px solid $white;
+    border-left: 1200px solid transparent;
+    height: 0;
+    width: 0;
+}
+
 
 //remove default off-canvas-content box shadow
 .off-canvas-content, .off-canvas-content {
@@ -86,7 +409,7 @@ h1, h2, h3, h4{
   a, a:visited {
   color:$black;
   }
-}
+} 
 
 //all headline image wrapper
 .headline-image-wrapper {
@@ -173,19 +496,19 @@ background-color:$black;
       li a {
       color:$black;
       }
-      border: none;
-       ul li{
+      border: none; 
+       ul li{     
          &:last-child {
-         border-bottom:1px solid $brand-accent;
+         border-bottom:1px solid $brand-accent; 
         }
        }
-       ul li a {
-        border: 0;
+       ul li a {       
+        border: 0;        
         &:hover {
           background: $white;
         }
       }
-    }
+    }   
   //site search form foundation style
   .site-search {
     .input-group {
@@ -195,7 +518,7 @@ background-color:$black;
       margin: 0;
     }
     .input-group-label{
-      background-color: $white;
+      background-color: $white; 
       border: none;
     }
     .input-group-field {
@@ -236,7 +559,7 @@ background-color:$black;
     }
   }
   height: auto;
-  background-color: $footer-main-color;
+  background-color: $footer-main-color; 
   padding-top: 300px;
   h2 {
     font-size: 1.3rem;
@@ -279,7 +602,7 @@ background-color:$black;
 // *************************
 // Footer - Schools color logos icons
 // *************************
-.utility-menu-footer{
+.utility-menu-footer{  
   background: $black;
   span, p, a {
     color: $light-gray;
@@ -319,18 +642,18 @@ background-color:$black;
     background-color: $dark-gray;
     &:hover{
       background-color: $brand-blue-dark;
-    }
+    }  
   }
   .input-group-label {
-    background-color: $brand-accent;
-    color: $white;
-    cursor: pointer;
+    background-color: $brand-accent; 
+    color: $white; 
+    cursor: pointer; 
     border: none;
   }
   //forms styling
   [type="text"] {
   background-color: $light-gray;
-  }
+  } 
 }
 //end main search block
 
@@ -361,8 +684,8 @@ background-color:$black;
     margin-left: auto;
     margin-right:auto;
     //overide default dropdown arrow color
-    .button.dropdown::after {
-        border-color: $dark-gray transparent transparent;
+    .button.dropdown::after {       
+        border-color: $dark-gray transparent transparent;       
     }
   }
 }
@@ -392,14 +715,14 @@ background-color:$black;
     text-align: left;
     background: $white;
 
-  }
+  } 
   .promo-image-overlay-content {
   background: rgba(0,102,153, 0.9); //brand dark blue
   padding: $big-padding;
   color:$light-gray;
    .button {
       background: $brand-accent;
-      box-shadow: 0 0 1px $black;
+      box-shadow: 0 0 1px $black;    
       &:hover {
         box-shadow: 0 0 5px $black;
       }
@@ -407,7 +730,7 @@ background-color:$black;
   }
   @include breakpoint(large) {
   //promo image hover over affect only on large
-  //hover over image content
+  //hover over image content 
     .promo-image-overlay-content {
       width: 100%;
       height: 100%;
@@ -418,13 +741,13 @@ background-color:$black;
       padding-left: $big-padding;
       padding-right: $big-padding;
     }
-  .overlay-fade-in {
+  .overlay-fade-in {    
     p {
       letter-spacing: 0.1em;
       color: $light-gray;
       opacity: 0;
       //transition: all 0.2s linear;
-    }
+    }       
     .promo-image-overlay-content {
       opacity: 0;
       //background: rgba(81,83,92, 0.9);
@@ -438,17 +761,17 @@ background-color:$black;
       margin-top: $global-padding;
       opacity: 0;
       transition: all 0.2s ease-in-out;
-    }
+    }  
     .button {
       background: $brand-accent;
-      box-shadow: 0 0 1px $black;
+      box-shadow: 0 0 1px $black;    
       &:hover {
         box-shadow: 0 0 5px $black;
       }
     }
     &:hover img {
       //transform: scale(1);
-    }
+    }   
     &:hover .promo-image-overlay-content {
       opacity: 1;
     }
@@ -457,14 +780,14 @@ background-color:$black;
     }
     &:hover p {
       transition-delay: 0.1s;
-    }
+    }    
     &:hover .button {
       transition-delay: 0.2s;
     }
     &:hover figcaption {
       display: none;
     }
-  }
+  } 
   //promo image hover over affect
  }
 }
@@ -482,7 +805,7 @@ background-color:$black;
     padding-bottom: $global-padding;
   }
 
-  //fixing equalizer on large vs photo dimension display for large screen smaller than 1150px
+  //fixing equalizer on large vs photo dimension display for large screen smaller than 1150px 
   .quick-link {
     @include alw-circle(20px,$brand-blue-dark,$brand-blue-dark);
     padding:$global-padding 0;
@@ -502,7 +825,7 @@ background-color:$black;
       @media only screen and (max-width: 480px){
         font-size: 78%;
         i {
-         margin-right: .25rem;
+         margin-right: .25rem; 
         }
       }
       //iphone 1 to 4 and other small screen devices
@@ -512,67 +835,9 @@ background-color:$black;
           display:none;
         }
       }
-    }
+    }       
   }
 }
-//end quick link list
-
-// *************************
-//  Home - Main Content Row 4- Ask Us
-// *************************
-
-// Ask Us Block Background style with diagonal
-// .askus-bg {
-//     display: block;
-//     height: auto;
-//     min-height: 0;
-//     overflow: hidden;
-//     padding:5rem 0 13rem;
-//     //padding: 131px 0 209px;
-//     position: relative;
-//     background: url($askus-bg-img) no-repeat center 70% / cover;
-//     &:before, &:after {
-//       background: $body-background none repeat scroll 0 0;
-//       content: "";
-//       height: 75px;
-//       left: -2-%;
-//       position: absolute;
-//       width: 120%;
-//     }
-//     &:before {
-//       //transform: rotate(1deg);
-//       top: -75px;
-//     }
-//     &:after {
-//       transform: rotate(-3.5deg);
-//       bottom: -75px;
-//     }
-// }
-// .askus-bg {
-//     display: block;
-//     height: auto;
-//     min-height: 0;
-//     overflow: hidden;
-//     padding:15rem 0 13rem; // diagonal background fix
-//     position: relative;
-//     background: url($askus-bg-img) no-repeat center 70% / cover;
-//     &:before, &:after {
-//       background: $body-background none repeat scroll 0 0;
-//       content: "";
-//       height: 200px; // diagonal background fix
-//       left: -2-%;
-//       position: absolute;
-//       width: 120%;
-//     }
-//     &:before {
-//       //transform: rotate(1deg);
-//       top: -75px;
-//     }
-//     &:after {
-//       transform: rotate(-3.5deg);
-//       bottom: -75px;
-//     }
-// }
 
 .askus-bg {
     display: block;
@@ -601,7 +866,7 @@ background-color:$black;
 }
 
 
-.main-icon{
+.main-icon{  
   span{
   margin-left: auto;
   margin-right:auto;
@@ -616,8 +881,8 @@ background-color:$black;
     font-size: 1rem;
     font-weight: bold;
     margin-top: -1rem;
-  }
-
+  } 
+   
   @include breakpoint(small only) {
     @include alw-circle(3rem, $dark-gray, $dark-gray);
     font-size: .9rem;
@@ -645,18 +910,18 @@ background-color:$black;
 
 // News and events
 
-// move up closer to aksu
+// move up closer to aksu 
 .marcomm-block {
   //authors style
   .authors{
   color:$dark-gray;
   }
 
-  // move up position to be closer to aksu
+  // move up position to be closer to aksu 
   margin-top: -150px;
-  position: relative;
+  position: relative; 
   margin-bottom: -200px;
-
+ 
   .news-list{
     @include breakpoint (medium down) {
       border-left: $global-padding solid $brand-accent;
@@ -717,7 +982,7 @@ background-color:$black;
       margin-top: $global-margin;
       background: $white;
       border-bottom: $block-border-accent;
-
+     
   }
 
   .event-header{
@@ -726,7 +991,7 @@ background-color:$black;
 
   //event item style
 
-  .event-item {
+  .event-item { 
     padding:$big-padding $global-padding;
     border-top: $deco-border;
      h3 a {
@@ -775,14 +1040,14 @@ background-color:$black;
       padding-bottom: $small-padding;
       margin: 0;
     }
-
+    
   }
   //end of event listing style
 
 }
 
 // *************************
-//  ADI
+//  ADI 
 // *************************
 
 /////////////////////////////////////////////////
@@ -804,3 +1069,6 @@ background-color:$black;
 .morelink {
     display: block;
 }
+
+
+

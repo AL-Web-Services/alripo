@@ -490,7 +490,7 @@ $font-family-serif: 'Vollkorn', serif;
   }
 }
 /////////////////////////////////////////////////////////
-//Featured
+//Featured v1
 /////////////////////////////////////////////////////////
 
 .img-backgr-wrapper {
@@ -578,17 +578,76 @@ $font-family-serif: 'Vollkorn', serif;
   }
 }
 
-//Slider
+/////////////////////////////////////////////////////////
+//Featured v2
+/////////////////////////////////////////////////////////
 
-.orbit-small {
-  .orbit-container {
-    border: 1px solid $light-gray;
+//Featured banner - image and title
+.featured-content {
+  padding: 7rem $big-padding 3rem;
+  background-color: $white;
+  // Headline styled over featured banner
+  .featured-wrapper {
+    position: relative;
+    .featured-headline {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40%;
+      padding:$global-padding $big-padding;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-top: $block-border-accent;
+      @include breakpoint (medium down) {
+        width: 100%;
+        position: relative;
+        background-color: $light-gray;
+        border-top: none;
+        border-left: 5px solid $brand-accent;
+      }
+      p {
+        color: $dark-gray;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      .button {
+        margin: 0;
+      }
+    }
   }
-  .orbit-slide {
-    padding: $big-padding;
+  // Intro paragraph(s)
+  .featured-intro {
+    padding: $big-padding 0;
+    border-bottom: 1px solid $light-gray;
+    p {
+      color: #666;
+    }
+  }
+}
+
+//Featured slider styles
+.featured-slider {
+  min-height: 400px;
+  img {
+    padding: 0.5rem $big-padding;
+    width: 100%; //remove this and use Drupal resize
+    height: 400px; //remove this and use Drupal resize
+  }
+  h2 {
+    color: $brand-accent;
+  }
+  p {
+    line-height: 2;
+  }
+  .orbit-container {
+    overflow: visible;
+  }
+  .orbit-bullets {
+    border-top: 1px solid $brand-accent;
+    margin-top: $global-padding;
   }
   .orbit-bullets button {
-    background-color: $dark-gray;
+    background-color: $medium-gray;
     width: 0.7rem;
     height: 0.7rem;
   }
@@ -597,9 +656,182 @@ $font-family-serif: 'Vollkorn', serif;
   }
   .orbit-previous, .orbit-next {
     padding: 0.5em;
-    color: $black;
+    color: $medium-gray;
+    bottom: -65px;
+    top: initial;
+    @include breakpoint(medium down) {
+      bottom: -95px;
+      font-size: $big-padding;
+    }
   }
 }
+
+//New materials slider styles
+.new-materials-slider {
+  // min-height: 300px;
+  padding: 0 $big-padding $big-padding;
+  img {
+    width: 65%;
+    height: auto;
+  }
+  h4 {
+    padding-top: 3rem;
+    padding-left: 3rem;
+    color: $brand-accent;
+    font-weight: bold;
+  }
+  p {
+    font-style: italic;
+    padding-left: $big-padding;
+  }
+  .orbit-container {
+    overflow: visible;
+    @include breakpoint(medium down) {
+      text-align: center;
+    }
+  }
+  .orbit-bullets {
+    margin-top: $big-padding;
+  }
+  .orbit-bullets button {
+    background-color: $medium-gray;
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+  .orbit-bullets button.is-active {
+  	background-color: $brand-accent;
+  }
+  .orbit-previous, .orbit-next {
+    padding: 0.5em;
+    color: $brand-accent;
+    @include breakpoint(medium down) {
+      font-size: $big-padding;
+    }
+  }
+}
+
+//Style sidebar video box
+.aside-box {
+  img {
+    padding-bottom: $big-padding;
+  }
+  h3 {
+    font-weight: bold;
+    color: $dark-gray;
+    padding-left: 10px;
+    border-left: 5px solid $light-gray;
+  }
+  p {
+    padding: $global-padding $big-padding 0;
+    letter-spacing: 0.1em;
+  }
+  p:last-child {
+    padding: 0 0.5rem;
+  }
+  .button {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+//Middle content block
+.mid-content-block {
+  background-color: $white;
+  padding: $global-padding $global-padding $big-padding;
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+//Bottom content blocks
+.bottom-content-block {
+  background-color: $white;
+  padding: $global-padding $global-padding 6rem;
+  h2 {
+    border-bottom: 1px solid $light-gray;
+    margin-bottom: $global-padding;
+    padding-bottom: 0.5rem;
+  }
+  .button {
+  margin-bottom: 0;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+  //Dropcap layout from building blocks
+  .cap-wrapper {
+    float: left;
+  }
+  .dropcap {
+    display: block;
+    float: left;
+    font-size: 4rem;
+    line-height: 6rem;
+    margin: 0.25rem 0.5rem 0 0;
+    text-align: center;
+    width: 4rem;
+    color: $white;
+  }
+  .dropcap-white {
+  	@extend .dropcap;
+    color: $white;
+  }
+}
+
+// Numbered horizontal cards
+.list-block {
+  background: $light-gray none repeat scroll 0 0;
+  padding: $big-padding;
+  color: $black;
+  margin-bottom: $big-padding;
+  h1, h2, h3, h4 {
+    font-weight: bold;
+    color: $brand-accent;
+  }
+  p {
+    letter-spacing: 0.1em;
+    font-size: 90%;
+  }
+}
+
+.explore-new {
+  p {
+    letter-spacing: 0.1em;
+    font-size: 90%;
+    margin-bottom: $big-padding;
+  }
+  .button {
+    background-color: $black;
+  }
+  .button:hover {
+    background-color: $brand-accent;
+  }
+}
+
+// .flat-icon {
+//   color: darken($light-gray, 4%);
+// }
+
+//Media type label
+// .label-container {
+//   position: relative;
+//   span {
+//     color: $dark-gray;
+//     font-weight: bold;
+//     position: absolute;
+//     right: 0;
+//     bottom: 0;
+//     width: 70px;
+//     height: 70px;
+//     background-color: $white;
+//     text-align: center;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     opacity: 0.6;
+//   }
+// }
+
 
 /////////////////////////////////////////////////////////
 //Gallery List View
