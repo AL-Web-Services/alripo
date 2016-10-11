@@ -933,6 +933,10 @@ $font-family-serif: 'Vollkorn', serif;
       padding: 1em 2em;
       font-size: 1rem;
       font-weight: bold;
+      &:hover {
+        background-color: $white;
+        color: $black;
+      }
     }
   }
 }
@@ -1131,6 +1135,9 @@ $font-family-serif: 'Vollkorn', serif;
 .bottom-row {
   background-color: $white;
   padding: 4rem 0;
+  @include breakpoint (medium down) {
+    background-color: $light-gray;
+  }
   .info-listing {
     .round-thumbnail {
       border-color: $medium-gray;
