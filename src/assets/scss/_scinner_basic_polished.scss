@@ -229,7 +229,7 @@ $font-family-serif: 'Vollkorn', serif;
 }
 
 /////////////////////////////////////////////////////////
-//News/Events, Featured - fancy layout
+//News/Events
 /////////////////////////////////////////////////////////
 
 //Inner banner diagonal
@@ -462,33 +462,29 @@ $font-family-serif: 'Vollkorn', serif;
   }
 }
 //News Events Categories Section - alternative color background
-.categories-v2 {
-  background-color: $medium-gray;
-  background-image: none;
-  .albadge-bckg-1 {
-    background: rgba(0, 0, 0, 0.5) url("/assets/img/inner-pages/thumb1.jpg") no-repeat scroll center 40% / cover ;
-  }
-  .albadge-bckg-2 {
-    background: rgba(0, 0, 0, 0) url("/assets/img/inner-pages/thumb2.jpg") no-repeat scroll center 40% / cover ;
-  }
-  .albadge-bckg-3 {
-    background: rgba(0, 0, 0, 0) url("/assets/img/inner-pages/thumb3.jpg") no-repeat scroll center 40% / cover ;
-  }
-  .albadge-bckg-4 {
-    background: rgba(0, 0, 0, 0) url("/assets/img/inner-pages/thumb4.jpg") no-repeat scroll center 40% / cover ;
-  }
-  .main-icon{
-    // span{
-    // margin-left: auto;
-    // margin-right:auto;
-    // }
-    @include alw-circle(7rem, $brand-accent, $dark-gray);
-    font-size: 1.3rem;
-    margin-bottom: $global-padding;
-    text-shadow: -1px 2px $black;
-    font-weight: bold;
-  }
-}
+// .categories-v2 {
+//   background-color: $medium-gray;
+//   background-image: none;
+//   .albadge-bckg-1 {
+//     background: rgba(0, 0, 0, 0.5) url("/assets/img/inner-pages/thumb1.jpg") no-repeat scroll center 40% / cover ;
+//   }
+//   .albadge-bckg-2 {
+//     background: rgba(0, 0, 0, 0) url("/assets/img/inner-pages/thumb2.jpg") no-repeat scroll center 40% / cover ;
+//   }
+//   .albadge-bckg-3 {
+//     background: rgba(0, 0, 0, 0) url("/assets/img/inner-pages/thumb3.jpg") no-repeat scroll center 40% / cover ;
+//   }
+//   .albadge-bckg-4 {
+//     background: rgba(0, 0, 0, 0) url("/assets/img/inner-pages/thumb4.jpg") no-repeat scroll center 40% / cover ;
+//   }
+//   .main-icon{
+//     @include alw-circle(7rem, $brand-accent, $dark-gray);
+//     font-size: 1.3rem;
+//     margin-bottom: $global-padding;
+//     text-shadow: -1px 2px $black;
+//     font-weight: bold;
+//   }
+// }
 /////////////////////////////////////////////////////////
 //Featured v1
 /////////////////////////////////////////////////////////
@@ -629,7 +625,7 @@ $font-family-serif: 'Vollkorn', serif;
 .featured-slider {
   min-height: 400px;
   img {
-    padding: 0.5rem $big-padding;
+    padding: 0.5rem $big-padding 0.5rem 0;
     width: 100%; //remove this and use Drupal resize
     height: 400px; //remove this and use Drupal resize
   }
@@ -645,6 +641,7 @@ $font-family-serif: 'Vollkorn', serif;
   .orbit-bullets {
     border-top: 1px solid $brand-accent;
     margin-top: $global-padding;
+    padding-top: 0.5rem;
   }
   .orbit-bullets button {
     background-color: $medium-gray;
@@ -657,11 +654,11 @@ $font-family-serif: 'Vollkorn', serif;
   .orbit-previous, .orbit-next {
     padding: 0.5em;
     color: $medium-gray;
-    bottom: -65px;
+    bottom: -70px;
     top: initial;
     @include breakpoint(medium down) {
-      bottom: -95px;
-      font-size: $big-padding;
+      // bottom: -95px;
+      // font-size: $big-padding;
     }
   }
 }
@@ -670,6 +667,9 @@ $font-family-serif: 'Vollkorn', serif;
 .new-materials-slider {
   // min-height: 300px;
   padding: 0 $big-padding $big-padding;
+  @include breakpoint(medium down) {
+    padding: 0;
+  }
   img {
     width: 65%;
     height: auto;
@@ -704,14 +704,18 @@ $font-family-serif: 'Vollkorn', serif;
   .orbit-previous, .orbit-next {
     padding: 0.5em;
     color: $brand-accent;
-    @include breakpoint(medium down) {
-      font-size: $big-padding;
-    }
+    // @include breakpoint(medium down) {
+    //   font-size: $big-padding;
+    // }
   }
 }
 
 //Style sidebar video box
 .aside-box {
+  @include breakpoint(medium down) {
+    border-top: 1px solid $light-gray;
+    padding-top: 4rem;
+  }
   img {
     padding-bottom: $big-padding;
   }
@@ -808,9 +812,21 @@ $font-family-serif: 'Vollkorn', serif;
   }
 }
 
-// .flat-icon {
-//   color: darken($light-gray, 4%);
-// }
+.flat-icon {
+  @include breakpoint(medium down) {
+    font-size: 5em;
+    color: $medium-gray;
+    line-height: 0;
+  }
+  // color: darken($light-gray, 4%);
+}
+.flat-icon-text {
+  @include breakpoint(medium down) {
+    display: block;
+    color: $medium-gray;
+    font-size: 2rem;
+  }
+}
 
 //Media type label
 // .label-container {
@@ -864,6 +880,282 @@ $font-family-serif: 'Vollkorn', serif;
     flex-basis: content;
     @include breakpoint(medium down) {
       width: 100%;
+    }
+  }
+}
+
+/////////////////////////////////////////////////////////
+//News/events 2
+/////////////////////////////////////////////////////////
+
+//Featured story banner and text
+.featured-story {
+  position: relative;
+  .featured-story-text {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 35%;
+    padding:$big-padding;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: $block-border-accent;
+    @include breakpoint (medium down) {
+      width: 100%;
+      position: relative;
+      background-color: $white;
+      border-bottom: none medium;
+    }
+    p {
+      color: $dark-gray;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .button {
+      margin: 0;
+    }
+    h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      @include breakpoint (medium down) {
+        font-size: initial;
+      }
+    }
+  }
+  .featured-story-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    .button {
+      background-color: transparent;
+      border: 3px solid $white;
+      padding: 1em 2em;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
+}
+
+//News and events categories row
+.categories-row {
+  background: $white;
+  padding: 6rem 22rem 5rem;
+  @include breakpoint (medium down) {
+    padding: 6rem 10rem 5rem;
+  }
+  @include breakpoint (small down) {
+    padding: 1rem;
+  }
+  h2 {
+    border-bottom: 1px solid $brand-accent;
+    padding-bottom: 0.5rem;
+    margin-bottom: $global-padding;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+  .main-icon {
+    margin-top: 0;
+    font-size: 1.1rem;
+  }
+  .main-icon span i, .main-icon span.albadge {
+    height: 6rem;
+    width: 6rem;
+    background-color: $brand-accent;
+    border: 5px solid $medium-gray;
+    @include breakpoint (small down) {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+//Events slideshow
+.events-row {
+  background-color: $white;
+  padding: 0 0 $global-padding;
+  @include breakpoint (medium down) {
+    padding: $big-padding 0 $global-padding;
+  }
+  @include breakpoint (small down) {
+    padding: $big-padding 0 $global-padding;
+  }
+  h2 {
+    border-bottom: 1px solid $light-gray;
+    margin-bottom: $global-padding;
+    padding-top: $global-padding;
+  }
+  //Event styling
+  .events-wrapper {
+    position: relative;
+    .event-item {
+      position: absolute;
+      left: 0;
+      top: 0;
+      .event-date {
+        border-left: 5px solid $brand-accent;
+        margin: 0 auto $global-padding;
+        display: table-cell;
+        width: auto;
+        .event-month {
+          margin: 0;
+          background: $light-gray;
+          padding: $small-padding;
+          text-align: center;
+        }
+        .event-day {
+          margin: 0;
+          border: 1px solid $light-gray;
+          padding: 0 $global-padding;
+          text-align: center;
+        }
+      }
+      .event-desc {
+        margin-top: $global-padding;
+      }
+      .event-desc-detail {
+        font-weight: bold;
+        color: $dark-gray;
+      }
+      .event-desc-header {
+        margin-top: 1.5rem;
+        margin-left: $global-padding;
+        @include breakpoint (medium down) {
+          margin: 0;
+        }
+        @include breakpoint (small down) {
+          margin-top: $global-padding;
+        }
+      }
+      h4.event-desc-header {
+        font-weight: bold;
+      }
+      .button-wrapper {
+        border-top: 5px solid $light-gray;
+        padding-top: $global-padding;
+      }
+    }
+  }
+  h3.slider-title {
+    padding: 0.3rem 0 0.3rem 0.5rem;
+    border-top: 1px solid $white;
+    color: #666;
+    background-color: $light-gray;
+    border-bottom: 1px solid $dark-gray;
+  }
+  .events-slider {
+    @include breakpoint (medium down) {
+      min-height: 270px;
+    }
+    .orbit-container {
+      overflow: visible;
+    }
+    .orbit-bullets {
+      position: absolute;
+      left: 0.5rem;
+      bottom: 0.5rem;
+      margin: 0;
+      @include breakpoint (medium down) {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        margin: $global-padding;
+      }
+    }
+    .orbit-bullets button {
+      background-color: $medium-gray;
+      width: 0.7rem;
+      height: 0.7rem;
+    }
+    .orbit-bullets button.is-active {
+    	background-color: $brand-accent;
+    }
+  }
+}
+
+//Top stories row
+.stories-row {
+  background-color: $white;
+  padding: 4rem 0 $big-padding;
+  @include breakpoint (medium down) {
+    padding: 0;
+  }
+  .callout{
+    background-color: $light-gray;
+    display: block;
+    border: medium none;
+    border-bottom: 5px solid $brand-accent;
+    margin: 0;
+    @include breakpoint (medium down) {
+      margin-bottom: 1rem;
+    }
+    img {
+      margin-bottom: $global-padding;
+      padding: $global-padding $global-padding 0;
+    }
+  }
+  .story-listing {
+    border-right: 1px solid $light-gray;
+    &:last-child {
+      border-right: medium none;
+    }
+  }
+  .category-tag {
+    padding-top: 1.5rem;
+    p {
+      margin-bottom: 0;
+      color: $dark-gray;
+    }
+  }
+  .title {
+    padding: 0 $big-padding $big-padding;
+    h4 {
+      font-weight: bold;
+      color: $brand-accent;
+    }
+  }
+  .badge {
+    color: $black;
+    background-color: transparent;
+  }
+  .share-links {
+    border-top: 1px solid $medium-gray;
+  }
+  .stand-alone-icon {
+    font-size: 3rem;
+    display: block;
+  }
+}
+
+//Did you know, Renov and Featured Resources block
+.bottom-row {
+  background-color: $white;
+  padding: 4rem 0;
+  .info-listing {
+    .round-thumbnail {
+      border-color: $medium-gray;
+    }
+    img {
+      margin-top: 0.5rem;
+      box-shadow: 0 10px 6px -6px #777;
+      &:hover {
+        box-shadow: 0 10px 6px -3px #777;
+      }
+    }
+    h3 {
+      font-weight: bold;
+      color: $dark-gray;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid $medium-gray;
+    }
+    p {
+      padding: $global-padding $global-padding $global-padding 0;
+      font-size: 90%;
+      letter-spacing: 0.1em;
+    }
+    .rsvp {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
     }
   }
 }
