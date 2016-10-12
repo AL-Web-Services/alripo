@@ -643,29 +643,16 @@ $font-family-serif: 'Vollkorn', serif;
     margin-top: $global-padding;
     padding-top: 0.5rem;
   }
-  .orbit-bullets button {
-    background-color: $medium-gray;
-    width: 0.7rem;
-    height: 0.7rem;
-  }
-  .orbit-bullets button.is-active {
-  	background-color: $brand-accent;
-  }
   .orbit-previous, .orbit-next {
     padding: 0.5em;
     color: $medium-gray;
     bottom: -70px;
     top: initial;
-    @include breakpoint(medium down) {
-      // bottom: -95px;
-      // font-size: $big-padding;
-    }
   }
 }
 
 //New materials slider styles
 .new-materials-slider {
-  // min-height: 300px;
   padding: 0 $big-padding $big-padding;
   @include breakpoint(medium down) {
     padding: 0;
@@ -693,20 +680,9 @@ $font-family-serif: 'Vollkorn', serif;
   .orbit-bullets {
     margin-top: $big-padding;
   }
-  .orbit-bullets button {
-    background-color: $medium-gray;
-    width: 0.7rem;
-    height: 0.7rem;
-  }
-  .orbit-bullets button.is-active {
-  	background-color: $brand-accent;
-  }
   .orbit-previous, .orbit-next {
     padding: 0.5em;
     color: $brand-accent;
-    // @include breakpoint(medium down) {
-    //   font-size: $big-padding;
-    // }
   }
 }
 
@@ -818,7 +794,6 @@ $font-family-serif: 'Vollkorn', serif;
     color: $medium-gray;
     line-height: 0;
   }
-  // color: darken($light-gray, 4%);
 }
 .flat-icon-text {
   @include breakpoint(medium down) {
@@ -828,7 +803,7 @@ $font-family-serif: 'Vollkorn', serif;
   }
 }
 
-//Media type label
+//Media type label - we are not using it but I decided to leave this to use in the future
 // .label-container {
 //   position: relative;
 //   span {
@@ -885,7 +860,7 @@ $font-family-serif: 'Vollkorn', serif;
 }
 
 /////////////////////////////////////////////////////////
-//News/events 2
+//News/events 2 - Final
 /////////////////////////////////////////////////////////
 
 //Featured story banner and text
@@ -922,6 +897,7 @@ $font-family-serif: 'Vollkorn', serif;
       }
     }
   }
+  //Big hero button
   .featured-story-btn {
     position: absolute;
     bottom: 0;
@@ -989,7 +965,7 @@ $font-family-serif: 'Vollkorn', serif;
     margin-bottom: $global-padding;
     padding-top: $global-padding;
   }
-  //Event styling
+  //Event list item styling
   .events-wrapper {
     position: relative;
     .event-item {
@@ -1040,13 +1016,7 @@ $font-family-serif: 'Vollkorn', serif;
       }
     }
   }
-  h3.slider-title {
-    padding: 0.3rem 0 0.3rem 0.5rem;
-    border-top: 1px solid $white;
-    color: #666;
-    background-color: $light-gray;
-    border-bottom: 1px solid $dark-gray;
-  }
+  //Events slider
   .events-slider {
     @include breakpoint (medium down) {
       min-height: 270px;
@@ -1065,14 +1035,6 @@ $font-family-serif: 'Vollkorn', serif;
         bottom: 0;
         margin: $global-padding;
       }
-    }
-    .orbit-bullets button {
-      background-color: $medium-gray;
-      width: 0.7rem;
-      height: 0.7rem;
-    }
-    .orbit-bullets button.is-active {
-    	background-color: $brand-accent;
     }
   }
 }
