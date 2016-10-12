@@ -436,7 +436,7 @@ $maincontent-shadow: 0 0 10px rgba($black, 0.5);
 
 //Sasha changed default settings (above) to style orbit
 $orbit-bullet-background: $medium-gray;
-$orbit-bullet-background-active: $brand-accent;
+$orbit-bullet-background-active: map-get($foundation-palette, secondary);
 $orbit-bullet-diameter: 0.7rem;
 $orbit-bullet-margin: 0.1rem;
 $orbit-bullet-margin-top: 0.8rem;
