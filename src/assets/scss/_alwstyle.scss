@@ -1117,13 +1117,12 @@ background-color:$black;
   margin-left: auto;
   margin-right: auto;
   flex-basis: content;
-  
+  background-color:$light-gray;
+  border-bottom: 2px solid $medium-gray;
+   
   .news-card-inner{
     border-top:$block-border-accent;
-    //border-top: 5px solid $brand-blue;
     padding:0;
-    margin:$global-padding $global-padding;
-    //box-shadow: 0px 1px 2px 0px $medium-gray;
     transition: all 0.3s linear 0s;
     &:hover {
     box-shadow: 0px 1px 5px 0px $medium-gray;
@@ -1156,10 +1155,10 @@ background-color:$black;
           color:$brand-accent;
         }
         padding:$global-padding $big-padding;
-        border-bottom: 2px solid $medium-gray;
       }
     }
-    .post-meta {
+    .news-meta {
+      text-align: center;
       color: $dark-gray;
       a {
         color: $dark-gray;
