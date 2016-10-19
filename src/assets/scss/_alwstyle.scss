@@ -806,7 +806,7 @@ background-color:$black;
   }
 
   //fixing equalizer on large vs photo dimension display for large screen smaller than 1150px 
-  .quick-link {
+  .quick-link{
     @include alw-circle(20px,$brand-blue-dark,$brand-blue-dark);
     padding:$global-padding 0;
     @media only screen and (max-width: 480px){
@@ -1112,36 +1112,51 @@ background-color:$black;
   background-color: #fff;
   padding: $big-padding;
 }
-
+.stories-row {
+  background-color: $white;
+  padding: $big-padding;
+  @include breakpoint (medium down) {
+    padding: $small-padding;
+  }
+  .share-links {
+    border-top: 1px solid $medium-gray;
+  }
+  .badge {
+    color: $black;
+    background-color: transparent;
+  }
+}
 .news-card {
   margin-left: auto;
   margin-right: auto;
   flex-basis: content;
   background-color:$light-gray;
-  border-bottom: 2px solid $medium-gray;
+  //border-bottom: 2px solid $medium-gray;
    
   .news-card-inner{
     border-top:$block-border-accent;
     padding:0;
-    transition: all 0.3s linear 0s;
+    //transition: all 0.3s linear 0s;
     &:hover {
-    box-shadow: 0px 1px 5px 0px $medium-gray;
+    //box-shadow: 0px 1px 5px 0px $medium-gray;
     }
     img {
     max-width: 100%; 
     height: auto;
+    padding:$big-padding;
     //padding:0 $global-padding;
     }
     .category {
       position: absolute;
-      top: -34px;
+      top: -3rem;
       left: 0;
-      background: $brand-accent;
-      padding: 10px 15px;
+      background: $dark-gray;
+      padding: $small-padding $global-padding;
       color: $white;
       font-size: 90%;
       font-weight: 600;
       text-transform: uppercase;
+      margin-left: $big-padding;
     }
     .news-content{
       background-color:$light-gray;
@@ -1166,4 +1181,127 @@ background-color:$black;
     }
   }
 
+}
+.share-links {
+  background-color:$light-gray;
+  border-bottom: 2px solid $medium-gray;
+}
+
+//main image
+
+ // promo affect
+.promo-image-wrapper {
+    width: 100%;
+    height: 100%;
+    border: 0px solid rgba(0,0,0,0.04);
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    background: $white;
+
+} 
+.promo-image-overlay-content {
+  background: rgba(0,102,153, 0.9); //brand dark blue
+  padding: $big-padding;
+  color:$light-gray;
+   .button {
+      background: $brand-accent;
+      box-shadow: 0 0 1px $black;    
+      &:hover {
+        box-shadow: 0 0 5px $black;
+      }
+    }
+}
+@include breakpoint(large) {
+  //promo image hover over affect only on large
+  //hover over image content 
+    .promo-image-overlay-content {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      padding-left: $big-padding;
+      padding-right: $big-padding;
+    }
+  .overlay-fade-in {    
+    p {
+      letter-spacing: 0.1em;
+      color: $light-gray;
+      opacity: 0;
+      //transition: all 0.2s linear;
+    }       
+    .promo-image-overlay-content {
+      opacity: 0;
+      //background: rgba(81,83,92, 0.9);
+      //background: rgba(142,142,142, 0.9);
+      background: rgba(0,102,153, 0.9); //brand dark blue
+      transition: all 0.4s ease-in-out;
+    }
+    h2 {
+      color: $light-gray;
+      //font-size: 1.8rem;
+      margin-top: $global-padding;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+    }  
+    .button {
+      background: $brand-accent;
+      box-shadow: 0 0 1px $black;    
+      &:hover {
+        box-shadow: 0 0 5px $black;
+      }
+    }
+    &:hover img {
+      //transform: scale(1);
+    }   
+    &:hover .promo-image-overlay-content {
+      opacity: 1;
+    }
+    &:hover h2, p, .button {
+      opacity: 1;
+    }
+    &:hover p {
+      transition-delay: 0.1s;
+    }    
+    &:hover .button {
+      transition-delay: 0.2s;
+    }
+    &:hover figcaption {
+      display: none;
+    }
+  } 
+  //promo image hover over affect
+}
+
+//News and events categories row
+.categories-row {
+  background: $white;
+  
+}
+
+.main-icon {
+  span{
+  margin-left: auto;
+  margin-right:auto;
+  }
+
+  @include alw-circle(8rem, $brand-accent, $dark-gray);
+  font-size: 1.5rem;
+
+  @include breakpoint(medium only) {
+    @include alw-circle(6rem, $brand-accent, $dark-gray);
+    font-size: 1rem;
+    font-weight: bold;
+
+  } 
+   
+  @include breakpoint(small only) {
+    @include alw-circle(3rem, $brand-accent, $dark-gray);
+    font-size: .9rem;
+    font-weight: bold;
+    margin-top: 0;
+  }
+    
 }
